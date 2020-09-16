@@ -28,16 +28,16 @@ void MenuInterface::displayMainMenu() {
     _display<<"(r)andom dungeon level"<<std::endl;
     _display<<"(q)uit"<<std::endl;
 
-    validifyMainMenuInput(getUserInput());
+    validifyMainMenuInput(getCharInput());
 }
 
 void MenuInterface::displayDNGDescribeMenu(){
-    _display<<"What would you like to do?"<<std::endl;
+    _display<<"\nWhat would you like to do?"<<std::endl;
     _display<<"(d)escribe the dungeon level"<<std::endl;
     _display<<"(v)iew the dungeon level"<<std::endl;
     _display<<"(r)eturn to the main menu"<<std::endl;
 
-    switch(tolower(getUserInput())){
+    switch(tolower(getCharInput())){
     case('d'):
         describeLvl();
         setCustomMenu(DNG_Exploration);
@@ -57,14 +57,14 @@ void MenuInterface::displayDNGDescribeMenu(){
 }
 
 void MenuInterface::displayDNGExplorationMenu(){
-    _display<<"What would you like to do?"<<std::endl;
+    _display<<"\nWhat would you like to do?"<<std::endl;
     _display<<"(d)escribe a room"<<std::endl;
     _display<<"(r)eturn to previous menu"<<std::endl;
 
 
     _input.clear();
 
-    switch(tolower(getUserInput())){
+    switch(tolower(getCharInput())){
     case('d'):
         describeRoom();
         emptyLinePrompt();
@@ -80,10 +80,46 @@ void MenuInterface::displayDNGExplorationMenu(){
 
 }
 
-char MenuInterface::getUserInput() const{
-    char userInput;
+char MenuInterface::getCharInput() const{
+    char input;
+    _input.clear();
+    _input >> input;
+    _input.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    return input;
+}
+
+int MenuInterface::getIntInput() const{
+    int userInput;
+    _input.clear();
+    _input >> userInput;
+    _input.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    while(_input.fail()){ // valid the input type is an int
+        _input.clear();
+        displayInvalidInputMessage();
+        _input.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+        _input >> userInput;
+        _input.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
+
+    return userInput;
+}
+
+std::string MenuInterface::getStringInput() const{
+    std::string userInput;
     _input.clear();
     _input>>userInput;
+    _input.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    while(_input.fail()){ // validate input type is string
+        _input.clear();
+        displayInvalidInputMessage();
+        _input.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+        _input >> userInput;
+        _input.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
 
     return userInput;
 }
@@ -167,15 +203,45 @@ void MenuInterface::generateExampleLvl(){
 }
 
 void MenuInterface::generateRandomLvl(){
+    _display<<"\nWhat would you like to call the level?"<<std::endl;
+    std::string dngName=getStringInput();
+    int rows;
+    int cols;
+    char lvl;
+
+    _display<<"\nHow many rows in *"<<dngName<<"*??"<<std::endl;
+    rows=getIntInput();
+
+    _display<<"\nHow many columns in *"<<dngName<<"*??"<<std::endl;
+    cols=tolower(getIntInput());
+
+
+    _display<<"\nWhat type of dungeon level is it? (b)asic or (m)agical"<<std::endl;
+    lvl=tolower(getCharInput());
+    while (!(lvl=='b'||lvl=='m')){
+        displayInvalidInputMessage();
+        lvl=getCharInput();
+    }
+
+    _display<<"Creating "<<dngName<<"..."<<std::endl;
+
+    _display<<"Dungeon Level created!"<<std::endl;
 
 }
 
 void MenuInterface::displayLvl()
 {
+    // TODO view the dng level
 
 }
 
 void MenuInterface::describeLvl(){
+    //place holders
+    std::string dngName="small dark cave";
+    int rows=2;
+    int cols=2;
+    char lvl ='b';
+    //TODO print out the dng description here.
 
 }
 

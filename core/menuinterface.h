@@ -31,12 +31,13 @@ private:
 
     void setCustomMenu(Menu menu) ;
 
-    char getUserInput() const;
+    char getCharInput() const;
+    std::string getStringInput() const;
+    int getIntInput() const;
 
     void validifyMainMenuInput(char input) ;
 
 
-//    bool validifyMenuInput(char input) const;
 
 
     void displayInvalidInputMessage() const;
