@@ -10,5 +10,5 @@ Monster::Monster(const std::string &name){
 }
 
  std::unique_ptr<AbstractCreature> Monster::clone()const{
-    return std::make_unique<Monster>(new Monster(creatureName));
+    return std::make_unique<Monster>(this);
 }

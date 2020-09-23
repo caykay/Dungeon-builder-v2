@@ -5,6 +5,10 @@
 #include "core/dungeon/room.h"
 #include "dungeonlevel.h"
 #include "core/items/item.h"
+#include "core/creatures/abstractcreature.h"
+#include "core/items/weapon.h"
+#include "core/items/consumeable.h"
+#include "core/creatures/monster.h"
 namespace core {
 namespace dungeon {
 
@@ -19,7 +23,13 @@ protected:
         Goblin, Werewolf, Evil_Wizard, Dragon
     };
 
+    std::map<Monsters, std::unique_ptr<core::creatures::AbstractCreature>> prototypeCreatures;
     std::map<Items, std::unique_ptr<core::items::Item>> prototypeItems;
+
+    void createPrototypeItems();
+    void createPrototypeCreatures();
+    std::unique_ptr<core::items::Item> createItem(Items item);
+    std::unique_ptr<core::creatures::AbstractCreature> createMonster(Monsters monster);
 public:
     DungeonLevelBuilder();
     virtual ~DungeonLevelBuilder(){}

@@ -13,7 +13,7 @@ public:
     Monster();
     Monster(const std::string &name);
 
-    void clone() const override;
+    std::unique_ptr<AbstractCreature> clone() const override;
 };
 }
 }
