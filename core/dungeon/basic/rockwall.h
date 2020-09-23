@@ -4,7 +4,7 @@
 
 namespace core {
 namespace dungeon {
-namespace magical{
+namespace basic{
 
 
 

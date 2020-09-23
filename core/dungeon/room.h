@@ -37,7 +37,7 @@ public:
 //    const std::shared_ptr<RoomEdge> getSouth();
 //    const std::shared_ptr<RoomEdge> getWest();
 
-    std::string display();//not yet figured out
+    std::vector<std::string> display();//not yet figured out
     int id();
     std::shared_ptr<core::items::Item> item();
     void setItem(std::shared_ptr<core::items::Item> newItem);

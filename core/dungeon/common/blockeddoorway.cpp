@@ -5,15 +5,13 @@ BlockedDoorway::BlockedDoorway()
 
 }
 
+
 bool BlockedDoorway::isPassage() const{
-    switch (opposite) {
-    case 1:
-        return true;
-        break;
-    case 0:
-        return false;
-        break;
-    default:
-        return false;
-    }
+    return (opposite) ? true : false;
 }
+
+
+
+std::string BlockedDoorway::description() const{}
+char BlockedDoorway::displayCharacter() const{}
+

@@ -9,7 +9,8 @@ class RoomEdge
 {
 public:
     RoomEdge();
-    ~RoomEdge();
+    RoomEdge(std::shared_ptr<RoomEdge> room);
+    virtual ~RoomEdge(){};
 
 
     virtual std::string description() const=0;

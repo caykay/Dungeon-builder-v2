@@ -7,14 +7,8 @@ OpenWayDoor::OpenWayDoor()
 
 
 bool OpenWayDoor::isPassage() const{
-    switch (opposite) {
-    case 1:
-        return true;
-        break;
-    case 0:
-        return false;
-        break;
-    default:
-        return false;
-    }
+    return (opposite) ? true : false;
 }
+
+std::string OpenWayDoor::description() const{}
+char OpenWayDoor::displayCharacter() const{}

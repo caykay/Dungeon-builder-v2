@@ -9,15 +9,20 @@ class Doorway: public RoomEdge
 {
 public:
     Doorway();
+    virtual ~Doorway(){
+        delete this;
+    };
 
-    int opposite; //not sure
-    void connect(std::shared_ptr<Doorway> opposite); // not sure
+    Doorway* opposite; //not sure
+    void connect(Doorway* opposite); // not sure
     bool isEntrance();
     bool isExit();
 
     virtual std::string description() const override;
     virtual char displayCharacter() const override;
     virtual bool isPassage() const override;
+
+    void setOpposite(Doorway* opposite);
 };
 }
 }

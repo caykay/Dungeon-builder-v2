@@ -6,14 +6,8 @@ OpenDoorWay::OpenDoorWay()
 }
 
 bool OpenDoorWay::isPassage() const{
-    switch (opposite) {
-    case 1:
-        return true;
-        break;
-    case 0:
-        return false;
-        break;
-    default:
-        return false;
-    }
+    return (opposite) ? true : false;
 }
+
+std::string OpenDoorWay::description() const{}
+char OpenDoorWay::displayCharacter() const{}

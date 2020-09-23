@@ -4,3 +4,7 @@ MagicWall::MagicWall()
 {
 
 }
+
+bool MagicWall::isPassage() const{}
+std::string MagicWall::description() const{}
+char MagicWall::displayCharacter() const{}
