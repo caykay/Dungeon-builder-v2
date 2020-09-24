@@ -13,3 +13,7 @@ AbstractCreature::AbstractCreature(const std::string &name): creatureName{name}{
 char AbstractCreature::displayCharacter(){
     return 'M';
 }
+
+std::string AbstractCreature::name(){
+    return creatureName;
+}

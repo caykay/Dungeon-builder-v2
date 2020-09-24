@@ -8,3 +8,4 @@ Wall::Wall()
 std::string Wall::description() const{}
 char Wall::displayCharacter() const{}
 bool Wall::isPassage() const{}
+

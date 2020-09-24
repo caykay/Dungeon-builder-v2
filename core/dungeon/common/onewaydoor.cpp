@@ -1,11 +1,12 @@
-#include "opendoorway.h"
+#include "onewaydoor.h"
 using namespace core::dungeon::common;
-OpenDoorWay::OpenDoorWay()
+OneWayDoor::OneWayDoor()
 {
 
 }
 
-bool OpenDoorWay::isPassage() const{
+
+bool OneWayDoor::isPassage() const{
     if (isExit()||isEntrance()==true){
         return false;
     }else{
@@ -14,25 +15,27 @@ bool OpenDoorWay::isPassage() const{
 
 }
 
-std::string OpenDoorWay::description() const{}
-char OpenDoorWay::displayCharacter() const{
+std::string OneWayDoor::description() const{}
+
+char OneWayDoor::displayCharacter() const{
     return character;
 }
 
-void OpenDoorWay::setCharacterAt(const char &direction) {
+void OneWayDoor::setCharacterAt(const char &direction) {
     switch (tolower(direction)) {
     case 'n':
-        this->character='^';
-        break;
-    case 's':
         this->character='v';
         break;
-    case 'e':
-        this->character='>';
+    case 's':
+        this->character='^';
         break;
-    case 'w':
+    case 'e':
         this->character='<';
         break;
+    case 'w':
+        this->character='>';
+        break;
+
 
     }
 

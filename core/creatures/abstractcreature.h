@@ -10,11 +10,13 @@ class AbstractCreature
 {
 protected:
     std::string creatureName;
+    char character;
 public:
     AbstractCreature();
     AbstractCreature(const std::string &name);
     virtual ~AbstractCreature(){}
-    virtual std::unique_ptr<AbstractCreature> clone() const;
+
+    virtual std::unique_ptr<AbstractCreature> clone() const=0;
     std::string name();
     char displayCharacter();
 

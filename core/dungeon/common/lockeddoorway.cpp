@@ -6,8 +6,19 @@ LockedDoorway::LockedDoorway()
 }
 
 bool LockedDoorway::isPassage() const{
-    return (opposite) ? true : false;
+    if (isExit()||isEntrance()==true){
+        return false;
+    }else{
+        return (opposite) ? true : false;
+    }
+
 }
 
 std::string LockedDoorway::description() const{}
-char LockedDoorway::displayCharacter() const{}
+
+char LockedDoorway::displayCharacter() const{
+    return '@';
+}
+
+void LockedDoorway::setCharacterAt(const char &direction) {
+}

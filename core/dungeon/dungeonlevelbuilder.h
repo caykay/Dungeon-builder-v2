@@ -3,7 +3,7 @@
 #include <memory>
 #include <map>
 #include "core/dungeon/room.h"
-#include "dungeonlevel.h"
+#include "core/dungeon/dungeonlevel.h"
 #include "core/items/item.h"
 #include "core/creatures/abstractcreature.h"
 #include "core/items/weapon.h"
@@ -15,6 +15,7 @@ namespace dungeon {
 class DungeonLevelBuilder
 {
 protected:
+    //TODO Remove these already implemented some in basic and (optional) magical dlb
     enum class Items {
         Boomerang, Short_Sword, Battle_Axe, Wizard_Staff,Magic_Wand,
         Health_Potion, Molotov_Cocktail, Smoke_Bomb, Resistance_Potion
@@ -23,35 +24,37 @@ protected:
         Goblin, Werewolf, Evil_Wizard, Dragon
     };
 
-    std::map<Monsters, std::unique_ptr<core::creatures::AbstractCreature>> prototypeCreatures;
-    std::map<Items, std::unique_ptr<core::items::Item>> prototypeItems;
+    std::map<Monsters, std::shared_ptr<core::creatures::AbstractCreature>> prototypeCreatures;
+    std::map<Items, std::shared_ptr<core::items::Item>> prototypeItems;
 
-    void createPrototypeItems();
-    void createPrototypeCreatures();
-    std::unique_ptr<core::items::Item> createItem(Items item);
-    std::unique_ptr<core::creatures::AbstractCreature> createMonster(Monsters monster);
+    virtual void createPrototypeItems();
+    virtual void createPrototypeCreatures();
+    virtual std::shared_ptr<core::items::Item> createItem(Items item) ;
+    virtual std::shared_ptr<core::creatures::AbstractCreature> createMonster(Monsters monster);
 public:
     DungeonLevelBuilder();
     virtual ~DungeonLevelBuilder(){}
 
-    enum class MoveConstraints: unsigned{None=0, OriginImpassable=1,
-                                        DestinationImpassable=2, OriginLoced=4,
+    enum class MoveConstraints: unsigned{None, OriginImpassable=1,
+                                        DestinationImpassable=2, OriginLocked=4,
                                         DestinationLocked=8};
 
-    virtual void buildDungeonLevel(const std::string &name, int width, int height)const;
-    virtual std::shared_ptr<Room> buildRoom(int id) const;
+    virtual void buildDungeonLevel(const std::string &name, int width, int height);
+    virtual std::shared_ptr<Room> buildRoom(int id) ;
     virtual void buildDoorway(std::shared_ptr<Room> origin, std::shared_ptr<Room>destination,
-                              Room::Direction direction, MoveConstraints constraints) const;
+                              Room::Direction direction, MoveConstraints constraints) ;
 
-    virtual void buildEntrance(std::shared_ptr<Room> room, Room::Direction direction) const;
+    virtual void buildEntrance(std::shared_ptr<Room> room, Room::Direction direction) ;
 
-    virtual void buildExit(std::shared_ptr<Room> room, Room::Direction direction) const;
+    virtual void buildExit(std::shared_ptr<Room> room, Room::Direction direction) ;
 
-    virtual void buildItem (std::shared_ptr<Room> room) const;
+    virtual void buildItem (std::shared_ptr<Room> room) ;
 
-    virtual void buildCreature (std::shared_ptr<Room> room) const;
+    virtual void buildCreature (std::shared_ptr<Room> room) ;
 
-    DungeonLevel* getDungeonLevel() const;
+    virtual DungeonLevel* getDungeonLevel() ;
+
+
 };
 }
 }

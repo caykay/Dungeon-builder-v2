@@ -12,50 +12,44 @@
 namespace core {
 namespace dungeon {
 
-class RoomEdge;
-
 class Room
 {
+protected:
+    int dungeonID;
 public:
     Room();
     Room(int id);
-    enum class Direction :unsigned {North, South, East, West};
 
+    using RoomEdgePtr = std::shared_ptr<RoomEdge>;
+
+    enum class Direction :unsigned int {North, South, East, West};
     virtual std::string description() const=0;
 
-    void setEdge(std::shared_ptr<RoomEdge> edge, Direction direction);
-    std::shared_ptr<RoomEdge> edgeAt(Direction direction) const;
+    void setEdge(RoomEdgePtr edge, Direction direction);
+    RoomEdgePtr edgeAt(Direction direction) ;
 
-    //to be removed not sure tho
-//    void setNorth(const std::shared_ptr<RoomEdge> roomEdge);
-//    void setEast(const std::shared_ptr<RoomEdge> roomEdge);
-//    void setSouth(const std::shared_ptr<RoomEdge> roomEdge);
-//    void setWest(const std::shared_ptr<RoomEdge> roomEdge);
-
-//    const std::shared_ptr<RoomEdge> getNorth();
-//    const std::shared_ptr<RoomEdge> getEast();
-//    const std::shared_ptr<RoomEdge> getSouth();
-//    const std::shared_ptr<RoomEdge> getWest();
-
-    std::vector<std::string> display();//not yet figured out
+    std::vector<std::string> display();
     int id();
     std::shared_ptr<core::items::Item> item();
     void setItem(std::shared_ptr<core::items::Item> newItem);
     std::shared_ptr<core::creatures::AbstractCreature> creature();
     void setCreature (std::shared_ptr<core::creatures::AbstractCreature> newCreature);
 
-private:
-    int _id;
+private:   
     std::shared_ptr<core::items::Item> _item;
     std::shared_ptr<core::creatures::AbstractCreature> _creature;
-    std::shared_ptr<core::dungeon::RoomEdge> edges[4];
+    std::map<Direction, RoomEdgePtr> edges;
+    bool _roomExit=false;
 
+    char creatureChar();
+    char itemChar();
+    bool roomHasExit();
+    void checkHasExit();
 
-//    Direction _edge;
-
-
-
-
+    //concatenators
+    std::string firstLastRow(char character);
+    std::string midRow(char charEast, char charWest);
+    std::string emptyRow();
 };
 }
 }

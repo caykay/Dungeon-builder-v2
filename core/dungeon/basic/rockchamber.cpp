@@ -4,3 +4,10 @@ RockChamber::RockChamber()
 {
 
 }
+RockChamber::RockChamber(int id){
+    dungeonID=id;
+}
+
+std::string RockChamber::description() const{
+    return "This is a rock chamber";
+}

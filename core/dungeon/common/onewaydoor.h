@@ -6,14 +6,17 @@ namespace dungeon {
 namespace common{
 
 
-class OpenWayDoor: public Doorway
+class OneWayDoor: public Doorway
 {
 public:
-    OpenWayDoor();
+    OneWayDoor();
 
     std::string description() const override;
     char displayCharacter() const override;
     bool isPassage() const override;
+    void setCharacterAt(const char &direction) override;
+
+private:
 
 };
 }

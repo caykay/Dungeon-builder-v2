@@ -1,21 +1,24 @@
 #ifndef ROOMEDGE_H
 #define ROOMEDGE_H
 #include <memory>
-#include "room.h"
+
 
 namespace core {
 namespace dungeon {
 class RoomEdge
 {
+protected:
+    char character;
 public:
     RoomEdge();
-    RoomEdge(std::shared_ptr<RoomEdge> room);
     virtual ~RoomEdge(){};
 
 
     virtual std::string description() const=0;
     virtual char displayCharacter() const=0;
     virtual bool isPassage() const=0;
+
+    virtual void setCharacterAt( const char &direction)=0;
 };
 }
 }

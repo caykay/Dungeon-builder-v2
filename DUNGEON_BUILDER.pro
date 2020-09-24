@@ -13,8 +13,8 @@ SOURCES += \
     core/dungeon/basic/rockwall.cpp \
     core/dungeon/common/blockeddoorway.cpp \
     core/dungeon/common/lockeddoorway.cpp \
+    core/dungeon/common/onewaydoor.cpp \
     core/dungeon/common/opendoorway.cpp \
-    core/dungeon/common/openwaydoor.cpp \
     core/dungeon/doorway.cpp \
     core/dungeon/dungeonlevel.cpp \
     core/dungeon/dungeonlevelbuilder.cpp \
@@ -43,8 +43,8 @@ HEADERS += \
     core/dungeon/basic/rockwall.h \
     core/dungeon/common/blockeddoorway.h \
     core/dungeon/common/lockeddoorway.h \
+    core/dungeon/common/onewaydoor.h \
     core/dungeon/common/opendoorway.h \
-    core/dungeon/common/openwaydoor.h \
     core/dungeon/doorway.h \
     core/dungeon/dungeonlevel.h \
     core/dungeon/dungeonlevelbuilder.h \

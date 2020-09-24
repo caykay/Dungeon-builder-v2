@@ -14,6 +14,9 @@ public:
     std::string description() const override;
     char displayCharacter() const override;
     bool isPassage() const override;
+    void setCharacterAt(const char &direction) override;
+
+private:
 
 };
 }

@@ -9,6 +9,11 @@ namespace dungeon {
 
 class DungeonLevel
 {
+protected:
+    std::string levelName;
+    int levelHeight;
+    int levelWidth;
+    std::map<int, std::shared_ptr<Room>> rooms;
 public:
     DungeonLevel();
     DungeonLevel(const std::string &name, int width, int height);
@@ -16,8 +21,8 @@ public:
         delete this;
     }
 
-    bool addRoom(std::unique_ptr<Room> room);
-    void retrieveRoom (int id);
+    bool addRoom(std::shared_ptr<Room> room);
+    std::shared_ptr<Room> retrieveRoom (int id);
     int width() const;
     int height() const;
     int numberOfRooms() const;
@@ -27,10 +32,8 @@ public:
     std::vector<std::string> display();
 
 private:
-    std::string _name;
-    int _width;
-    int _height;
-    std::map<int, std::unique_ptr<Room>> rooms;
+    void populateDungeon();
+    int getLastID();
 
 };
 }

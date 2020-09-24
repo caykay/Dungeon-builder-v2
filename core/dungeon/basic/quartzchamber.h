@@ -7,10 +7,13 @@ namespace dungeon {
 namespace basic{
 
 
-class QuartzChamber
+class QuartzChamber:public Room
 {
 public:
     QuartzChamber();
+    QuartzChamber(int id);
+
+    std::string description() const override;
 };
 }
 }
