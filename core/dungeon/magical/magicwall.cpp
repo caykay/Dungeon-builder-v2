@@ -8,15 +8,19 @@ MagicWall::MagicWall()
 bool MagicWall::isPassage() const{
     return false;
 }
-std::string MagicWall::description() const{}
+std::string MagicWall::description() const{
+    return "is a Magic Wall";
+}
 char MagicWall::displayCharacter() const{}
 
-void MagicWall::setCharacterAt(const char &direction) {
+void MagicWall::setCharacterAt(char direction) {
     switch (tolower(direction)) {
-    case 'n'|'s':
+    case 'n':
+    case 's':
         this->character='-';
         break;
-    case 'e'|'w':
+    case 'e':
+    case 'w':
         this->character='|';
         break;
     }

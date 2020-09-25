@@ -1,4 +1,5 @@
 #include "menuinterface.h"
+#include <sstream>
 
 using namespace core;
 
@@ -8,9 +9,9 @@ MenuInterface::MenuInterface(std::ostream &display, std::istream &input)
 }
 
 void MenuInterface::displayWelcome(const std::string &author, const std::string &title) const{
-    std::cout<< "Welcome to: " <<title <<"\n";
-    std::cout<< "                Developed by " <<author<<std::endl;
-    std::cout<< "           COMP 3023 Software Development with C++"<<std::endl;
+    _display<< "Welcome to: " <<title <<"\n";
+    _display<< "                Developed by " <<author<<std::endl;
+    _display<< "           COMP 3023 Software Development with C++"<<std::endl;
 
 }
 
@@ -68,7 +69,7 @@ void MenuInterface::displayDNGExplorationMenu(){
     case('d'):
         describeRoom();
         emptyLinePrompt();
-        displayDNGExplorationMenu();
+        displayDNGExplorationMenu();// recursive method
         break;
     case('r'):
         displayDNGDescribeMenu();
@@ -198,7 +199,7 @@ void MenuInterface::setCustomMenu(Menu menu){
 
 void MenuInterface::generateExampleLvl(){
     _display<<"Creating Example Dungeon Level..."<<std::endl;
-
+    Game::instance().createExampleLevel();
     _display<<"Dungeon Level created"<<std::endl;
 }
 
@@ -232,21 +233,29 @@ void MenuInterface::generateRandomLvl(){
 void MenuInterface::displayLvl()
 {
     // TODO view the dng level
-
+    Game::instance().displayLevel(_display);
 }
 
 void MenuInterface::describeLvl(){
-    //place holders
-    std::string dngName="small dark cave";
-    int rows=2;
-    int cols=2;
-    char lvl ='b';
-    //TODO print out the dng description here.
+    Game::instance().describeLevel(_display);
 
 }
 
 void MenuInterface::describeRoom()
 {
+    // TODO Describe Room
+    int noOfRooms=Game::instance().level->numberOfRooms();
+    std::stringstream range;
+    range<<"(1-"<<noOfRooms<<")";
+    int roomNo;
+    _display<<"Which room would you like to describe?"<<range.str()<<std::endl;
+    roomNo=getIntInput();
+    while(roomNo<1||roomNo>noOfRooms){
+        _display<<"Enter number between: "<<range.str()<<std::endl;
+        _display<<"Which room would you like to describe?"<<range.str()<<std::endl;
+        roomNo=getIntInput();
+    }
+    Game::instance().describeRoom(_display, roomNo);
 
 }
 

@@ -25,12 +25,12 @@ protected:
     };
 
     std::map<Monsters, std::shared_ptr<core::creatures::AbstractCreature>> prototypeCreatures;
-    std::map<Items, std::shared_ptr<core::items::Item>> prototypeItems;
+    std::map<Items, core::items::Item*> prototypeItems;
 
     virtual void createPrototypeItems();
     virtual void createPrototypeCreatures();
-    virtual std::shared_ptr<core::items::Item> createItem(Items item) ;
-    virtual std::shared_ptr<core::creatures::AbstractCreature> createMonster(Monsters monster);
+    virtual core::items::Item *createItem(Items item) ;
+    virtual std::unique_ptr<core::creatures::AbstractCreature> createMonster(Monsters monster);
 public:
     DungeonLevelBuilder();
     virtual ~DungeonLevelBuilder(){}

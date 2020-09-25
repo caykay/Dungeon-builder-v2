@@ -8,12 +8,13 @@ Room::Room()
 
 }
 
-Room::Room(int id): dungeonID{id} {
+// TODO Do we need to check for IDs?
+Room::Room(int id): roomID{id} {
 
 }
 
 int Room::id(){
-    return dungeonID;
+    return roomID;
 }
 
 void Room::setEdge(RoomEdgePtr edge, Direction direction){
@@ -29,9 +30,9 @@ void Room::setEdge(RoomEdgePtr edge, Direction direction){
         break;
     case Direction::West:
         edge->setCharacterAt('w');
-        break;
-    edges[direction]= edge;
+        break;    
 }
+    edges[direction]= edge;
 }
 
 RoomEdgePtr Room::edgeAt(Direction direction){
@@ -42,11 +43,11 @@ void Room::setItem(std::shared_ptr<core::items::Item> newItem){
     _item=newItem;
 }
 
-std::shared_ptr<core::items::Item> Room::item(){
+std::shared_ptr<core::items::Item> Room::item() const{
     return _item;
 }
 
-std::shared_ptr<core::creatures::AbstractCreature> Room::creature(){
+std::shared_ptr<core::creatures::AbstractCreature> Room::creature() const{
     return _creature;
 }
 
@@ -56,8 +57,11 @@ void Room::setCreature (std::shared_ptr<core::creatures::AbstractCreature> newCr
 
 
 std::vector<std::string> Room::display(){
+    // checks if room has exit and assigns the result to a boolean value
+    // this is so as to make the appending of * on boss monsters
+    checkHasExit();
     std::vector<std::string> edgeV(5);
-
+    //  Check for empty edges and fill them up with walls?
     edgeV.at(0)=firstLastRow(edges[Direction::North]->displayCharacter());
     edgeV.at(1)=emptyRow();
     edgeV.at(2)=midRow(edges[Direction::East]->displayCharacter()
@@ -68,6 +72,7 @@ std::vector<std::string> Room::display(){
     return edgeV;
 }
 
+std::string Room::description() const{}
 std::string Room::firstLastRow(char character){
     std::string row;
     int size=11;
@@ -147,8 +152,8 @@ bool Room::roomHasExit(){
 
 void Room::checkHasExit(){
     for (int i=static_cast<int>(Direction::North); i <static_cast<int>(Direction::West); i++){
-        // Checks if the room edge is a doorway
-        if(!(std::dynamic_pointer_cast<Doorway>(edges.at(static_cast<Direction>(i)))==nullptr)){
+        // Checks if the room edge is an open doorway
+        if(std::dynamic_pointer_cast<Doorway>(edges.at(static_cast<Direction>(i)))!=nullptr){
             // Checks if the doorway is an exit door
             if (std::dynamic_pointer_cast<Doorway>(edges.at(static_cast<Direction>(i)))->isExit()){
                 // sets the room has exit to true;
@@ -158,4 +163,21 @@ void Room::checkHasExit(){
         }
     }
 
+}
+
+std::string Room::getDirection(int pos) const{
+    switch (pos) {
+    case 0:
+        return "North ";
+        break;
+    case 1:
+        return "South ";
+        break;
+    case 2:
+        return "East ";
+        break;
+    case 3:
+        return "West ";
+        break;
+    }
 }

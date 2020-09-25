@@ -22,6 +22,8 @@ BasicDungeonLevelBuilder::BasicDungeonLevelBuilder()
 
 void BasicDungeonLevelBuilder::buildDungeonLevel(const std::string &name, int width, int height) {
     _level=new BasicDungeonLevel(name, width, height);
+    createPrototypeItems();
+    createPrototypeCreatures();
 }
 
 int BasicDungeonLevelBuilder::getRandomInt(int min, int max){
@@ -133,30 +135,56 @@ void BasicDungeonLevelBuilder::buildDoorway(RoomPtr origin, RoomPtr destination,
 
         }
     }
-    // Otherwise the constraints is a 0 constraint meaning construction of two open doorways
+    // Otherwise the origin constraint is not set therefore maps open dooorway
     else{
         // construct pointers to two OPenDoorWays
         originDoorway=std::make_shared<OpenDoorWay>();
-        destinationDoorway=std::make_shared<OpenDoorWay>();
-        // Set opposite doorways
-        originDoorway->connect(destinationDoorway.get());
-        destinationDoorway->connect(originDoorway.get());
-        //set origin and destination rooms edges
-        origin->setEdge(originDoorway, direction);
-        destination->setEdge(destinationDoorway, opposite(direction));
+        // checks if the constraint has destination locked bit
+        if((constraints&MoveConstraints::DestinationLocked)==(MoveConstraints::DestinationLocked)){
+            // sets the destination doorway to a locked door
+            destinationDoorway=std::make_shared<LockedDoorWay>();
+            // Set opposite doorways
+            originDoorway->connect(destinationDoorway.get());
+            destinationDoorway->connect(originDoorway.get());
+            //set origin and destination rooms edges
+            origin->setEdge(originDoorway, direction);
+            destination->setEdge(destinationDoorway, opposite(direction));
 
+        }
+        // Checks if the constraint has a Destingation impassable bit
+        else if((constraints&MoveConstraints::DestinationImpassable)==(MoveConstraints::DestinationImpassable)){
+            destinationDoorway=std::make_shared<OneWayDoor>();
+            // Set opposite doorways
+            originDoorway->connect(destinationDoorway.get());
+            destinationDoorway->connect(originDoorway.get());
+            //set origin and destination rooms edges
+            origin->setEdge(originDoorway, direction);
+            destination->setEdge(destinationDoorway, opposite(direction));
+
+        }
+        // Otherwise the constraints is a 0 constraint meaning construction of two open doorways
+        else{
+            // construct pointers the destination doorway as an OPenDoorWay
+            destinationDoorway=std::make_shared<OpenDoorWay>();
+            // Set opposite doorways
+            originDoorway->connect(destinationDoorway.get());
+            destinationDoorway->connect(originDoorway.get());
+            //set origin and destination rooms edges
+            origin->setEdge(originDoorway, direction);
+            destination->setEdge(destinationDoorway, opposite(direction));
+        }
     }
 }
 
 void BasicDungeonLevelBuilder::buildEntrance(RoomPtr room, Room::Direction direction){
     // the false is for exit and true is for entrance bools
-    std::shared_ptr<DoorWay> entrance = std::make_shared<DoorWay>(false, true);
+    std::shared_ptr<DoorWay> entrance = std::make_shared<OpenDoorWay>('i');
     room->setEdge(entrance, direction);
 }
 
 void BasicDungeonLevelBuilder::buildExit(RoomPtr room, Room::Direction direction) {
     // the true is for exit and false is for entrance bools
-    std::shared_ptr<DoorWay> exit = std::make_shared<DoorWay>(true, false);
+    std::shared_ptr<DoorWay> exit = std::make_shared<OpenDoorWay>('x');
     room->setEdge(exit, direction);
 }
 
@@ -192,12 +220,12 @@ Room::Direction BasicDungeonLevelBuilder::opposite(Direction direction){
 
 
 void BasicDungeonLevelBuilder::createPrototypeItems(){
-    prototypeItems[Items::Boomerang]= std::make_unique<core::items::Weapon>("Boomerang");
-    prototypeItems[Items::Battle_Axe]= std::make_unique<core::items::Weapon>("Battle Axe");
-    prototypeItems[Items::Short_Sword]=std::make_unique<core::items::Weapon>("Short Staff");
-    prototypeItems[Items::Smoke_Bomb]=std::make_unique<core::items::Consumeable>("Smoke Bomb");
-    prototypeItems[Items::Health_Potion]=std::make_unique<core::items::Consumeable>("Health Potion");
-    prototypeItems[Items::Molotov_Cocktail]=std::make_unique<core::items::Consumeable>("Molotov Cocktail");
+    prototypeItems[Items::Boomerang]= new core::items::Weapon("Boomerang");
+    prototypeItems[Items::Battle_Axe]= new core::items::Weapon("Battle Axe");
+    prototypeItems[Items::Short_Sword]=new core::items::Weapon("Short Staff");
+    prototypeItems[Items::Smoke_Bomb]=new core::items::Weapon("Smoke Bomb");
+    prototypeItems[Items::Health_Potion]=new core::items::Weapon("Health Potion");
+    prototypeItems[Items::Molotov_Cocktail]=new core::items::Weapon("Molotov Cocktail");
 }
 
 void BasicDungeonLevelBuilder::createPrototypeCreatures(){
@@ -205,35 +233,35 @@ void BasicDungeonLevelBuilder::createPrototypeCreatures(){
     prototypeCreatures[Monsters::Werewolf]= std::make_unique<core::creatures::Monster>("Werewold");
     prototypeCreatures[Monsters::Evil_Wizard]= std::make_unique<core::creatures::Monster>("Evil Wizard");
 }
-std::shared_ptr<core::items::Item> BasicDungeonLevelBuilder::createItem(Items item) {
+core::items::Item *BasicDungeonLevelBuilder::createItem(Items item) {
 
     return prototypeItems[(Items)item]->clone();
 }
 
-std::shared_ptr<core::creatures::AbstractCreature> BasicDungeonLevelBuilder::createMonster(Monsters monster){
+std::unique_ptr<core::creatures::AbstractCreature> BasicDungeonLevelBuilder::createMonster(Monsters monster){
     return prototypeCreatures[monster]->clone();
 }
 
-std::shared_ptr<core::items::Item> BasicDungeonLevelBuilder::getRandomItem(){
+std::unique_ptr<core::items::Item> BasicDungeonLevelBuilder::getRandomItem(){
     int randomNum=getRandomInt(1,6);
     switch (randomNum) {
     case 1:
-        return createItem(Items::Boomerang);
+        return std::unique_ptr<core::items::Item>{createItem(Items::Boomerang)};
         break;
     case 2:
-        return createItem(Items::Battle_Axe);
+        return std::unique_ptr<core::items::Item>{createItem(Items::Battle_Axe)};
         break;
     case 3:
-        return createItem(Items::Short_Sword);
+        return std::unique_ptr<core::items::Item>{createItem(Items::Short_Sword)};
         break;
     case 4:
-        return createItem(Items::Health_Potion);
+        return std::unique_ptr<core::items::Item>{createItem(Items::Health_Potion)};
         break;
     case 5:
-        return createItem(Items::Molotov_Cocktail);
+        return std::unique_ptr<core::items::Item>{createItem(Items::Molotov_Cocktail)};
         break;
     default:
-        return createItem(Items::Smoke_Bomb);
+        return std::unique_ptr<core::items::Item>{createItem(Items::Smoke_Bomb)};
         break;
     }
 }

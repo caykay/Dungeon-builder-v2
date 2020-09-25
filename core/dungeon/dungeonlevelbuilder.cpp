@@ -44,11 +44,11 @@ void DungeonLevelBuilder::createPrototypeCreatures(){
 //    prototypeCreatures[Monsters::Evil_Wizard]= std::make_unique<core::creatures::Monster>("Evil Wizard");
 }
 
-std::shared_ptr<core::items::Item> DungeonLevelBuilder::createItem(Items item){
+core::items::Item  *DungeonLevelBuilder::createItem(Items item){
 //    return  prototypeItems[item]->clone();//use move?
 }
 
-std::shared_ptr<core::creatures::AbstractCreature> DungeonLevelBuilder::createMonster(Monsters monster){
+std::unique_ptr<core::creatures::AbstractCreature> DungeonLevelBuilder::createMonster(Monsters monster){
 //    return prototypeCreatures[monster]->clone();//use move?
 }
 

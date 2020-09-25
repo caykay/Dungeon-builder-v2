@@ -2,11 +2,7 @@
 using namespace core::dungeon;
 Doorway::Doorway()
 {
-    _entrance=false;
-    _exit=false;
 }
-Doorway::Doorway(bool exit, bool entrance): _exit{exit}, _entrance{entrance}
-{}
 
 
 void Doorway::connect(Doorway* opposite){
@@ -22,12 +18,12 @@ void Doorway::connect(Doorway* opposite){
         opposite->opposite=this;
     }
 }
-
+void Doorway::setCharacterAt(char direction){}
 bool Doorway::isEntrance()const{
-    return _entrance;
+    return entrance;
 }
 bool Doorway::isExit()const {
-    return _exit;
+    return exit;
 }
 
 
@@ -35,11 +31,6 @@ std::string Doorway::description() const{}
 
 char Doorway::displayCharacter() const{
     //should they be implemented in sub classes?
-    if(isExit()==true&&isEntrance()==false){
-        return '0';
-    }else if(isEntrance()==true&&isExit()==false){
-        return 'I';
-    }
 }
 
 bool Doorway::isPassage() const{

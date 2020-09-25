@@ -8,7 +8,7 @@ Weapon::Weapon(const std::string &name){
     itemName=name;
 }
 
-std::unique_ptr<Item> Weapon::clone() const {
+Item *Weapon::clone() const {
     // does this really make a clone?
-    return std::make_unique<Weapon>(itemName);
+    return new Weapon(*this);
 }

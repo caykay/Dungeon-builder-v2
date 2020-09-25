@@ -10,11 +10,11 @@ class OpenDoorWay:public Doorway
 {
 public:
     OpenDoorWay();
-
+    OpenDoorWay(char state);
     std::string description() const override;
     char displayCharacter() const override;
     bool isPassage() const override;
-    void setCharacterAt(const char &direction) override;
+    void setCharacterAt(char direction) override;
 
 private:
 

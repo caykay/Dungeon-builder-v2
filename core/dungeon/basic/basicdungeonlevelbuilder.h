@@ -40,24 +40,24 @@ private:
 
     void createPrototypeItems() override;
     void createPrototypeCreatures()override;
-    std::shared_ptr<core::items::Item> createItem(Items item)  override;
-    std::shared_ptr<core::creatures::AbstractCreature> createMonster(Monsters monster)  override;
+    core::items::Item *createItem(Items item)  override;
+    std::unique_ptr<core::creatures::AbstractCreature> createMonster(Monsters monster)  override;
 
-    std::shared_ptr<core::items::Item> getRandomItem();
+    std::unique_ptr<core::items::Item> getRandomItem();
     std::shared_ptr<core::creatures::AbstractCreature> getRandomCreature();
 
     int getRandomInt(int min, int max);
 
     //UNSURE
-    friend MoveConstraints operator |(MoveConstraints constraint1, MoveConstraints constraint2);
-    friend MoveConstraints operator &(MoveConstraints constraint1, MoveConstraints constraint2);
+//    friend MoveConstraints operator |(MoveConstraints constraint1, MoveConstraints constraint2);
+//    friend MoveConstraints operator &(MoveConstraints constraint1, MoveConstraints constraint2);
     friend bool operator ==(DBL::MoveConstraints constraint1,DBL::MoveConstraints constraint2);
 };
 
-DBL::MoveConstraints operator |(DBL::MoveConstraints constraint1,DBL::MoveConstraints constraint2) {
+inline DBL::MoveConstraints operator |(DBL::MoveConstraints constraint1,DBL::MoveConstraints constraint2) {
     return (static_cast<DBL::MoveConstraints>(static_cast<unsigned int>(constraint1) | static_cast<unsigned int>(constraint2)));
 }
-DBL::MoveConstraints operator &(DBL::MoveConstraints constraint1,DBL::MoveConstraints constraint2) {
+inline DBL::MoveConstraints operator &(DBL::MoveConstraints constraint1,DBL::MoveConstraints constraint2) {
     return (static_cast<DBL::MoveConstraints>(static_cast<unsigned int>(constraint1) & static_cast<unsigned int>(constraint2)));
 }
 

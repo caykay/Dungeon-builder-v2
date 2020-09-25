@@ -18,7 +18,7 @@ public:
     DungeonLevel();
     DungeonLevel(const std::string &name, int width, int height);
     virtual ~DungeonLevel(){
-        delete this;
+//        delete this;
     }
 
     bool addRoom(std::shared_ptr<Room> room);
@@ -32,7 +32,7 @@ public:
     std::vector<std::string> display();
 
 private:
-    void populateDungeon();
+    std::vector<std::string> getDungeonRows();
     int getLastID();
 
 };

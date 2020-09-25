@@ -15,7 +15,8 @@ namespace dungeon {
 class Room
 {
 protected:
-    int dungeonID;
+    int roomID;
+    std::string getDirection(int pos) const;
 public:
     Room();
     Room(int id);
@@ -23,22 +24,21 @@ public:
     using RoomEdgePtr = std::shared_ptr<RoomEdge>;
 
     enum class Direction :unsigned int {North, South, East, West};
-    virtual std::string description() const=0;
+    virtual std::string description() const;
 
     void setEdge(RoomEdgePtr edge, Direction direction);
     RoomEdgePtr edgeAt(Direction direction) ;
 
     std::vector<std::string> display();
     int id();
-    std::shared_ptr<core::items::Item> item();
+    std::shared_ptr<core::items::Item> item() const;
     void setItem(std::shared_ptr<core::items::Item> newItem);
-    std::shared_ptr<core::creatures::AbstractCreature> creature();
+    std::shared_ptr<core::creatures::AbstractCreature> creature() const;
     void setCreature (std::shared_ptr<core::creatures::AbstractCreature> newCreature);
-
+    std::map<Direction, RoomEdgePtr> edges;
 private:   
     std::shared_ptr<core::items::Item> _item;
     std::shared_ptr<core::creatures::AbstractCreature> _creature;
-    std::map<Direction, RoomEdgePtr> edges;
     bool _roomExit=false;
 
     char creatureChar();

@@ -4,17 +4,26 @@
 #include <random>
 #include <ctime>
 #include <iostream>
-//#include "core/dungeon/dungeonlevelbuilder.h"
+#include "core/dungeon/dungeonlevelbuilder.h"
 #include "core/dungeon/dungeonlevel.h"
+
 
 namespace core {
 // forward decleration (to look back at it)
-class DungeonLevelBuilder;
+using DLB=core::dungeon::DungeonLevelBuilder;
+using Room=std::shared_ptr<core::dungeon::Room>;
+using Direction=core::dungeon::Room::Direction;
+using MoveConstraints=DLB::MoveConstraints;
+using DL=core::dungeon::DungeonLevel;
+
 class Game
 {
 public:
     ~Game(){
         delete level;
+        delete builder;
+        level=nullptr;
+        builder=nullptr;
     }
     // Game should not be cloneable
     Game(Game &other)=delete ;
@@ -22,21 +31,41 @@ public:
     void operator=(const Game &)= delete;
 
     static Game &instance();
-    std::shared_ptr<DungeonLevelBuilder> builder;
+    core::dungeon::DungeonLevelBuilder* builder;
     core::dungeon::DungeonLevel *level;
 
-    void setDungeonType(std::shared_ptr<DungeonLevelBuilder> builder);
+    void setDungeonType(core::dungeon::DungeonLevelBuilder* builder);
     void createExampleLevel();
     void createRandomLevel(const std::string &name, int width, int height);
-    void displayLevel(const std::ostream &display);
+
+    void displayLevel( std::ostream &display);
+    void describeLevel( std::ostream &display);
+    void describeRoom(std::ostream &display, int id);
+
     double randomDouble();
 private:
     Game(){}
+    void createExampleRooms();
+    void buildExampleDoorways();
+    void buildExampleItems();
+    void buildExampleCreatures();
 
+    // Do i need to instantiate it to nullptr?
     static std::unique_ptr<Game> _theInstance;
     std::mt19937 _randomGenerator{uint32_t(time(nullptr))}; //!< Mersenne Twister random number generator seeded by current time
     std::uniform_real_distribution<double> _realDistribution{0.0, 1.0}; //!< For random numbers between 0.0 & 1.0
+
+
+
 };
+
+inline DLB::MoveConstraints operator |(DLB::MoveConstraints constraint1,DLB::MoveConstraints constraint2) {
+    return (static_cast<DLB::MoveConstraints>(static_cast<unsigned int>(constraint1) | static_cast<unsigned int>(constraint2)));
+}
+inline DLB::MoveConstraints operator &(DLB::MoveConstraints constraint1,DLB::MoveConstraints constraint2) {
+    return (static_cast<DLB::MoveConstraints>(static_cast<unsigned int>(constraint1) & static_cast<unsigned int>(constraint2)));
+}
+
 }
 
 

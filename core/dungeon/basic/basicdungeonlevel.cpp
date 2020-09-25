@@ -1,4 +1,5 @@
 #include "basicdungeonlevel.h"
+#include <sstream>
 using namespace core::dungeon::basic;
 BasicDungeonLevel::BasicDungeonLevel()
 {
@@ -11,5 +12,11 @@ BasicDungeonLevel::BasicDungeonLevel(const std::string &name, int width, int hei
 }
 
 std::string BasicDungeonLevel::description() const{
-    return "This is a basic dungeon level";
+    std::stringstream description;
+    std::string nxt="\n";
+    description<<this->name()<<nxt;
+    description<<"Size: "<<this->width()<<" x "<<this->height()<<nxt;
+    description<<"Type: "<<"Dark Cave(Basic Dungoen)";
+    return description.str();
 }
+

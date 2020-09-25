@@ -18,12 +18,14 @@ bool BlockedDoorway::isPassage() const{
 
 
 
-std::string BlockedDoorway::description() const{}
+std::string BlockedDoorway::description() const{
+    return "is a Blocked Doorway";
+}
 char BlockedDoorway::displayCharacter() const{
     return 'X';
 }
 
-void BlockedDoorway::setCharacterAt(const char &direction) {
+void BlockedDoorway::setCharacterAt(char direction) {
 }
 
 

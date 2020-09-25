@@ -15,13 +15,15 @@ bool OneWayDoor::isPassage() const{
 
 }
 
-std::string OneWayDoor::description() const{}
+std::string OneWayDoor::description() const{
+    return "is a Oneway Door";
+}
 
 char OneWayDoor::displayCharacter() const{
     return character;
 }
 
-void OneWayDoor::setCharacterAt(const char &direction) {
+void OneWayDoor::setCharacterAt(char direction) {
     switch (tolower(direction)) {
     case 'n':
         this->character='v';

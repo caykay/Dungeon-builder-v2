@@ -18,7 +18,7 @@ public:
     virtual char displayCharacter() const=0;
     virtual bool isPassage() const=0;
 
-    virtual void setCharacterAt( const char &direction)=0;
+    virtual void setCharacterAt( char direction)=0;
 };
 }
 }

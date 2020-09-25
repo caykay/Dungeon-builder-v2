@@ -14,11 +14,13 @@ bool LockedDoorway::isPassage() const{
 
 }
 
-std::string LockedDoorway::description() const{}
+std::string LockedDoorway::description() const{
+    return "is a Locked Doorway";
+}
 
 char LockedDoorway::displayCharacter() const{
     return '@';
 }
 
-void LockedDoorway::setCharacterAt(const char &direction) {
+void LockedDoorway::setCharacterAt(char direction) {
 }

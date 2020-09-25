@@ -15,7 +15,7 @@ public:
     virtual char displayCharacter() const override;
     virtual bool isPassage() const override;
 
-    virtual void setCharacterAt(const char &direction) override=0;
+    virtual void setCharacterAt(char direction) override=0;
 
 };
 }

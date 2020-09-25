@@ -5,7 +5,9 @@ RockWall::RockWall()
 
 }
 
-std::string RockWall::description() const{}
+std::string RockWall::description() const{
+    return "is a Rock wall";
+}
 char RockWall::displayCharacter() const{
     return character;
 }
@@ -13,15 +15,16 @@ bool RockWall::isPassage() const{
     return false;
 }
 
-void RockWall::setCharacterAt(const char &direction) {
+void RockWall::setCharacterAt(char direction) {
     switch (tolower(direction)) {
-    case 'n'|'s':
+    case 'n':
+    case 's':
         this->character='-';
         break;
-    case 'e'|'w':
+    case 'e':
+    case 'w':
         this->character='|';
         break;
 
     }
-    this->character=character;
 }

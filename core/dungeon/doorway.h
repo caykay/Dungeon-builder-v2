@@ -9,11 +9,14 @@ class Doorway: public RoomEdge
 {
 protected:
     Doorway* opposite; //not sure
+    bool exit=false;
+    bool entrance=false;
 public:
     Doorway();
-    Doorway(bool exit, bool entrance);
     virtual ~Doorway(){
-        delete this;
+        // TODO check this
+        delete opposite;
+        opposite=nullptr;
     };
 
 
@@ -24,10 +27,8 @@ public:
     virtual char displayCharacter() const override;
     virtual bool isPassage() const override;
 
-    virtual void setCharacterAt(const char &direction) override=0;
+    virtual void setCharacterAt(char direction) override;
 private:
-    bool _exit;
-    bool _entrance;
     void disconnect();
 };
 }
