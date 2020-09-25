@@ -20,10 +20,11 @@ class Game
 {
 public:
     ~Game(){
-        delete level;
-        delete builder;
-        level=nullptr;
-        builder=nullptr;
+        // do we really need this
+//        delete level;
+//        delete builder;
+//        level=nullptr;
+//        builder=nullptr;
     }
     // Game should not be cloneable
     Game(Game &other)=delete ;
@@ -31,9 +32,11 @@ public:
     void operator=(const Game &)= delete;
 
     static Game &instance();
-    core::dungeon::DungeonLevelBuilder* builder;
+    static void releaseInstance();
+    core::dungeon::DungeonLevelBuilder *builder;
     core::dungeon::DungeonLevel *level;
 
+    void setDungeonType(char type);
     void setDungeonType(core::dungeon::DungeonLevelBuilder* builder);
     void createExampleLevel();
     void createRandomLevel(const std::string &name, int width, int height);
@@ -49,6 +52,21 @@ private:
     void buildExampleDoorways();
     void buildExampleItems();
     void buildExampleCreatures();
+
+    void buildRandomRooms(int size);
+    void buildRandomDoorways();
+    std::vector<int> getFirstRowIDs();
+    std::vector<int> getLastRowIDs();
+    int getRandomId(std::vector<int> list);
+
+    int getRandomInt(int min, int max);
+    int getRandomBtn(int a, int b);
+
+    // specific constraint functions
+    void buildRandomEntrance(std::vector<int> FirstRowIDs);
+    void buildRandomExit(std::vector<int> lastRowIDs);
+    void buildCornerRooms();
+    void buildNonCornerRooms();
 
     // Do i need to instantiate it to nullptr?
     static std::unique_ptr<Game> _theInstance;

@@ -9,8 +9,20 @@ double Game::randomDouble() {
   return _realDistribution(_randomGenerator);
 }
 
-void Game::setDungeonType(DLB* builder){
+void Game::setDungeonType(char type){
+    switch (tolower(type)) {
+    case 'b':
+        // set dungeon type to basicDungeon level builder
+        setDungeonType(new BasicDLB());
+        break;
+    case 'm':
+        // set dungeon type to magic dungeon level builder
+        break;
+    }
+}
 
+void Game::setDungeonType(DLB* builder){
+    this->builder=builder;
 }
 void Game::createExampleLevel(){
     builder=new BasicDLB();
@@ -25,7 +37,10 @@ void Game::createExampleLevel(){
 
 }
 void Game::createRandomLevel(const std::string &name, int width, int height){
-
+    builder->buildDungeonLevel(name, width, height);
+    level=builder->getDungeonLevel();
+    buildRandomRooms(width*height);
+     //buildRandomDoorways();
 }
 
 void Game::displayLevel(std::ostream &display){
@@ -51,6 +66,13 @@ Game &Game::instance(){
 
     return *_theInstance;
 
+}
+
+void Game::releaseInstance(){
+    if(_theInstance!=nullptr){
+//        _theInstance.reset(new Game());
+        _theInstance=nullptr;
+    }
 }
 
 void Game::createExampleRooms(){
@@ -95,8 +117,162 @@ void Game::buildExampleCreatures(){
     builder->buildCreature(level->retrieveRoom(9));
 }
 
-//void Game::addRoomsToExampleLevel(DL* level, std::vector<Room> rooms){
-//    for (Room room:rooms){
-//        level->addRoom(room);
-//    }
-//}
+void Game::buildRandomRooms(int size){
+    for (int i=1; i<=size; i++){
+        level->addRoom(builder->buildRoom(i));
+    }
+}
+
+void Game::buildRandomDoorways(){
+    std::vector<int> firstIds=getFirstRowIDs();
+    std::vector<int> lastIds=getLastRowIDs();
+    int entranceID=getRandomId(firstIds); // random id from first row
+    int exitID=getRandomId(lastIds); // random id from last row
+
+    //Builds random entrance
+    buildRandomEntrance(firstIds);
+    //Builds random exit
+    buildRandomExit(lastIds);
+    // Build Corner rooms
+    buildCornerRooms();
+    //build Non Corner rooms
+    buildNonCornerRooms();
+    // TODO there's only one room then edge cant have both exit and entrance
+    if(level->numberOfRooms()==1){
+
+    }
+
+}
+
+void Game::buildCornerRooms(){
+    std::vector<int> firstIds=getFirstRowIDs();
+    std::vector<int> lastIds=getLastRowIDs();
+    // 1x1 case excluded (handleded with a different function)
+    int corner1=firstIds.at(0);
+    int corner2=firstIds.at(firstIds.size()-1);
+    int corner3=lastIds.at(0);
+    int corner4=lastIds.at(lastIds.size()-1);
+
+    for (int i=1; i<=level->numberOfRooms(); i++){
+        if(i==corner1){
+
+        }
+    }
+
+}
+
+void Game::buildNonCornerRooms(){
+    std::vector<int> firstIds=getFirstRowIDs();
+    std::vector<int> lastIds=getLastRowIDs();
+    // 1x1 case excluded (handleded with a different function)
+    int corner1=firstIds.at(0);
+    int corner2=firstIds.at(firstIds.size()-1);
+    int corner3=lastIds.at(0);
+    int corner4=lastIds.at(lastIds.size()-1);
+}
+
+void Game::buildRandomEntrance(std::vector<int>firstIds){
+    // if check to see entranceID is that of a corner room or non-corner room
+    // if true apply pick random direction choice
+    int entranceID=getRandomId(firstIds); // random id from first row
+
+    int firstCorner=firstIds.at(0);
+    int secondCorner=firstIds.at(firstIds.size()-1);
+    if(entranceID==firstCorner){
+        // Direction either North or West
+        Direction direction=static_cast<Direction>(getRandomBtn(0,3));
+        builder->buildEntrance(level->retrieveRoom(entranceID),direction);
+    }else if(entranceID==secondCorner){
+        // Direction either North or East
+        Direction direction=static_cast<Direction>(getRandomBtn(0,2));
+        builder->buildEntrance(level->retrieveRoom(entranceID),direction);
+
+    }else{
+        // Direction can only be North
+        builder->buildEntrance(level->retrieveRoom(entranceID),Direction::North);
+    }
+
+}
+
+void Game::buildRandomExit(std::vector<int> lastRowIDs){
+    // if check to see exitID is that of a corner room or non-corner room
+    // if true apply pick random direction choice
+    int exitID=getRandomId(lastRowIDs); // random id from last row
+
+    int firstCorner=lastRowIDs.at(0);
+    int secondCorner=lastRowIDs.at(lastRowIDs.size()-1);
+    if(exitID==firstCorner){
+        // Direction either South or West
+        Direction direction=static_cast<Direction>(getRandomBtn(1,3));
+        builder->buildEntrance(level->retrieveRoom(exitID),direction);
+    }else if(exitID==secondCorner){
+        // Direction either South or East
+        Direction direction=static_cast<Direction>(getRandomBtn(1,2));
+        builder->buildEntrance(level->retrieveRoom(exitID),direction);
+
+    }else{
+        // Direction can only be South
+        builder->buildEntrance(level->retrieveRoom(exitID),Direction::South);
+    }
+
+}
+
+std::vector<int> Game::getFirstRowIDs(){
+    // cointains ids of the rooms in the first row
+    std::vector<int> firstRow(level->width());
+    // fils up the first row with room ids
+    for(int id=1; id<=level->width(); id++){
+        firstRow.push_back(id);
+    }
+    return firstRow;
+}
+std::vector<int> Game::getLastRowIDs(){
+    // contains ids of the rooms in the last row
+    std::vector<int> lastRow(level->width());
+    // fills up the last row with room ids
+    int id=level->numberOfRooms(); //gets the ids from last room
+                                      // then decrements from there
+    for (int i=level->width()-1; i>=0; i--){
+        lastRow.push_back(id);
+        id--;
+    }
+    return lastRow;
+}
+
+int Game::getRandomId(std::vector<int> list){
+    int min=list.at(0);
+    int max=0;
+    for(int i :list){
+        if (min>i){
+            min=i;
+        }
+        if (max<i){
+            max=i;
+        }
+    }
+    return getRandomInt(min, max);
+}
+
+int Game::getRandomInt(int min, int max){
+    // no need to generate random number
+    if (min==max){
+        return max;
+    }
+    if (max < min){
+        std::swap(min,max);
+    }
+
+    return (int)(randomDouble() * (max-min +1)) + min;
+}
+
+int Game::getRandomBtn(int a, int b){
+    int randNum=getRandomInt(1,2);
+    switch (randNum) {
+    case 1:
+        return a;
+        break;
+    case 2:
+        return b;
+        break;
+    }
+}

@@ -158,6 +158,12 @@ void MenuInterface::displayInvalidInputMessage() const{
     _display<<"Invalid Input please try again"<<std::endl;
 }
 
+void MenuInterface::displayInvalidInputMessage(std::string message) const{
+    _display<<message<<std::endl;
+}
+
+
+
 bool MenuInterface::quitInterface() const{
     char userInput;
     _display<<"\n*Are you sure you want to quit? (y/n) *"<<std::endl;
@@ -199,23 +205,36 @@ void MenuInterface::setCustomMenu(Menu menu){
 
 void MenuInterface::generateExampleLvl(){
     _display<<"Creating Example Dungeon Level..."<<std::endl;
+    Game::releaseInstance();
     Game::instance().createExampleLevel();
     _display<<"Dungeon Level created"<<std::endl;
 }
 
 void MenuInterface::generateRandomLvl(){
-    _display<<"\nWhat would you like to call the level?"<<std::endl;
-    std::string dngName=getStringInput();
+    std::string dngName;
     int rows;
     int cols;
     char lvl;
 
+    _display<<"\nWhat would you like to call the level?"<<std::endl;
+    dngName=getStringInput();
+    while(dngName.empty()==true){
+        displayInvalidInputMessage("Please enter a valid name");
+        dngName=getStringInput();
+    }
     _display<<"\nHow many rows in *"<<dngName<<"*??"<<std::endl;
     rows=getIntInput();
+    while(rows<1 || rows>4){
+        displayInvalidInputMessage("Please enter in range of 1 and 4");
+        rows=getIntInput();
+    }
 
     _display<<"\nHow many columns in *"<<dngName<<"*??"<<std::endl;
     cols=tolower(getIntInput());
-
+    while(cols<1 || cols>4){
+        displayInvalidInputMessage("Please enter in range of 1 and 4");
+        cols=getIntInput();
+    }
 
     _display<<"\nWhat type of dungeon level is it? (b)asic or (m)agical"<<std::endl;
     lvl=tolower(getCharInput());
@@ -226,6 +245,10 @@ void MenuInterface::generateRandomLvl(){
 
     _display<<"Creating "<<dngName<<"..."<<std::endl;
 
+    // TODO check here
+//    Game::releaseInstance();
+    Game::instance().setDungeonType('b');
+    Game::instance().createRandomLevel(dngName, cols, rows);
     _display<<"Dungeon Level created!"<<std::endl;
 
 }

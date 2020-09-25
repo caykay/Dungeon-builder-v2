@@ -40,6 +40,7 @@ private:
 
 
     void displayInvalidInputMessage() const;
+    void displayInvalidInputMessage(std::string message) const;
 
     bool quitInterface() const;
 
