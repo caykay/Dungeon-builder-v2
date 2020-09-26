@@ -37,9 +37,16 @@ bool Doorway::isPassage() const{
     if (isExit()||isEntrance()==true){
         return false;
     }
-    return true;
+    if (opposite!=nullptr){
+        return true;
+    }
+    return false;
 }
 
 void Doorway::disconnect(){
-    this->opposite=nullptr;
+//    opposite=nullptr;
+    if (isPassage()==true){
+       opposite->opposite=nullptr;
+       this->opposite=nullptr;
+    }
 }

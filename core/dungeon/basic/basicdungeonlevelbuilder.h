@@ -3,10 +3,7 @@
 #include "core/dungeon/dungeonlevelbuilder.h"
 #include "basicdungeonlevel.h"
 #include "core/dungeon/doorway.h"
-#include "core/dungeon/common/blockeddoorway.h"
-#include "core/dungeon/common/lockeddoorway.h"
-#include "core/dungeon/common/onewaydoor.h"
-#include "core/dungeon/common/opendoorway.h"
+
 namespace core {
 namespace dungeon{
 namespace basic{
@@ -48,21 +45,19 @@ private:
 
     int getRandomInt(int min, int max);
 
-    //UNSURE
-//    friend MoveConstraints operator |(MoveConstraints constraint1, MoveConstraints constraint2);
-//    friend MoveConstraints operator &(MoveConstraints constraint1, MoveConstraints constraint2);
+    // Takes two door references as parameters and connects them at specified direction
+    void connectDoors(std::shared_ptr<Room> origin, std::shared_ptr<Room>destination, Room::Direction direction);
+
     friend bool operator ==(DBL::MoveConstraints constraint1,DBL::MoveConstraints constraint2);
 };
-
-inline DBL::MoveConstraints operator |(DBL::MoveConstraints constraint1,DBL::MoveConstraints constraint2) {
-    return (static_cast<DBL::MoveConstraints>(static_cast<unsigned int>(constraint1) | static_cast<unsigned int>(constraint2)));
-}
-inline DBL::MoveConstraints operator &(DBL::MoveConstraints constraint1,DBL::MoveConstraints constraint2) {
-    return (static_cast<DBL::MoveConstraints>(static_cast<unsigned int>(constraint1) & static_cast<unsigned int>(constraint2)));
-}
-
 }
 }
+}
+inline core::dungeon::DungeonLevelBuilder::MoveConstraints operator |(core::dungeon::DungeonLevelBuilder::MoveConstraints constraint1,core::dungeon::DungeonLevelBuilder::MoveConstraints constraint2) {
+    return (static_cast<core::dungeon::DungeonLevelBuilder::MoveConstraints>(static_cast<unsigned int>(constraint1) | static_cast<unsigned int>(constraint2)));
+}
+inline core::dungeon::DungeonLevelBuilder::MoveConstraints operator &(core::dungeon::DungeonLevelBuilder::MoveConstraints constraint1,core::dungeon::DungeonLevelBuilder::MoveConstraints constraint2) {
+    return (static_cast<core::dungeon::DungeonLevelBuilder::MoveConstraints>(static_cast<unsigned int>(constraint1) & static_cast<unsigned int>(constraint2)));
 }
 
 #endif // BASICDUNGEONLEVELBUILDER_H

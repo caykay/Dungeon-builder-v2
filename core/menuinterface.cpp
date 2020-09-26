@@ -205,7 +205,6 @@ void MenuInterface::setCustomMenu(Menu menu){
 
 void MenuInterface::generateExampleLvl(){
     _display<<"Creating Example Dungeon Level..."<<std::endl;
-    Game::releaseInstance();
     Game::instance().createExampleLevel();
     _display<<"Dungeon Level created"<<std::endl;
 }

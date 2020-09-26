@@ -187,8 +187,21 @@ std::shared_ptr<OpenDoorWay> Room::createOpenDoorway() const{
     return std::make_shared<OpenDoorWay>();
 }
 std::shared_ptr<OpenDoorWay> Room::createOpenDoorway(char type) const{
-    // TODO fix
-    return std::make_shared<OpenDoorWay>();
+
+    switch (tolower(type)) {
+    // entrance
+    case 'i':
+        return std::make_shared<OpenDoorWay>(type);
+        break;
+    // exit
+    case 'x':
+        return std::make_shared<OpenDoorWay>(type);
+        break;
+    default:
+        // DO nothing
+        return nullptr;
+        break;
+    }
 }
 
 std::shared_ptr<LockedDoorWay> Room::createLockedDoorway() const{

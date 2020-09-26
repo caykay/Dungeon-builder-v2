@@ -9,9 +9,11 @@ OneWayDoor::OneWayDoor()
 bool OneWayDoor::isPassage() const{
     if (isExit()||isEntrance()==true){
         return false;
-    }else{
-        return (opposite) ? true : false;
     }
+    if (opposite!=nullptr){
+        return true;
+    }
+    return false;
 
 }
 

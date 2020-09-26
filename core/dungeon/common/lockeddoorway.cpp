@@ -8,10 +8,11 @@ LockedDoorway::LockedDoorway()
 bool LockedDoorway::isPassage() const{
     if (isExit()||isEntrance()==true){
         return false;
-    }else{
-        return (opposite) ? true : false;
     }
-
+    if (opposite!=nullptr){
+        return true;
+    }
+    return false;
 }
 
 std::string LockedDoorway::description() const{

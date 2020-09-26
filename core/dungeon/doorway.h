@@ -2,6 +2,7 @@
 #define DOORWAY_H
 #include <memory>
 #include "roomedge.h"
+#include <cstdlib>
 
 namespace core {
 namespace dungeon {

@@ -10,9 +10,11 @@ bool BlockedDoorway::isPassage() const{
     // This wont matter because a blocked doorway is not expected to be an entrance or exit
     if (isExit()||isEntrance()==true){
         return false;
-    }else{
-        return (opposite) ? true : false;
     }
+    if (opposite!=nullptr){
+        return true;
+    }
+    return false;
 
 }
 

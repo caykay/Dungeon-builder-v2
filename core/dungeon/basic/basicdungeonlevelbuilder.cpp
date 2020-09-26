@@ -2,16 +2,13 @@
 #include "quartzchamber.h"
 #include "rockchamber.h"
 #include "core/game.h"
+#include "core/dungeon/room.h"
 
 using namespace core::dungeon::basic;
 using Room= core::dungeon::Room;
 using RoomPtr=std::shared_ptr<Room>;
 using Direction=Room::Direction;
 using DoorWay=core::dungeon::Doorway;
-using OpenDoorWay=core::dungeon::common::OpenDoorWay;
-using LockedDoorWay=core::dungeon::common::LockedDoorway;
-using OneWayDoor=core::dungeon::common::OneWayDoor;
-using BlockedDoorWay=core::dungeon::common::BlockedDoorway;
 using DBL= core::dungeon::DungeonLevelBuilder;
 
 
@@ -57,122 +54,85 @@ RoomPtr BasicDungeonLevelBuilder::buildRoom(int id)  {
 void BasicDungeonLevelBuilder::buildDoorway(RoomPtr origin, RoomPtr destination,Direction direction,
                   DBL::MoveConstraints constraints)
 {
-    // TODO remove 1
-    std::shared_ptr<DoorWay> originDoorway;
-    std::shared_ptr<DoorWay> destinationDoorway;
     // checks if the constraint has an originlocked bit
     if((constraints&MoveConstraints::OriginLocked)==(MoveConstraints::OriginLocked)){
-        // sets the origin door variable to a locked Doorway
-        originDoorway=std::make_shared<LockedDoorWay>();
+         origin->setEdge(origin->createLockedDoorway(), direction);
         // checks if the constraint has destination locked bit
         if((constraints&MoveConstraints::DestinationLocked)==(MoveConstraints::DestinationLocked)){
-            // sets the destination doorway to a locked door
-            destinationDoorway=std::make_shared<LockedDoorWay>();
-            // Set opposite doorways
-            originDoorway->connect(destinationDoorway.get());
-            destinationDoorway->connect(originDoorway.get());
             //set origin and destination rooms edges
-            origin->setEdge(originDoorway, direction);
-            destination->setEdge(destinationDoorway, opposite(direction));
+            destination->setEdge(destination->createLockedDoorway(), opposite(direction));
+            connectDoors(origin, destination, direction);
 
         }
         // Checks if the constraint has a Destingation impassable bit
         else if((constraints&MoveConstraints::DestinationImpassable)==(MoveConstraints::DestinationImpassable)){
-            destinationDoorway=std::make_shared<OneWayDoor>();
-            // Set opposite doorways
-            originDoorway->connect(destinationDoorway.get());
-            destinationDoorway->connect(originDoorway.get());
             //set origin and destination rooms edges
-            origin->setEdge(originDoorway, direction);
-            destination->setEdge(destinationDoorway, opposite(direction));
-
+            destination->setEdge(destination->createOnewaydoor(), opposite(direction));
+            // Connects the doors
+            connectDoors(origin, destination, direction);
         }
         // Otherwise the destination door is an Open doorway
         else{
-            // construct pointers the destination doorway as an OPenDoorWay
-            destinationDoorway=std::make_shared<OpenDoorWay>();
-            // Set opposite doorways
-            originDoorway->connect(destinationDoorway.get());
-            destinationDoorway->connect(originDoorway.get());
             //set origin and destination rooms edges
-            origin->setEdge(originDoorway, direction);
-            destination->setEdge(destinationDoorway, opposite(direction));
+            destination->setEdge(destination->createOpenDoorway(), opposite(direction));
+            // Connects the doors
+            connectDoors(origin, destination, direction);
         }
     }
     // Checks if the constraints has an origin impassable bit
     else if((constraints&MoveConstraints::OriginImpassable)==(MoveConstraints::OriginImpassable)){
 
         if((constraints&MoveConstraints::DestinationLocked)==(MoveConstraints::DestinationLocked)){
-            originDoorway=std::make_shared<OneWayDoor>();
-            destinationDoorway=std::make_shared<LockedDoorWay>();
-            // Set opposite doorways
-            originDoorway->connect(destinationDoorway.get());
-            destinationDoorway->connect(originDoorway.get());
             //set origin and destination rooms edges
-            origin->setEdge(originDoorway, direction);
-            destination->setEdge(destinationDoorway, opposite(direction));
+            origin->setEdge(destination->createOnewaydoor(), opposite(direction));
+            destination->setEdge(destination->createLockedDoorway(), opposite(direction));
+
+            // Connects the doors
+            connectDoors(origin, destination, direction);
 
         }else if ((constraints&MoveConstraints::DestinationImpassable)==(MoveConstraints::DestinationImpassable)){
-            // sets both doors as blocked as adhered to the constraints
-            originDoorway=std::make_shared<BlockedDoorWay>();
-            destinationDoorway=std::make_shared<BlockedDoorWay>();
-            // Set opposite doorways
-            originDoorway->connect(destinationDoorway.get());
-            destinationDoorway->connect(originDoorway.get());
             //set origin and destination rooms edges
-            origin->setEdge(originDoorway, direction);
-            destination->setEdge(destinationDoorway, opposite(direction));
+            origin->setEdge(destination->createBlockedDoorway(), opposite(direction));
+            destination->setEdge(destination->createBlockedDoorway(), opposite(direction));
+
+            // Connects the doors
+            connectDoors(origin, destination, direction);
 
         }else{
-            originDoorway=std::make_shared<OneWayDoor>();
-            // construct pointers the destination doorway as an OPenDoorWay
-            destinationDoorway=std::make_shared<OpenDoorWay>();
-            // Set opposite doorways
-            originDoorway->connect(destinationDoorway.get());
-            destinationDoorway->connect(originDoorway.get());
             //set origin and destination rooms edges
-            origin->setEdge(originDoorway, direction);
-            destination->setEdge(destinationDoorway, opposite(direction));
+            origin->setEdge(destination->createOnewaydoor(), opposite(direction));
+            destination->setEdge(destination->createOpenDoorway(), opposite(direction));
+
+            // Connects the doors
+            connectDoors(origin, destination, direction);
 
         }
     }
     // Otherwise the origin constraint is not set therefore maps open dooorway
     else{
-        // construct pointers to two OPenDoorWays
-        originDoorway=std::make_shared<OpenDoorWay>();
+        // construct OPenDoorWay edge
+       origin->setEdge(destination->createOpenDoorway(), opposite(direction));
         // checks if the constraint has destination locked bit
         if((constraints&MoveConstraints::DestinationLocked)==(MoveConstraints::DestinationLocked)){
-            // sets the destination doorway to a locked door
-            destinationDoorway=std::make_shared<LockedDoorWay>();
-            // Set opposite doorways
-            originDoorway->connect(destinationDoorway.get());
-            destinationDoorway->connect(originDoorway.get());
             //set origin and destination rooms edges
-            origin->setEdge(originDoorway, direction);
-            destination->setEdge(destinationDoorway, opposite(direction));
-
+            destination->setEdge(destination->createLockedDoorway(), opposite(direction));
+            // Connects the doors
+            connectDoors(origin, destination, direction);
         }
         // Checks if the constraint has a Destingation impassable bit
         else if((constraints&MoveConstraints::DestinationImpassable)==(MoveConstraints::DestinationImpassable)){
-            destinationDoorway=std::make_shared<OneWayDoor>();
-            // Set opposite doorways
-            originDoorway->connect(destinationDoorway.get());
-            destinationDoorway->connect(originDoorway.get());
             //set origin and destination rooms edges
-            origin->setEdge(originDoorway, direction);
-            destination->setEdge(destinationDoorway, opposite(direction));
+            destination->setEdge(destination->createOnewaydoor(), opposite(direction));
 
-        }
+            // Connects the doors
+            connectDoors(origin, destination, direction);
+         }
         // Otherwise the constraints is a 0 constraint meaning construction of two open doorways
         else{
-            // construct pointers the destination doorway as an OPenDoorWay
-            destinationDoorway=std::make_shared<OpenDoorWay>();
-            // Set opposite doorways
-            originDoorway->connect(destinationDoorway.get());
-            destinationDoorway->connect(originDoorway.get());
             //set origin and destination rooms edges
-            origin->setEdge(originDoorway, direction);
-            destination->setEdge(destinationDoorway, opposite(direction));
+            destination->setEdge(destination->createOpenDoorway(), opposite(direction));
+            // Connects the doors
+            connectDoors(origin, destination, direction);
         }
     }
 }
@@ -280,6 +240,17 @@ std::shared_ptr<core::creatures::AbstractCreature> BasicDungeonLevelBuilder::get
         return createMonster(Monsters::Evil_Wizard);
         break;
     }
+}
+
+void BasicDungeonLevelBuilder::connectDoors(std::shared_ptr<Room> origin, std::shared_ptr<Room>destination, Room::Direction direction){
+    std::shared_ptr<DoorWay> originDoorway;
+    std::shared_ptr<DoorWay> destinationDoorway;
+    originDoorway=std::dynamic_pointer_cast<Doorway>(origin->edgeAt(direction));
+    destinationDoorway=std::dynamic_pointer_cast<Doorway>(destination->edgeAt(direction));
+    // sets opposite edges to ea other
+    originDoorway->connect(destinationDoorway.get());
+    destinationDoorway->connect(originDoorway.get());
+
 }
 
 bool operator ==(DBL::MoveConstraints constraint1,DBL::MoveConstraints constraint2){

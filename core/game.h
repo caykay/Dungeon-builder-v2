@@ -78,14 +78,6 @@ private:
 
 
 };
-
-inline DLB::MoveConstraints operator |(DLB::MoveConstraints constraint1,DLB::MoveConstraints constraint2) {
-    return (static_cast<DLB::MoveConstraints>(static_cast<unsigned int>(constraint1) | static_cast<unsigned int>(constraint2)));
-}
-inline DLB::MoveConstraints operator &(DLB::MoveConstraints constraint1,DLB::MoveConstraints constraint2) {
-    return (static_cast<DLB::MoveConstraints>(static_cast<unsigned int>(constraint1) & static_cast<unsigned int>(constraint2)));
-}
-
 }
 
 
