@@ -58,7 +58,7 @@ std::vector<std::string> DungeonLevel::display(){
 
     return result;
 }
-
+// TODO update this method: since we already have better helper methods to help reduce the size
 std::vector<std::string> DungeonLevel::getDungeonRows(){
     std::vector<std::string> rows;
     //fill the rows with empty strings before concatenation
@@ -121,3 +121,200 @@ std::vector<std::string> DungeonLevel::getDungeonRows(){
 int DungeonLevel::getLastID(){
     return rooms.size();
 }
+
+std::shared_ptr<Room> DungeonLevel::retrieveNearbyRoom (int id, Room::Direction direction){
+
+    switch (direction) {
+    case Room::Direction::North:
+        return retrieveRoom(getAboveRoomId(id));
+        break;
+    case Room::Direction::South:
+        return retrieveRoom(getBelowRoomId(id));
+        break;
+    case Room::Direction::East:
+        return retrieveRoom(getRightRoomId(id));
+    break;
+    case Room::Direction::West:
+        return retrieveRoom(getLeftRoomId(id));
+    break;
+    }
+}
+
+int DungeonLevel::getAboveRoomId(int id){
+    return id-width();
+}
+
+int DungeonLevel::getBelowRoomId(int id){
+    return id+width();
+}
+
+int DungeonLevel::getRightRoomId(int id){
+    return id+1;
+}
+
+int DungeonLevel::getLeftRoomId(int id){
+    return id-1;
+}
+
+std::vector<int> DungeonLevel::getFirstRowIDs(){
+    // cointains ids of the rooms in the first row
+    std::vector<int> firstRow(width());
+    // fils up the first row with room ids
+    for(int id=1; id<=width(); id++){
+        firstRow.push_back(id);
+    }
+    return firstRow;
+}
+std::vector<int> DungeonLevel::getLastRowIDs(){
+    // contains ids of the rooms in the last row
+    std::vector<int> lastRow(width());
+    // fills up the last row with room ids
+    int id=numberOfRooms(); //gets the ids from last room
+                                      // then decrements from there
+    for (int i=width()-1; i>=0; i--){
+        lastRow.push_back(id);
+        id--;
+    }
+    return lastRow;
+}
+
+
+std::vector<int> DungeonLevel::getCornerRoomIds(){
+    std::vector<int> lastRow=getLastRowIDs();
+    std::vector<int> firstRow=getFirstRowIDs();
+    std::vector<int> corners;
+    // in most cases a room can have a maximum of 4 corners
+    int corner1 = firstRow.at(0);
+    corners.push_back(corner1);
+    int corner2 =firstRow.at(firstRow.size()-1);
+    corners.push_back(corner2);
+    int corner3 = lastRow.at(0);
+    corners.push_back(corner3);
+    int corner4 =lastRow.at(lastRow.size()-1);
+    corners.push_back(corner4);
+
+    return corners;
+}
+
+std::vector<int> DungeonLevel::getNonCornerRoomIds(){
+    std::vector<int> corners=getCornerRoomIds();
+    std::vector<int> nonCorners;
+
+    for(int j=1; j<=(width()*height());j++){
+        for(int i=0;i<(int)corners.size(); i++){
+            if(j!=corners.at(i)){
+                nonCorners.push_back(j);
+            }
+        }
+    }
+    return nonCorners;
+}
+
+std::vector<int> DungeonLevel::getLeftRoomIds(){
+    std::vector<int> lastRow=getLastRowIDs();
+    std::vector<int> firstRow=getFirstRowIDs();
+    std::vector<int> leftRooms;
+
+    int corner1 = firstRow.at(0);
+    int corner3 = lastRow.at(0);
+
+    for (int i=corner1; i<corner3; i+=width()){
+        if (i != corner1 && i!=corner3){
+            leftRooms.push_back(i);
+        }
+    }
+
+    return leftRooms;
+}
+// gets the ids or rooms aligned to the right excluding corner rooms
+std::vector<int> DungeonLevel::getRightRoomIds(){
+    std::vector<int> lastRow=getLastRowIDs();
+    std::vector<int> firstRow=getFirstRowIDs();
+    std::vector<int> rightRooms;
+
+    int corner2 = firstRow.at(firstRow.size()-1);
+    int corner4 = lastRow.at(lastRow.size()-1);
+
+    for (int i=corner2; i<corner4; i+=width()){
+        if (i != corner2 && i!=corner4){
+            rightRooms.push_back(i);
+        }
+    }
+    return rightRooms;
+}
+
+std::vector<int> DungeonLevel::getMidRoomIds(){
+    std::vector<int> midRooms;
+    // we have to check if the room is not on the top rows, bottom, left or right
+    // then we know it belongs mid
+    for (int id=1; id<=(width()*height());id++ ){
+        if(isLeftRoom(id)==false){
+            if(isRightRoom(id)==false){
+                if(isTopRoom(id)==false){
+                    if(isBottomRoom(id)==false){
+                        midRooms.push_back(id);
+                    }
+                }
+            }
+        }
+    }
+    return midRooms;
+}
+
+bool DungeonLevel::isLeftRoom(int id){
+    // does not include corner rooms
+    std::vector<int> leftRooms=getLeftRoomIds();
+
+    for(int k=0;k<(int)leftRooms.size(); k++){
+        if(id==leftRooms.at(k)){
+            return true;
+        }
+    }
+    return false;
+}
+bool DungeonLevel::isRightRoom(int id){
+    // does not include corner rooms
+    std::vector<int> rightRooms= getRightRoomIds();
+    for(int k=0;k<(int)rightRooms.size(); k++){
+        if(id==rightRooms.at(k)){
+            return true;
+        }
+    }
+    return false;
+
+}
+bool DungeonLevel::isTopRoom(int id){
+    // may include the corner rooms as well
+    std::vector<int> topRooms= getFirstRowIDs();
+    for(int k=0;k<(int)topRooms.size(); k++){
+        if(id==topRooms.at(k)){
+            return true;
+        }
+    }
+    return false;
+
+}
+bool DungeonLevel::isBottomRoom(int id){
+    // this may include the corner rooms as well
+    std::vector<int> bottomRooms= getLastRowIDs();
+    for(int k=0;k<(int)bottomRooms.size(); k++){
+        if(id==bottomRooms.at(k)){
+            return true;
+        }
+    }
+    return false;
+
+}
+
+bool DungeonLevel::isMidRoom(int id){
+    // this may include the corner rooms as well
+    std::vector<int> midRooms= getMidRoomIds();
+    for(int k=0;k<(int)midRooms.size(); k++){
+        if(id==midRooms.at(k)){
+            return true;
+        }
+    }
+    return false;
+
+}
+

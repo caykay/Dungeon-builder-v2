@@ -224,3 +224,5 @@ std::shared_ptr<OneWayDoor> Room::createOnewaydoor() const{
 std::shared_ptr<BlockedDoorWay> Room::createBlockedDoorway() const{
     return std::make_shared<BlockedDoorWay>();
 }
+
+

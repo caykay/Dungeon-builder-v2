@@ -124,8 +124,8 @@ void Game::buildRandomRooms(int size){
 }
 
 void Game::buildRandomDoorways(){
-    std::vector<int> firstIds=getFirstRowIDs();
-    std::vector<int> lastIds=getLastRowIDs();
+    std::vector<int> firstIds;
+    std::vector<int> lastIds;
     int entranceID=getRandomId(firstIds); // random id from first row
     int exitID=getRandomId(lastIds); // random id from last row
 
@@ -145,30 +145,11 @@ void Game::buildRandomDoorways(){
 }
 
 void Game::buildCornerRooms(){
-    std::vector<int> firstIds=getFirstRowIDs();
-    std::vector<int> lastIds=getLastRowIDs();
     // 1x1 case excluded (handleded with a different function)
-    int corner1=firstIds.at(0);
-    int corner2=firstIds.at(firstIds.size()-1);
-    int corner3=lastIds.at(0);
-    int corner4=lastIds.at(lastIds.size()-1);
-
-    for (int i=1; i<=level->numberOfRooms(); i++){
-        if(i==corner1){
-
-        }
-    }
 
 }
 
 void Game::buildNonCornerRooms(){
-    std::vector<int> firstIds=getFirstRowIDs();
-    std::vector<int> lastIds=getLastRowIDs();
-    // 1x1 case excluded (handleded with a different function)
-    int corner1=firstIds.at(0);
-    int corner2=firstIds.at(firstIds.size()-1);
-    int corner3=lastIds.at(0);
-    int corner4=lastIds.at(lastIds.size()-1);
 }
 
 void Game::buildRandomEntrance(std::vector<int>firstIds){
@@ -217,27 +198,6 @@ void Game::buildRandomExit(std::vector<int> lastRowIDs){
 
 }
 
-std::vector<int> Game::getFirstRowIDs(){
-    // cointains ids of the rooms in the first row
-    std::vector<int> firstRow(level->width());
-    // fils up the first row with room ids
-    for(int id=1; id<=level->width(); id++){
-        firstRow.push_back(id);
-    }
-    return firstRow;
-}
-std::vector<int> Game::getLastRowIDs(){
-    // contains ids of the rooms in the last row
-    std::vector<int> lastRow(level->width());
-    // fills up the last row with room ids
-    int id=level->numberOfRooms(); //gets the ids from last room
-                                      // then decrements from there
-    for (int i=level->width()-1; i>=0; i--){
-        lastRow.push_back(id);
-        id--;
-    }
-    return lastRow;
-}
 
 int Game::getRandomId(std::vector<int> list){
     int min=list.at(0);
@@ -276,3 +236,25 @@ int Game::getRandomBtn(int a, int b){
         break;
     }
 }
+
+DLB::MoveConstraints Game::getRandConstraint(){
+    // constraint for the origin doorway
+    MoveConstraints originC;
+    // constraint for the destination room doorway
+    MoveConstraints destC;
+
+    int rand=getRandomInt(1,100);
+    if(rand<=45){
+        originC=destC=MoveConstraints::None;
+    }else if(rand<=75){
+        originC=MoveConstraints::OriginLocked;
+        destC=MoveConstraints::DestinationLocked;
+    }else{
+        originC=MoveConstraints::OriginImpassable;
+        destC=MoveConstraints::DestinationImpassable;
+    }
+
+    // general constraint set is returned(individual constraints added together)
+    return originC|destC;
+}
+

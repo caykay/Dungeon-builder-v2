@@ -55,8 +55,6 @@ private:
 
     void buildRandomRooms(int size);
     void buildRandomDoorways();
-    std::vector<int> getFirstRowIDs();
-    std::vector<int> getLastRowIDs();
     int getRandomId(std::vector<int> list);
 
     int getRandomInt(int min, int max);
@@ -65,10 +63,19 @@ private:
     // specific constraint functions
     void buildRandomEntrance(std::vector<int> FirstRowIDs);
     void buildRandomExit(std::vector<int> lastRowIDs);
+
     void buildCornerRooms();
     void buildNonCornerRooms();
+    void buildTopRooms();
+    void buildBottomRooms();
+    void buildLeftRooms();
+    void buildRightRooms();
+    void buildMidRooms();
+    // returns a constraint set with random individual doorways constraints
+    // (contraint returns is already a mix of the individual doorways)
+    DLB::MoveConstraints getRandConstraint();
 
-    DLB::MoveConstraints getRandomConstraint();
+
 
     // Do i need to instantiate it to nullptr?
     static std::unique_ptr<Game> _theInstance;
