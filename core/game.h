@@ -68,6 +68,8 @@ private:
     void buildCornerRooms();
     void buildNonCornerRooms();
 
+    DLB::MoveConstraints getRandomConstraint();
+
     // Do i need to instantiate it to nullptr?
     static std::unique_ptr<Game> _theInstance;
     std::mt19937 _randomGenerator{uint32_t(time(nullptr))}; //!< Mersenne Twister random number generator seeded by current time

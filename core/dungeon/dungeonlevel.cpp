@@ -71,10 +71,12 @@ std::vector<std::string> DungeonLevel::getDungeonRows(){
                      // concatenated on a width row
     int colsDone=0;   // this variable will change the position to concatenate the next
                      // string in the final vector everytime we switch to new row
+    // TODO not needed
     int numberOfRoomsInRow=numberOfRooms(); //proper implementation here pleas????????
     for(int k=1; k<=height();k++){
         // loops through rooms across the width
         for (int i=1; i<=width();i++){
+            // TODO not needed
             int widthCheck;
             if(width()>numberOfRoomsInRow){
                 widthCheck=numberOfRoomsInRow;
@@ -100,6 +102,7 @@ std::vector<std::string> DungeonLevel::getDungeonRows(){
             // end row concatenation
 
         }
+        // TODO not needed
         if(width()<numberOfRoomsInRow){
             numberOfRoomsInRow-=width();
         }

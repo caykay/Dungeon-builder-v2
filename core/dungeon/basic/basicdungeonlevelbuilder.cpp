@@ -57,6 +57,7 @@ RoomPtr BasicDungeonLevelBuilder::buildRoom(int id)  {
 void BasicDungeonLevelBuilder::buildDoorway(RoomPtr origin, RoomPtr destination,Direction direction,
                   DBL::MoveConstraints constraints)
 {
+    // TODO remove 1
     std::shared_ptr<DoorWay> originDoorway;
     std::shared_ptr<DoorWay> destinationDoorway;
     // checks if the constraint has an originlocked bit

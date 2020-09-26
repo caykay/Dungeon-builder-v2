@@ -181,3 +181,24 @@ std::string Room::getDirection(int pos) const{
         break;
     }
 }
+
+// Doorway creates
+std::shared_ptr<OpenDoorWay> Room::createOpenDoorway() const{
+    return std::make_shared<OpenDoorWay>();
+}
+std::shared_ptr<OpenDoorWay> Room::createOpenDoorway(char type) const{
+    // TODO fix
+    return std::make_shared<OpenDoorWay>();
+}
+
+std::shared_ptr<LockedDoorWay> Room::createLockedDoorway() const{
+    return std::make_shared<LockedDoorWay>();
+}
+
+std::shared_ptr<OneWayDoor> Room::createOnewaydoor() const{
+    return std::make_shared<OneWayDoor>();
+}
+
+std::shared_ptr<BlockedDoorWay> Room::createBlockedDoorway() const{
+    return std::make_shared<BlockedDoorWay>();
+}

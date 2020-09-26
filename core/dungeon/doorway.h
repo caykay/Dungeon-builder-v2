@@ -2,6 +2,7 @@
 #define DOORWAY_H
 #include <memory>
 #include "roomedge.h"
+
 namespace core {
 namespace dungeon {
 
@@ -16,6 +17,7 @@ public:
     virtual ~Doorway(){
         // TODO Doorway has no reason to delete another opposite doorway, it should be deleted by Doorway?
         opposite=nullptr;
+        // Doorway itself will be deleted by room cz room has the ownership of shared_ptr doorway.
     };
 
 
