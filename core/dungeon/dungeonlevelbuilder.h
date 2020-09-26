@@ -54,6 +54,11 @@ public:
 
     virtual DungeonLevel* getDungeonLevel() ;
 
+    // sets a random individual constraint for a doorway
+    virtual MoveConstraints getRandomOriginConstraint();
+    virtual MoveConstraints getRandomDestConstraint();
+
+
 
 };
 }

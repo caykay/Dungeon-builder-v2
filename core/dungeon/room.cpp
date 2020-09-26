@@ -157,7 +157,9 @@ char Room::itemChar(){
 bool Room::roomHasExit(){
     return _roomExit;
 }
-
+bool Room::hasEntrance(){
+    return _roomEntrance;
+}
 
 void Room::checkHasExit(){
     for (int i=static_cast<int>(Direction::North); i <static_cast<int>(Direction::West); i++){
@@ -173,6 +175,21 @@ void Room::checkHasExit(){
     }
 
 }
+
+void Room::checkHasEntrance(){
+    for (int i=static_cast<int>(Direction::North); i <static_cast<int>(Direction::West); i++){
+        // Checks if the room edge is an open doorway
+        if(std::dynamic_pointer_cast<Doorway>(edges.at(static_cast<Direction>(i)))!=nullptr){
+            // Checks if the doorway is an exit door
+            if (std::dynamic_pointer_cast<Doorway>(edges.at(static_cast<Direction>(i)))->isEntrance()){
+                // sets the room has exit to true;
+                _roomEntrance=true;
+                break;
+            }
+        }
+    }
+}
+
 
 std::string Room::getDirection(int pos) const{
     switch (pos) {

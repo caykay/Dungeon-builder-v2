@@ -8,11 +8,11 @@ Doorway::Doorway()
 void Doorway::connect(Doorway* opposite){
     // first disconnect this door (as well as the other door's opposite which is this door)
     // from its current door
-    this->disconnect();
+    disconnect(this);
 
     if(opposite!=nullptr){
         //disconnect the opposite door from any of its connections
-        opposite->disconnect();
+        disconnect(opposite);
         // connects current door to the passed in door parameter
         this->opposite=opposite;
         // connects the opposite door to this door respectively
@@ -35,20 +35,12 @@ char Doorway::displayCharacter() const{
 }
 
 bool Doorway::isPassage() const{
-    if (isExit()||isEntrance()==true){
-        return false;
-    }
-    if (opposite!=nullptr){
-        // returns true if doorway is already connected
-        return true;
-    }
-    return false;
 }
 
-void Doorway::disconnect(){
+void Doorway::disconnect(Doorway* doorway){
     // if doorway is already connected then disconnect otherwise nothing to disconnect
-    if (isPassage()==true){
-       opposite->opposite=nullptr;
-       this->opposite=nullptr;
+    if (doorway->isPassage()==true){
+//       opposite->opposite=nullptr;
+       doorway->opposite=nullptr;
     }
 }

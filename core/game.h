@@ -20,11 +20,6 @@ class Game
 {
 public:
     ~Game(){
-        // do we really need this
-//        delete level;
-//        delete builder;
-//        level=nullptr;
-//        builder=nullptr;
     }
     // Game should not be cloneable
     Game(Game &other)=delete ;
@@ -32,7 +27,6 @@ public:
     void operator=(const Game &)= delete;
 
     static Game &instance();
-    static void releaseInstance();
     core::dungeon::DungeonLevelBuilder *builder;
     core::dungeon::DungeonLevel *level;
 
@@ -40,6 +34,8 @@ public:
     void setDungeonType(core::dungeon::DungeonLevelBuilder* builder);
     void createExampleLevel();
     void createRandomLevel(const std::string &name, int width, int height);
+
+    void clearLevel();
 
     void displayLevel( std::ostream &display);
     void describeLevel( std::ostream &display);
@@ -57,23 +53,45 @@ private:
     void buildRandomDoorways();
     int getRandomId(std::vector<int> list);
 
+    // returns a random number in the given range
     int getRandomInt(int min, int max);
+    // choses a either int a or b at random and returns it
     int getRandomBtn(int a, int b);
 
     // specific constraint functions
-    void buildRandomEntrance(std::vector<int> FirstRowIDs);
-    void buildRandomExit(std::vector<int> lastRowIDs);
+    // Builds an entrance from a random room of the top rooms
+    void buildRandomEntrance();
+    // Builds an exit doorway from a random room in the bottom rows
+    void buildRandomExit();
 
+    // responsible for building corner room doorways for random level
     void buildCornerRooms();
+    // following functions are subset of the above functions
+    void buildTopLeftCornerRoom();
+    void buildTopRightCornerRoom();
+    void buildBottomLeftCornerRoom();
+    void buildBottomRightCornerRoom();
+
+    // responsible for building non-corner rooms
     void buildNonCornerRooms();
+    // Build top&bottom room doorways
     void buildTopRooms();
     void buildBottomRooms();
+
+    // Build left&right room doorways
     void buildLeftRooms();
     void buildRightRooms();
+
+    // Build mid room doorways
     void buildMidRooms();
-    // returns a constraint set with random individual doorways constraints
+
+    // this function is similar to that of level, it does the same thing, but instead of
+    // passing origin and destination rooms, it delegates level functions to do that
+    // and building the general function itself
+    void buildRoomDoorway(int id, Direction side);
+    // returns a constraint set with random individual doorways constraints already set
     // (contraint returns is already a mix of the individual doorways)
-    DLB::MoveConstraints getRandConstraint();
+    DLB::MoveConstraints getConstraint();
 
 
 

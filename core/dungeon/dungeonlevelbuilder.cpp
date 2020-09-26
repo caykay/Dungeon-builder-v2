@@ -26,29 +26,18 @@ DungeonLevel* DungeonLevelBuilder::getDungeonLevel() {
 
 //IMPLEMENTED IN CONCRETE BUILDERS
 void DungeonLevelBuilder::createPrototypeItems(){
-//    prototypeItems[Items::Boomerang]= std::make_unique<core::items::Weapon>("Boomerang");
-//    prototypeItems[Items::Battle_Axe]= std::make_unique<core::items::Weapon>("Battle Axe");
-//    prototypeItems[Items::Magic_Wand]=std::make_unique<core::items::Weapon>("Magic Sword");
-//    prototypeItems[Items::Short_Sword]=std::make_unique<core::items::Weapon>("Short Staff");
-//    prototypeItems[Items::Wizard_Staff]=std::make_unique<core::items::Weapon>("Wizard Staff");
-//    prototypeItems[Items::Smoke_Bomb]=std::make_unique<core::items::Consumeable>("Smoke Bomb");
-//    prototypeItems[Items::Health_Potion]=std::make_unique<core::items::Consumeable>("Health Potion");
-//    prototypeItems[Items::Molotov_Cocktail]=std::make_unique<core::items::Consumeable>("Molotov Cocktail");
-//    prototypeItems[Items::Resistance_Potion]=std::make_unique<core::items::Consumeable>("Resistance Potion");
 }
 
 void DungeonLevelBuilder::createPrototypeCreatures(){
-//    prototypeCreatures[Monsters::Dragon]= std::make_unique<core::creatures::Monster>("Dragon");
-//    prototypeCreatures[Monsters::Goblin]= std::make_unique<core::creatures::Monster>("Goblin");
-//    prototypeCreatures[Monsters::Werewolf]= std::make_unique<core::creatures::Monster>("Werewold");
-//    prototypeCreatures[Monsters::Evil_Wizard]= std::make_unique<core::creatures::Monster>("Evil Wizard");
 }
 
 core::items::Item  *DungeonLevelBuilder::createItem(Items item){
-//    return  prototypeItems[item]->clone();//use move?
 }
 
 std::unique_ptr<core::creatures::AbstractCreature> DungeonLevelBuilder::createMonster(Monsters monster){
-//    return prototypeCreatures[monster]->clone();//use move?
+
 }
 
+// sets a random individual constraint for a doorway
+DungeonLevelBuilder::MoveConstraints DungeonLevelBuilder::getRandomOriginConstraint(){}
+DungeonLevelBuilder::MoveConstraints DungeonLevelBuilder::getRandomDestConstraint(){}

@@ -176,7 +176,7 @@ Room::Direction BasicDungeonLevelBuilder::opposite(Direction direction){
         return Direction::West;
         break;
     case Direction::West:
-        return Direction::West;
+        return Direction::East;
         break;
     }
 }
@@ -254,8 +254,35 @@ void BasicDungeonLevelBuilder::connectDoors(std::shared_ptr<Room> origin, std::s
     destinationDoorway=std::dynamic_pointer_cast<Doorway>(destination->edgeAt(opposite(direction)));
     // sets opposite edges to ea other
     originDoorway->connect(destinationDoorway.get());
-    destinationDoorway->connect(originDoorway.get());
+//    destinationDoorway->connect(originDoorway.get());
 
+}
+
+DBL::MoveConstraints BasicDungeonLevelBuilder::getRandomOriginConstraint(){
+    int rand=getRandomInt(1,100);
+    // 40% chance to set it as an open doorway
+    if(rand<=40){
+        return MoveConstraints::None;
+    }
+    // 30% chance its locked (70%-40%=30%)
+    else if(rand<=70){
+        return MoveConstraints::OriginLocked;
+    }else{
+        // and the remainin 30% impassable
+        return MoveConstraints::OriginImpassable;
+    }
+}
+
+DBL::MoveConstraints BasicDungeonLevelBuilder::getRandomDestConstraint(){
+    int rand=getRandomInt(1,100);
+    // 40% chance to set it as an open doorway
+    if(rand<=40){
+        return MoveConstraints::None;
+    }else if(rand<=70){
+        return MoveConstraints::DestinationLocked;
+    }else{
+        return MoveConstraints::DestinationImpassable;
+    }
 }
 
 bool operator ==(DBL::MoveConstraints constraint1,DBL::MoveConstraints constraint2){

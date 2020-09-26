@@ -56,16 +56,20 @@ public:
     std::shared_ptr<OneWayDoor> createOnewaydoor() const;
     // creates new Blocked Doorwat
     std::shared_ptr<BlockedDoorWay> createBlockedDoorway() const;
+    bool roomHasExit();
+    bool hasEntrance();
 
 private:   
     std::shared_ptr<core::items::Item> _item;
     std::shared_ptr<core::creatures::AbstractCreature> _creature;
     bool _roomExit=false;
+    bool _roomEntrance=false;
 
     char creatureChar();
     char itemChar();
-    bool roomHasExit();
+
     void checkHasExit();
+    void checkHasEntrance();
 
     //concatenators
     std::string firstLastRow(char character);

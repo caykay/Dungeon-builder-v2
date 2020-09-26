@@ -205,6 +205,7 @@ void MenuInterface::setCustomMenu(Menu menu){
 
 void MenuInterface::generateExampleLvl(){
     _display<<"Creating Example Dungeon Level..."<<std::endl;
+    Game::instance().clearLevel();
     Game::instance().createExampleLevel();
     _display<<"Dungeon Level created"<<std::endl;
 }
@@ -244,8 +245,7 @@ void MenuInterface::generateRandomLvl(){
 
     _display<<"Creating "<<dngName<<"..."<<std::endl;
 
-    // TODO check here
-//    Game::releaseInstance();
+    Game::instance().clearLevel();
     Game::instance().setDungeonType('b');
     Game::instance().createRandomLevel(dngName, cols, rows);
     _display<<"Dungeon Level created!"<<std::endl;

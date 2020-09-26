@@ -31,7 +31,7 @@ public:
 
     virtual void setCharacterAt(char direction) override;
 private:
-    void disconnect();
+    void disconnect(Doorway* doorway);
 };
 }
 }

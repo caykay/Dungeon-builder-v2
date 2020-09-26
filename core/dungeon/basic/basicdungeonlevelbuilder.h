@@ -47,6 +47,9 @@ private:
 
     // Takes two door references as parameters and connects them at specified direction
     void connectDoors(std::shared_ptr<Room> origin, std::shared_ptr<Room>destination, Room::Direction direction);
+    // sets a random individual constraint for a doorway
+    DungeonLevelBuilder::MoveConstraints getRandomOriginConstraint() override;
+    DungeonLevelBuilder::MoveConstraints getRandomDestConstraint() override;
 
     friend bool operator ==(DBL::MoveConstraints constraint1,DBL::MoveConstraints constraint2);
 };
