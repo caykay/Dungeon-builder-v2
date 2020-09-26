@@ -14,8 +14,7 @@ protected:
 public:
     Doorway();
     virtual ~Doorway(){
-        // TODO switch back to delete and set nullptr when done debugging
-        delete opposite;
+        // TODO Doorway has no reason to delete another opposite doorway, it should be deleted by Doorway?
         opposite=nullptr;
     };
 
