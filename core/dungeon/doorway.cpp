@@ -6,7 +6,8 @@ Doorway::Doorway()
 
 
 void Doorway::connect(Doorway* opposite){
-
+    // first disconnect this door (as well as the other door's opposite which is this door)
+    // from its current door
     this->disconnect();
 
     if(opposite!=nullptr){
@@ -38,13 +39,14 @@ bool Doorway::isPassage() const{
         return false;
     }
     if (opposite!=nullptr){
+        // returns true if doorway is already connected
         return true;
     }
     return false;
 }
 
 void Doorway::disconnect(){
-//    opposite=nullptr;
+    // if doorway is already connected then disconnect otherwise nothing to disconnect
     if (isPassage()==true){
        opposite->opposite=nullptr;
        this->opposite=nullptr;

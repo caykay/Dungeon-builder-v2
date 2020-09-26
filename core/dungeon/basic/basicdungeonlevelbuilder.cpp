@@ -3,6 +3,7 @@
 #include "rockchamber.h"
 #include "core/game.h"
 #include "core/dungeon/room.h"
+#include "core/dungeon/roomedge.h"
 
 using namespace core::dungeon::basic;
 using Room= core::dungeon::Room;
@@ -56,25 +57,25 @@ void BasicDungeonLevelBuilder::buildDoorway(RoomPtr origin, RoomPtr destination,
 {
     // checks if the constraint has an originlocked bit
     if((constraints&MoveConstraints::OriginLocked)==(MoveConstraints::OriginLocked)){
-         origin->setEdge(origin->createLockedDoorway(), direction);
-        // checks if the constraint has destination locked bit
+        // Sets a locked doorway at the direction in origin room
+        origin->setEdge(origin->createLockedDoorway(), direction);
+        // checks if the constraint has destinationLocked constraint bit
         if((constraints&MoveConstraints::DestinationLocked)==(MoveConstraints::DestinationLocked)){
-            //set origin and destination rooms edges
+            // Sets a locked doorway at the direction in destination room
             destination->setEdge(destination->createLockedDoorway(), opposite(direction));
             connectDoors(origin, destination, direction);
-
         }
         // Checks if the constraint has a Destingation impassable bit
         else if((constraints&MoveConstraints::DestinationImpassable)==(MoveConstraints::DestinationImpassable)){
-            //set origin and destination rooms edges
+            // Sets a oneway doorway at the direction in destination room
             destination->setEdge(destination->createOnewaydoor(), opposite(direction));
             // Connects the doors
             connectDoors(origin, destination, direction);
         }
         // Otherwise the destination door is an Open doorway
         else{
-            //set origin and destination rooms edges
-            destination->setEdge(destination->createOpenDoorway(), opposite(direction));
+            // Sets an open doorway at the direction in destination room
+            destination->setEdge(origin->createOpenDoorway(), opposite(direction));
             // Connects the doors
             connectDoors(origin, destination, direction);
         }
@@ -83,24 +84,24 @@ void BasicDungeonLevelBuilder::buildDoorway(RoomPtr origin, RoomPtr destination,
     else if((constraints&MoveConstraints::OriginImpassable)==(MoveConstraints::OriginImpassable)){
 
         if((constraints&MoveConstraints::DestinationLocked)==(MoveConstraints::DestinationLocked)){
-            //set origin and destination rooms edges
-            origin->setEdge(destination->createOnewaydoor(), opposite(direction));
+            //set origin and destination rooms edges as both locked doorways
+            origin->setEdge(origin->createOnewaydoor(), direction);
             destination->setEdge(destination->createLockedDoorway(), opposite(direction));
 
             // Connects the doors
             connectDoors(origin, destination, direction);
 
         }else if ((constraints&MoveConstraints::DestinationImpassable)==(MoveConstraints::DestinationImpassable)){
-            //set origin and destination rooms edges
-            origin->setEdge(destination->createBlockedDoorway(), opposite(direction));
+            //set origin and destination rooms edges as Blocked doorways
+            origin->setEdge(origin->createBlockedDoorway(), direction);
             destination->setEdge(destination->createBlockedDoorway(), opposite(direction));
 
             // Connects the doors
             connectDoors(origin, destination, direction);
 
         }else{
-            //set origin and destination rooms edges
-            origin->setEdge(destination->createOnewaydoor(), opposite(direction));
+            //Set the origin as impassable (one way door) and the destination as open doorway
+            origin->setEdge(origin->createOnewaydoor(), direction);
             destination->setEdge(destination->createOpenDoorway(), opposite(direction));
 
             // Connects the doors
@@ -110,18 +111,18 @@ void BasicDungeonLevelBuilder::buildDoorway(RoomPtr origin, RoomPtr destination,
     }
     // Otherwise the origin constraint is not set therefore maps open dooorway
     else{
-        // construct OPenDoorWay edge
-       origin->setEdge(destination->createOpenDoorway(), opposite(direction));
+        // construct OPenDoorWay edge on the origin
+        origin->setEdge(origin->createOpenDoorway(), direction);
         // checks if the constraint has destination locked bit
         if((constraints&MoveConstraints::DestinationLocked)==(MoveConstraints::DestinationLocked)){
-            //set origin and destination rooms edges
+            // Sets a locked doorway at the direction in destination room
             destination->setEdge(destination->createLockedDoorway(), opposite(direction));
             // Connects the doors
             connectDoors(origin, destination, direction);
         }
-        // Checks if the constraint has a Destingation impassable bit
+        // Checks if the constraint has a Destination impassable bit
         else if((constraints&MoveConstraints::DestinationImpassable)==(MoveConstraints::DestinationImpassable)){
-            //set origin and destination rooms edges
+            // Sets a one doorway(impassable) at the direction in destination room
             destination->setEdge(destination->createOnewaydoor(), opposite(direction));
 
             // Connects the doors
@@ -129,7 +130,7 @@ void BasicDungeonLevelBuilder::buildDoorway(RoomPtr origin, RoomPtr destination,
          }
         // Otherwise the constraints is a 0 constraint meaning construction of two open doorways
         else{
-            //set origin and destination rooms edges
+            // Sets an open doorway at the direction in destination room
             destination->setEdge(destination->createOpenDoorway(), opposite(direction));
             // Connects the doors
             connectDoors(origin, destination, direction);
@@ -138,15 +139,17 @@ void BasicDungeonLevelBuilder::buildDoorway(RoomPtr origin, RoomPtr destination,
 }
 
 void BasicDungeonLevelBuilder::buildEntrance(RoomPtr room, Room::Direction direction){
-    // the false is for exit and true is for entrance bools
-    std::shared_ptr<DoorWay> entrance = std::make_shared<OpenDoorWay>('i');
-    room->setEdge(entrance, direction);
+    // Sets an open door way at the direction of the room, and specifies a character to
+    // that represents the entrance character
+
+    room->setEdge(room->createOpenDoorway('i'), direction);
 }
 
 void BasicDungeonLevelBuilder::buildExit(RoomPtr room, Room::Direction direction) {
-    // the true is for exit and false is for entrance bools
-    std::shared_ptr<DoorWay> exit = std::make_shared<OpenDoorWay>('x');
-    room->setEdge(exit, direction);
+    // Sets an open door way at the direction of the room, and specifies a character to
+    // that represents the exit character
+
+    room->setEdge(room->createOpenDoorway('x'), direction);
 }
 
 void BasicDungeonLevelBuilder::buildItem (RoomPtr room) {
@@ -243,10 +246,12 @@ std::shared_ptr<core::creatures::AbstractCreature> BasicDungeonLevelBuilder::get
 }
 
 void BasicDungeonLevelBuilder::connectDoors(std::shared_ptr<Room> origin, std::shared_ptr<Room>destination, Room::Direction direction){
+    // variable shared pointers linking to the origin and destination doors to be connected
     std::shared_ptr<DoorWay> originDoorway;
     std::shared_ptr<DoorWay> destinationDoorway;
+    // definition of the above declared pointers
     originDoorway=std::dynamic_pointer_cast<Doorway>(origin->edgeAt(direction));
-    destinationDoorway=std::dynamic_pointer_cast<Doorway>(destination->edgeAt(direction));
+    destinationDoorway=std::dynamic_pointer_cast<Doorway>(destination->edgeAt(opposite(direction)));
     // sets opposite edges to ea other
     originDoorway->connect(destinationDoorway.get());
     destinationDoorway->connect(originDoorway.get());

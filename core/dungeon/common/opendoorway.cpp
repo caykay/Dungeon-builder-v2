@@ -10,10 +10,12 @@ OpenDoorWay::OpenDoorWay(char state){
     // entrance
     case 'i':
         entrance=true;
+        character='I';
         break;
     // exit
     case 'x':
         exit=true;
+        character='0';
         break;
     }
 }
@@ -31,15 +33,19 @@ bool OpenDoorWay::isPassage() const{
 }
 
 std::string OpenDoorWay::description() const{
-    return "is an Opendoor Doorway";
+    // check if doorway is an entrance door
+    if(character=='I'){
+        // display entrance message
+        return "is an entrance door to the room and the dungeon and not";
+    }
+    // check if doorway is an exit door
+    else if(character=='0'){
+        return "is an exit door from the room and the dungeon and not";
+    }else {
+        return "is an Opendoor Doorway";
+    }
 }
 char OpenDoorWay::displayCharacter() const{
-    if(isExit()==true&&isEntrance()==false){
-        return '0';
-    }else if(isEntrance()==true&&isExit()==false){
-        return 'I';
-    }
-
     return character;
 }
 

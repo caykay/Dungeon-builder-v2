@@ -18,6 +18,14 @@ int Room::id(){
 }
 
 void Room::setEdge(RoomEdgePtr edge, Direction direction){
+    // check if the door is an entrance or exit
+    if(std::dynamic_pointer_cast<OpenDoorWay>(edge)){
+        if(std::dynamic_pointer_cast<OpenDoorWay>(edge)->isExit()||
+                std::dynamic_pointer_cast<OpenDoorWay>(edge)->isEntrance()){
+            edges[direction]= edge;
+            return;
+        }
+    }
     switch (direction) {
     case Direction::North:
         edge->setCharacterAt('n');
@@ -36,6 +44,7 @@ void Room::setEdge(RoomEdgePtr edge, Direction direction){
 }
 
 RoomEdgePtr Room::edgeAt(Direction direction){
+
     return edges[direction];
 }
 
@@ -199,7 +208,7 @@ std::shared_ptr<OpenDoorWay> Room::createOpenDoorway(char type) const{
         break;
     default:
         // DO nothing
-        return nullptr;
+        return nullptr; //not expected to happen
         break;
     }
 }
