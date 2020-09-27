@@ -15,6 +15,7 @@ double Game::randomDouble() {
 void Game::setDungeonType(char type){
     switch (tolower(type)) {
     case 'b':
+
         // set dungeon type to basicDungeon level builder
         setDungeonType(new BasicDLB());
         break;
@@ -26,6 +27,8 @@ void Game::setDungeonType(char type){
 }
 
 void Game::setDungeonType(DLB* builder){
+    // clears the previous builder
+    clearBuilder();
     this->builder=builder;
 }
 void Game::createExampleLevel(){
@@ -82,6 +85,13 @@ void Game::clearLevel(){
     if(level!=nullptr){
         level =nullptr;
         delete level;
+    }
+}
+
+void Game::clearBuilder(){
+    if(builder!=nullptr){
+        builder =nullptr;
+        delete builder;
     }
 }
 

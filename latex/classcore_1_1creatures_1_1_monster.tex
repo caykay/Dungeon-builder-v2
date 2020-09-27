@@ -1,0 +1,91 @@
+\hypertarget{classcore_1_1creatures_1_1_monster}{}\doxysection{core\+::creatures\+::Monster Class Reference}
+\label{classcore_1_1creatures_1_1_monster}\index{core::creatures::Monster@{core::creatures::Monster}}
+
+
+The \mbox{\hyperlink{classcore_1_1creatures_1_1_monster}{Monster}} class.  
+
+
+
+
+{\ttfamily \#include $<$monster.\+h$>$}
+
+Inheritance diagram for core\+::creatures\+::Monster\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcore_1_1creatures_1_1_monster}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1creatures_1_1_monster_a3dfc253fbec8331d42ac13c20bf9425f}{Monster}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcore_1_1creatures_1_1_monster}{Monster}} Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcore_1_1creatures_1_1_monster_a55635831c24bc1e806cade05f8801f91}{Monster}} (const std\+::string \&\mbox{\hyperlink{classcore_1_1creatures_1_1_abstract_creature_ad2428b235ed7b97e67a58de86e0d3a59}{name}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcore_1_1creatures_1_1_monster}{Monster}} Constructor assigning name to monster. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1creatures_1_1_abstract_creature}{Abstract\+Creature}} $>$ \mbox{\hyperlink{classcore_1_1creatures_1_1_monster_a4f74010c2d30dc004234fa49267a87d4}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em clone Allows concrete creature types to clone themselves \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcore_1_1creatures_1_1_monster}{Monster}} class. 
+
+Concrete creature that may exist to haunt you in a dungeon room.
+
+\begin{DoxyAuthor}{Author}
+Cassian Kahema 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcore_1_1creatures_1_1_monster_a3dfc253fbec8331d42ac13c20bf9425f}\label{classcore_1_1creatures_1_1_monster_a3dfc253fbec8331d42ac13c20bf9425f}} 
+\index{core::creatures::Monster@{core::creatures::Monster}!Monster@{Monster}}
+\index{Monster@{Monster}!core::creatures::Monster@{core::creatures::Monster}}
+\doxysubsubsection{\texorpdfstring{Monster()}{Monster()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Monster\+::\+Monster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classcore_1_1creatures_1_1_monster}{Monster}} Default Constructor. 
+
+\mbox{\Hypertarget{classcore_1_1creatures_1_1_monster_a55635831c24bc1e806cade05f8801f91}\label{classcore_1_1creatures_1_1_monster_a55635831c24bc1e806cade05f8801f91}} 
+\index{core::creatures::Monster@{core::creatures::Monster}!Monster@{Monster}}
+\index{Monster@{Monster}!core::creatures::Monster@{core::creatures::Monster}}
+\doxysubsubsection{\texorpdfstring{Monster()}{Monster()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Monster\+::\+Monster (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classcore_1_1creatures_1_1_monster}{Monster}} Constructor assigning name to monster. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the monster \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcore_1_1creatures_1_1_monster_a4f74010c2d30dc004234fa49267a87d4}\label{classcore_1_1creatures_1_1_monster_a4f74010c2d30dc004234fa49267a87d4}} 
+\index{core::creatures::Monster@{core::creatures::Monster}!clone@{clone}}
+\index{clone@{clone}!core::creatures::Monster@{core::creatures::Monster}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1creatures_1_1_abstract_creature}{Abstract\+Creature}} $>$ Monster\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+clone Allows concrete creature types to clone themselves 
+
+\begin{DoxyReturn}{Returns}
+A cloned copy of a creature 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcore_1_1creatures_1_1_abstract_creature_a0874e655b69e8c79e896972ff6e9a996}{core\+::creatures\+::\+Abstract\+Creature}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{monster_8h}{monster.\+h}}\item 
+\mbox{\hyperlink{monster_8cpp}{monster.\+cpp}}\end{DoxyCompactItemize}

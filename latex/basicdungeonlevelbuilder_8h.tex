@@ -1,0 +1,74 @@
+\hypertarget{basicdungeonlevelbuilder_8h}{}\doxysection{basicdungeonlevelbuilder.\+h File Reference}
+\label{basicdungeonlevelbuilder_8h}\index{basicdungeonlevelbuilder.h@{basicdungeonlevelbuilder.h}}
+{\ttfamily \#include \char`\"{}dungeonlevelbuilder.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}basicdungeonlevel.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}doorway.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder}{core\+::dungeon\+::basic\+::\+Basic\+Dungeon\+Level\+Builder}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder}{Basic\+Dungeon\+Level\+Builder}} class A concrete builder that inherits the \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder}{Dungeon\+Level\+Builder}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecore}{core}}
+\item 
+ \mbox{\hyperlink{namespacecore_1_1dungeon}{core\+::dungeon}}
+\item 
+ \mbox{\hyperlink{namespacecore_1_1dungeon_1_1basic}{core\+::dungeon\+::basic}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacecore_1_1dungeon_1_1basic_ad74c1953dfdbf2de465a00524302d621}{core\+::dungeon\+::basic\+::\+D\+BL}} = \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{core\+::dungeon\+::\+Dungeon\+Level\+Builder\+::\+Move\+Constraints}} \mbox{\hyperlink{basicdungeonlevelbuilder_8h_a6367ae3eabc3698d16844b415c8eec13}{operator$\vert$}} (\mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{core\+::dungeon\+::\+Dungeon\+Level\+Builder\+::\+Move\+Constraints}} constraint1, \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{core\+::dungeon\+::\+Dungeon\+Level\+Builder\+::\+Move\+Constraints}} constraint2)
+\begin{DoxyCompactList}\small\item\em operator $\vert$ Overrides the bitwise OR operator to be able to perform bitwise operation on two Move\+Constraints enums \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{core\+::dungeon\+::\+Dungeon\+Level\+Builder\+::\+Move\+Constraints}} \mbox{\hyperlink{basicdungeonlevelbuilder_8h_ac175b8fff50e2d804f78d9ab05975d00}{operator\&}} (\mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{core\+::dungeon\+::\+Dungeon\+Level\+Builder\+::\+Move\+Constraints}} constraint1, \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{core\+::dungeon\+::\+Dungeon\+Level\+Builder\+::\+Move\+Constraints}} constraint2)
+\begin{DoxyCompactList}\small\item\em operator \& Overrides the bitwise A\+ND operator to be able to perform bitwise operation on two Move\+Constraints enums \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{basicdungeonlevelbuilder_8h_ac175b8fff50e2d804f78d9ab05975d00}\label{basicdungeonlevelbuilder_8h_ac175b8fff50e2d804f78d9ab05975d00}} 
+\index{basicdungeonlevelbuilder.h@{basicdungeonlevelbuilder.h}!operator\&@{operator\&}}
+\index{operator\&@{operator\&}!basicdungeonlevelbuilder.h@{basicdungeonlevelbuilder.h}}
+\doxysubsubsection{\texorpdfstring{operator\&()}{operator\&()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{core\+::dungeon\+::\+Dungeon\+Level\+Builder\+::\+Move\+Constraints}} operator\& (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{core\+::dungeon\+::\+Dungeon\+Level\+Builder\+::\+Move\+Constraints}}}]{constraint1,  }\item[{\mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{core\+::dungeon\+::\+Dungeon\+Level\+Builder\+::\+Move\+Constraints}}}]{constraint2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator \& Overrides the bitwise A\+ND operator to be able to perform bitwise operation on two Move\+Constraints enums 
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraint1} & One of the constraints \\
+\hline
+{\em constraint2} & The other constraint \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A result of the bitwise A\+ND between constraint1 and constraint2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{basicdungeonlevelbuilder_8h_a6367ae3eabc3698d16844b415c8eec13}\label{basicdungeonlevelbuilder_8h_a6367ae3eabc3698d16844b415c8eec13}} 
+\index{basicdungeonlevelbuilder.h@{basicdungeonlevelbuilder.h}!operator\texttt{"|}@{operator\texttt{"|}}}
+\index{operator\texttt{"|}@{operator\texttt{"|}}!basicdungeonlevelbuilder.h@{basicdungeonlevelbuilder.h}}
+\doxysubsubsection{\texorpdfstring{operator\texttt{"|}()}{operator|()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{core\+::dungeon\+::\+Dungeon\+Level\+Builder\+::\+Move\+Constraints}} operator$\vert$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{core\+::dungeon\+::\+Dungeon\+Level\+Builder\+::\+Move\+Constraints}}}]{constraint1,  }\item[{\mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{core\+::dungeon\+::\+Dungeon\+Level\+Builder\+::\+Move\+Constraints}}}]{constraint2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator $\vert$ Overrides the bitwise OR operator to be able to perform bitwise operation on two Move\+Constraints enums 
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraint1} & One of the constraints \\
+\hline
+{\em constraint2} & The other constraint \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A result of the bitwise OR between constraint1 and constraint2 
+\end{DoxyReturn}

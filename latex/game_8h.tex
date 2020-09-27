@@ -1,0 +1,40 @@
+\hypertarget{game_8h}{}\doxysection{game.\+h File Reference}
+\label{game_8h}\index{game.h@{game.h}}
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}dungeonlevelbuilder.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dungeonlevel.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}consumeable.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}weapon.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}item.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcore_1_1_game}{core\+::\+Game}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classcore_1_1_game}{Game}} class This class employs the singleton pattern, meaning there can only be one of its instance at a time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecore}{core}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacecore_a73d9939fc29e161a37c182695c88f190}{core\+::\+D\+LB}} = \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}
+\begin{DoxyCompactList}\small\item\em using definitions for simplification of having to write full namespaces and class names \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacecore_a35be29f8ba0884c64aba244222e465f3}{core\+::\+Room}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{core\+::dungeon\+::\+Room}} $>$
+\item 
+using \mbox{\hyperlink{namespacecore_afef90c358ebc709d1de1612b3976117e}{core\+::\+Direction}} = core\+::dungeon\+::\+Room\+::\+Direction
+\item 
+using \mbox{\hyperlink{namespacecore_a50f326cef59420b30c6e4c8d9eb17916}{core\+::\+Move\+Constraints}} = D\+L\+B\+::\+Move\+Constraints
+\item 
+using \mbox{\hyperlink{namespacecore_aecf01a8751e370e31769b1b5a95d71d9}{core\+::\+DL}} = \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level}{core\+::dungeon\+::\+Dungeon\+Level}}
+\item 
+using \mbox{\hyperlink{namespacecore_a35ecf752be17859feb5649952d5cfa47}{core\+::\+Item}} = \mbox{\hyperlink{classcore_1_1items_1_1_item}{core\+::items\+::\+Item}}
+\item 
+using \mbox{\hyperlink{namespacecore_ab706844831e79113bf3cfe4df8a4a935}{core\+::\+Consumable}} = \mbox{\hyperlink{classcore_1_1items_1_1_consumeable}{core\+::items\+::\+Consumeable}}
+\item 
+using \mbox{\hyperlink{namespacecore_a7bdf58507a6ba22c727545c3c6b8f54d}{core\+::\+Weapon}} = \mbox{\hyperlink{classcore_1_1items_1_1_weapon}{core\+::items\+::\+Weapon}}
+\end{DoxyCompactItemize}

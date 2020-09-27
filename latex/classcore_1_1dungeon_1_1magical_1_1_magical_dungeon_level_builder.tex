@@ -1,0 +1,208 @@
+\hypertarget{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder}{}\doxysection{core\+::dungeon\+::magical\+::Magical\+Dungeon\+Level\+Builder Class Reference}
+\label{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder}\index{core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}}
+
+
+{\ttfamily \#include $<$magicaldungeonlevelbuilder.\+h$>$}
+
+Inheritance diagram for core\+::dungeon\+::magical\+::Magical\+Dungeon\+Level\+Builder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_a3c3dc8984f40af69efdb2f84da82fce9}{Magical\+Dungeon\+Level\+Builder}} ()
+\item 
+\mbox{\hyperlink{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_a2e069affbafb1fc3dc15ecb18ebf02cb}{$\sim$\+Magical\+Dungeon\+Level\+Builder}} ()
+\item 
+void \mbox{\hyperlink{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_a11c8089704f0ee35e51e752565d47e17}{build\+Dungeon\+Level}} (const std\+::string \&name, int width, int height) override
+\begin{DoxyCompactList}\small\item\em build\+Dungeon\+Level Creates a new Dungeon Level (product) with a name, and specified size \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$ \mbox{\hyperlink{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_a959d0c2348e005608cede9b2b768b57b}{build\+Room}} (int id) override
+\begin{DoxyCompactList}\small\item\em build\+Room Uses the given id parameter to create a room with that id number as an identification of it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_a40cae929d53ca8184be0cc11262ef6e6}{build\+Doorway}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$ origin, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$destination, \mbox{\hyperlink{classcore_1_1dungeon_1_1_room_a2f8757a1b941610050ef39112ea7adda}{Room\+::\+Direction}} direction, \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{Move\+Constraints}} constraints) override
+\begin{DoxyCompactList}\small\item\em build\+Doorway Builds a passage between two rooms under specified constraints at a certain direction of the source/origin room which is the opposite direction of the destination room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_aa4fcd5f3eac21873b21a6ae02bde9358}{build\+Entrance}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$ room, \mbox{\hyperlink{classcore_1_1dungeon_1_1_room_a2f8757a1b941610050ef39112ea7adda}{Room\+::\+Direction}} direction) override
+\begin{DoxyCompactList}\small\item\em build\+Entrance Builds an entrance doorway at the specified room on the specified direction \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_a2640207961786dc9ac444831972a75b1}{build\+Exit}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$ room, \mbox{\hyperlink{classcore_1_1dungeon_1_1_room_a2f8757a1b941610050ef39112ea7adda}{Room\+::\+Direction}} direction) override
+\begin{DoxyCompactList}\small\item\em build\+Exit Builds an exit doorway at the specified room on the specified direction \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_aea918d03e09e2ce8d179a904ab0ef09b}{build\+Item}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$ room) override
+\begin{DoxyCompactList}\small\item\em build\+Item Builds an item (which was selected at random) by cloning it then adding it to the specified room \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_aea8cc1e606c76d71b6dd3abff701a4de}{build\+Creature}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$ room) override
+\begin{DoxyCompactList}\small\item\em build\+Creature Builds a creature (which was selected at random) by cloning it then adding it to the specified room \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_a3c3dc8984f40af69efdb2f84da82fce9}\label{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_a3c3dc8984f40af69efdb2f84da82fce9}} 
+\index{core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}!MagicalDungeonLevelBuilder@{MagicalDungeonLevelBuilder}}
+\index{MagicalDungeonLevelBuilder@{MagicalDungeonLevelBuilder}!core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{MagicalDungeonLevelBuilder()}{MagicalDungeonLevelBuilder()}}
+{\footnotesize\ttfamily Magical\+Dungeon\+Level\+Builder\+::\+Magical\+Dungeon\+Level\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_a2e069affbafb1fc3dc15ecb18ebf02cb}\label{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_a2e069affbafb1fc3dc15ecb18ebf02cb}} 
+\index{core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}!````~MagicalDungeonLevelBuilder@{$\sim$MagicalDungeonLevelBuilder}}
+\index{````~MagicalDungeonLevelBuilder@{$\sim$MagicalDungeonLevelBuilder}!core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{$\sim$MagicalDungeonLevelBuilder()}{~MagicalDungeonLevelBuilder()}}
+{\footnotesize\ttfamily core\+::dungeon\+::magical\+::\+Magical\+Dungeon\+Level\+Builder\+::$\sim$\+Magical\+Dungeon\+Level\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_aea8cc1e606c76d71b6dd3abff701a4de}\label{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_aea8cc1e606c76d71b6dd3abff701a4de}} 
+\index{core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}!buildCreature@{buildCreature}}
+\index{buildCreature@{buildCreature}!core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{buildCreature()}{buildCreature()}}
+{\footnotesize\ttfamily void Magical\+Dungeon\+Level\+Builder\+::build\+Creature (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$}]{room }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+build\+Creature Builds a creature (which was selected at random) by cloning it then adding it to the specified room 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} to which the creature is added \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_ab891751de1636d51e89569303bf566b1}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_a40cae929d53ca8184be0cc11262ef6e6}\label{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_a40cae929d53ca8184be0cc11262ef6e6}} 
+\index{core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}!buildDoorway@{buildDoorway}}
+\index{buildDoorway@{buildDoorway}!core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{buildDoorway()}{buildDoorway()}}
+{\footnotesize\ttfamily void Magical\+Dungeon\+Level\+Builder\+::build\+Doorway (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$}]{origin,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$}]{destination,  }\item[{\mbox{\hyperlink{classcore_1_1dungeon_1_1_room_a2f8757a1b941610050ef39112ea7adda}{Room\+::\+Direction}}}]{direction,  }\item[{\mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{Move\+Constraints}}}]{constraints }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+build\+Doorway Builds a passage between two rooms under specified constraints at a certain direction of the source/origin room which is the opposite direction of the destination room. 
+
+The constraint parameter is bitmask to identify bits that represents individual constraint for a doorway type. 
+\begin{DoxyParams}{Parameters}
+{\em origin} & Source room or the room at current location \\
+\hline
+{\em destination} & \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} opposite to the current room. The intended destination \\
+\hline
+{\em direction} & Direction to which the connection is to be made in origin \\
+\hline
+{\em constraints} & Specifies the condition to which the rooms should be built \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_abaf8946eb2a3b81ad50a3c8270088997}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_a11c8089704f0ee35e51e752565d47e17}\label{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_a11c8089704f0ee35e51e752565d47e17}} 
+\index{core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}!buildDungeonLevel@{buildDungeonLevel}}
+\index{buildDungeonLevel@{buildDungeonLevel}!core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{buildDungeonLevel()}{buildDungeonLevel()}}
+{\footnotesize\ttfamily void Magical\+Dungeon\+Level\+Builder\+::build\+Dungeon\+Level (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+build\+Dungeon\+Level Creates a new Dungeon Level (product) with a name, and specified size 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the dungeon level \\
+\hline
+{\em width} & Number of columns in dungeon level \\
+\hline
+{\em height} & Number of rows in dungeon level \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a6c3acd3f202f9f73a3240d2310f86774}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_aa4fcd5f3eac21873b21a6ae02bde9358}\label{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_aa4fcd5f3eac21873b21a6ae02bde9358}} 
+\index{core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}!buildEntrance@{buildEntrance}}
+\index{buildEntrance@{buildEntrance}!core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{buildEntrance()}{buildEntrance()}}
+{\footnotesize\ttfamily void Magical\+Dungeon\+Level\+Builder\+::build\+Entrance (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$}]{room,  }\item[{\mbox{\hyperlink{classcore_1_1dungeon_1_1_room_a2f8757a1b941610050ef39112ea7adda}{Room\+::\+Direction}}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+build\+Entrance Builds an entrance doorway at the specified room on the specified direction 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} to which an entrance is to be set \\
+\hline
+{\em direction} & Direction of the entrance \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a29bacfa086a38d4c97e69869f63ef4f6}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_a2640207961786dc9ac444831972a75b1}\label{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_a2640207961786dc9ac444831972a75b1}} 
+\index{core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}!buildExit@{buildExit}}
+\index{buildExit@{buildExit}!core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{buildExit()}{buildExit()}}
+{\footnotesize\ttfamily void Magical\+Dungeon\+Level\+Builder\+::build\+Exit (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$}]{room,  }\item[{\mbox{\hyperlink{classcore_1_1dungeon_1_1_room_a2f8757a1b941610050ef39112ea7adda}{Room\+::\+Direction}}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+build\+Exit Builds an exit doorway at the specified room on the specified direction 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} to which an exit is to be set \\
+\hline
+{\em direction} & Direction of the exit \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9576c6942368c79c60820dd393249794}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_aea918d03e09e2ce8d179a904ab0ef09b}\label{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_aea918d03e09e2ce8d179a904ab0ef09b}} 
+\index{core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}!buildItem@{buildItem}}
+\index{buildItem@{buildItem}!core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{buildItem()}{buildItem()}}
+{\footnotesize\ttfamily void Magical\+Dungeon\+Level\+Builder\+::build\+Item (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$}]{room }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+build\+Item Builds an item (which was selected at random) by cloning it then adding it to the specified room 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} to which the item is added \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a6485fff2bf4c540664022ea97c37cede}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_a959d0c2348e005608cede9b2b768b57b}\label{classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder_a959d0c2348e005608cede9b2b768b57b}} 
+\index{core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}!buildRoom@{buildRoom}}
+\index{buildRoom@{buildRoom}!core::dungeon::magical::MagicalDungeonLevelBuilder@{core::dungeon::magical::MagicalDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{buildRoom()}{buildRoom()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{basicdungeonlevelbuilder_8cpp_ad69d497ee3a2fbf6b9d2f5e4661549b1}{Room\+Ptr}} Magical\+Dungeon\+Level\+Builder\+::build\+Room (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+build\+Room Uses the given id parameter to create a room with that id number as an identification of it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Unique identifier of a room \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared\+\_\+ptr reference of a room 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_abc324a2acd0a53a3899a9d8ab140f4b1}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{magicaldungeonlevelbuilder_8h}{magicaldungeonlevelbuilder.\+h}}\item 
+\mbox{\hyperlink{magicaldungeonlevelbuilder_8cpp}{magicaldungeonlevelbuilder.\+cpp}}\end{DoxyCompactItemize}

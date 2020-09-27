@@ -1,0 +1,161 @@
+\hypertarget{classcore_1_1dungeon_1_1_wall}{}\doxysection{core\+::dungeon\+::Wall Class Reference}
+\label{classcore_1_1dungeon_1_1_wall}\index{core::dungeon::Wall@{core::dungeon::Wall}}
+
+
+The \mbox{\hyperlink{classcore_1_1dungeon_1_1_wall}{Wall}} class.  
+
+
+
+
+{\ttfamily \#include $<$wall.\+h$>$}
+
+Inheritance diagram for core\+::dungeon\+::Wall\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcore_1_1dungeon_1_1_wall}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1dungeon_1_1_wall_a12dc41bc7bc045c55ec1034a43e52043}{Wall}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcore_1_1dungeon_1_1_wall}{Wall}} Default Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classcore_1_1dungeon_1_1_wall_a8271d2d19d1eabe861df299047d827bf}{$\sim$\+Wall}} ()
+\begin{DoxyCompactList}\small\item\em $\sim$\+Wall Virtual Constructor \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classcore_1_1dungeon_1_1_wall_a04d2cb6144ba482daf425d0f385408d5}{description}} () const override
+\begin{DoxyCompactList}\small\item\em description Provides the description of the type of room edge \end{DoxyCompactList}\item 
+virtual char \mbox{\hyperlink{classcore_1_1dungeon_1_1_wall_a68a65436690bfc7761732e12d5d489d2}{display\+Character}} () const override
+\begin{DoxyCompactList}\small\item\em display\+Character Displays the character representation of the room edge \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classcore_1_1dungeon_1_1_wall_a6d54001163d03d45cfb433838e4fd8ee}{is\+Passage}} () const override
+\begin{DoxyCompactList}\small\item\em is\+Passage Returns a boolean state of whether the room edge is a valid passage leading to another room \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcore_1_1dungeon_1_1_wall_accb85b50542afd5507ffe8aaf414d9b4}{set\+Character\+At}} (char direction) override=0
+\begin{DoxyCompactList}\small\item\em set\+Character\+At In special cases where a room edge has may be represented by a different character depending on its direction in the room, then this method is used to identify the location where the room edge will be set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcore_1_1dungeon_1_1_wall}{Wall}} class. 
+
+This class is a specific type of a room edge. Its a wall which means by default it has no passage to another room to start with.
+
+\begin{DoxyAuthor}{Author}
+Cassian Kahema 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1_wall_a12dc41bc7bc045c55ec1034a43e52043}\label{classcore_1_1dungeon_1_1_wall_a12dc41bc7bc045c55ec1034a43e52043}} 
+\index{core::dungeon::Wall@{core::dungeon::Wall}!Wall@{Wall}}
+\index{Wall@{Wall}!core::dungeon::Wall@{core::dungeon::Wall}}
+\doxysubsubsection{\texorpdfstring{Wall()}{Wall()}}
+{\footnotesize\ttfamily Wall\+::\+Wall (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classcore_1_1dungeon_1_1_wall}{Wall}} Default Constructor. 
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1_wall_a8271d2d19d1eabe861df299047d827bf}\label{classcore_1_1dungeon_1_1_wall_a8271d2d19d1eabe861df299047d827bf}} 
+\index{core::dungeon::Wall@{core::dungeon::Wall}!````~Wall@{$\sim$Wall}}
+\index{````~Wall@{$\sim$Wall}!core::dungeon::Wall@{core::dungeon::Wall}}
+\doxysubsubsection{\texorpdfstring{$\sim$Wall()}{~Wall()}}
+{\footnotesize\ttfamily virtual core\+::dungeon\+::\+Wall\+::$\sim$\+Wall (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+$\sim$\+Wall Virtual Constructor 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1_wall_a04d2cb6144ba482daf425d0f385408d5}\label{classcore_1_1dungeon_1_1_wall_a04d2cb6144ba482daf425d0f385408d5}} 
+\index{core::dungeon::Wall@{core::dungeon::Wall}!description@{description}}
+\index{description@{description}!core::dungeon::Wall@{core::dungeon::Wall}}
+\doxysubsubsection{\texorpdfstring{description()}{description()}}
+{\footnotesize\ttfamily std\+::string Wall\+::description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+description Provides the description of the type of room edge 
+
+\begin{DoxyReturn}{Returns}
+String description of the room properties 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcore_1_1dungeon_1_1_room_edge_ad2a9494a0383e0578b48b77d20f1b475}{core\+::dungeon\+::\+Room\+Edge}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_rock_wall_a805b4d99763b7b5e4c6f0f7b5cda7490}{core\+::dungeon\+::basic\+::\+Rock\+Wall}}, and \mbox{\hyperlink{classcore_1_1dungeon_1_1magical_1_1_magic_wall_a3a979b06a1411ce3346c8eb4b4f3ce2b}{core\+::dungeon\+::magical\+::\+Magic\+Wall}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1_wall_a68a65436690bfc7761732e12d5d489d2}\label{classcore_1_1dungeon_1_1_wall_a68a65436690bfc7761732e12d5d489d2}} 
+\index{core::dungeon::Wall@{core::dungeon::Wall}!displayCharacter@{displayCharacter}}
+\index{displayCharacter@{displayCharacter}!core::dungeon::Wall@{core::dungeon::Wall}}
+\doxysubsubsection{\texorpdfstring{displayCharacter()}{displayCharacter()}}
+{\footnotesize\ttfamily char Wall\+::display\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+display\+Character Displays the character representation of the room edge 
+
+\begin{DoxyReturn}{Returns}
+character representing edge 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcore_1_1dungeon_1_1_room_edge_a27e30dfbfe7a69e27517c54acfd9a037}{core\+::dungeon\+::\+Room\+Edge}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_rock_wall_a83271a117cc530d36183b689e1b7b7c3}{core\+::dungeon\+::basic\+::\+Rock\+Wall}}, and \mbox{\hyperlink{classcore_1_1dungeon_1_1magical_1_1_magic_wall_a630dee09772670a60aa68cc1887605a2}{core\+::dungeon\+::magical\+::\+Magic\+Wall}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1_wall_a6d54001163d03d45cfb433838e4fd8ee}\label{classcore_1_1dungeon_1_1_wall_a6d54001163d03d45cfb433838e4fd8ee}} 
+\index{core::dungeon::Wall@{core::dungeon::Wall}!isPassage@{isPassage}}
+\index{isPassage@{isPassage}!core::dungeon::Wall@{core::dungeon::Wall}}
+\doxysubsubsection{\texorpdfstring{isPassage()}{isPassage()}}
+{\footnotesize\ttfamily bool Wall\+::is\+Passage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+is\+Passage Returns a boolean state of whether the room edge is a valid passage leading to another room 
+
+\begin{DoxyReturn}{Returns}
+True if room is passage, False otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcore_1_1dungeon_1_1_room_edge_aaeee71d51077cfc135a9b719b99a19d2}{core\+::dungeon\+::\+Room\+Edge}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_rock_wall_a302ac3fef87ea1d74e449fb14a3043ea}{core\+::dungeon\+::basic\+::\+Rock\+Wall}}, and \mbox{\hyperlink{classcore_1_1dungeon_1_1magical_1_1_magic_wall_af7fb785bf8534621e86a87a77517f773}{core\+::dungeon\+::magical\+::\+Magic\+Wall}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1_wall_accb85b50542afd5507ffe8aaf414d9b4}\label{classcore_1_1dungeon_1_1_wall_accb85b50542afd5507ffe8aaf414d9b4}} 
+\index{core::dungeon::Wall@{core::dungeon::Wall}!setCharacterAt@{setCharacterAt}}
+\index{setCharacterAt@{setCharacterAt}!core::dungeon::Wall@{core::dungeon::Wall}}
+\doxysubsubsection{\texorpdfstring{setCharacterAt()}{setCharacterAt()}}
+{\footnotesize\ttfamily virtual void core\+::dungeon\+::\+Wall\+::set\+Character\+At (\begin{DoxyParamCaption}\item[{char}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
+
+
+
+set\+Character\+At In special cases where a room edge has may be represented by a different character depending on its direction in the room, then this method is used to identify the location where the room edge will be set. 
+
+\textquotesingle{}n\textquotesingle{} for North \textquotesingle{}s\textquotesingle{} for South \textquotesingle{}e\textquotesingle{} for East and \textquotesingle{}w\textquotesingle{} for West 
+\begin{DoxyParams}{Parameters}
+{\em direction} & character representing the direction of the roomedge \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcore_1_1dungeon_1_1_room_edge_a41ed2537a55a9b37230f91d2122ed2a4}{core\+::dungeon\+::\+Room\+Edge}}.
+
+
+
+Implemented in \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_rock_wall_ae8229881c6abad7b9511ae75bc0b2b20}{core\+::dungeon\+::basic\+::\+Rock\+Wall}}, and \mbox{\hyperlink{classcore_1_1dungeon_1_1magical_1_1_magic_wall_a213f8cd3adc7aa17e68ab7cdca06b98b}{core\+::dungeon\+::magical\+::\+Magic\+Wall}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{wall_8h}{wall.\+h}}\item 
+\mbox{\hyperlink{wall_8cpp}{wall.\+cpp}}\end{DoxyCompactItemize}

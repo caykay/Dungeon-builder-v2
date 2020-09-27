@@ -1,0 +1,128 @@
+\hypertarget{classcore_1_1dungeon_1_1common_1_1_locked_doorway}{}\doxysection{core\+::dungeon\+::common\+::Locked\+Doorway Class Reference}
+\label{classcore_1_1dungeon_1_1common_1_1_locked_doorway}\index{core::dungeon::common::LockedDoorway@{core::dungeon::common::LockedDoorway}}
+
+
+The \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_locked_doorway}{Locked\+Doorway}} class.  
+
+
+
+
+{\ttfamily \#include $<$lockeddoorway.\+h$>$}
+
+Inheritance diagram for core\+::dungeon\+::common\+::Locked\+Doorway\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcore_1_1dungeon_1_1common_1_1_locked_doorway}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_locked_doorway_aa0154f2688f4251439a32b21841bd276}{Locked\+Doorway}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_locked_doorway}{Locked\+Doorway}} Default constructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_locked_doorway_a4aa68c6e65e1cfbdd471a29c3e6344f1}{description}} () const override
+\begin{DoxyCompactList}\small\item\em description Provides the description of the type of room edge \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_locked_doorway_a65adf44f2a968880d1abd3c6403e778e}{display\+Character}} () const override
+\begin{DoxyCompactList}\small\item\em display\+Character Displays the character representation of the room edge \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_locked_doorway_a49f61ed0c337e7ace762e8763aaf0c71}{is\+Passage}} () const override
+\begin{DoxyCompactList}\small\item\em is\+Passage Returns a boolean state of whether the room edge is a valid passage leading to another room \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_locked_doorway_ab64556a655c9c5d331770a2dfbed77d1}{set\+Character\+At}} (char direction) override
+\begin{DoxyCompactList}\small\item\em set\+Character\+At In special cases where a room edge has may be represented by a different character depending on its direction in the room, then this method is used to identify the location where the room edge will be set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_locked_doorway}{Locked\+Doorway}} class. 
+
+Derived class from \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway}{Doorway}}, Its basically a Door that is locked 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1common_1_1_locked_doorway_aa0154f2688f4251439a32b21841bd276}\label{classcore_1_1dungeon_1_1common_1_1_locked_doorway_aa0154f2688f4251439a32b21841bd276}} 
+\index{core::dungeon::common::LockedDoorway@{core::dungeon::common::LockedDoorway}!LockedDoorway@{LockedDoorway}}
+\index{LockedDoorway@{LockedDoorway}!core::dungeon::common::LockedDoorway@{core::dungeon::common::LockedDoorway}}
+\doxysubsubsection{\texorpdfstring{LockedDoorway()}{LockedDoorway()}}
+{\footnotesize\ttfamily Locked\+Doorway\+::\+Locked\+Doorway (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_locked_doorway}{Locked\+Doorway}} Default constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1common_1_1_locked_doorway_a4aa68c6e65e1cfbdd471a29c3e6344f1}\label{classcore_1_1dungeon_1_1common_1_1_locked_doorway_a4aa68c6e65e1cfbdd471a29c3e6344f1}} 
+\index{core::dungeon::common::LockedDoorway@{core::dungeon::common::LockedDoorway}!description@{description}}
+\index{description@{description}!core::dungeon::common::LockedDoorway@{core::dungeon::common::LockedDoorway}}
+\doxysubsubsection{\texorpdfstring{description()}{description()}}
+{\footnotesize\ttfamily std\+::string Locked\+Doorway\+::description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+description Provides the description of the type of room edge 
+
+\begin{DoxyReturn}{Returns}
+String description of the room properties 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_a5604c97b735ad559e7316bc7854454b7}{core\+::dungeon\+::\+Doorway}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1common_1_1_locked_doorway_a65adf44f2a968880d1abd3c6403e778e}\label{classcore_1_1dungeon_1_1common_1_1_locked_doorway_a65adf44f2a968880d1abd3c6403e778e}} 
+\index{core::dungeon::common::LockedDoorway@{core::dungeon::common::LockedDoorway}!displayCharacter@{displayCharacter}}
+\index{displayCharacter@{displayCharacter}!core::dungeon::common::LockedDoorway@{core::dungeon::common::LockedDoorway}}
+\doxysubsubsection{\texorpdfstring{displayCharacter()}{displayCharacter()}}
+{\footnotesize\ttfamily char Locked\+Doorway\+::display\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+display\+Character Displays the character representation of the room edge 
+
+\begin{DoxyReturn}{Returns}
+character representing edge 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_aed3dcb33bbf56b93b5287f72d8ac3690}{core\+::dungeon\+::\+Doorway}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1common_1_1_locked_doorway_a49f61ed0c337e7ace762e8763aaf0c71}\label{classcore_1_1dungeon_1_1common_1_1_locked_doorway_a49f61ed0c337e7ace762e8763aaf0c71}} 
+\index{core::dungeon::common::LockedDoorway@{core::dungeon::common::LockedDoorway}!isPassage@{isPassage}}
+\index{isPassage@{isPassage}!core::dungeon::common::LockedDoorway@{core::dungeon::common::LockedDoorway}}
+\doxysubsubsection{\texorpdfstring{isPassage()}{isPassage()}}
+{\footnotesize\ttfamily bool Locked\+Doorway\+::is\+Passage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+is\+Passage Returns a boolean state of whether the room edge is a valid passage leading to another room 
+
+\begin{DoxyReturn}{Returns}
+True if room is passage, False otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_a400e400b13d5d305407152728c935c4f}{core\+::dungeon\+::\+Doorway}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1common_1_1_locked_doorway_ab64556a655c9c5d331770a2dfbed77d1}\label{classcore_1_1dungeon_1_1common_1_1_locked_doorway_ab64556a655c9c5d331770a2dfbed77d1}} 
+\index{core::dungeon::common::LockedDoorway@{core::dungeon::common::LockedDoorway}!setCharacterAt@{setCharacterAt}}
+\index{setCharacterAt@{setCharacterAt}!core::dungeon::common::LockedDoorway@{core::dungeon::common::LockedDoorway}}
+\doxysubsubsection{\texorpdfstring{setCharacterAt()}{setCharacterAt()}}
+{\footnotesize\ttfamily void Locked\+Doorway\+::set\+Character\+At (\begin{DoxyParamCaption}\item[{char}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+set\+Character\+At In special cases where a room edge has may be represented by a different character depending on its direction in the room, then this method is used to identify the location where the room edge will be set. 
+
+\textquotesingle{}n\textquotesingle{} for North \textquotesingle{}s\textquotesingle{} for South \textquotesingle{}e\textquotesingle{} for East and \textquotesingle{}w\textquotesingle{} for West 
+\begin{DoxyParams}{Parameters}
+{\em direction} & character representing the direction of the roomedge \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_ac5473f1405f3ccd6fbc49ab9cc30da5d}{core\+::dungeon\+::\+Doorway}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{lockeddoorway_8h}{lockeddoorway.\+h}}\item 
+\mbox{\hyperlink{lockeddoorway_8cpp}{lockeddoorway.\+cpp}}\end{DoxyCompactItemize}

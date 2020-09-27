@@ -1,0 +1,311 @@
+\hypertarget{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder}{}\doxysection{core\+::dungeon\+::basic\+::Basic\+Dungeon\+Level\+Builder Class Reference}
+\label{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder}\index{core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}}
+
+
+The \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder}{Basic\+Dungeon\+Level\+Builder}} class A concrete builder that inherits the \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder}{Dungeon\+Level\+Builder}}.  
+
+
+
+
+{\ttfamily \#include $<$basicdungeonlevelbuilder.\+h$>$}
+
+Inheritance diagram for core\+::dungeon\+::basic\+::Basic\+Dungeon\+Level\+Builder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_a3d18f74bccecfd989abd2a88ec024eeb}{Basic\+Dungeon\+Level\+Builder}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder}{Basic\+Dungeon\+Level\+Builder}} Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_ae356c05740adba46d96e6748484a0ea0}{$\sim$\+Basic\+Dungeon\+Level\+Builder}} ()
+\begin{DoxyCompactList}\small\item\em $\sim$\+Basic\+Dungeon\+Level\+Builder Destructor that does cleanup of the bare pointer level used to construct a basic dungeon level product \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_af48afc19c96197991b542a37203a95e9}{build\+Dungeon\+Level}} (const std\+::string \&name, int width, int height) override
+\begin{DoxyCompactList}\small\item\em build\+Dungeon\+Level Creates a new Dungeon Level (product) with a name, and specified size \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$ \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_aad6918ef2fee20044424d79a2117ab5e}{build\+Room}} (int id) override
+\begin{DoxyCompactList}\small\item\em build\+Room Uses the given id parameter to create a room with that id number as an identification of it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_aeefe773d44aba88a3d1822d5f93a884a}{build\+Doorway}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$ origin, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$destination, \mbox{\hyperlink{classcore_1_1dungeon_1_1_room_a2f8757a1b941610050ef39112ea7adda}{Room\+::\+Direction}} direction, \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{Move\+Constraints}} constraints) override
+\begin{DoxyCompactList}\small\item\em build\+Doorway Builds a passage between two rooms under specified constraints at a certain direction of the source/origin room which is the opposite direction of the destination room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_a4779cd72bcc5be0f62412dabe21169ed}{build\+Entrance}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$ room, \mbox{\hyperlink{classcore_1_1dungeon_1_1_room_a2f8757a1b941610050ef39112ea7adda}{Room\+::\+Direction}} direction) override
+\begin{DoxyCompactList}\small\item\em build\+Entrance Builds an entrance doorway at the specified room on the specified direction \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_a0083d147f6260744d6c5195be9a810ed}{build\+Exit}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$ room, \mbox{\hyperlink{classcore_1_1dungeon_1_1_room_a2f8757a1b941610050ef39112ea7adda}{Room\+::\+Direction}} direction) override
+\begin{DoxyCompactList}\small\item\em build\+Exit Builds an exit doorway at the specified room on the specified direction \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_ada85d4fe82524be6551a4801d65294b5}{build\+Item}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$ room) override
+\begin{DoxyCompactList}\small\item\em build\+Item Builds an item (which was selected at random) by cloning it then adding it to the specified room \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_a9e9ea732cd81d2c5103fba8b1b485d1f}{build\+Creature}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$ room) override
+\begin{DoxyCompactList}\small\item\em build\+Creature Builds a creature (which was selected at random) by cloning it then adding it to the specified room \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level}{Dungeon\+Level}} $\ast$ \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_a8b32645d9b546eeb2ba77246f44eb263}{get\+Dungeon\+Level}} () override
+\begin{DoxyCompactList}\small\item\em get\+Dungeon\+Level Gets the current dungeon level product constructed by the dungeon level builder \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1items_1_1_item}{core\+::items\+::\+Item}} $>$ \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_aa96668944d53183ae985fcfaec201f9a}{get\+Random\+Item}} () override
+\begin{DoxyCompactList}\small\item\em get\+Random\+Item Selects one random item from a list of prototype\+Items and returns a shared\+\_\+ptr reference of it \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1creatures_1_1_abstract_creature}{core\+::creatures\+::\+Abstract\+Creature}} $>$ \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_ac27ddfbe8d78a5b2a345a73799122f40}{get\+Random\+Creature}} () override
+\begin{DoxyCompactList}\small\item\em get\+Random\+Creature Selects one random creature from a list of prototype\+Creatures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_aa08583d97c9c5fc0e9cadc45f51250a2}{operator==}} (\mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{D\+B\+L\+::\+Move\+Constraints}} constraint1, \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{D\+B\+L\+::\+Move\+Constraints}} constraint2)
+\begin{DoxyCompactList}\small\item\em operator == Overrides the boolean comparison operator to be able to compare two constraints \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder}{Basic\+Dungeon\+Level\+Builder}} class A concrete builder that inherits the \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder}{Dungeon\+Level\+Builder}}. 
+
+Responsible for specifically building a basic dungeon level. Acts as concrete Builder. It implements all the virtual functions declared in the Builder class 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_a3d18f74bccecfd989abd2a88ec024eeb}\label{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_a3d18f74bccecfd989abd2a88ec024eeb}} 
+\index{core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}!BasicDungeonLevelBuilder@{BasicDungeonLevelBuilder}}
+\index{BasicDungeonLevelBuilder@{BasicDungeonLevelBuilder}!core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{BasicDungeonLevelBuilder()}{BasicDungeonLevelBuilder()}}
+{\footnotesize\ttfamily Basic\+Dungeon\+Level\+Builder\+::\+Basic\+Dungeon\+Level\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder}{Basic\+Dungeon\+Level\+Builder}} Default constructor. 
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_ae356c05740adba46d96e6748484a0ea0}\label{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_ae356c05740adba46d96e6748484a0ea0}} 
+\index{core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}!````~BasicDungeonLevelBuilder@{$\sim$BasicDungeonLevelBuilder}}
+\index{````~BasicDungeonLevelBuilder@{$\sim$BasicDungeonLevelBuilder}!core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{$\sim$BasicDungeonLevelBuilder()}{~BasicDungeonLevelBuilder()}}
+{\footnotesize\ttfamily core\+::dungeon\+::basic\+::\+Basic\+Dungeon\+Level\+Builder\+::$\sim$\+Basic\+Dungeon\+Level\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+$\sim$\+Basic\+Dungeon\+Level\+Builder Destructor that does cleanup of the bare pointer level used to construct a basic dungeon level product 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_a9e9ea732cd81d2c5103fba8b1b485d1f}\label{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_a9e9ea732cd81d2c5103fba8b1b485d1f}} 
+\index{core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}!buildCreature@{buildCreature}}
+\index{buildCreature@{buildCreature}!core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{buildCreature()}{buildCreature()}}
+{\footnotesize\ttfamily void Basic\+Dungeon\+Level\+Builder\+::build\+Creature (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$}]{room }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+build\+Creature Builds a creature (which was selected at random) by cloning it then adding it to the specified room 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} to which the creature is added \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_ab891751de1636d51e89569303bf566b1}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_aeefe773d44aba88a3d1822d5f93a884a}\label{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_aeefe773d44aba88a3d1822d5f93a884a}} 
+\index{core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}!buildDoorway@{buildDoorway}}
+\index{buildDoorway@{buildDoorway}!core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{buildDoorway()}{buildDoorway()}}
+{\footnotesize\ttfamily void Basic\+Dungeon\+Level\+Builder\+::build\+Doorway (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$}]{origin,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$}]{destination,  }\item[{\mbox{\hyperlink{classcore_1_1dungeon_1_1_room_a2f8757a1b941610050ef39112ea7adda}{Room\+::\+Direction}}}]{direction,  }\item[{\mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{Move\+Constraints}}}]{constraints }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+build\+Doorway Builds a passage between two rooms under specified constraints at a certain direction of the source/origin room which is the opposite direction of the destination room. 
+
+The constraint parameter is bitmask to identify bits that represents individual constraint for a doorway type. 
+\begin{DoxyParams}{Parameters}
+{\em origin} & Source room or the room at current location \\
+\hline
+{\em destination} & \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} opposite to the current room. The intended destination \\
+\hline
+{\em direction} & Direction to which the connection is to be made in origin \\
+\hline
+{\em constraints} & Specifies the condition to which the rooms should be built \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_abaf8946eb2a3b81ad50a3c8270088997}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_af48afc19c96197991b542a37203a95e9}\label{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_af48afc19c96197991b542a37203a95e9}} 
+\index{core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}!buildDungeonLevel@{buildDungeonLevel}}
+\index{buildDungeonLevel@{buildDungeonLevel}!core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{buildDungeonLevel()}{buildDungeonLevel()}}
+{\footnotesize\ttfamily void Basic\+Dungeon\+Level\+Builder\+::build\+Dungeon\+Level (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+build\+Dungeon\+Level Creates a new Dungeon Level (product) with a name, and specified size 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the dungeon level \\
+\hline
+{\em width} & Number of columns in dungeon level \\
+\hline
+{\em height} & Number of rows in dungeon level \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a6c3acd3f202f9f73a3240d2310f86774}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_a4779cd72bcc5be0f62412dabe21169ed}\label{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_a4779cd72bcc5be0f62412dabe21169ed}} 
+\index{core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}!buildEntrance@{buildEntrance}}
+\index{buildEntrance@{buildEntrance}!core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{buildEntrance()}{buildEntrance()}}
+{\footnotesize\ttfamily void Basic\+Dungeon\+Level\+Builder\+::build\+Entrance (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$}]{room,  }\item[{\mbox{\hyperlink{classcore_1_1dungeon_1_1_room_a2f8757a1b941610050ef39112ea7adda}{Room\+::\+Direction}}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+build\+Entrance Builds an entrance doorway at the specified room on the specified direction 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} to which an entrance is to be set \\
+\hline
+{\em direction} & Direction of the entrance \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a29bacfa086a38d4c97e69869f63ef4f6}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_a0083d147f6260744d6c5195be9a810ed}\label{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_a0083d147f6260744d6c5195be9a810ed}} 
+\index{core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}!buildExit@{buildExit}}
+\index{buildExit@{buildExit}!core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{buildExit()}{buildExit()}}
+{\footnotesize\ttfamily void Basic\+Dungeon\+Level\+Builder\+::build\+Exit (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$}]{room,  }\item[{\mbox{\hyperlink{classcore_1_1dungeon_1_1_room_a2f8757a1b941610050ef39112ea7adda}{Room\+::\+Direction}}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+build\+Exit Builds an exit doorway at the specified room on the specified direction 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} to which an exit is to be set \\
+\hline
+{\em direction} & Direction of the exit \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9576c6942368c79c60820dd393249794}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_ada85d4fe82524be6551a4801d65294b5}\label{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_ada85d4fe82524be6551a4801d65294b5}} 
+\index{core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}!buildItem@{buildItem}}
+\index{buildItem@{buildItem}!core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{buildItem()}{buildItem()}}
+{\footnotesize\ttfamily void Basic\+Dungeon\+Level\+Builder\+::build\+Item (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} $>$}]{room }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+build\+Item Builds an item (which was selected at random) by cloning it then adding it to the specified room 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & \mbox{\hyperlink{classcore_1_1dungeon_1_1_room}{Room}} to which the item is added \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a6485fff2bf4c540664022ea97c37cede}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_aad6918ef2fee20044424d79a2117ab5e}\label{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_aad6918ef2fee20044424d79a2117ab5e}} 
+\index{core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}!buildRoom@{buildRoom}}
+\index{buildRoom@{buildRoom}!core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{buildRoom()}{buildRoom()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{basicdungeonlevelbuilder_8cpp_ad69d497ee3a2fbf6b9d2f5e4661549b1}{Room\+Ptr}} Basic\+Dungeon\+Level\+Builder\+::build\+Room (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+build\+Room Uses the given id parameter to create a room with that id number as an identification of it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Unique identifier of a room \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared\+\_\+ptr reference of a room 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_abc324a2acd0a53a3899a9d8ab140f4b1}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_a8b32645d9b546eeb2ba77246f44eb263}\label{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_a8b32645d9b546eeb2ba77246f44eb263}} 
+\index{core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}!getDungeonLevel@{getDungeonLevel}}
+\index{getDungeonLevel@{getDungeonLevel}!core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{getDungeonLevel()}{getDungeonLevel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level}{core\+::dungeon\+::\+Dungeon\+Level}} $\ast$ Basic\+Dungeon\+Level\+Builder\+::get\+Dungeon\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get\+Dungeon\+Level Gets the current dungeon level product constructed by the dungeon level builder 
+
+\begin{DoxyReturn}{Returns}
+Reference to the Dungeon level created 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a8babc0269a6ea078976b021618b229d7}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_ac27ddfbe8d78a5b2a345a73799122f40}\label{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_ac27ddfbe8d78a5b2a345a73799122f40}} 
+\index{core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}!getRandomCreature@{getRandomCreature}}
+\index{getRandomCreature@{getRandomCreature}!core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{getRandomCreature()}{getRandomCreature()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1creatures_1_1_abstract_creature}{core\+::creatures\+::\+Abstract\+Creature}} $>$ Basic\+Dungeon\+Level\+Builder\+::get\+Random\+Creature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get\+Random\+Creature Selects one random creature from a list of prototype\+Creatures. 
+
+\begin{DoxyReturn}{Returns}
+Shared\+\_\+ptr reference to the random selected creature 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a2120038f87ed6d419a4f15235b7b813b}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_aa96668944d53183ae985fcfaec201f9a}\label{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_aa96668944d53183ae985fcfaec201f9a}} 
+\index{core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}!getRandomItem@{getRandomItem}}
+\index{getRandomItem@{getRandomItem}!core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{getRandomItem()}{getRandomItem()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1items_1_1_item}{core\+::items\+::\+Item}} $>$ Basic\+Dungeon\+Level\+Builder\+::get\+Random\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get\+Random\+Item Selects one random item from a list of prototype\+Items and returns a shared\+\_\+ptr reference of it 
+
+\begin{DoxyReturn}{Returns}
+a shared\+\_\+ptr reference of it to randomly selected item 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_aa779c11ff416e0c4fc0edc4972a4597b}{core\+::dungeon\+::\+Dungeon\+Level\+Builder}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_aa08583d97c9c5fc0e9cadc45f51250a2}\label{classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder_aa08583d97c9c5fc0e9cadc45f51250a2}} 
+\index{core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}!operator==@{operator==}}
+\index{operator==@{operator==}!core::dungeon::basic::BasicDungeonLevelBuilder@{core::dungeon::basic::BasicDungeonLevelBuilder}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{D\+B\+L\+::\+Move\+Constraints}}}]{constraint1,  }\item[{\mbox{\hyperlink{classcore_1_1dungeon_1_1_dungeon_level_builder_a9337835590737d734578fdca348410f0}{D\+B\+L\+::\+Move\+Constraints}}}]{constraint2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+operator == Overrides the boolean comparison operator to be able to compare two constraints 
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraint1} & One of the constraint to be compared \\
+\hline
+{\em constraint2} & The other constraint to be compared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if equal and false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{basicdungeonlevelbuilder_8h}{basicdungeonlevelbuilder.\+h}}\item 
+\mbox{\hyperlink{basicdungeonlevelbuilder_8cpp}{basicdungeonlevelbuilder.\+cpp}}\end{DoxyCompactItemize}

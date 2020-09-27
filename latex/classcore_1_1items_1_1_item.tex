@@ -1,0 +1,162 @@
+\hypertarget{classcore_1_1items_1_1_item}{}\doxysection{core\+::items\+::Item Class Reference}
+\label{classcore_1_1items_1_1_item}\index{core::items::Item@{core::items::Item}}
+
+
+The \mbox{\hyperlink{classcore_1_1items_1_1_item}{Item}} class.  
+
+
+
+
+{\ttfamily \#include $<$item.\+h$>$}
+
+Inheritance diagram for core\+::items\+::Item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcore_1_1items_1_1_item}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1items_1_1_item_a297720c02984eab37332ae795d22189d}{Item}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcore_1_1items_1_1_item}{Item}} Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcore_1_1items_1_1_item_ac9fdd690ffb0ad0563fe4968de86a0a0}{Item}} (const std\+::string \&\mbox{\hyperlink{classcore_1_1items_1_1_item_a75eb15d31b7244deb5ad19228ae3da22}{name}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcore_1_1items_1_1_item}{Item}} Parametarized constructor that defines a name of an idem. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classcore_1_1items_1_1_item_aa6e4de6c78beb3a5ec200dfac0882bf5}{$\sim$\+Item}} ()
+\begin{DoxyCompactList}\small\item\em $\sim$\+Item Virtual destructor \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classcore_1_1items_1_1_item}{Item}} $>$ \mbox{\hyperlink{classcore_1_1items_1_1_item_a82925aaa3c7c05ff06ee8fc67517fd2f}{clone}} () const =0
+\begin{DoxyCompactList}\small\item\em clone Abstract function that when implemented allows a concrete prototype object to clone itself \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classcore_1_1items_1_1_item_a75eb15d31b7244deb5ad19228ae3da22}{name}} ()
+\begin{DoxyCompactList}\small\item\em name Displays item name \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classcore_1_1items_1_1_item_a162fe028d72e84f2bd93107f794cea6b}{display\+Character}} ()
+\begin{DoxyCompactList}\small\item\em display\+Character Displays character representing an item \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classcore_1_1items_1_1_item_a9768acfc195e2bd2f8063e1c9801c4ee}{item\+Name}}
+\begin{DoxyCompactList}\small\item\em item\+Name Name of the item \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classcore_1_1items_1_1_item_a21f5a0f7f9b40dcc66f284e884ef3fef}{character}}
+\begin{DoxyCompactList}\small\item\em character Character representation of the item \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcore_1_1items_1_1_item}{Item}} class. 
+
+This class implements the Prototype Design Pattern. Its a representation of an item that can be picked in a dungeon. It allows concrete prototypes to clone themselves
+
+\begin{DoxyAuthor}{Author}
+Cassian Kahema 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcore_1_1items_1_1_item_a297720c02984eab37332ae795d22189d}\label{classcore_1_1items_1_1_item_a297720c02984eab37332ae795d22189d}} 
+\index{core::items::Item@{core::items::Item}!Item@{Item}}
+\index{Item@{Item}!core::items::Item@{core::items::Item}}
+\doxysubsubsection{\texorpdfstring{Item()}{Item()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Item\+::\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classcore_1_1items_1_1_item}{Item}} Default constructor. 
+
+\mbox{\Hypertarget{classcore_1_1items_1_1_item_ac9fdd690ffb0ad0563fe4968de86a0a0}\label{classcore_1_1items_1_1_item_ac9fdd690ffb0ad0563fe4968de86a0a0}} 
+\index{core::items::Item@{core::items::Item}!Item@{Item}}
+\index{Item@{Item}!core::items::Item@{core::items::Item}}
+\doxysubsubsection{\texorpdfstring{Item()}{Item()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Item\+::\+Item (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classcore_1_1items_1_1_item}{Item}} Parametarized constructor that defines a name of an idem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the item to be made \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcore_1_1items_1_1_item_aa6e4de6c78beb3a5ec200dfac0882bf5}\label{classcore_1_1items_1_1_item_aa6e4de6c78beb3a5ec200dfac0882bf5}} 
+\index{core::items::Item@{core::items::Item}!````~Item@{$\sim$Item}}
+\index{````~Item@{$\sim$Item}!core::items::Item@{core::items::Item}}
+\doxysubsubsection{\texorpdfstring{$\sim$Item()}{~Item()}}
+{\footnotesize\ttfamily virtual core\+::items\+::\+Item\+::$\sim$\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+$\sim$\+Item Virtual destructor 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcore_1_1items_1_1_item_a82925aaa3c7c05ff06ee8fc67517fd2f}\label{classcore_1_1items_1_1_item_a82925aaa3c7c05ff06ee8fc67517fd2f}} 
+\index{core::items::Item@{core::items::Item}!clone@{clone}}
+\index{clone@{clone}!core::items::Item@{core::items::Item}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classcore_1_1items_1_1_item}{Item}}$>$ core\+::items\+::\+Item\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+clone Abstract function that when implemented allows a concrete prototype object to clone itself 
+
+\begin{DoxyReturn}{Returns}
+a cloned instance of a concrete \mbox{\hyperlink{classcore_1_1items_1_1_item}{Item}} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classcore_1_1items_1_1_weapon_a31b79ea4fe726ff062c6ca016d22993d}{core\+::items\+::\+Weapon}}, and \mbox{\hyperlink{classcore_1_1items_1_1_consumeable_a49bfdd1ed9ae1cf8a04e1ba2fd34b004}{core\+::items\+::\+Consumeable}}.
+
+\mbox{\Hypertarget{classcore_1_1items_1_1_item_a162fe028d72e84f2bd93107f794cea6b}\label{classcore_1_1items_1_1_item_a162fe028d72e84f2bd93107f794cea6b}} 
+\index{core::items::Item@{core::items::Item}!displayCharacter@{displayCharacter}}
+\index{displayCharacter@{displayCharacter}!core::items::Item@{core::items::Item}}
+\doxysubsubsection{\texorpdfstring{displayCharacter()}{displayCharacter()}}
+{\footnotesize\ttfamily char Item\+::display\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+display\+Character Displays character representing an item 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcore_1_1items_1_1_item_a75eb15d31b7244deb5ad19228ae3da22}\label{classcore_1_1items_1_1_item_a75eb15d31b7244deb5ad19228ae3da22}} 
+\index{core::items::Item@{core::items::Item}!name@{name}}
+\index{name@{name}!core::items::Item@{core::items::Item}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily std\+::string Item\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+name Displays item name 
+
+\begin{DoxyReturn}{Returns}
+Name of the item 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcore_1_1items_1_1_item_a21f5a0f7f9b40dcc66f284e884ef3fef}\label{classcore_1_1items_1_1_item_a21f5a0f7f9b40dcc66f284e884ef3fef}} 
+\index{core::items::Item@{core::items::Item}!character@{character}}
+\index{character@{character}!core::items::Item@{core::items::Item}}
+\doxysubsubsection{\texorpdfstring{character}{character}}
+{\footnotesize\ttfamily char core\+::items\+::\+Item\+::character\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+character Character representation of the item 
+
+\mbox{\Hypertarget{classcore_1_1items_1_1_item_a9768acfc195e2bd2f8063e1c9801c4ee}\label{classcore_1_1items_1_1_item_a9768acfc195e2bd2f8063e1c9801c4ee}} 
+\index{core::items::Item@{core::items::Item}!itemName@{itemName}}
+\index{itemName@{itemName}!core::items::Item@{core::items::Item}}
+\doxysubsubsection{\texorpdfstring{itemName}{itemName}}
+{\footnotesize\ttfamily std\+::string core\+::items\+::\+Item\+::item\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+item\+Name Name of the item 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{item_8h}{item.\+h}}\item 
+\mbox{\hyperlink{item_8cpp}{item.\+cpp}}\end{DoxyCompactItemize}

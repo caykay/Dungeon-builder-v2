@@ -7,30 +7,1311 @@
     <toc>
       <section title="My Dungeon Builder Project" ref="index.html">
         <section title="DUNGEON LEVEL BUILDER" ref="index.html" />
-        <section title="Modules" ref="modules.html">
-          <section title="To test" ref="group__test.html" />
+        <section title="Namespaces" ref="namespaces.html">
+          <section title="Namespace List" ref="namespaces.html">
+            <section title="core" ref="namespacecore.html">
+              <section title="creatures" ref="namespacecore_1_1creatures.html" />
+              <section title="dungeon" ref="namespacecore_1_1dungeon.html">
+                <section title="basic" ref="namespacecore_1_1dungeon_1_1basic.html" />
+                <section title="common" ref="namespacecore_1_1dungeon_1_1common.html" />
+                <section title="magical" ref="namespacecore_1_1dungeon_1_1magical.html" />
+              </section>
+              <section title="items" ref="namespacecore_1_1items.html" />
+            </section>
+          </section>
+          <section title="Namespace Members" ref="namespacemembers.html">
+            <section title="All" ref="namespacemembers.html" />
+            <section title="Typedefs" ref="namespacemembers_type.html" />
+          </section>
+        </section>
+        <section title="Classes" ref="annotated.html">
+          <section title="Class List" ref="annotated.html">
+            <section title="core" ref="namespacecore.html">
+              <section title="creatures" ref="namespacecore_1_1creatures.html">
+                <section title="AbstractCreature" ref="classcore_1_1creatures_1_1_abstract_creature.html">
+                  <section title="AbstractCreature" ref="classcore_1_1creatures_1_1_abstract_creature.html#a751226de6786bc6146971d6fe178d112" />
+                  <section title="AbstractCreature" ref="classcore_1_1creatures_1_1_abstract_creature.html#aadc3cc297c617c58637a0cbb73cd5df7" />
+                  <section title="~AbstractCreature" ref="classcore_1_1creatures_1_1_abstract_creature.html#aa9ac9f2d417d79a9215e8030c1231da9" />
+                  <section title="clone" ref="classcore_1_1creatures_1_1_abstract_creature.html#a0874e655b69e8c79e896972ff6e9a996" />
+                  <section title="displayCharacter" ref="classcore_1_1creatures_1_1_abstract_creature.html#aeb95f0f398608d959c6881e6a69dfdd2" />
+                  <section title="name" ref="classcore_1_1creatures_1_1_abstract_creature.html#ad2428b235ed7b97e67a58de86e0d3a59" />
+                  <section title="character" ref="classcore_1_1creatures_1_1_abstract_creature.html#a2c42581f1a794c41d5d44bd51c9a3c8c" />
+                  <section title="creatureName" ref="classcore_1_1creatures_1_1_abstract_creature.html#af52e2507d1ce3a114e8c7448681ba05d" />
+                </section>
+                <section title="Monster" ref="classcore_1_1creatures_1_1_monster.html">
+                  <section title="Monster" ref="classcore_1_1creatures_1_1_monster.html#a3dfc253fbec8331d42ac13c20bf9425f" />
+                  <section title="Monster" ref="classcore_1_1creatures_1_1_monster.html#a55635831c24bc1e806cade05f8801f91" />
+                  <section title="clone" ref="classcore_1_1creatures_1_1_monster.html#a4f74010c2d30dc004234fa49267a87d4" />
+                </section>
+              </section>
+              <section title="dungeon" ref="namespacecore_1_1dungeon.html">
+                <section title="basic" ref="namespacecore_1_1dungeon_1_1basic.html">
+                  <section title="BasicDungeonLevel" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level.html">
+                    <section title="BasicDungeonLevel" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level.html#aac28b467446b8b142bc04031f7717878" />
+                    <section title="BasicDungeonLevel" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level.html#a19e21d1b9e98c42f8b1eba62d0059894" />
+                    <section title="description" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level.html#a5427d8e414fe9d9555d4583c6983ec72" />
+                  </section>
+                  <section title="BasicDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html">
+                    <section title="BasicDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#a3d18f74bccecfd989abd2a88ec024eeb" />
+                    <section title="~BasicDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#ae356c05740adba46d96e6748484a0ea0" />
+                    <section title="buildCreature" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#a9e9ea732cd81d2c5103fba8b1b485d1f" />
+                    <section title="buildDoorway" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#aeefe773d44aba88a3d1822d5f93a884a" />
+                    <section title="buildDungeonLevel" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#af48afc19c96197991b542a37203a95e9" />
+                    <section title="buildEntrance" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#a4779cd72bcc5be0f62412dabe21169ed" />
+                    <section title="buildExit" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#a0083d147f6260744d6c5195be9a810ed" />
+                    <section title="buildItem" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#ada85d4fe82524be6551a4801d65294b5" />
+                    <section title="buildRoom" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#aad6918ef2fee20044424d79a2117ab5e" />
+                    <section title="getDungeonLevel" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#a8b32645d9b546eeb2ba77246f44eb263" />
+                    <section title="getRandomCreature" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#ac27ddfbe8d78a5b2a345a73799122f40" />
+                    <section title="getRandomItem" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#aa96668944d53183ae985fcfaec201f9a" />
+                    <section title="operator==" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#aa08583d97c9c5fc0e9cadc45f51250a2" />
+                  </section>
+                  <section title="QuartzChamber" ref="classcore_1_1dungeon_1_1basic_1_1_quartz_chamber.html">
+                    <section title="QuartzChamber" ref="classcore_1_1dungeon_1_1basic_1_1_quartz_chamber.html#ae90cc797a6c2704d5fb9e07c06fb18da" />
+                    <section title="QuartzChamber" ref="classcore_1_1dungeon_1_1basic_1_1_quartz_chamber.html#aa7beed3ddf40ed22249150578d6dbcb9" />
+                    <section title="description" ref="classcore_1_1dungeon_1_1basic_1_1_quartz_chamber.html#abb4070a42e23e6795f3fa1ea74d4f425" />
+                  </section>
+                  <section title="RockChamber" ref="classcore_1_1dungeon_1_1basic_1_1_rock_chamber.html">
+                    <section title="RockChamber" ref="classcore_1_1dungeon_1_1basic_1_1_rock_chamber.html#aa6776539e3f0aaeda16dde2ca41209bd" />
+                    <section title="RockChamber" ref="classcore_1_1dungeon_1_1basic_1_1_rock_chamber.html#acd829037b2ab958aa355040c09acc945" />
+                    <section title="description" ref="classcore_1_1dungeon_1_1basic_1_1_rock_chamber.html#a6479e13ce88ddd395cb45980503a9846" />
+                  </section>
+                  <section title="RockWall" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html">
+                    <section title="RockWall" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html#a6779c39fa016921d0d9347f739ad11e0" />
+                    <section title="description" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html#a805b4d99763b7b5e4c6f0f7b5cda7490" />
+                    <section title="displayCharacter" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html#a83271a117cc530d36183b689e1b7b7c3" />
+                    <section title="isPassage" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html#a302ac3fef87ea1d74e449fb14a3043ea" />
+                    <section title="setCharacterAt" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html#ae8229881c6abad7b9511ae75bc0b2b20" />
+                  </section>
+                </section>
+                <section title="common" ref="namespacecore_1_1dungeon_1_1common.html">
+                  <section title="BlockedDoorway" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html">
+                    <section title="BlockedDoorway" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html#a3297bdd54f4a9e6818e4bfc2418d6ebd" />
+                    <section title="description" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html#acaaf74ba1bb465369875d04492169f25" />
+                    <section title="displayCharacter" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html#a2d594428b9ac519180222b6f613f6468" />
+                    <section title="isPassage" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html#a6b1da2591ddb800bd7ede5aca89b3906" />
+                    <section title="setCharacterAt" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html#ae6f1997d6aa79f1490ff78d1328f8ea4" />
+                  </section>
+                  <section title="LockedDoorway" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html">
+                    <section title="LockedDoorway" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html#aa0154f2688f4251439a32b21841bd276" />
+                    <section title="description" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html#a4aa68c6e65e1cfbdd471a29c3e6344f1" />
+                    <section title="displayCharacter" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html#a65adf44f2a968880d1abd3c6403e778e" />
+                    <section title="isPassage" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html#a49f61ed0c337e7ace762e8763aaf0c71" />
+                    <section title="setCharacterAt" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html#ab64556a655c9c5d331770a2dfbed77d1" />
+                  </section>
+                  <section title="OneWayDoor" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html">
+                    <section title="OneWayDoor" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html#aa94504525a94b8ae5d1ea7f14896557c" />
+                    <section title="description" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html#ab19007cda198ac1a322f8631c7053ab5" />
+                    <section title="displayCharacter" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html#a0988dbe99fc8c039918b81ab547cb652" />
+                    <section title="isPassage" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html#ae8b3f86e04af0991916458c0250a820d" />
+                    <section title="setCharacterAt" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html#a05bc627834e6d2accde251e79881f3fb" />
+                  </section>
+                  <section title="OpenDoorWay" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html">
+                    <section title="OpenDoorWay" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html#adf7cff68ef9d51f4c1972079b887f6a2" />
+                    <section title="OpenDoorWay" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html#a60b167ffa318c46852c86f0053b9ae60" />
+                    <section title="description" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html#afe8f80114a207da8e0b4991426139f4a" />
+                    <section title="displayCharacter" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html#a3a350d58c828ce62a9c93f0fbf78fa0e" />
+                    <section title="isPassage" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html#a2fdccccb0068ecb0817f93c6a69bd061" />
+                    <section title="setCharacterAt" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html#a26cf81183c8bc96209e49c525b03a76a" />
+                  </section>
+                </section>
+                <section title="magical" ref="namespacecore_1_1dungeon_1_1magical.html">
+                  <section title="AlchemistsLaboratory" ref="classcore_1_1dungeon_1_1magical_1_1_alchemists_laboratory.html">
+                    <section title="AlchemistsLaboratory" ref="classcore_1_1dungeon_1_1magical_1_1_alchemists_laboratory.html#aa6419cac127ded00db9fb848f631eef2" />
+                  </section>
+                  <section title="EnchantedLibrary" ref="classcore_1_1dungeon_1_1magical_1_1_enchanted_library.html">
+                    <section title="EnchantedLibrary" ref="classcore_1_1dungeon_1_1magical_1_1_enchanted_library.html#a3a5bfa2dc4027eb1fbcb4be6f8675cd7" />
+                  </section>
+                  <section title="MagicalDungeonLevel" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level.html">
+                    <section title="MagicalDungeonLevel" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level.html#abcee9d6349e8df805072c169ec5aec5d" />
+                    <section title="description" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level.html#a87a0f9c4668ff572517514ef925e2777" />
+                  </section>
+                  <section title="MagicalDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html">
+                    <section title="MagicalDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#a3c3dc8984f40af69efdb2f84da82fce9" />
+                    <section title="~MagicalDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#a2e069affbafb1fc3dc15ecb18ebf02cb" />
+                    <section title="buildCreature" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#aea8cc1e606c76d71b6dd3abff701a4de" />
+                    <section title="buildDoorway" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#a40cae929d53ca8184be0cc11262ef6e6" />
+                    <section title="buildDungeonLevel" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#a11c8089704f0ee35e51e752565d47e17" />
+                    <section title="buildEntrance" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#aa4fcd5f3eac21873b21a6ae02bde9358" />
+                    <section title="buildExit" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#a2640207961786dc9ac444831972a75b1" />
+                    <section title="buildItem" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#aea918d03e09e2ce8d179a904ab0ef09b" />
+                    <section title="buildRoom" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#a959d0c2348e005608cede9b2b768b57b" />
+                  </section>
+                  <section title="MagicWall" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html">
+                    <section title="MagicWall" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html#a5a5933953b32b526e601084e816e1fbb" />
+                    <section title="description" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html#a3a979b06a1411ce3346c8eb4b4f3ce2b" />
+                    <section title="displayCharacter" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html#a630dee09772670a60aa68cc1887605a2" />
+                    <section title="isPassage" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html#af7fb785bf8534621e86a87a77517f773" />
+                    <section title="setCharacterAt" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html#a213f8cd3adc7aa17e68ab7cdca06b98b" />
+                  </section>
+                </section>
+                <section title="Doorway" ref="classcore_1_1dungeon_1_1_doorway.html">
+                  <section title="Doorway" ref="classcore_1_1dungeon_1_1_doorway.html#a7bd9ec58f6e8112e0c89c6919951ebe0" />
+                  <section title="~Doorway" ref="classcore_1_1dungeon_1_1_doorway.html#a4a721bb917836a3b0acf80c30ef45c9c" />
+                  <section title="connect" ref="classcore_1_1dungeon_1_1_doorway.html#a151deaf107d00af53b4467e9717d0248" />
+                  <section title="description" ref="classcore_1_1dungeon_1_1_doorway.html#a5604c97b735ad559e7316bc7854454b7" />
+                  <section title="displayCharacter" ref="classcore_1_1dungeon_1_1_doorway.html#aed3dcb33bbf56b93b5287f72d8ac3690" />
+                  <section title="isEntrance" ref="classcore_1_1dungeon_1_1_doorway.html#a4d71fcebd8d213841c0710d0cd0cda3e" />
+                  <section title="isExit" ref="classcore_1_1dungeon_1_1_doorway.html#a3ff12678aa7585a99d20dd008b67e47d" />
+                  <section title="isPassage" ref="classcore_1_1dungeon_1_1_doorway.html#a400e400b13d5d305407152728c935c4f" />
+                  <section title="setCharacterAt" ref="classcore_1_1dungeon_1_1_doorway.html#ac5473f1405f3ccd6fbc49ab9cc30da5d" />
+                  <section title="entrance" ref="classcore_1_1dungeon_1_1_doorway.html#ab1255365426591bb3528627ad2669362" />
+                  <section title="exit" ref="classcore_1_1dungeon_1_1_doorway.html#a607b3a217b85f37bdd9774cdbff9b1e0" />
+                  <section title="opposite" ref="classcore_1_1dungeon_1_1_doorway.html#a5e24c2ed8a559827d0482aeb7d0e6737" />
+                </section>
+                <section title="DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html">
+                  <section title="DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html#aa0d526766a36085c685527a565de9b8a" />
+                  <section title="~DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a2c9f484a4867a91747944481a70a92f2" />
+                  <section title="DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a3d96264c8d61ca66592a63fb0fb8b63f" />
+                  <section title="addRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a5398f0bcbee625ee5113f9dccf59da5e" />
+                  <section title="description" ref="classcore_1_1dungeon_1_1_dungeon_level.html#af21e81d88b50194126286069ad941741" />
+                  <section title="display" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a0a8eca04772b82d9bfc171253fc9e4db" />
+                  <section title="height" ref="classcore_1_1dungeon_1_1_dungeon_level.html#acd83fcdc250a1848fb3df8fbe028914a" />
+                  <section title="isBottomRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a83f05d679a7c808cb76b19c8aec5eb90" />
+                  <section title="isCornerRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a7b0ae97613a421f1f2df104585f1fb9f" />
+                  <section title="isLeftRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a9c955afddbefe3127c374f3ee9cf35db" />
+                  <section title="isMidRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a6f8d69643df9981b725f4950b5c6f2ae" />
+                  <section title="isNonCornerRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#afdb8749dc9e6d75102f150da4749ce08" />
+                  <section title="isRightRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a48bd4c3cec9ff2923e7b58ef8295e4cb" />
+                  <section title="isTopRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a8392dde5fbe82ce2b25bb12dd538a8ee" />
+                  <section title="name" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a5b5bdfb218b447408201e851f1557351" />
+                  <section title="numberOfRooms" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a227c7ec5ce87420cf045dff0cd92a0b0" />
+                  <section title="retrieveNearbyRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#ad2507485e712e3efa66e22a8d89b312d" />
+                  <section title="retrieveRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a1b9a8e42c8f5e5322201daf45c2dd807" />
+                  <section title="width" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a1940172e8e195ccc26154302f8c920e2" />
+                  <section title="levelHeight" ref="classcore_1_1dungeon_1_1_dungeon_level.html#ac479f5e070acc617f5cd0d142745817e" />
+                  <section title="levelName" ref="classcore_1_1dungeon_1_1_dungeon_level.html#afe1821b9f4df81d119800b24586510e3" />
+                  <section title="levelWidth" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a8d04ce822056498508bbbe999d33720b" />
+                  <section title="rooms" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a8e6e83b8f33d39fa6aa69a3a3e96ef87" />
+                </section>
+                <section title="DungeonLevelBuilder" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html">
+                  <section title="Items" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2">
+                    <section title="Boomerang" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2a8c9d96b1ef82662dd41a42e8528876b6" />
+                    <section title="Short_Sword" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2aceeecca2e328c8da70b00ed092e6b6f8" />
+                    <section title="Battle_Axe" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2af538dc50b37f083a3e92c5f9f6866dfd" />
+                    <section title="Wizard_Staff" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2abbd614da81a94f4ce76b239117982f9b" />
+                    <section title="Magic_Wand" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2a38d0685bf113c37e389107f10b66da0a" />
+                    <section title="Health_Potion" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2a7cb91380c30aaa0a4cb01e434b4c7af2" />
+                    <section title="Molotov_Cocktail" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2a0fd7961b3591b03ad7b91eb88845ca9c" />
+                    <section title="Smoke_Bomb" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2a30efe64cf5d326d5dcb95b875c4dff8a" />
+                    <section title="Resistance_Potion" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2a6cadafe2f97c990dd4138d4a90001f57" />
+                  </section>
+                  <section title="Monsters" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a72077a1c7a2f8b4baab220c44a75f52c">
+                    <section title="Goblin" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a72077a1c7a2f8b4baab220c44a75f52ca8e81e2940511f7152ba4462fe53e35b8" />
+                    <section title="Werewolf" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a72077a1c7a2f8b4baab220c44a75f52ca176935340d9e1c04dcf64bc0c6cf5d44" />
+                    <section title="Evil_Wizard" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a72077a1c7a2f8b4baab220c44a75f52ca5e26aef54e0e43fa2d310522f968bebd" />
+                    <section title="Dragon" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a72077a1c7a2f8b4baab220c44a75f52ca583f4be146b6127f9e4f3f036ce7df43" />
+                  </section>
+                  <section title="MoveConstraints" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9337835590737d734578fdca348410f0">
+                    <section title="None" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9337835590737d734578fdca348410f0a6adf97f83acf6453d4a6a4b1070f3754" />
+                    <section title="OriginImpassable" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9337835590737d734578fdca348410f0aeab5593204a8f5891664422068c5a7c5" />
+                    <section title="DestinationImpassable" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9337835590737d734578fdca348410f0ab1d25a6ed9ee89ab933e0b9c4a0faccc" />
+                    <section title="OriginLocked" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9337835590737d734578fdca348410f0a1598cd0c23c08b7a0255e3de2f9b99b3" />
+                    <section title="DestinationLocked" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9337835590737d734578fdca348410f0accbe6e6139cce31e2d01586139ca11fc" />
+                  </section>
+                  <section title="DungeonLevelBuilder" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a4723e30858d2b5ff59c52642234fcc97" />
+                  <section title="~DungeonLevelBuilder" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a2dc50fdac6d4e7362bff38d2a0d0b4ac" />
+                  <section title="buildCreature" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ab891751de1636d51e89569303bf566b1" />
+                  <section title="buildDoorway" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#abaf8946eb2a3b81ad50a3c8270088997" />
+                  <section title="buildDungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a6c3acd3f202f9f73a3240d2310f86774" />
+                  <section title="buildEntrance" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a29bacfa086a38d4c97e69869f63ef4f6" />
+                  <section title="buildExit" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9576c6942368c79c60820dd393249794" />
+                  <section title="buildItem" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a6485fff2bf4c540664022ea97c37cede" />
+                  <section title="buildRoom" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#abc324a2acd0a53a3899a9d8ab140f4b1" />
+                  <section title="createItem" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad22b4f219ddd4915da0d8252e2504b64" />
+                  <section title="createMonster" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ab496bb3b597384f2ecaafd1ca56c0754" />
+                  <section title="createPrototypeCreatures" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a8c52fe625b8a4581aa3e2cf48e2c12a2" />
+                  <section title="createPrototypeItems" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a298352cfed8bb86e69246d7b5b77ccf6" />
+                  <section title="getDungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a8babc0269a6ea078976b021618b229d7" />
+                  <section title="getRandomCreature" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a2120038f87ed6d419a4f15235b7b813b" />
+                  <section title="getRandomDestConstraint" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#abd70fe31a31390da208be619773b1a15" />
+                  <section title="getRandomItem" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#aa779c11ff416e0c4fc0edc4972a4597b" />
+                  <section title="getRandomOriginConstraint" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a452848386f986f799f4b35c2ab804d7b" />
+                  <section title="prototypeCreatures" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a70e6d541f61e6524893750071ce3505c" />
+                  <section title="prototypeItems" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a980f6b4566b3d20fb66184f612b72c3c" />
+                </section>
+                <section title="Room" ref="classcore_1_1dungeon_1_1_room.html">
+                  <section title="Direction" ref="classcore_1_1dungeon_1_1_room.html#a2f8757a1b941610050ef39112ea7adda">
+                    <section title="North" ref="classcore_1_1dungeon_1_1_room.html#a2f8757a1b941610050ef39112ea7addaa601560b94fbb188919dd1d36c8ab70a4" />
+                    <section title="South" ref="classcore_1_1dungeon_1_1_room.html#a2f8757a1b941610050ef39112ea7addaa263d7b2cf53802c9ed127b718c0bf9fd" />
+                    <section title="East" ref="classcore_1_1dungeon_1_1_room.html#a2f8757a1b941610050ef39112ea7addaaa99dc62d017d04cf67266593f9c3761e" />
+                    <section title="West" ref="classcore_1_1dungeon_1_1_room.html#a2f8757a1b941610050ef39112ea7addaabf495fc048d8d44b7f32536df5cf3930" />
+                  </section>
+                  <section title="Room" ref="classcore_1_1dungeon_1_1_room.html#ac6ef93a7d9c3e1d624e025058d5f16ff" />
+                  <section title="Room" ref="classcore_1_1dungeon_1_1_room.html#a8701c81a439522a19e2fdfac4c1022ab" />
+                  <section title="~Room" ref="classcore_1_1dungeon_1_1_room.html#ac989b4a3fa3844f6e207664f1219f0af" />
+                  <section title="createBlockedDoorway" ref="classcore_1_1dungeon_1_1_room.html#a16b55922579e2d47af0e46b4bb14f594" />
+                  <section title="createLockedDoorway" ref="classcore_1_1dungeon_1_1_room.html#a7347690614ed1ddc7b836e91774e4a97" />
+                  <section title="createOnewaydoor" ref="classcore_1_1dungeon_1_1_room.html#a72889d240f66be2968caad721fb54090" />
+                  <section title="createOpenDoorway" ref="classcore_1_1dungeon_1_1_room.html#a17d6c348ca06a8afaaa960b60b557399" />
+                  <section title="createOpenDoorway" ref="classcore_1_1dungeon_1_1_room.html#a87ab91197edf8bd2f9d404e977b02d64" />
+                  <section title="creature" ref="classcore_1_1dungeon_1_1_room.html#a0403d35c40a059fe48c3f67095762778" />
+                  <section title="description" ref="classcore_1_1dungeon_1_1_room.html#aa3aa06d6da0d339c2fc8a001d251108b" />
+                  <section title="display" ref="classcore_1_1dungeon_1_1_room.html#a7411e34ee3c25f864678614d6b1220bf" />
+                  <section title="edgeAt" ref="classcore_1_1dungeon_1_1_room.html#aa7102fa0219c2bba2bfdb4308777ca6f" />
+                  <section title="getDirection" ref="classcore_1_1dungeon_1_1_room.html#a09623712abb81c6680a1233b018ce90d" />
+                  <section title="hasEntrance" ref="classcore_1_1dungeon_1_1_room.html#a591ed1cc14b893f2baae19ccf0f74460" />
+                  <section title="id" ref="classcore_1_1dungeon_1_1_room.html#aaecc24dc2ff0b7709e37d2d470f141ab" />
+                  <section title="item" ref="classcore_1_1dungeon_1_1_room.html#ab7eb9beb221da4bbb9f70e92b7228007" />
+                  <section title="roomHasExit" ref="classcore_1_1dungeon_1_1_room.html#af009913e8c7cf62e523ae52960b22673" />
+                  <section title="setCreature" ref="classcore_1_1dungeon_1_1_room.html#ac1905a91c844fbfd6c238f3b11fae25c" />
+                  <section title="setEdge" ref="classcore_1_1dungeon_1_1_room.html#ac5199bbe1984e4d84a1d50a2a057184e" />
+                  <section title="setItem" ref="classcore_1_1dungeon_1_1_room.html#a7d189e2a7375d995c25af05ce05a3807" />
+                  <section title="edges" ref="classcore_1_1dungeon_1_1_room.html#abe0cb947808b11cf99bfd8a4295f6bcc" />
+                  <section title="roomID" ref="classcore_1_1dungeon_1_1_room.html#a2cdf3261211b81777a5929ee5cc2c642" />
+                </section>
+                <section title="RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html">
+                  <section title="RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#ae90203c7ed0c83d63a040f6dd1eb15d4" />
+                  <section title="~RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#a6417c70c22c1d6095e7d99e9049bc02f" />
+                  <section title="description" ref="classcore_1_1dungeon_1_1_room_edge.html#ad2a9494a0383e0578b48b77d20f1b475" />
+                  <section title="displayCharacter" ref="classcore_1_1dungeon_1_1_room_edge.html#a27e30dfbfe7a69e27517c54acfd9a037" />
+                  <section title="isPassage" ref="classcore_1_1dungeon_1_1_room_edge.html#aaeee71d51077cfc135a9b719b99a19d2" />
+                  <section title="setCharacterAt" ref="classcore_1_1dungeon_1_1_room_edge.html#a41ed2537a55a9b37230f91d2122ed2a4" />
+                  <section title="character" ref="classcore_1_1dungeon_1_1_room_edge.html#a6c4207afb631648c9db37b3ea842a3b3" />
+                </section>
+                <section title="Wall" ref="classcore_1_1dungeon_1_1_wall.html">
+                  <section title="Wall" ref="classcore_1_1dungeon_1_1_wall.html#a12dc41bc7bc045c55ec1034a43e52043" />
+                  <section title="~Wall" ref="classcore_1_1dungeon_1_1_wall.html#a8271d2d19d1eabe861df299047d827bf" />
+                  <section title="description" ref="classcore_1_1dungeon_1_1_wall.html#a04d2cb6144ba482daf425d0f385408d5" />
+                  <section title="displayCharacter" ref="classcore_1_1dungeon_1_1_wall.html#a68a65436690bfc7761732e12d5d489d2" />
+                  <section title="isPassage" ref="classcore_1_1dungeon_1_1_wall.html#a6d54001163d03d45cfb433838e4fd8ee" />
+                  <section title="setCharacterAt" ref="classcore_1_1dungeon_1_1_wall.html#accb85b50542afd5507ffe8aaf414d9b4" />
+                </section>
+              </section>
+              <section title="items" ref="namespacecore_1_1items.html">
+                <section title="Consumeable" ref="classcore_1_1items_1_1_consumeable.html">
+                  <section title="Consumeable" ref="classcore_1_1items_1_1_consumeable.html#ab3a7f561b586ada93596e2af3a7bf4f6" />
+                  <section title="Consumeable" ref="classcore_1_1items_1_1_consumeable.html#acf4062a400bb24c7c2225f6c9d8b21dd" />
+                  <section title="clone" ref="classcore_1_1items_1_1_consumeable.html#a49bfdd1ed9ae1cf8a04e1ba2fd34b004" />
+                </section>
+                <section title="Item" ref="classcore_1_1items_1_1_item.html">
+                  <section title="Item" ref="classcore_1_1items_1_1_item.html#a297720c02984eab37332ae795d22189d" />
+                  <section title="Item" ref="classcore_1_1items_1_1_item.html#ac9fdd690ffb0ad0563fe4968de86a0a0" />
+                  <section title="~Item" ref="classcore_1_1items_1_1_item.html#aa6e4de6c78beb3a5ec200dfac0882bf5" />
+                  <section title="clone" ref="classcore_1_1items_1_1_item.html#a82925aaa3c7c05ff06ee8fc67517fd2f" />
+                  <section title="displayCharacter" ref="classcore_1_1items_1_1_item.html#a162fe028d72e84f2bd93107f794cea6b" />
+                  <section title="name" ref="classcore_1_1items_1_1_item.html#a75eb15d31b7244deb5ad19228ae3da22" />
+                  <section title="character" ref="classcore_1_1items_1_1_item.html#a21f5a0f7f9b40dcc66f284e884ef3fef" />
+                  <section title="itemName" ref="classcore_1_1items_1_1_item.html#a9768acfc195e2bd2f8063e1c9801c4ee" />
+                </section>
+                <section title="Weapon" ref="classcore_1_1items_1_1_weapon.html">
+                  <section title="Weapon" ref="classcore_1_1items_1_1_weapon.html#a42dbc46dd70319a24763992c4ebbd396" />
+                  <section title="Weapon" ref="classcore_1_1items_1_1_weapon.html#abb43c5f247680f99d48bdfc719a4f975" />
+                  <section title="clone" ref="classcore_1_1items_1_1_weapon.html#a31b79ea4fe726ff062c6ca016d22993d" />
+                </section>
+              </section>
+              <section title="Game" ref="classcore_1_1_game.html">
+                <section title="~Game" ref="classcore_1_1_game.html#a505167d4f06357db648294a117ecf4f5" />
+                <section title="Game" ref="classcore_1_1_game.html#a902fcb8142994ab93ce9e4c3224ca8ae" />
+                <section title="clearBuilder" ref="classcore_1_1_game.html#a60a7dfcf048d0249b91371050cba5fa9" />
+                <section title="clearLevel" ref="classcore_1_1_game.html#ad17f444685bc573e4c8eaed502244a19" />
+                <section title="createExampleLevel" ref="classcore_1_1_game.html#afd7758a8283c1a064e47624e90a653d2" />
+                <section title="createRandomLevel" ref="classcore_1_1_game.html#a717af4ce8c3d048e28189b987d3b8b53" />
+                <section title="describeLevel" ref="classcore_1_1_game.html#a9d9d4c2925686ae4a23722ed5ba3c24d" />
+                <section title="describeRoom" ref="classcore_1_1_game.html#a0f83b4fb10299132fbeb7c340bc44456" />
+                <section title="displayLevel" ref="classcore_1_1_game.html#ad4676c2d6613d6268a54c13b25196f7e" />
+                <section title="instance" ref="classcore_1_1_game.html#ac213e6d3a4e566d901413f62f6408858" />
+                <section title="operator=" ref="classcore_1_1_game.html#afe55440b14bc5959ab28d4de2a3867cc" />
+                <section title="randomDouble" ref="classcore_1_1_game.html#ad9dd9f598497438e52fa3803a4e082ab" />
+                <section title="setDungeonType" ref="classcore_1_1_game.html#a1923124429d0cf9ac11b6189d2cd4718" />
+                <section title="setDungeonType" ref="classcore_1_1_game.html#a3e673e285fe61055792c5cce3bf8b94d" />
+                <section title="builder" ref="classcore_1_1_game.html#a445a0ccf9d9d7fdd2ae0f7452fbe67da" />
+                <section title="level" ref="classcore_1_1_game.html#a31c00cef7f2a90feb46aa5f4d6fc326b" />
+              </section>
+              <section title="MenuInterface" ref="classcore_1_1_menu_interface.html">
+                <section title="MenuInterface" ref="classcore_1_1_menu_interface.html#aee444ec197e2a9bd4ce2c81ee9c06182" />
+                <section title="MenuInterface" ref="classcore_1_1_menu_interface.html#ac16c500284a22e86f75847c4f0c2f144" />
+                <section title="displayWelcome" ref="classcore_1_1_menu_interface.html#a7dd4f226055e8976a66acd6d6f2b5094" />
+                <section title="run" ref="classcore_1_1_menu_interface.html#adf459c12569194a27880433e9a9d2e34" />
+              </section>
+            </section>
+            <section title="OpenDoorway" ref="class_open_doorway.html" />
+          </section>
+          <section title="Class Index" ref="classes.html" />
+          <section title="Class Hierarchy" ref="hierarchy.html">
+            <section title="core::creatures::AbstractCreature" ref="classcore_1_1creatures_1_1_abstract_creature.html">
+              <section title="core::creatures::Monster" ref="classcore_1_1creatures_1_1_monster.html" />
+            </section>
+            <section title="core::dungeon::DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html">
+              <section title="core::dungeon::basic::BasicDungeonLevel" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level.html" />
+              <section title="core::dungeon::magical::MagicalDungeonLevel" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level.html" />
+            </section>
+            <section title="core::dungeon::DungeonLevelBuilder" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html">
+              <section title="core::dungeon::basic::BasicDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html" />
+              <section title="core::dungeon::magical::MagicalDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html" />
+            </section>
+            <section title="core::dungeon::magical::EnchantedLibrary" ref="classcore_1_1dungeon_1_1magical_1_1_enchanted_library.html" />
+            <section title="core::Game" ref="classcore_1_1_game.html" />
+            <section title="core::items::Item" ref="classcore_1_1items_1_1_item.html">
+              <section title="core::items::Consumeable" ref="classcore_1_1items_1_1_consumeable.html" />
+              <section title="core::items::Weapon" ref="classcore_1_1items_1_1_weapon.html" />
+            </section>
+            <section title="core::MenuInterface" ref="classcore_1_1_menu_interface.html" />
+            <section title="OpenDoorway" ref="class_open_doorway.html" />
+            <section title="core::dungeon::Room" ref="classcore_1_1dungeon_1_1_room.html">
+              <section title="core::dungeon::basic::QuartzChamber" ref="classcore_1_1dungeon_1_1basic_1_1_quartz_chamber.html" />
+              <section title="core::dungeon::basic::RockChamber" ref="classcore_1_1dungeon_1_1basic_1_1_rock_chamber.html" />
+              <section title="core::dungeon::magical::AlchemistsLaboratory" ref="classcore_1_1dungeon_1_1magical_1_1_alchemists_laboratory.html" />
+            </section>
+            <section title="core::dungeon::RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html">
+              <section title="core::dungeon::Doorway" ref="classcore_1_1dungeon_1_1_doorway.html">
+                <section title="core::dungeon::common::BlockedDoorway" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html" />
+                <section title="core::dungeon::common::LockedDoorway" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html" />
+                <section title="core::dungeon::common::OneWayDoor" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html" />
+                <section title="core::dungeon::common::OpenDoorWay" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html" />
+              </section>
+              <section title="core::dungeon::Wall" ref="classcore_1_1dungeon_1_1_wall.html">
+                <section title="core::dungeon::basic::RockWall" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html" />
+                <section title="core::dungeon::magical::MagicWall" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html" />
+              </section>
+            </section>
+          </section>
+          <section title="Class Members" ref="functions.html">
+            <section title="All" ref="functions.html">
+              <section title="a" ref="functions.html" />
+              <section title="b" ref="functions_b.html" />
+              <section title="c" ref="functions_c.html" />
+              <section title="d" ref="functions_d.html" />
+              <section title="e" ref="functions_e.html" />
+              <section title="g" ref="functions_g.html" />
+              <section title="h" ref="functions_h.html" />
+              <section title="i" ref="functions_i.html" />
+              <section title="l" ref="functions_l.html" />
+              <section title="m" ref="functions_m.html" />
+              <section title="n" ref="functions_n.html" />
+              <section title="o" ref="functions_o.html" />
+              <section title="p" ref="functions_p.html" />
+              <section title="q" ref="functions_q.html" />
+              <section title="r" ref="functions_r.html" />
+              <section title="s" ref="functions_s.html" />
+              <section title="w" ref="functions_w.html" />
+              <section title="~" ref="functions_~.html" />
+            </section>
+            <section title="Functions" ref="functions_func.html" />
+            <section title="Variables" ref="functions_vars.html" />
+            <section title="Enumerations" ref="functions_enum.html" />
+            <section title="Related Functions" ref="functions_rela.html" />
+          </section>
         </section>
         <section title="Files" ref="files.html">
           <section title="File List" ref="files.html">
+            <section title="abstractcreature.cpp" ref="abstractcreature_8cpp.html" />
+            <section title="abstractcreature.h" ref="abstractcreature_8h.html">
+              <section title="AbstractCreature" ref="classcore_1_1creatures_1_1_abstract_creature.html">
+                <section title="AbstractCreature" ref="classcore_1_1creatures_1_1_abstract_creature.html#a751226de6786bc6146971d6fe178d112" />
+                <section title="AbstractCreature" ref="classcore_1_1creatures_1_1_abstract_creature.html#aadc3cc297c617c58637a0cbb73cd5df7" />
+                <section title="~AbstractCreature" ref="classcore_1_1creatures_1_1_abstract_creature.html#aa9ac9f2d417d79a9215e8030c1231da9" />
+                <section title="clone" ref="classcore_1_1creatures_1_1_abstract_creature.html#a0874e655b69e8c79e896972ff6e9a996" />
+                <section title="displayCharacter" ref="classcore_1_1creatures_1_1_abstract_creature.html#aeb95f0f398608d959c6881e6a69dfdd2" />
+                <section title="name" ref="classcore_1_1creatures_1_1_abstract_creature.html#ad2428b235ed7b97e67a58de86e0d3a59" />
+                <section title="character" ref="classcore_1_1creatures_1_1_abstract_creature.html#a2c42581f1a794c41d5d44bd51c9a3c8c" />
+                <section title="creatureName" ref="classcore_1_1creatures_1_1_abstract_creature.html#af52e2507d1ce3a114e8c7448681ba05d" />
+              </section>
+            </section>
+            <section title="alchemistslaboratory.cpp" ref="alchemistslaboratory_8cpp.html" />
+            <section title="alchemistslaboratory.h" ref="alchemistslaboratory_8h.html">
+              <section title="AlchemistsLaboratory" ref="classcore_1_1dungeon_1_1magical_1_1_alchemists_laboratory.html">
+                <section title="AlchemistsLaboratory" ref="classcore_1_1dungeon_1_1magical_1_1_alchemists_laboratory.html#aa6419cac127ded00db9fb848f631eef2" />
+              </section>
+            </section>
+            <section title="basicdungeonlevel.cpp" ref="basicdungeonlevel_8cpp.html" />
+            <section title="basicdungeonlevel.h" ref="basicdungeonlevel_8h.html">
+              <section title="BasicDungeonLevel" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level.html">
+                <section title="BasicDungeonLevel" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level.html#aac28b467446b8b142bc04031f7717878" />
+                <section title="BasicDungeonLevel" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level.html#a19e21d1b9e98c42f8b1eba62d0059894" />
+                <section title="description" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level.html#a5427d8e414fe9d9555d4583c6983ec72" />
+              </section>
+            </section>
+            <section title="basicdungeonlevelbuilder.cpp" ref="basicdungeonlevelbuilder_8cpp.html">
+              <section title="DBL" ref="basicdungeonlevelbuilder_8cpp.html#aca0a9c5e115bdcf32c72cd03b25859f5" />
+              <section title="Direction" ref="basicdungeonlevelbuilder_8cpp.html#a5289fd437d0bb5a86ee06928b6cfb11e" />
+              <section title="DoorWay" ref="basicdungeonlevelbuilder_8cpp.html#abd0a5ba90cc9795f300a511286ffa335" />
+              <section title="Room" ref="basicdungeonlevelbuilder_8cpp.html#a596612b6f993f69395e1f5c2b551bfd0" />
+              <section title="RoomPtr" ref="basicdungeonlevelbuilder_8cpp.html#ad69d497ee3a2fbf6b9d2f5e4661549b1" />
+              <section title="operator==" ref="basicdungeonlevelbuilder_8cpp.html#aa08583d97c9c5fc0e9cadc45f51250a2" />
+            </section>
+            <section title="basicdungeonlevelbuilder.h" ref="basicdungeonlevelbuilder_8h.html">
+              <section title="BasicDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html">
+                <section title="BasicDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#a3d18f74bccecfd989abd2a88ec024eeb" />
+                <section title="~BasicDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#ae356c05740adba46d96e6748484a0ea0" />
+                <section title="buildCreature" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#a9e9ea732cd81d2c5103fba8b1b485d1f" />
+                <section title="buildDoorway" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#aeefe773d44aba88a3d1822d5f93a884a" />
+                <section title="buildDungeonLevel" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#af48afc19c96197991b542a37203a95e9" />
+                <section title="buildEntrance" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#a4779cd72bcc5be0f62412dabe21169ed" />
+                <section title="buildExit" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#a0083d147f6260744d6c5195be9a810ed" />
+                <section title="buildItem" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#ada85d4fe82524be6551a4801d65294b5" />
+                <section title="buildRoom" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#aad6918ef2fee20044424d79a2117ab5e" />
+                <section title="getDungeonLevel" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#a8b32645d9b546eeb2ba77246f44eb263" />
+                <section title="getRandomCreature" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#ac27ddfbe8d78a5b2a345a73799122f40" />
+                <section title="getRandomItem" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#aa96668944d53183ae985fcfaec201f9a" />
+                <section title="operator==" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#aa08583d97c9c5fc0e9cadc45f51250a2" />
+              </section>
+              <section title="DBL" ref="basicdungeonlevelbuilder_8h.html#ad74c1953dfdbf2de465a00524302d621" />
+              <section title="operator&amp;" ref="basicdungeonlevelbuilder_8h.html#ac175b8fff50e2d804f78d9ab05975d00" />
+              <section title="operator|" ref="basicdungeonlevelbuilder_8h.html#a6367ae3eabc3698d16844b415c8eec13" />
+            </section>
+            <section title="blockeddoorway.cpp" ref="blockeddoorway_8cpp.html" />
+            <section title="blockeddoorway.h" ref="blockeddoorway_8h.html">
+              <section title="BlockedDoorway" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html">
+                <section title="BlockedDoorway" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html#a3297bdd54f4a9e6818e4bfc2418d6ebd" />
+                <section title="description" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html#acaaf74ba1bb465369875d04492169f25" />
+                <section title="displayCharacter" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html#a2d594428b9ac519180222b6f613f6468" />
+                <section title="isPassage" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html#a6b1da2591ddb800bd7ede5aca89b3906" />
+                <section title="setCharacterAt" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html#ae6f1997d6aa79f1490ff78d1328f8ea4" />
+              </section>
+            </section>
+            <section title="consumeable.cpp" ref="consumeable_8cpp.html" />
+            <section title="consumeable.h" ref="consumeable_8h.html">
+              <section title="Consumeable" ref="classcore_1_1items_1_1_consumeable.html">
+                <section title="Consumeable" ref="classcore_1_1items_1_1_consumeable.html#ab3a7f561b586ada93596e2af3a7bf4f6" />
+                <section title="Consumeable" ref="classcore_1_1items_1_1_consumeable.html#acf4062a400bb24c7c2225f6c9d8b21dd" />
+                <section title="clone" ref="classcore_1_1items_1_1_consumeable.html#a49bfdd1ed9ae1cf8a04e1ba2fd34b004" />
+              </section>
+            </section>
+            <section title="doorway.cpp" ref="doorway_8cpp.html" />
+            <section title="doorway.h" ref="doorway_8h.html">
+              <section title="Doorway" ref="classcore_1_1dungeon_1_1_doorway.html">
+                <section title="Doorway" ref="classcore_1_1dungeon_1_1_doorway.html#a7bd9ec58f6e8112e0c89c6919951ebe0" />
+                <section title="~Doorway" ref="classcore_1_1dungeon_1_1_doorway.html#a4a721bb917836a3b0acf80c30ef45c9c" />
+                <section title="connect" ref="classcore_1_1dungeon_1_1_doorway.html#a151deaf107d00af53b4467e9717d0248" />
+                <section title="description" ref="classcore_1_1dungeon_1_1_doorway.html#a5604c97b735ad559e7316bc7854454b7" />
+                <section title="displayCharacter" ref="classcore_1_1dungeon_1_1_doorway.html#aed3dcb33bbf56b93b5287f72d8ac3690" />
+                <section title="isEntrance" ref="classcore_1_1dungeon_1_1_doorway.html#a4d71fcebd8d213841c0710d0cd0cda3e" />
+                <section title="isExit" ref="classcore_1_1dungeon_1_1_doorway.html#a3ff12678aa7585a99d20dd008b67e47d" />
+                <section title="isPassage" ref="classcore_1_1dungeon_1_1_doorway.html#a400e400b13d5d305407152728c935c4f" />
+                <section title="setCharacterAt" ref="classcore_1_1dungeon_1_1_doorway.html#ac5473f1405f3ccd6fbc49ab9cc30da5d" />
+                <section title="entrance" ref="classcore_1_1dungeon_1_1_doorway.html#ab1255365426591bb3528627ad2669362" />
+                <section title="exit" ref="classcore_1_1dungeon_1_1_doorway.html#a607b3a217b85f37bdd9774cdbff9b1e0" />
+                <section title="opposite" ref="classcore_1_1dungeon_1_1_doorway.html#a5e24c2ed8a559827d0482aeb7d0e6737" />
+              </section>
+            </section>
+            <section title="dungeonlevel.cpp" ref="dungeonlevel_8cpp.html" />
+            <section title="dungeonlevel.h" ref="dungeonlevel_8h.html">
+              <section title="DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html">
+                <section title="DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html#aa0d526766a36085c685527a565de9b8a" />
+                <section title="~DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a2c9f484a4867a91747944481a70a92f2" />
+                <section title="DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a3d96264c8d61ca66592a63fb0fb8b63f" />
+                <section title="addRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a5398f0bcbee625ee5113f9dccf59da5e" />
+                <section title="description" ref="classcore_1_1dungeon_1_1_dungeon_level.html#af21e81d88b50194126286069ad941741" />
+                <section title="display" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a0a8eca04772b82d9bfc171253fc9e4db" />
+                <section title="height" ref="classcore_1_1dungeon_1_1_dungeon_level.html#acd83fcdc250a1848fb3df8fbe028914a" />
+                <section title="isBottomRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a83f05d679a7c808cb76b19c8aec5eb90" />
+                <section title="isCornerRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a7b0ae97613a421f1f2df104585f1fb9f" />
+                <section title="isLeftRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a9c955afddbefe3127c374f3ee9cf35db" />
+                <section title="isMidRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a6f8d69643df9981b725f4950b5c6f2ae" />
+                <section title="isNonCornerRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#afdb8749dc9e6d75102f150da4749ce08" />
+                <section title="isRightRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a48bd4c3cec9ff2923e7b58ef8295e4cb" />
+                <section title="isTopRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a8392dde5fbe82ce2b25bb12dd538a8ee" />
+                <section title="name" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a5b5bdfb218b447408201e851f1557351" />
+                <section title="numberOfRooms" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a227c7ec5ce87420cf045dff0cd92a0b0" />
+                <section title="retrieveNearbyRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#ad2507485e712e3efa66e22a8d89b312d" />
+                <section title="retrieveRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a1b9a8e42c8f5e5322201daf45c2dd807" />
+                <section title="width" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a1940172e8e195ccc26154302f8c920e2" />
+                <section title="levelHeight" ref="classcore_1_1dungeon_1_1_dungeon_level.html#ac479f5e070acc617f5cd0d142745817e" />
+                <section title="levelName" ref="classcore_1_1dungeon_1_1_dungeon_level.html#afe1821b9f4df81d119800b24586510e3" />
+                <section title="levelWidth" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a8d04ce822056498508bbbe999d33720b" />
+                <section title="rooms" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a8e6e83b8f33d39fa6aa69a3a3e96ef87" />
+              </section>
+            </section>
+            <section title="dungeonlevelbuilder.cpp" ref="dungeonlevelbuilder_8cpp.html" />
+            <section title="dungeonlevelbuilder.h" ref="dungeonlevelbuilder_8h.html">
+              <section title="DungeonLevelBuilder" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html">
+                <section title="Items" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2">
+                  <section title="Boomerang" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2a8c9d96b1ef82662dd41a42e8528876b6" />
+                  <section title="Short_Sword" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2aceeecca2e328c8da70b00ed092e6b6f8" />
+                  <section title="Battle_Axe" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2af538dc50b37f083a3e92c5f9f6866dfd" />
+                  <section title="Wizard_Staff" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2abbd614da81a94f4ce76b239117982f9b" />
+                  <section title="Magic_Wand" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2a38d0685bf113c37e389107f10b66da0a" />
+                  <section title="Health_Potion" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2a7cb91380c30aaa0a4cb01e434b4c7af2" />
+                  <section title="Molotov_Cocktail" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2a0fd7961b3591b03ad7b91eb88845ca9c" />
+                  <section title="Smoke_Bomb" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2a30efe64cf5d326d5dcb95b875c4dff8a" />
+                  <section title="Resistance_Potion" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2a6cadafe2f97c990dd4138d4a90001f57" />
+                </section>
+                <section title="Monsters" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a72077a1c7a2f8b4baab220c44a75f52c">
+                  <section title="Goblin" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a72077a1c7a2f8b4baab220c44a75f52ca8e81e2940511f7152ba4462fe53e35b8" />
+                  <section title="Werewolf" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a72077a1c7a2f8b4baab220c44a75f52ca176935340d9e1c04dcf64bc0c6cf5d44" />
+                  <section title="Evil_Wizard" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a72077a1c7a2f8b4baab220c44a75f52ca5e26aef54e0e43fa2d310522f968bebd" />
+                  <section title="Dragon" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a72077a1c7a2f8b4baab220c44a75f52ca583f4be146b6127f9e4f3f036ce7df43" />
+                </section>
+                <section title="MoveConstraints" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9337835590737d734578fdca348410f0">
+                  <section title="None" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9337835590737d734578fdca348410f0a6adf97f83acf6453d4a6a4b1070f3754" />
+                  <section title="OriginImpassable" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9337835590737d734578fdca348410f0aeab5593204a8f5891664422068c5a7c5" />
+                  <section title="DestinationImpassable" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9337835590737d734578fdca348410f0ab1d25a6ed9ee89ab933e0b9c4a0faccc" />
+                  <section title="OriginLocked" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9337835590737d734578fdca348410f0a1598cd0c23c08b7a0255e3de2f9b99b3" />
+                  <section title="DestinationLocked" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9337835590737d734578fdca348410f0accbe6e6139cce31e2d01586139ca11fc" />
+                </section>
+                <section title="DungeonLevelBuilder" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a4723e30858d2b5ff59c52642234fcc97" />
+                <section title="~DungeonLevelBuilder" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a2dc50fdac6d4e7362bff38d2a0d0b4ac" />
+                <section title="buildCreature" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ab891751de1636d51e89569303bf566b1" />
+                <section title="buildDoorway" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#abaf8946eb2a3b81ad50a3c8270088997" />
+                <section title="buildDungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a6c3acd3f202f9f73a3240d2310f86774" />
+                <section title="buildEntrance" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a29bacfa086a38d4c97e69869f63ef4f6" />
+                <section title="buildExit" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9576c6942368c79c60820dd393249794" />
+                <section title="buildItem" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a6485fff2bf4c540664022ea97c37cede" />
+                <section title="buildRoom" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#abc324a2acd0a53a3899a9d8ab140f4b1" />
+                <section title="createItem" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad22b4f219ddd4915da0d8252e2504b64" />
+                <section title="createMonster" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ab496bb3b597384f2ecaafd1ca56c0754" />
+                <section title="createPrototypeCreatures" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a8c52fe625b8a4581aa3e2cf48e2c12a2" />
+                <section title="createPrototypeItems" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a298352cfed8bb86e69246d7b5b77ccf6" />
+                <section title="getDungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a8babc0269a6ea078976b021618b229d7" />
+                <section title="getRandomCreature" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a2120038f87ed6d419a4f15235b7b813b" />
+                <section title="getRandomDestConstraint" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#abd70fe31a31390da208be619773b1a15" />
+                <section title="getRandomItem" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#aa779c11ff416e0c4fc0edc4972a4597b" />
+                <section title="getRandomOriginConstraint" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a452848386f986f799f4b35c2ab804d7b" />
+                <section title="prototypeCreatures" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a70e6d541f61e6524893750071ce3505c" />
+                <section title="prototypeItems" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a980f6b4566b3d20fb66184f612b72c3c" />
+              </section>
+            </section>
+            <section title="enchantedlibrary.cpp" ref="enchantedlibrary_8cpp.html" />
+            <section title="enchantedlibrary.h" ref="enchantedlibrary_8h.html">
+              <section title="EnchantedLibrary" ref="classcore_1_1dungeon_1_1magical_1_1_enchanted_library.html">
+                <section title="EnchantedLibrary" ref="classcore_1_1dungeon_1_1magical_1_1_enchanted_library.html#a3a5bfa2dc4027eb1fbcb4be6f8675cd7" />
+              </section>
+            </section>
+            <section title="game.cpp" ref="game_8cpp.html">
+              <section title="BasicDLB" ref="game_8cpp.html#a50d44521fe4fdf055be19148710d0fe5" />
+            </section>
+            <section title="game.h" ref="game_8h.html">
+              <section title="Game" ref="classcore_1_1_game.html">
+                <section title="~Game" ref="classcore_1_1_game.html#a505167d4f06357db648294a117ecf4f5" />
+                <section title="Game" ref="classcore_1_1_game.html#a902fcb8142994ab93ce9e4c3224ca8ae" />
+                <section title="clearBuilder" ref="classcore_1_1_game.html#a60a7dfcf048d0249b91371050cba5fa9" />
+                <section title="clearLevel" ref="classcore_1_1_game.html#ad17f444685bc573e4c8eaed502244a19" />
+                <section title="createExampleLevel" ref="classcore_1_1_game.html#afd7758a8283c1a064e47624e90a653d2" />
+                <section title="createRandomLevel" ref="classcore_1_1_game.html#a717af4ce8c3d048e28189b987d3b8b53" />
+                <section title="describeLevel" ref="classcore_1_1_game.html#a9d9d4c2925686ae4a23722ed5ba3c24d" />
+                <section title="describeRoom" ref="classcore_1_1_game.html#a0f83b4fb10299132fbeb7c340bc44456" />
+                <section title="displayLevel" ref="classcore_1_1_game.html#ad4676c2d6613d6268a54c13b25196f7e" />
+                <section title="instance" ref="classcore_1_1_game.html#ac213e6d3a4e566d901413f62f6408858" />
+                <section title="operator=" ref="classcore_1_1_game.html#afe55440b14bc5959ab28d4de2a3867cc" />
+                <section title="randomDouble" ref="classcore_1_1_game.html#ad9dd9f598497438e52fa3803a4e082ab" />
+                <section title="setDungeonType" ref="classcore_1_1_game.html#a1923124429d0cf9ac11b6189d2cd4718" />
+                <section title="setDungeonType" ref="classcore_1_1_game.html#a3e673e285fe61055792c5cce3bf8b94d" />
+                <section title="builder" ref="classcore_1_1_game.html#a445a0ccf9d9d7fdd2ae0f7452fbe67da" />
+                <section title="level" ref="classcore_1_1_game.html#a31c00cef7f2a90feb46aa5f4d6fc326b" />
+              </section>
+              <section title="Consumable" ref="game_8h.html#ab706844831e79113bf3cfe4df8a4a935" />
+              <section title="Direction" ref="game_8h.html#afef90c358ebc709d1de1612b3976117e" />
+              <section title="DL" ref="game_8h.html#aecf01a8751e370e31769b1b5a95d71d9" />
+              <section title="DLB" ref="game_8h.html#a73d9939fc29e161a37c182695c88f190" />
+              <section title="Item" ref="game_8h.html#a35ecf752be17859feb5649952d5cfa47" />
+              <section title="MoveConstraints" ref="game_8h.html#a50f326cef59420b30c6e4c8d9eb17916" />
+              <section title="Room" ref="game_8h.html#a35be29f8ba0884c64aba244222e465f3" />
+              <section title="Weapon" ref="game_8h.html#a7bdf58507a6ba22c727545c3c6b8f54d" />
+            </section>
+            <section title="item.cpp" ref="item_8cpp.html" />
+            <section title="item.h" ref="item_8h.html">
+              <section title="Item" ref="classcore_1_1items_1_1_item.html">
+                <section title="Item" ref="classcore_1_1items_1_1_item.html#a297720c02984eab37332ae795d22189d" />
+                <section title="Item" ref="classcore_1_1items_1_1_item.html#ac9fdd690ffb0ad0563fe4968de86a0a0" />
+                <section title="~Item" ref="classcore_1_1items_1_1_item.html#aa6e4de6c78beb3a5ec200dfac0882bf5" />
+                <section title="clone" ref="classcore_1_1items_1_1_item.html#a82925aaa3c7c05ff06ee8fc67517fd2f" />
+                <section title="displayCharacter" ref="classcore_1_1items_1_1_item.html#a162fe028d72e84f2bd93107f794cea6b" />
+                <section title="name" ref="classcore_1_1items_1_1_item.html#a75eb15d31b7244deb5ad19228ae3da22" />
+                <section title="character" ref="classcore_1_1items_1_1_item.html#a21f5a0f7f9b40dcc66f284e884ef3fef" />
+                <section title="itemName" ref="classcore_1_1items_1_1_item.html#a9768acfc195e2bd2f8063e1c9801c4ee" />
+              </section>
+            </section>
+            <section title="lockeddoorway.cpp" ref="lockeddoorway_8cpp.html" />
+            <section title="lockeddoorway.h" ref="lockeddoorway_8h.html">
+              <section title="LockedDoorway" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html">
+                <section title="LockedDoorway" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html#aa0154f2688f4251439a32b21841bd276" />
+                <section title="description" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html#a4aa68c6e65e1cfbdd471a29c3e6344f1" />
+                <section title="displayCharacter" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html#a65adf44f2a968880d1abd3c6403e778e" />
+                <section title="isPassage" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html#a49f61ed0c337e7ace762e8763aaf0c71" />
+                <section title="setCharacterAt" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html#ab64556a655c9c5d331770a2dfbed77d1" />
+              </section>
+            </section>
+            <section title="magicaldungeonlevel.cpp" ref="magicaldungeonlevel_8cpp.html" />
+            <section title="magicaldungeonlevel.h" ref="magicaldungeonlevel_8h.html">
+              <section title="MagicalDungeonLevel" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level.html">
+                <section title="MagicalDungeonLevel" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level.html#abcee9d6349e8df805072c169ec5aec5d" />
+                <section title="description" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level.html#a87a0f9c4668ff572517514ef925e2777" />
+              </section>
+            </section>
+            <section title="magicaldungeonlevelbuilder.cpp" ref="magicaldungeonlevelbuilder_8cpp.html">
+              <section title="RoomPtr" ref="magicaldungeonlevelbuilder_8cpp.html#ac061c2116ba6ea0d33a1f1ad4ef7b455" />
+            </section>
+            <section title="magicaldungeonlevelbuilder.h" ref="magicaldungeonlevelbuilder_8h.html">
+              <section title="MagicalDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html">
+                <section title="MagicalDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#a3c3dc8984f40af69efdb2f84da82fce9" />
+                <section title="~MagicalDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#a2e069affbafb1fc3dc15ecb18ebf02cb" />
+                <section title="buildCreature" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#aea8cc1e606c76d71b6dd3abff701a4de" />
+                <section title="buildDoorway" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#a40cae929d53ca8184be0cc11262ef6e6" />
+                <section title="buildDungeonLevel" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#a11c8089704f0ee35e51e752565d47e17" />
+                <section title="buildEntrance" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#aa4fcd5f3eac21873b21a6ae02bde9358" />
+                <section title="buildExit" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#a2640207961786dc9ac444831972a75b1" />
+                <section title="buildItem" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#aea918d03e09e2ce8d179a904ab0ef09b" />
+                <section title="buildRoom" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#a959d0c2348e005608cede9b2b768b57b" />
+              </section>
+            </section>
+            <section title="magicwall.cpp" ref="magicwall_8cpp.html" />
+            <section title="magicwall.h" ref="magicwall_8h.html">
+              <section title="MagicWall" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html">
+                <section title="MagicWall" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html#a5a5933953b32b526e601084e816e1fbb" />
+                <section title="description" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html#a3a979b06a1411ce3346c8eb4b4f3ce2b" />
+                <section title="displayCharacter" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html#a630dee09772670a60aa68cc1887605a2" />
+                <section title="isPassage" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html#af7fb785bf8534621e86a87a77517f773" />
+                <section title="setCharacterAt" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html#a213f8cd3adc7aa17e68ab7cdca06b98b" />
+              </section>
+            </section>
             <section title="main.cpp" ref="main_8cpp.html">
               <section title="AUTHOR" ref="main_8cpp.html#a6c8fad838ed64cc67da3f68149009758" />
               <section title="TITLE" ref="main_8cpp.html#a60a56c499875b57369f7ef3a5a227cb9" />
               <section title="main" ref="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" />
             </section>
+            <section title="menuinterface.cpp" ref="menuinterface_8cpp.html" />
+            <section title="menuinterface.h" ref="menuinterface_8h.html">
+              <section title="MenuInterface" ref="classcore_1_1_menu_interface.html">
+                <section title="MenuInterface" ref="classcore_1_1_menu_interface.html#aee444ec197e2a9bd4ce2c81ee9c06182" />
+                <section title="MenuInterface" ref="classcore_1_1_menu_interface.html#ac16c500284a22e86f75847c4f0c2f144" />
+                <section title="displayWelcome" ref="classcore_1_1_menu_interface.html#a7dd4f226055e8976a66acd6d6f2b5094" />
+                <section title="run" ref="classcore_1_1_menu_interface.html#adf459c12569194a27880433e9a9d2e34" />
+              </section>
+            </section>
+            <section title="monster.cpp" ref="monster_8cpp.html" />
+            <section title="monster.h" ref="monster_8h.html">
+              <section title="Monster" ref="classcore_1_1creatures_1_1_monster.html">
+                <section title="Monster" ref="classcore_1_1creatures_1_1_monster.html#a3dfc253fbec8331d42ac13c20bf9425f" />
+                <section title="Monster" ref="classcore_1_1creatures_1_1_monster.html#a55635831c24bc1e806cade05f8801f91" />
+                <section title="clone" ref="classcore_1_1creatures_1_1_monster.html#a4f74010c2d30dc004234fa49267a87d4" />
+              </section>
+            </section>
+            <section title="onewaydoor.cpp" ref="onewaydoor_8cpp.html" />
+            <section title="onewaydoor.h" ref="onewaydoor_8h.html">
+              <section title="OneWayDoor" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html">
+                <section title="OneWayDoor" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html#aa94504525a94b8ae5d1ea7f14896557c" />
+                <section title="description" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html#ab19007cda198ac1a322f8631c7053ab5" />
+                <section title="displayCharacter" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html#a0988dbe99fc8c039918b81ab547cb652" />
+                <section title="isPassage" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html#ae8b3f86e04af0991916458c0250a820d" />
+                <section title="setCharacterAt" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html#a05bc627834e6d2accde251e79881f3fb" />
+              </section>
+            </section>
+            <section title="opendoorway.cpp" ref="opendoorway_8cpp.html" />
+            <section title="opendoorway.h" ref="opendoorway_8h.html">
+              <section title="OpenDoorWay" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html">
+                <section title="OpenDoorWay" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html#adf7cff68ef9d51f4c1972079b887f6a2" />
+                <section title="OpenDoorWay" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html#a60b167ffa318c46852c86f0053b9ae60" />
+                <section title="description" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html#afe8f80114a207da8e0b4991426139f4a" />
+                <section title="displayCharacter" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html#a3a350d58c828ce62a9c93f0fbf78fa0e" />
+                <section title="isPassage" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html#a2fdccccb0068ecb0817f93c6a69bd061" />
+                <section title="setCharacterAt" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html#a26cf81183c8bc96209e49c525b03a76a" />
+              </section>
+            </section>
+            <section title="quartzchamber.cpp" ref="quartzchamber_8cpp.html" />
+            <section title="quartzchamber.h" ref="quartzchamber_8h.html">
+              <section title="QuartzChamber" ref="classcore_1_1dungeon_1_1basic_1_1_quartz_chamber.html">
+                <section title="QuartzChamber" ref="classcore_1_1dungeon_1_1basic_1_1_quartz_chamber.html#ae90cc797a6c2704d5fb9e07c06fb18da" />
+                <section title="QuartzChamber" ref="classcore_1_1dungeon_1_1basic_1_1_quartz_chamber.html#aa7beed3ddf40ed22249150578d6dbcb9" />
+                <section title="description" ref="classcore_1_1dungeon_1_1basic_1_1_quartz_chamber.html#abb4070a42e23e6795f3fa1ea74d4f425" />
+              </section>
+            </section>
+            <section title="rockchamber.cpp" ref="rockchamber_8cpp.html" />
+            <section title="rockchamber.h" ref="rockchamber_8h.html">
+              <section title="RockChamber" ref="classcore_1_1dungeon_1_1basic_1_1_rock_chamber.html">
+                <section title="RockChamber" ref="classcore_1_1dungeon_1_1basic_1_1_rock_chamber.html#aa6776539e3f0aaeda16dde2ca41209bd" />
+                <section title="RockChamber" ref="classcore_1_1dungeon_1_1basic_1_1_rock_chamber.html#acd829037b2ab958aa355040c09acc945" />
+                <section title="description" ref="classcore_1_1dungeon_1_1basic_1_1_rock_chamber.html#a6479e13ce88ddd395cb45980503a9846" />
+              </section>
+            </section>
+            <section title="rockwall.cpp" ref="rockwall_8cpp.html" />
+            <section title="rockwall.h" ref="rockwall_8h.html">
+              <section title="RockWall" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html">
+                <section title="RockWall" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html#a6779c39fa016921d0d9347f739ad11e0" />
+                <section title="description" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html#a805b4d99763b7b5e4c6f0f7b5cda7490" />
+                <section title="displayCharacter" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html#a83271a117cc530d36183b689e1b7b7c3" />
+                <section title="isPassage" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html#a302ac3fef87ea1d74e449fb14a3043ea" />
+                <section title="setCharacterAt" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html#ae8229881c6abad7b9511ae75bc0b2b20" />
+              </section>
+            </section>
+            <section title="room.cpp" ref="room_8cpp.html">
+              <section title="RoomEdgePtr" ref="room_8cpp.html#abf69b1b7081d1930481255f775c2fc05" />
+            </section>
+            <section title="room.h" ref="room_8h.html">
+              <section title="Room" ref="classcore_1_1dungeon_1_1_room.html">
+                <section title="Direction" ref="classcore_1_1dungeon_1_1_room.html#a2f8757a1b941610050ef39112ea7adda">
+                  <section title="North" ref="classcore_1_1dungeon_1_1_room.html#a2f8757a1b941610050ef39112ea7addaa601560b94fbb188919dd1d36c8ab70a4" />
+                  <section title="South" ref="classcore_1_1dungeon_1_1_room.html#a2f8757a1b941610050ef39112ea7addaa263d7b2cf53802c9ed127b718c0bf9fd" />
+                  <section title="East" ref="classcore_1_1dungeon_1_1_room.html#a2f8757a1b941610050ef39112ea7addaaa99dc62d017d04cf67266593f9c3761e" />
+                  <section title="West" ref="classcore_1_1dungeon_1_1_room.html#a2f8757a1b941610050ef39112ea7addaabf495fc048d8d44b7f32536df5cf3930" />
+                </section>
+                <section title="Room" ref="classcore_1_1dungeon_1_1_room.html#ac6ef93a7d9c3e1d624e025058d5f16ff" />
+                <section title="Room" ref="classcore_1_1dungeon_1_1_room.html#a8701c81a439522a19e2fdfac4c1022ab" />
+                <section title="~Room" ref="classcore_1_1dungeon_1_1_room.html#ac989b4a3fa3844f6e207664f1219f0af" />
+                <section title="createBlockedDoorway" ref="classcore_1_1dungeon_1_1_room.html#a16b55922579e2d47af0e46b4bb14f594" />
+                <section title="createLockedDoorway" ref="classcore_1_1dungeon_1_1_room.html#a7347690614ed1ddc7b836e91774e4a97" />
+                <section title="createOnewaydoor" ref="classcore_1_1dungeon_1_1_room.html#a72889d240f66be2968caad721fb54090" />
+                <section title="createOpenDoorway" ref="classcore_1_1dungeon_1_1_room.html#a17d6c348ca06a8afaaa960b60b557399" />
+                <section title="createOpenDoorway" ref="classcore_1_1dungeon_1_1_room.html#a87ab91197edf8bd2f9d404e977b02d64" />
+                <section title="creature" ref="classcore_1_1dungeon_1_1_room.html#a0403d35c40a059fe48c3f67095762778" />
+                <section title="description" ref="classcore_1_1dungeon_1_1_room.html#aa3aa06d6da0d339c2fc8a001d251108b" />
+                <section title="display" ref="classcore_1_1dungeon_1_1_room.html#a7411e34ee3c25f864678614d6b1220bf" />
+                <section title="edgeAt" ref="classcore_1_1dungeon_1_1_room.html#aa7102fa0219c2bba2bfdb4308777ca6f" />
+                <section title="getDirection" ref="classcore_1_1dungeon_1_1_room.html#a09623712abb81c6680a1233b018ce90d" />
+                <section title="hasEntrance" ref="classcore_1_1dungeon_1_1_room.html#a591ed1cc14b893f2baae19ccf0f74460" />
+                <section title="id" ref="classcore_1_1dungeon_1_1_room.html#aaecc24dc2ff0b7709e37d2d470f141ab" />
+                <section title="item" ref="classcore_1_1dungeon_1_1_room.html#ab7eb9beb221da4bbb9f70e92b7228007" />
+                <section title="roomHasExit" ref="classcore_1_1dungeon_1_1_room.html#af009913e8c7cf62e523ae52960b22673" />
+                <section title="setCreature" ref="classcore_1_1dungeon_1_1_room.html#ac1905a91c844fbfd6c238f3b11fae25c" />
+                <section title="setEdge" ref="classcore_1_1dungeon_1_1_room.html#ac5199bbe1984e4d84a1d50a2a057184e" />
+                <section title="setItem" ref="classcore_1_1dungeon_1_1_room.html#a7d189e2a7375d995c25af05ce05a3807" />
+                <section title="edges" ref="classcore_1_1dungeon_1_1_room.html#abe0cb947808b11cf99bfd8a4295f6bcc" />
+                <section title="roomID" ref="classcore_1_1dungeon_1_1_room.html#a2cdf3261211b81777a5929ee5cc2c642" />
+              </section>
+              <section title="BlockedDoorWay" ref="room_8h.html#aa8b3f99c7414ddb6d9cc9f396f1d8394" />
+              <section title="LockedDoorWay" ref="room_8h.html#a98b5ea5b159d862467ebb5420fab071d" />
+              <section title="OneWayDoor" ref="room_8h.html#ae5e2e64b9aa2bb55cb2f4663a15592f5" />
+              <section title="OpenDoorWay" ref="room_8h.html#a9aed52d23418cdc3c3db7977cfe0fd7d" />
+              <section title="RoomEdgePtr" ref="room_8h.html#a6e8e18dcd6dce25b2de7fbe021a4b21a" />
+            </section>
+            <section title="roomedge.cpp" ref="roomedge_8cpp.html" />
+            <section title="roomedge.h" ref="roomedge_8h.html">
+              <section title="RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html">
+                <section title="RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#ae90203c7ed0c83d63a040f6dd1eb15d4" />
+                <section title="~RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#a6417c70c22c1d6095e7d99e9049bc02f" />
+                <section title="description" ref="classcore_1_1dungeon_1_1_room_edge.html#ad2a9494a0383e0578b48b77d20f1b475" />
+                <section title="displayCharacter" ref="classcore_1_1dungeon_1_1_room_edge.html#a27e30dfbfe7a69e27517c54acfd9a037" />
+                <section title="isPassage" ref="classcore_1_1dungeon_1_1_room_edge.html#aaeee71d51077cfc135a9b719b99a19d2" />
+                <section title="setCharacterAt" ref="classcore_1_1dungeon_1_1_room_edge.html#a41ed2537a55a9b37230f91d2122ed2a4" />
+                <section title="character" ref="classcore_1_1dungeon_1_1_room_edge.html#a6c4207afb631648c9db37b3ea842a3b3" />
+              </section>
+            </section>
+            <section title="wall.cpp" ref="wall_8cpp.html" />
+            <section title="wall.h" ref="wall_8h.html">
+              <section title="Wall" ref="classcore_1_1dungeon_1_1_wall.html">
+                <section title="Wall" ref="classcore_1_1dungeon_1_1_wall.html#a12dc41bc7bc045c55ec1034a43e52043" />
+                <section title="~Wall" ref="classcore_1_1dungeon_1_1_wall.html#a8271d2d19d1eabe861df299047d827bf" />
+                <section title="description" ref="classcore_1_1dungeon_1_1_wall.html#a04d2cb6144ba482daf425d0f385408d5" />
+                <section title="displayCharacter" ref="classcore_1_1dungeon_1_1_wall.html#a68a65436690bfc7761732e12d5d489d2" />
+                <section title="isPassage" ref="classcore_1_1dungeon_1_1_wall.html#a6d54001163d03d45cfb433838e4fd8ee" />
+                <section title="setCharacterAt" ref="classcore_1_1dungeon_1_1_wall.html#accb85b50542afd5507ffe8aaf414d9b4" />
+              </section>
+            </section>
+            <section title="weapon.cpp" ref="weapon_8cpp.html" />
+            <section title="weapon.h" ref="weapon_8h.html">
+              <section title="Weapon" ref="classcore_1_1items_1_1_weapon.html">
+                <section title="Weapon" ref="classcore_1_1items_1_1_weapon.html#a42dbc46dd70319a24763992c4ebbd396" />
+                <section title="Weapon" ref="classcore_1_1items_1_1_weapon.html#abb43c5f247680f99d48bdfc719a4f975" />
+                <section title="clone" ref="classcore_1_1items_1_1_weapon.html#a31b79ea4fe726ff062c6ca016d22993d" />
+              </section>
+            </section>
           </section>
           <section title="File Members" ref="globals.html">
             <section title="All" ref="globals.html" />
             <section title="Functions" ref="globals_func.html" />
+            <section title="Typedefs" ref="globals_type.html" />
             <section title="Macros" ref="globals_defs.html" />
           </section>
         </section>
       </section>
     </toc>
     <keywords>
+      <keyword name="Room" id="basicdungeonlevelbuilder.cpp::Room" ref="basicdungeonlevelbuilder_8cpp.html#a596612b6f993f69395e1f5c2b551bfd0" />
+      <keyword name="RoomPtr" id="basicdungeonlevelbuilder.cpp::RoomPtr" ref="basicdungeonlevelbuilder_8cpp.html#ad69d497ee3a2fbf6b9d2f5e4661549b1" />
+      <keyword name="Direction" id="basicdungeonlevelbuilder.cpp::Direction" ref="basicdungeonlevelbuilder_8cpp.html#a5289fd437d0bb5a86ee06928b6cfb11e" />
+      <keyword name="DoorWay" id="basicdungeonlevelbuilder.cpp::DoorWay" ref="basicdungeonlevelbuilder_8cpp.html#abd0a5ba90cc9795f300a511286ffa335" />
+      <keyword name="DBL" id="basicdungeonlevelbuilder.cpp::DBL" ref="basicdungeonlevelbuilder_8cpp.html#aca0a9c5e115bdcf32c72cd03b25859f5" />
+      <keyword name="operator==" id="basicdungeonlevelbuilder.cpp::operator==" ref="basicdungeonlevelbuilder_8cpp.html#aa08583d97c9c5fc0e9cadc45f51250a2" />
+      <keyword name="DBL" id="basicdungeonlevelbuilder.h::DBL" ref="basicdungeonlevelbuilder_8h.html#ad74c1953dfdbf2de465a00524302d621" />
+      <keyword name="operator|" id="basicdungeonlevelbuilder.h::operator|" ref="basicdungeonlevelbuilder_8h.html#a6367ae3eabc3698d16844b415c8eec13" />
+      <keyword name="operator&amp;" id="basicdungeonlevelbuilder.h::operator&amp;" ref="basicdungeonlevelbuilder_8h.html#ac175b8fff50e2d804f78d9ab05975d00" />
+      <keyword name="BasicDLB" id="game.cpp::BasicDLB" ref="game_8cpp.html#a50d44521fe4fdf055be19148710d0fe5" />
+      <keyword name="DLB" id="game.h::DLB" ref="game_8h.html#a73d9939fc29e161a37c182695c88f190" />
+      <keyword name="Room" id="game.h::Room" ref="game_8h.html#a35be29f8ba0884c64aba244222e465f3" />
+      <keyword name="Direction" id="game.h::Direction" ref="game_8h.html#afef90c358ebc709d1de1612b3976117e" />
+      <keyword name="MoveConstraints" id="game.h::MoveConstraints" ref="game_8h.html#a50f326cef59420b30c6e4c8d9eb17916" />
+      <keyword name="DL" id="game.h::DL" ref="game_8h.html#aecf01a8751e370e31769b1b5a95d71d9" />
+      <keyword name="Item" id="game.h::Item" ref="game_8h.html#a35ecf752be17859feb5649952d5cfa47" />
+      <keyword name="Consumable" id="game.h::Consumable" ref="game_8h.html#ab706844831e79113bf3cfe4df8a4a935" />
+      <keyword name="Weapon" id="game.h::Weapon" ref="game_8h.html#a7bdf58507a6ba22c727545c3c6b8f54d" />
+      <keyword name="RoomPtr" id="magicaldungeonlevelbuilder.cpp::RoomPtr" ref="magicaldungeonlevelbuilder_8cpp.html#ac061c2116ba6ea0d33a1f1ad4ef7b455" />
       <keyword name="AUTHOR" id="main.cpp::AUTHOR" ref="main_8cpp.html#a6c8fad838ed64cc67da3f68149009758" />
       <keyword name="TITLE" id="main.cpp::TITLE" ref="main_8cpp.html#a60a56c499875b57369f7ef3a5a227cb9" />
       <keyword name="main" id="main.cpp::main" ref="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" />
-      <keyword name="To test" id="To test" ref="group__test.html" />
+      <keyword name="RoomEdgePtr" id="room.cpp::RoomEdgePtr" ref="room_8cpp.html#abf69b1b7081d1930481255f775c2fc05" />
+      <keyword name="OpenDoorWay" id="room.h::OpenDoorWay" ref="room_8h.html#a9aed52d23418cdc3c3db7977cfe0fd7d" />
+      <keyword name="LockedDoorWay" id="room.h::LockedDoorWay" ref="room_8h.html#a98b5ea5b159d862467ebb5420fab071d" />
+      <keyword name="OneWayDoor" id="room.h::OneWayDoor" ref="room_8h.html#ae5e2e64b9aa2bb55cb2f4663a15592f5" />
+      <keyword name="BlockedDoorWay" id="room.h::BlockedDoorWay" ref="room_8h.html#aa8b3f99c7414ddb6d9cc9f396f1d8394" />
+      <keyword name="RoomEdgePtr" id="room.h::RoomEdgePtr" ref="room_8h.html#a6e8e18dcd6dce25b2de7fbe021a4b21a" />
+      <keyword name="OpenDoorway" id="OpenDoorway" ref="class_open_doorway.html" />
+      <keyword name="core" id="core" ref="namespacecore.html" />
+      <keyword name="DLB" id="core::DLB" ref="namespacecore.html#a73d9939fc29e161a37c182695c88f190" />
+      <keyword name="Room" id="core::Room" ref="namespacecore.html#a35be29f8ba0884c64aba244222e465f3" />
+      <keyword name="Direction" id="core::Direction" ref="namespacecore.html#afef90c358ebc709d1de1612b3976117e" />
+      <keyword name="MoveConstraints" id="core::MoveConstraints" ref="namespacecore.html#a50f326cef59420b30c6e4c8d9eb17916" />
+      <keyword name="DL" id="core::DL" ref="namespacecore.html#aecf01a8751e370e31769b1b5a95d71d9" />
+      <keyword name="Item" id="core::Item" ref="namespacecore.html#a35ecf752be17859feb5649952d5cfa47" />
+      <keyword name="Consumable" id="core::Consumable" ref="namespacecore.html#ab706844831e79113bf3cfe4df8a4a935" />
+      <keyword name="Weapon" id="core::Weapon" ref="namespacecore.html#a7bdf58507a6ba22c727545c3c6b8f54d" />
+      <keyword name="core::Game" id="core::Game" ref="classcore_1_1_game.html" />
+      <keyword name="~Game" id="core::Game::~Game" ref="classcore_1_1_game.html#a505167d4f06357db648294a117ecf4f5" />
+      <keyword name="Game" id="core::Game::Game" ref="classcore_1_1_game.html#a902fcb8142994ab93ce9e4c3224ca8ae" />
+      <keyword name="operator=" id="core::Game::operator=" ref="classcore_1_1_game.html#afe55440b14bc5959ab28d4de2a3867cc" />
+      <keyword name="setDungeonType" id="core::Game::setDungeonType" ref="classcore_1_1_game.html#a1923124429d0cf9ac11b6189d2cd4718" />
+      <keyword name="setDungeonType" id="core::Game::setDungeonType" ref="classcore_1_1_game.html#a3e673e285fe61055792c5cce3bf8b94d" />
+      <keyword name="createExampleLevel" id="core::Game::createExampleLevel" ref="classcore_1_1_game.html#afd7758a8283c1a064e47624e90a653d2" />
+      <keyword name="createRandomLevel" id="core::Game::createRandomLevel" ref="classcore_1_1_game.html#a717af4ce8c3d048e28189b987d3b8b53" />
+      <keyword name="clearLevel" id="core::Game::clearLevel" ref="classcore_1_1_game.html#ad17f444685bc573e4c8eaed502244a19" />
+      <keyword name="clearBuilder" id="core::Game::clearBuilder" ref="classcore_1_1_game.html#a60a7dfcf048d0249b91371050cba5fa9" />
+      <keyword name="displayLevel" id="core::Game::displayLevel" ref="classcore_1_1_game.html#ad4676c2d6613d6268a54c13b25196f7e" />
+      <keyword name="describeLevel" id="core::Game::describeLevel" ref="classcore_1_1_game.html#a9d9d4c2925686ae4a23722ed5ba3c24d" />
+      <keyword name="describeRoom" id="core::Game::describeRoom" ref="classcore_1_1_game.html#a0f83b4fb10299132fbeb7c340bc44456" />
+      <keyword name="randomDouble" id="core::Game::randomDouble" ref="classcore_1_1_game.html#ad9dd9f598497438e52fa3803a4e082ab" />
+      <keyword name="instance" id="core::Game::instance" ref="classcore_1_1_game.html#ac213e6d3a4e566d901413f62f6408858" />
+      <keyword name="builder" id="core::Game::builder" ref="classcore_1_1_game.html#a445a0ccf9d9d7fdd2ae0f7452fbe67da" />
+      <keyword name="level" id="core::Game::level" ref="classcore_1_1_game.html#a31c00cef7f2a90feb46aa5f4d6fc326b" />
+      <keyword name="core::MenuInterface" id="core::MenuInterface" ref="classcore_1_1_menu_interface.html" />
+      <keyword name="MenuInterface" id="core::MenuInterface::MenuInterface" ref="classcore_1_1_menu_interface.html#aee444ec197e2a9bd4ce2c81ee9c06182" />
+      <keyword name="MenuInterface" id="core::MenuInterface::MenuInterface" ref="classcore_1_1_menu_interface.html#ac16c500284a22e86f75847c4f0c2f144" />
+      <keyword name="displayWelcome" id="core::MenuInterface::displayWelcome" ref="classcore_1_1_menu_interface.html#a7dd4f226055e8976a66acd6d6f2b5094" />
+      <keyword name="run" id="core::MenuInterface::run" ref="classcore_1_1_menu_interface.html#adf459c12569194a27880433e9a9d2e34" />
+      <keyword name="core::creatures" id="core::creatures" ref="namespacecore_1_1creatures.html" />
+      <keyword name="core::creatures::AbstractCreature" id="core::creatures::AbstractCreature" ref="classcore_1_1creatures_1_1_abstract_creature.html" />
+      <keyword name="AbstractCreature" id="core::creatures::AbstractCreature::AbstractCreature" ref="classcore_1_1creatures_1_1_abstract_creature.html#a751226de6786bc6146971d6fe178d112" />
+      <keyword name="AbstractCreature" id="core::creatures::AbstractCreature::AbstractCreature" ref="classcore_1_1creatures_1_1_abstract_creature.html#aadc3cc297c617c58637a0cbb73cd5df7" />
+      <keyword name="~AbstractCreature" id="core::creatures::AbstractCreature::~AbstractCreature" ref="classcore_1_1creatures_1_1_abstract_creature.html#aa9ac9f2d417d79a9215e8030c1231da9" />
+      <keyword name="clone" id="core::creatures::AbstractCreature::clone" ref="classcore_1_1creatures_1_1_abstract_creature.html#a0874e655b69e8c79e896972ff6e9a996" />
+      <keyword name="name" id="core::creatures::AbstractCreature::name" ref="classcore_1_1creatures_1_1_abstract_creature.html#ad2428b235ed7b97e67a58de86e0d3a59" />
+      <keyword name="displayCharacter" id="core::creatures::AbstractCreature::displayCharacter" ref="classcore_1_1creatures_1_1_abstract_creature.html#aeb95f0f398608d959c6881e6a69dfdd2" />
+      <keyword name="creatureName" id="core::creatures::AbstractCreature::creatureName" ref="classcore_1_1creatures_1_1_abstract_creature.html#af52e2507d1ce3a114e8c7448681ba05d" />
+      <keyword name="character" id="core::creatures::AbstractCreature::character" ref="classcore_1_1creatures_1_1_abstract_creature.html#a2c42581f1a794c41d5d44bd51c9a3c8c" />
+      <keyword name="core::creatures::Monster" id="core::creatures::Monster" ref="classcore_1_1creatures_1_1_monster.html" />
+      <keyword name="Monster" id="core::creatures::Monster::Monster" ref="classcore_1_1creatures_1_1_monster.html#a3dfc253fbec8331d42ac13c20bf9425f" />
+      <keyword name="Monster" id="core::creatures::Monster::Monster" ref="classcore_1_1creatures_1_1_monster.html#a55635831c24bc1e806cade05f8801f91" />
+      <keyword name="clone" id="core::creatures::Monster::clone" ref="classcore_1_1creatures_1_1_monster.html#a4f74010c2d30dc004234fa49267a87d4" />
+      <keyword name="AbstractCreature" id="core::creatures::AbstractCreature::AbstractCreature" ref="classcore_1_1creatures_1_1_abstract_creature.html#a751226de6786bc6146971d6fe178d112" />
+      <keyword name="AbstractCreature" id="core::creatures::AbstractCreature::AbstractCreature" ref="classcore_1_1creatures_1_1_abstract_creature.html#aadc3cc297c617c58637a0cbb73cd5df7" />
+      <keyword name="~AbstractCreature" id="core::creatures::AbstractCreature::~AbstractCreature" ref="classcore_1_1creatures_1_1_abstract_creature.html#aa9ac9f2d417d79a9215e8030c1231da9" />
+      <keyword name="name" id="core::creatures::AbstractCreature::name" ref="classcore_1_1creatures_1_1_abstract_creature.html#ad2428b235ed7b97e67a58de86e0d3a59" />
+      <keyword name="displayCharacter" id="core::creatures::AbstractCreature::displayCharacter" ref="classcore_1_1creatures_1_1_abstract_creature.html#aeb95f0f398608d959c6881e6a69dfdd2" />
+      <keyword name="creatureName" id="core::creatures::AbstractCreature::creatureName" ref="classcore_1_1creatures_1_1_abstract_creature.html#af52e2507d1ce3a114e8c7448681ba05d" />
+      <keyword name="character" id="core::creatures::AbstractCreature::character" ref="classcore_1_1creatures_1_1_abstract_creature.html#a2c42581f1a794c41d5d44bd51c9a3c8c" />
+      <keyword name="core::dungeon" id="core::dungeon" ref="namespacecore_1_1dungeon.html" />
+      <keyword name="OpenDoorWay" id="core::dungeon::OpenDoorWay" ref="namespacecore_1_1dungeon.html#a9aed52d23418cdc3c3db7977cfe0fd7d" />
+      <keyword name="LockedDoorWay" id="core::dungeon::LockedDoorWay" ref="namespacecore_1_1dungeon.html#a98b5ea5b159d862467ebb5420fab071d" />
+      <keyword name="OneWayDoor" id="core::dungeon::OneWayDoor" ref="namespacecore_1_1dungeon.html#ae5e2e64b9aa2bb55cb2f4663a15592f5" />
+      <keyword name="BlockedDoorWay" id="core::dungeon::BlockedDoorWay" ref="namespacecore_1_1dungeon.html#aa8b3f99c7414ddb6d9cc9f396f1d8394" />
+      <keyword name="RoomEdgePtr" id="core::dungeon::RoomEdgePtr" ref="namespacecore_1_1dungeon.html#a6e8e18dcd6dce25b2de7fbe021a4b21a" />
+      <keyword name="core::dungeon::Doorway" id="core::dungeon::Doorway" ref="classcore_1_1dungeon_1_1_doorway.html" />
+      <keyword name="Doorway" id="core::dungeon::Doorway::Doorway" ref="classcore_1_1dungeon_1_1_doorway.html#a7bd9ec58f6e8112e0c89c6919951ebe0" />
+      <keyword name="~Doorway" id="core::dungeon::Doorway::~Doorway" ref="classcore_1_1dungeon_1_1_doorway.html#a4a721bb917836a3b0acf80c30ef45c9c" />
+      <keyword name="connect" id="core::dungeon::Doorway::connect" ref="classcore_1_1dungeon_1_1_doorway.html#a151deaf107d00af53b4467e9717d0248" />
+      <keyword name="isEntrance" id="core::dungeon::Doorway::isEntrance" ref="classcore_1_1dungeon_1_1_doorway.html#a4d71fcebd8d213841c0710d0cd0cda3e" />
+      <keyword name="isExit" id="core::dungeon::Doorway::isExit" ref="classcore_1_1dungeon_1_1_doorway.html#a3ff12678aa7585a99d20dd008b67e47d" />
+      <keyword name="description" id="core::dungeon::Doorway::description" ref="classcore_1_1dungeon_1_1_doorway.html#a5604c97b735ad559e7316bc7854454b7" />
+      <keyword name="displayCharacter" id="core::dungeon::Doorway::displayCharacter" ref="classcore_1_1dungeon_1_1_doorway.html#aed3dcb33bbf56b93b5287f72d8ac3690" />
+      <keyword name="isPassage" id="core::dungeon::Doorway::isPassage" ref="classcore_1_1dungeon_1_1_doorway.html#a400e400b13d5d305407152728c935c4f" />
+      <keyword name="setCharacterAt" id="core::dungeon::Doorway::setCharacterAt" ref="classcore_1_1dungeon_1_1_doorway.html#ac5473f1405f3ccd6fbc49ab9cc30da5d" />
+      <keyword name="RoomEdge" id="core::dungeon::RoomEdge::RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#ae90203c7ed0c83d63a040f6dd1eb15d4" />
+      <keyword name="~RoomEdge" id="core::dungeon::RoomEdge::~RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#a6417c70c22c1d6095e7d99e9049bc02f" />
+      <keyword name="opposite" id="core::dungeon::Doorway::opposite" ref="classcore_1_1dungeon_1_1_doorway.html#a5e24c2ed8a559827d0482aeb7d0e6737" />
+      <keyword name="exit" id="core::dungeon::Doorway::exit" ref="classcore_1_1dungeon_1_1_doorway.html#a607b3a217b85f37bdd9774cdbff9b1e0" />
+      <keyword name="entrance" id="core::dungeon::Doorway::entrance" ref="classcore_1_1dungeon_1_1_doorway.html#ab1255365426591bb3528627ad2669362" />
+      <keyword name="character" id="core::dungeon::RoomEdge::character" ref="classcore_1_1dungeon_1_1_room_edge.html#a6c4207afb631648c9db37b3ea842a3b3" />
+      <keyword name="core::dungeon::DungeonLevel" id="core::dungeon::DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html" />
+      <keyword name="DungeonLevel" id="core::dungeon::DungeonLevel::DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html#aa0d526766a36085c685527a565de9b8a" />
+      <keyword name="~DungeonLevel" id="core::dungeon::DungeonLevel::~DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a2c9f484a4867a91747944481a70a92f2" />
+      <keyword name="DungeonLevel" id="core::dungeon::DungeonLevel::DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a3d96264c8d61ca66592a63fb0fb8b63f" />
+      <keyword name="addRoom" id="core::dungeon::DungeonLevel::addRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a5398f0bcbee625ee5113f9dccf59da5e" />
+      <keyword name="retrieveRoom" id="core::dungeon::DungeonLevel::retrieveRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a1b9a8e42c8f5e5322201daf45c2dd807" />
+      <keyword name="retrieveNearbyRoom" id="core::dungeon::DungeonLevel::retrieveNearbyRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#ad2507485e712e3efa66e22a8d89b312d" />
+      <keyword name="width" id="core::dungeon::DungeonLevel::width" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a1940172e8e195ccc26154302f8c920e2" />
+      <keyword name="height" id="core::dungeon::DungeonLevel::height" ref="classcore_1_1dungeon_1_1_dungeon_level.html#acd83fcdc250a1848fb3df8fbe028914a" />
+      <keyword name="numberOfRooms" id="core::dungeon::DungeonLevel::numberOfRooms" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a227c7ec5ce87420cf045dff0cd92a0b0" />
+      <keyword name="name" id="core::dungeon::DungeonLevel::name" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a5b5bdfb218b447408201e851f1557351" />
+      <keyword name="description" id="core::dungeon::DungeonLevel::description" ref="classcore_1_1dungeon_1_1_dungeon_level.html#af21e81d88b50194126286069ad941741" />
+      <keyword name="display" id="core::dungeon::DungeonLevel::display" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a0a8eca04772b82d9bfc171253fc9e4db" />
+      <keyword name="isLeftRoom" id="core::dungeon::DungeonLevel::isLeftRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a9c955afddbefe3127c374f3ee9cf35db" />
+      <keyword name="isRightRoom" id="core::dungeon::DungeonLevel::isRightRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a48bd4c3cec9ff2923e7b58ef8295e4cb" />
+      <keyword name="isTopRoom" id="core::dungeon::DungeonLevel::isTopRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a8392dde5fbe82ce2b25bb12dd538a8ee" />
+      <keyword name="isBottomRoom" id="core::dungeon::DungeonLevel::isBottomRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a83f05d679a7c808cb76b19c8aec5eb90" />
+      <keyword name="isMidRoom" id="core::dungeon::DungeonLevel::isMidRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a6f8d69643df9981b725f4950b5c6f2ae" />
+      <keyword name="isCornerRoom" id="core::dungeon::DungeonLevel::isCornerRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a7b0ae97613a421f1f2df104585f1fb9f" />
+      <keyword name="isNonCornerRoom" id="core::dungeon::DungeonLevel::isNonCornerRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#afdb8749dc9e6d75102f150da4749ce08" />
+      <keyword name="levelName" id="core::dungeon::DungeonLevel::levelName" ref="classcore_1_1dungeon_1_1_dungeon_level.html#afe1821b9f4df81d119800b24586510e3" />
+      <keyword name="levelHeight" id="core::dungeon::DungeonLevel::levelHeight" ref="classcore_1_1dungeon_1_1_dungeon_level.html#ac479f5e070acc617f5cd0d142745817e" />
+      <keyword name="levelWidth" id="core::dungeon::DungeonLevel::levelWidth" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a8d04ce822056498508bbbe999d33720b" />
+      <keyword name="rooms" id="core::dungeon::DungeonLevel::rooms" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a8e6e83b8f33d39fa6aa69a3a3e96ef87" />
+      <keyword name="core::dungeon::DungeonLevelBuilder" id="core::dungeon::DungeonLevelBuilder" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html" />
+      <keyword name="DungeonLevelBuilder" id="core::dungeon::DungeonLevelBuilder::DungeonLevelBuilder" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a4723e30858d2b5ff59c52642234fcc97" />
+      <keyword name="~DungeonLevelBuilder" id="core::dungeon::DungeonLevelBuilder::~DungeonLevelBuilder" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a2dc50fdac6d4e7362bff38d2a0d0b4ac" />
+      <keyword name="buildDungeonLevel" id="core::dungeon::DungeonLevelBuilder::buildDungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a6c3acd3f202f9f73a3240d2310f86774" />
+      <keyword name="buildRoom" id="core::dungeon::DungeonLevelBuilder::buildRoom" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#abc324a2acd0a53a3899a9d8ab140f4b1" />
+      <keyword name="buildDoorway" id="core::dungeon::DungeonLevelBuilder::buildDoorway" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#abaf8946eb2a3b81ad50a3c8270088997" />
+      <keyword name="buildEntrance" id="core::dungeon::DungeonLevelBuilder::buildEntrance" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a29bacfa086a38d4c97e69869f63ef4f6" />
+      <keyword name="buildExit" id="core::dungeon::DungeonLevelBuilder::buildExit" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9576c6942368c79c60820dd393249794" />
+      <keyword name="buildItem" id="core::dungeon::DungeonLevelBuilder::buildItem" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a6485fff2bf4c540664022ea97c37cede" />
+      <keyword name="buildCreature" id="core::dungeon::DungeonLevelBuilder::buildCreature" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ab891751de1636d51e89569303bf566b1" />
+      <keyword name="getDungeonLevel" id="core::dungeon::DungeonLevelBuilder::getDungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a8babc0269a6ea078976b021618b229d7" />
+      <keyword name="getRandomOriginConstraint" id="core::dungeon::DungeonLevelBuilder::getRandomOriginConstraint" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a452848386f986f799f4b35c2ab804d7b" />
+      <keyword name="getRandomDestConstraint" id="core::dungeon::DungeonLevelBuilder::getRandomDestConstraint" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#abd70fe31a31390da208be619773b1a15" />
+      <keyword name="getRandomItem" id="core::dungeon::DungeonLevelBuilder::getRandomItem" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#aa779c11ff416e0c4fc0edc4972a4597b" />
+      <keyword name="getRandomCreature" id="core::dungeon::DungeonLevelBuilder::getRandomCreature" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a2120038f87ed6d419a4f15235b7b813b" />
+      <keyword name="createPrototypeItems" id="core::dungeon::DungeonLevelBuilder::createPrototypeItems" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a298352cfed8bb86e69246d7b5b77ccf6" />
+      <keyword name="createPrototypeCreatures" id="core::dungeon::DungeonLevelBuilder::createPrototypeCreatures" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a8c52fe625b8a4581aa3e2cf48e2c12a2" />
+      <keyword name="createItem" id="core::dungeon::DungeonLevelBuilder::createItem" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad22b4f219ddd4915da0d8252e2504b64" />
+      <keyword name="createMonster" id="core::dungeon::DungeonLevelBuilder::createMonster" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ab496bb3b597384f2ecaafd1ca56c0754" />
+      <keyword name="prototypeCreatures" id="core::dungeon::DungeonLevelBuilder::prototypeCreatures" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a70e6d541f61e6524893750071ce3505c" />
+      <keyword name="prototypeItems" id="core::dungeon::DungeonLevelBuilder::prototypeItems" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a980f6b4566b3d20fb66184f612b72c3c" />
+      <keyword name="Boomerang" id="core::dungeon::DungeonLevelBuilder::Boomerang" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2a8c9d96b1ef82662dd41a42e8528876b6" />
+      <keyword name="Short_Sword" id="core::dungeon::DungeonLevelBuilder::Short_Sword" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2aceeecca2e328c8da70b00ed092e6b6f8" />
+      <keyword name="Battle_Axe" id="core::dungeon::DungeonLevelBuilder::Battle_Axe" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2af538dc50b37f083a3e92c5f9f6866dfd" />
+      <keyword name="Wizard_Staff" id="core::dungeon::DungeonLevelBuilder::Wizard_Staff" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2abbd614da81a94f4ce76b239117982f9b" />
+      <keyword name="Magic_Wand" id="core::dungeon::DungeonLevelBuilder::Magic_Wand" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2a38d0685bf113c37e389107f10b66da0a" />
+      <keyword name="Health_Potion" id="core::dungeon::DungeonLevelBuilder::Health_Potion" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2a7cb91380c30aaa0a4cb01e434b4c7af2" />
+      <keyword name="Molotov_Cocktail" id="core::dungeon::DungeonLevelBuilder::Molotov_Cocktail" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2a0fd7961b3591b03ad7b91eb88845ca9c" />
+      <keyword name="Smoke_Bomb" id="core::dungeon::DungeonLevelBuilder::Smoke_Bomb" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2a30efe64cf5d326d5dcb95b875c4dff8a" />
+      <keyword name="Resistance_Potion" id="core::dungeon::DungeonLevelBuilder::Resistance_Potion" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad021453389833161743d9cb1d19d35c2a6cadafe2f97c990dd4138d4a90001f57" />
+      <keyword name="Goblin" id="core::dungeon::DungeonLevelBuilder::Goblin" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a72077a1c7a2f8b4baab220c44a75f52ca8e81e2940511f7152ba4462fe53e35b8" />
+      <keyword name="Werewolf" id="core::dungeon::DungeonLevelBuilder::Werewolf" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a72077a1c7a2f8b4baab220c44a75f52ca176935340d9e1c04dcf64bc0c6cf5d44" />
+      <keyword name="Evil_Wizard" id="core::dungeon::DungeonLevelBuilder::Evil_Wizard" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a72077a1c7a2f8b4baab220c44a75f52ca5e26aef54e0e43fa2d310522f968bebd" />
+      <keyword name="Dragon" id="core::dungeon::DungeonLevelBuilder::Dragon" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a72077a1c7a2f8b4baab220c44a75f52ca583f4be146b6127f9e4f3f036ce7df43" />
+      <keyword name="None" id="core::dungeon::DungeonLevelBuilder::None" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9337835590737d734578fdca348410f0a6adf97f83acf6453d4a6a4b1070f3754" />
+      <keyword name="OriginImpassable" id="core::dungeon::DungeonLevelBuilder::OriginImpassable" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9337835590737d734578fdca348410f0aeab5593204a8f5891664422068c5a7c5" />
+      <keyword name="DestinationImpassable" id="core::dungeon::DungeonLevelBuilder::DestinationImpassable" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9337835590737d734578fdca348410f0ab1d25a6ed9ee89ab933e0b9c4a0faccc" />
+      <keyword name="OriginLocked" id="core::dungeon::DungeonLevelBuilder::OriginLocked" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9337835590737d734578fdca348410f0a1598cd0c23c08b7a0255e3de2f9b99b3" />
+      <keyword name="DestinationLocked" id="core::dungeon::DungeonLevelBuilder::DestinationLocked" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a9337835590737d734578fdca348410f0accbe6e6139cce31e2d01586139ca11fc" />
+      <keyword name="core::dungeon::Room" id="core::dungeon::Room" ref="classcore_1_1dungeon_1_1_room.html" />
+      <keyword name="Room" id="core::dungeon::Room::Room" ref="classcore_1_1dungeon_1_1_room.html#ac6ef93a7d9c3e1d624e025058d5f16ff" />
+      <keyword name="Room" id="core::dungeon::Room::Room" ref="classcore_1_1dungeon_1_1_room.html#a8701c81a439522a19e2fdfac4c1022ab" />
+      <keyword name="~Room" id="core::dungeon::Room::~Room" ref="classcore_1_1dungeon_1_1_room.html#ac989b4a3fa3844f6e207664f1219f0af" />
+      <keyword name="description" id="core::dungeon::Room::description" ref="classcore_1_1dungeon_1_1_room.html#aa3aa06d6da0d339c2fc8a001d251108b" />
+      <keyword name="setEdge" id="core::dungeon::Room::setEdge" ref="classcore_1_1dungeon_1_1_room.html#ac5199bbe1984e4d84a1d50a2a057184e" />
+      <keyword name="edgeAt" id="core::dungeon::Room::edgeAt" ref="classcore_1_1dungeon_1_1_room.html#aa7102fa0219c2bba2bfdb4308777ca6f" />
+      <keyword name="display" id="core::dungeon::Room::display" ref="classcore_1_1dungeon_1_1_room.html#a7411e34ee3c25f864678614d6b1220bf" />
+      <keyword name="id" id="core::dungeon::Room::id" ref="classcore_1_1dungeon_1_1_room.html#aaecc24dc2ff0b7709e37d2d470f141ab" />
+      <keyword name="item" id="core::dungeon::Room::item" ref="classcore_1_1dungeon_1_1_room.html#ab7eb9beb221da4bbb9f70e92b7228007" />
+      <keyword name="setItem" id="core::dungeon::Room::setItem" ref="classcore_1_1dungeon_1_1_room.html#a7d189e2a7375d995c25af05ce05a3807" />
+      <keyword name="creature" id="core::dungeon::Room::creature" ref="classcore_1_1dungeon_1_1_room.html#a0403d35c40a059fe48c3f67095762778" />
+      <keyword name="setCreature" id="core::dungeon::Room::setCreature" ref="classcore_1_1dungeon_1_1_room.html#ac1905a91c844fbfd6c238f3b11fae25c" />
+      <keyword name="createOpenDoorway" id="core::dungeon::Room::createOpenDoorway" ref="classcore_1_1dungeon_1_1_room.html#a17d6c348ca06a8afaaa960b60b557399" />
+      <keyword name="createOpenDoorway" id="core::dungeon::Room::createOpenDoorway" ref="classcore_1_1dungeon_1_1_room.html#a87ab91197edf8bd2f9d404e977b02d64" />
+      <keyword name="createLockedDoorway" id="core::dungeon::Room::createLockedDoorway" ref="classcore_1_1dungeon_1_1_room.html#a7347690614ed1ddc7b836e91774e4a97" />
+      <keyword name="createOnewaydoor" id="core::dungeon::Room::createOnewaydoor" ref="classcore_1_1dungeon_1_1_room.html#a72889d240f66be2968caad721fb54090" />
+      <keyword name="createBlockedDoorway" id="core::dungeon::Room::createBlockedDoorway" ref="classcore_1_1dungeon_1_1_room.html#a16b55922579e2d47af0e46b4bb14f594" />
+      <keyword name="roomHasExit" id="core::dungeon::Room::roomHasExit" ref="classcore_1_1dungeon_1_1_room.html#af009913e8c7cf62e523ae52960b22673" />
+      <keyword name="hasEntrance" id="core::dungeon::Room::hasEntrance" ref="classcore_1_1dungeon_1_1_room.html#a591ed1cc14b893f2baae19ccf0f74460" />
+      <keyword name="edges" id="core::dungeon::Room::edges" ref="classcore_1_1dungeon_1_1_room.html#abe0cb947808b11cf99bfd8a4295f6bcc" />
+      <keyword name="getDirection" id="core::dungeon::Room::getDirection" ref="classcore_1_1dungeon_1_1_room.html#a09623712abb81c6680a1233b018ce90d" />
+      <keyword name="roomID" id="core::dungeon::Room::roomID" ref="classcore_1_1dungeon_1_1_room.html#a2cdf3261211b81777a5929ee5cc2c642" />
+      <keyword name="North" id="core::dungeon::Room::North" ref="classcore_1_1dungeon_1_1_room.html#a2f8757a1b941610050ef39112ea7addaa601560b94fbb188919dd1d36c8ab70a4" />
+      <keyword name="South" id="core::dungeon::Room::South" ref="classcore_1_1dungeon_1_1_room.html#a2f8757a1b941610050ef39112ea7addaa263d7b2cf53802c9ed127b718c0bf9fd" />
+      <keyword name="East" id="core::dungeon::Room::East" ref="classcore_1_1dungeon_1_1_room.html#a2f8757a1b941610050ef39112ea7addaaa99dc62d017d04cf67266593f9c3761e" />
+      <keyword name="West" id="core::dungeon::Room::West" ref="classcore_1_1dungeon_1_1_room.html#a2f8757a1b941610050ef39112ea7addaabf495fc048d8d44b7f32536df5cf3930" />
+      <keyword name="core::dungeon::RoomEdge" id="core::dungeon::RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html" />
+      <keyword name="RoomEdge" id="core::dungeon::RoomEdge::RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#ae90203c7ed0c83d63a040f6dd1eb15d4" />
+      <keyword name="~RoomEdge" id="core::dungeon::RoomEdge::~RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#a6417c70c22c1d6095e7d99e9049bc02f" />
+      <keyword name="description" id="core::dungeon::RoomEdge::description" ref="classcore_1_1dungeon_1_1_room_edge.html#ad2a9494a0383e0578b48b77d20f1b475" />
+      <keyword name="displayCharacter" id="core::dungeon::RoomEdge::displayCharacter" ref="classcore_1_1dungeon_1_1_room_edge.html#a27e30dfbfe7a69e27517c54acfd9a037" />
+      <keyword name="isPassage" id="core::dungeon::RoomEdge::isPassage" ref="classcore_1_1dungeon_1_1_room_edge.html#aaeee71d51077cfc135a9b719b99a19d2" />
+      <keyword name="setCharacterAt" id="core::dungeon::RoomEdge::setCharacterAt" ref="classcore_1_1dungeon_1_1_room_edge.html#a41ed2537a55a9b37230f91d2122ed2a4" />
+      <keyword name="character" id="core::dungeon::RoomEdge::character" ref="classcore_1_1dungeon_1_1_room_edge.html#a6c4207afb631648c9db37b3ea842a3b3" />
+      <keyword name="core::dungeon::Wall" id="core::dungeon::Wall" ref="classcore_1_1dungeon_1_1_wall.html" />
+      <keyword name="Wall" id="core::dungeon::Wall::Wall" ref="classcore_1_1dungeon_1_1_wall.html#a12dc41bc7bc045c55ec1034a43e52043" />
+      <keyword name="~Wall" id="core::dungeon::Wall::~Wall" ref="classcore_1_1dungeon_1_1_wall.html#a8271d2d19d1eabe861df299047d827bf" />
+      <keyword name="description" id="core::dungeon::Wall::description" ref="classcore_1_1dungeon_1_1_wall.html#a04d2cb6144ba482daf425d0f385408d5" />
+      <keyword name="displayCharacter" id="core::dungeon::Wall::displayCharacter" ref="classcore_1_1dungeon_1_1_wall.html#a68a65436690bfc7761732e12d5d489d2" />
+      <keyword name="isPassage" id="core::dungeon::Wall::isPassage" ref="classcore_1_1dungeon_1_1_wall.html#a6d54001163d03d45cfb433838e4fd8ee" />
+      <keyword name="setCharacterAt" id="core::dungeon::Wall::setCharacterAt" ref="classcore_1_1dungeon_1_1_wall.html#accb85b50542afd5507ffe8aaf414d9b4" />
+      <keyword name="RoomEdge" id="core::dungeon::RoomEdge::RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#ae90203c7ed0c83d63a040f6dd1eb15d4" />
+      <keyword name="~RoomEdge" id="core::dungeon::RoomEdge::~RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#a6417c70c22c1d6095e7d99e9049bc02f" />
+      <keyword name="character" id="core::dungeon::RoomEdge::character" ref="classcore_1_1dungeon_1_1_room_edge.html#a6c4207afb631648c9db37b3ea842a3b3" />
+      <keyword name="core::dungeon::basic" id="core::dungeon::basic" ref="namespacecore_1_1dungeon_1_1basic.html" />
+      <keyword name="DBL" id="core::dungeon::basic::DBL" ref="namespacecore_1_1dungeon_1_1basic.html#ad74c1953dfdbf2de465a00524302d621" />
+      <keyword name="core::dungeon::basic::BasicDungeonLevel" id="core::dungeon::basic::BasicDungeonLevel" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level.html" />
+      <keyword name="BasicDungeonLevel" id="core::dungeon::basic::BasicDungeonLevel::BasicDungeonLevel" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level.html#aac28b467446b8b142bc04031f7717878" />
+      <keyword name="BasicDungeonLevel" id="core::dungeon::basic::BasicDungeonLevel::BasicDungeonLevel" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level.html#a19e21d1b9e98c42f8b1eba62d0059894" />
+      <keyword name="description" id="core::dungeon::basic::BasicDungeonLevel::description" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level.html#a5427d8e414fe9d9555d4583c6983ec72" />
+      <keyword name="DungeonLevel" id="core::dungeon::DungeonLevel::DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html#aa0d526766a36085c685527a565de9b8a" />
+      <keyword name="~DungeonLevel" id="core::dungeon::DungeonLevel::~DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a2c9f484a4867a91747944481a70a92f2" />
+      <keyword name="DungeonLevel" id="core::dungeon::DungeonLevel::DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a3d96264c8d61ca66592a63fb0fb8b63f" />
+      <keyword name="addRoom" id="core::dungeon::DungeonLevel::addRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a5398f0bcbee625ee5113f9dccf59da5e" />
+      <keyword name="retrieveRoom" id="core::dungeon::DungeonLevel::retrieveRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a1b9a8e42c8f5e5322201daf45c2dd807" />
+      <keyword name="retrieveNearbyRoom" id="core::dungeon::DungeonLevel::retrieveNearbyRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#ad2507485e712e3efa66e22a8d89b312d" />
+      <keyword name="width" id="core::dungeon::DungeonLevel::width" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a1940172e8e195ccc26154302f8c920e2" />
+      <keyword name="height" id="core::dungeon::DungeonLevel::height" ref="classcore_1_1dungeon_1_1_dungeon_level.html#acd83fcdc250a1848fb3df8fbe028914a" />
+      <keyword name="numberOfRooms" id="core::dungeon::DungeonLevel::numberOfRooms" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a227c7ec5ce87420cf045dff0cd92a0b0" />
+      <keyword name="name" id="core::dungeon::DungeonLevel::name" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a5b5bdfb218b447408201e851f1557351" />
+      <keyword name="display" id="core::dungeon::DungeonLevel::display" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a0a8eca04772b82d9bfc171253fc9e4db" />
+      <keyword name="isLeftRoom" id="core::dungeon::DungeonLevel::isLeftRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a9c955afddbefe3127c374f3ee9cf35db" />
+      <keyword name="isRightRoom" id="core::dungeon::DungeonLevel::isRightRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a48bd4c3cec9ff2923e7b58ef8295e4cb" />
+      <keyword name="isTopRoom" id="core::dungeon::DungeonLevel::isTopRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a8392dde5fbe82ce2b25bb12dd538a8ee" />
+      <keyword name="isBottomRoom" id="core::dungeon::DungeonLevel::isBottomRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a83f05d679a7c808cb76b19c8aec5eb90" />
+      <keyword name="isMidRoom" id="core::dungeon::DungeonLevel::isMidRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a6f8d69643df9981b725f4950b5c6f2ae" />
+      <keyword name="isCornerRoom" id="core::dungeon::DungeonLevel::isCornerRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a7b0ae97613a421f1f2df104585f1fb9f" />
+      <keyword name="isNonCornerRoom" id="core::dungeon::DungeonLevel::isNonCornerRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#afdb8749dc9e6d75102f150da4749ce08" />
+      <keyword name="levelName" id="core::dungeon::DungeonLevel::levelName" ref="classcore_1_1dungeon_1_1_dungeon_level.html#afe1821b9f4df81d119800b24586510e3" />
+      <keyword name="levelHeight" id="core::dungeon::DungeonLevel::levelHeight" ref="classcore_1_1dungeon_1_1_dungeon_level.html#ac479f5e070acc617f5cd0d142745817e" />
+      <keyword name="levelWidth" id="core::dungeon::DungeonLevel::levelWidth" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a8d04ce822056498508bbbe999d33720b" />
+      <keyword name="rooms" id="core::dungeon::DungeonLevel::rooms" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a8e6e83b8f33d39fa6aa69a3a3e96ef87" />
+      <keyword name="core::dungeon::basic::BasicDungeonLevelBuilder" id="core::dungeon::basic::BasicDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html" />
+      <keyword name="BasicDungeonLevelBuilder" id="core::dungeon::basic::BasicDungeonLevelBuilder::BasicDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#a3d18f74bccecfd989abd2a88ec024eeb" />
+      <keyword name="~BasicDungeonLevelBuilder" id="core::dungeon::basic::BasicDungeonLevelBuilder::~BasicDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#ae356c05740adba46d96e6748484a0ea0" />
+      <keyword name="buildDungeonLevel" id="core::dungeon::basic::BasicDungeonLevelBuilder::buildDungeonLevel" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#af48afc19c96197991b542a37203a95e9" />
+      <keyword name="buildRoom" id="core::dungeon::basic::BasicDungeonLevelBuilder::buildRoom" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#aad6918ef2fee20044424d79a2117ab5e" />
+      <keyword name="buildDoorway" id="core::dungeon::basic::BasicDungeonLevelBuilder::buildDoorway" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#aeefe773d44aba88a3d1822d5f93a884a" />
+      <keyword name="buildEntrance" id="core::dungeon::basic::BasicDungeonLevelBuilder::buildEntrance" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#a4779cd72bcc5be0f62412dabe21169ed" />
+      <keyword name="buildExit" id="core::dungeon::basic::BasicDungeonLevelBuilder::buildExit" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#a0083d147f6260744d6c5195be9a810ed" />
+      <keyword name="buildItem" id="core::dungeon::basic::BasicDungeonLevelBuilder::buildItem" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#ada85d4fe82524be6551a4801d65294b5" />
+      <keyword name="buildCreature" id="core::dungeon::basic::BasicDungeonLevelBuilder::buildCreature" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#a9e9ea732cd81d2c5103fba8b1b485d1f" />
+      <keyword name="getDungeonLevel" id="core::dungeon::basic::BasicDungeonLevelBuilder::getDungeonLevel" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#a8b32645d9b546eeb2ba77246f44eb263" />
+      <keyword name="getRandomItem" id="core::dungeon::basic::BasicDungeonLevelBuilder::getRandomItem" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#aa96668944d53183ae985fcfaec201f9a" />
+      <keyword name="getRandomCreature" id="core::dungeon::basic::BasicDungeonLevelBuilder::getRandomCreature" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#ac27ddfbe8d78a5b2a345a73799122f40" />
+      <keyword name="DungeonLevelBuilder" id="core::dungeon::DungeonLevelBuilder::DungeonLevelBuilder" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a4723e30858d2b5ff59c52642234fcc97" />
+      <keyword name="~DungeonLevelBuilder" id="core::dungeon::DungeonLevelBuilder::~DungeonLevelBuilder" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a2dc50fdac6d4e7362bff38d2a0d0b4ac" />
+      <keyword name="operator==" id="core::dungeon::basic::BasicDungeonLevelBuilder::operator==" ref="classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html#aa08583d97c9c5fc0e9cadc45f51250a2" />
+      <keyword name="prototypeCreatures" id="core::dungeon::DungeonLevelBuilder::prototypeCreatures" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a70e6d541f61e6524893750071ce3505c" />
+      <keyword name="prototypeItems" id="core::dungeon::DungeonLevelBuilder::prototypeItems" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a980f6b4566b3d20fb66184f612b72c3c" />
+      <keyword name="core::dungeon::basic::QuartzChamber" id="core::dungeon::basic::QuartzChamber" ref="classcore_1_1dungeon_1_1basic_1_1_quartz_chamber.html" />
+      <keyword name="QuartzChamber" id="core::dungeon::basic::QuartzChamber::QuartzChamber" ref="classcore_1_1dungeon_1_1basic_1_1_quartz_chamber.html#ae90cc797a6c2704d5fb9e07c06fb18da" />
+      <keyword name="QuartzChamber" id="core::dungeon::basic::QuartzChamber::QuartzChamber" ref="classcore_1_1dungeon_1_1basic_1_1_quartz_chamber.html#aa7beed3ddf40ed22249150578d6dbcb9" />
+      <keyword name="description" id="core::dungeon::basic::QuartzChamber::description" ref="classcore_1_1dungeon_1_1basic_1_1_quartz_chamber.html#abb4070a42e23e6795f3fa1ea74d4f425" />
+      <keyword name="Room" id="core::dungeon::Room::Room" ref="classcore_1_1dungeon_1_1_room.html#ac6ef93a7d9c3e1d624e025058d5f16ff" />
+      <keyword name="Room" id="core::dungeon::Room::Room" ref="classcore_1_1dungeon_1_1_room.html#a8701c81a439522a19e2fdfac4c1022ab" />
+      <keyword name="~Room" id="core::dungeon::Room::~Room" ref="classcore_1_1dungeon_1_1_room.html#ac989b4a3fa3844f6e207664f1219f0af" />
+      <keyword name="setEdge" id="core::dungeon::Room::setEdge" ref="classcore_1_1dungeon_1_1_room.html#ac5199bbe1984e4d84a1d50a2a057184e" />
+      <keyword name="edgeAt" id="core::dungeon::Room::edgeAt" ref="classcore_1_1dungeon_1_1_room.html#aa7102fa0219c2bba2bfdb4308777ca6f" />
+      <keyword name="display" id="core::dungeon::Room::display" ref="classcore_1_1dungeon_1_1_room.html#a7411e34ee3c25f864678614d6b1220bf" />
+      <keyword name="id" id="core::dungeon::Room::id" ref="classcore_1_1dungeon_1_1_room.html#aaecc24dc2ff0b7709e37d2d470f141ab" />
+      <keyword name="item" id="core::dungeon::Room::item" ref="classcore_1_1dungeon_1_1_room.html#ab7eb9beb221da4bbb9f70e92b7228007" />
+      <keyword name="setItem" id="core::dungeon::Room::setItem" ref="classcore_1_1dungeon_1_1_room.html#a7d189e2a7375d995c25af05ce05a3807" />
+      <keyword name="creature" id="core::dungeon::Room::creature" ref="classcore_1_1dungeon_1_1_room.html#a0403d35c40a059fe48c3f67095762778" />
+      <keyword name="setCreature" id="core::dungeon::Room::setCreature" ref="classcore_1_1dungeon_1_1_room.html#ac1905a91c844fbfd6c238f3b11fae25c" />
+      <keyword name="createOpenDoorway" id="core::dungeon::Room::createOpenDoorway" ref="classcore_1_1dungeon_1_1_room.html#a17d6c348ca06a8afaaa960b60b557399" />
+      <keyword name="createOpenDoorway" id="core::dungeon::Room::createOpenDoorway" ref="classcore_1_1dungeon_1_1_room.html#a87ab91197edf8bd2f9d404e977b02d64" />
+      <keyword name="createLockedDoorway" id="core::dungeon::Room::createLockedDoorway" ref="classcore_1_1dungeon_1_1_room.html#a7347690614ed1ddc7b836e91774e4a97" />
+      <keyword name="createOnewaydoor" id="core::dungeon::Room::createOnewaydoor" ref="classcore_1_1dungeon_1_1_room.html#a72889d240f66be2968caad721fb54090" />
+      <keyword name="createBlockedDoorway" id="core::dungeon::Room::createBlockedDoorway" ref="classcore_1_1dungeon_1_1_room.html#a16b55922579e2d47af0e46b4bb14f594" />
+      <keyword name="roomHasExit" id="core::dungeon::Room::roomHasExit" ref="classcore_1_1dungeon_1_1_room.html#af009913e8c7cf62e523ae52960b22673" />
+      <keyword name="hasEntrance" id="core::dungeon::Room::hasEntrance" ref="classcore_1_1dungeon_1_1_room.html#a591ed1cc14b893f2baae19ccf0f74460" />
+      <keyword name="edges" id="core::dungeon::Room::edges" ref="classcore_1_1dungeon_1_1_room.html#abe0cb947808b11cf99bfd8a4295f6bcc" />
+      <keyword name="getDirection" id="core::dungeon::Room::getDirection" ref="classcore_1_1dungeon_1_1_room.html#a09623712abb81c6680a1233b018ce90d" />
+      <keyword name="roomID" id="core::dungeon::Room::roomID" ref="classcore_1_1dungeon_1_1_room.html#a2cdf3261211b81777a5929ee5cc2c642" />
+      <keyword name="core::dungeon::basic::RockChamber" id="core::dungeon::basic::RockChamber" ref="classcore_1_1dungeon_1_1basic_1_1_rock_chamber.html" />
+      <keyword name="RockChamber" id="core::dungeon::basic::RockChamber::RockChamber" ref="classcore_1_1dungeon_1_1basic_1_1_rock_chamber.html#aa6776539e3f0aaeda16dde2ca41209bd" />
+      <keyword name="RockChamber" id="core::dungeon::basic::RockChamber::RockChamber" ref="classcore_1_1dungeon_1_1basic_1_1_rock_chamber.html#acd829037b2ab958aa355040c09acc945" />
+      <keyword name="description" id="core::dungeon::basic::RockChamber::description" ref="classcore_1_1dungeon_1_1basic_1_1_rock_chamber.html#a6479e13ce88ddd395cb45980503a9846" />
+      <keyword name="Room" id="core::dungeon::Room::Room" ref="classcore_1_1dungeon_1_1_room.html#ac6ef93a7d9c3e1d624e025058d5f16ff" />
+      <keyword name="Room" id="core::dungeon::Room::Room" ref="classcore_1_1dungeon_1_1_room.html#a8701c81a439522a19e2fdfac4c1022ab" />
+      <keyword name="~Room" id="core::dungeon::Room::~Room" ref="classcore_1_1dungeon_1_1_room.html#ac989b4a3fa3844f6e207664f1219f0af" />
+      <keyword name="setEdge" id="core::dungeon::Room::setEdge" ref="classcore_1_1dungeon_1_1_room.html#ac5199bbe1984e4d84a1d50a2a057184e" />
+      <keyword name="edgeAt" id="core::dungeon::Room::edgeAt" ref="classcore_1_1dungeon_1_1_room.html#aa7102fa0219c2bba2bfdb4308777ca6f" />
+      <keyword name="display" id="core::dungeon::Room::display" ref="classcore_1_1dungeon_1_1_room.html#a7411e34ee3c25f864678614d6b1220bf" />
+      <keyword name="id" id="core::dungeon::Room::id" ref="classcore_1_1dungeon_1_1_room.html#aaecc24dc2ff0b7709e37d2d470f141ab" />
+      <keyword name="item" id="core::dungeon::Room::item" ref="classcore_1_1dungeon_1_1_room.html#ab7eb9beb221da4bbb9f70e92b7228007" />
+      <keyword name="setItem" id="core::dungeon::Room::setItem" ref="classcore_1_1dungeon_1_1_room.html#a7d189e2a7375d995c25af05ce05a3807" />
+      <keyword name="creature" id="core::dungeon::Room::creature" ref="classcore_1_1dungeon_1_1_room.html#a0403d35c40a059fe48c3f67095762778" />
+      <keyword name="setCreature" id="core::dungeon::Room::setCreature" ref="classcore_1_1dungeon_1_1_room.html#ac1905a91c844fbfd6c238f3b11fae25c" />
+      <keyword name="createOpenDoorway" id="core::dungeon::Room::createOpenDoorway" ref="classcore_1_1dungeon_1_1_room.html#a17d6c348ca06a8afaaa960b60b557399" />
+      <keyword name="createOpenDoorway" id="core::dungeon::Room::createOpenDoorway" ref="classcore_1_1dungeon_1_1_room.html#a87ab91197edf8bd2f9d404e977b02d64" />
+      <keyword name="createLockedDoorway" id="core::dungeon::Room::createLockedDoorway" ref="classcore_1_1dungeon_1_1_room.html#a7347690614ed1ddc7b836e91774e4a97" />
+      <keyword name="createOnewaydoor" id="core::dungeon::Room::createOnewaydoor" ref="classcore_1_1dungeon_1_1_room.html#a72889d240f66be2968caad721fb54090" />
+      <keyword name="createBlockedDoorway" id="core::dungeon::Room::createBlockedDoorway" ref="classcore_1_1dungeon_1_1_room.html#a16b55922579e2d47af0e46b4bb14f594" />
+      <keyword name="roomHasExit" id="core::dungeon::Room::roomHasExit" ref="classcore_1_1dungeon_1_1_room.html#af009913e8c7cf62e523ae52960b22673" />
+      <keyword name="hasEntrance" id="core::dungeon::Room::hasEntrance" ref="classcore_1_1dungeon_1_1_room.html#a591ed1cc14b893f2baae19ccf0f74460" />
+      <keyword name="edges" id="core::dungeon::Room::edges" ref="classcore_1_1dungeon_1_1_room.html#abe0cb947808b11cf99bfd8a4295f6bcc" />
+      <keyword name="getDirection" id="core::dungeon::Room::getDirection" ref="classcore_1_1dungeon_1_1_room.html#a09623712abb81c6680a1233b018ce90d" />
+      <keyword name="roomID" id="core::dungeon::Room::roomID" ref="classcore_1_1dungeon_1_1_room.html#a2cdf3261211b81777a5929ee5cc2c642" />
+      <keyword name="core::dungeon::basic::RockWall" id="core::dungeon::basic::RockWall" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html" />
+      <keyword name="RockWall" id="core::dungeon::basic::RockWall::RockWall" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html#a6779c39fa016921d0d9347f739ad11e0" />
+      <keyword name="description" id="core::dungeon::basic::RockWall::description" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html#a805b4d99763b7b5e4c6f0f7b5cda7490" />
+      <keyword name="displayCharacter" id="core::dungeon::basic::RockWall::displayCharacter" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html#a83271a117cc530d36183b689e1b7b7c3" />
+      <keyword name="isPassage" id="core::dungeon::basic::RockWall::isPassage" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html#a302ac3fef87ea1d74e449fb14a3043ea" />
+      <keyword name="setCharacterAt" id="core::dungeon::basic::RockWall::setCharacterAt" ref="classcore_1_1dungeon_1_1basic_1_1_rock_wall.html#ae8229881c6abad7b9511ae75bc0b2b20" />
+      <keyword name="Wall" id="core::dungeon::Wall::Wall" ref="classcore_1_1dungeon_1_1_wall.html#a12dc41bc7bc045c55ec1034a43e52043" />
+      <keyword name="~Wall" id="core::dungeon::Wall::~Wall" ref="classcore_1_1dungeon_1_1_wall.html#a8271d2d19d1eabe861df299047d827bf" />
+      <keyword name="RoomEdge" id="core::dungeon::RoomEdge::RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#ae90203c7ed0c83d63a040f6dd1eb15d4" />
+      <keyword name="~RoomEdge" id="core::dungeon::RoomEdge::~RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#a6417c70c22c1d6095e7d99e9049bc02f" />
+      <keyword name="character" id="core::dungeon::RoomEdge::character" ref="classcore_1_1dungeon_1_1_room_edge.html#a6c4207afb631648c9db37b3ea842a3b3" />
+      <keyword name="core::dungeon::common" id="core::dungeon::common" ref="namespacecore_1_1dungeon_1_1common.html" />
+      <keyword name="core::dungeon::common::BlockedDoorway" id="core::dungeon::common::BlockedDoorway" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html" />
+      <keyword name="BlockedDoorway" id="core::dungeon::common::BlockedDoorway::BlockedDoorway" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html#a3297bdd54f4a9e6818e4bfc2418d6ebd" />
+      <keyword name="description" id="core::dungeon::common::BlockedDoorway::description" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html#acaaf74ba1bb465369875d04492169f25" />
+      <keyword name="displayCharacter" id="core::dungeon::common::BlockedDoorway::displayCharacter" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html#a2d594428b9ac519180222b6f613f6468" />
+      <keyword name="isPassage" id="core::dungeon::common::BlockedDoorway::isPassage" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html#a6b1da2591ddb800bd7ede5aca89b3906" />
+      <keyword name="setCharacterAt" id="core::dungeon::common::BlockedDoorway::setCharacterAt" ref="classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html#ae6f1997d6aa79f1490ff78d1328f8ea4" />
+      <keyword name="Doorway" id="core::dungeon::Doorway::Doorway" ref="classcore_1_1dungeon_1_1_doorway.html#a7bd9ec58f6e8112e0c89c6919951ebe0" />
+      <keyword name="~Doorway" id="core::dungeon::Doorway::~Doorway" ref="classcore_1_1dungeon_1_1_doorway.html#a4a721bb917836a3b0acf80c30ef45c9c" />
+      <keyword name="connect" id="core::dungeon::Doorway::connect" ref="classcore_1_1dungeon_1_1_doorway.html#a151deaf107d00af53b4467e9717d0248" />
+      <keyword name="isEntrance" id="core::dungeon::Doorway::isEntrance" ref="classcore_1_1dungeon_1_1_doorway.html#a4d71fcebd8d213841c0710d0cd0cda3e" />
+      <keyword name="isExit" id="core::dungeon::Doorway::isExit" ref="classcore_1_1dungeon_1_1_doorway.html#a3ff12678aa7585a99d20dd008b67e47d" />
+      <keyword name="RoomEdge" id="core::dungeon::RoomEdge::RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#ae90203c7ed0c83d63a040f6dd1eb15d4" />
+      <keyword name="~RoomEdge" id="core::dungeon::RoomEdge::~RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#a6417c70c22c1d6095e7d99e9049bc02f" />
+      <keyword name="opposite" id="core::dungeon::Doorway::opposite" ref="classcore_1_1dungeon_1_1_doorway.html#a5e24c2ed8a559827d0482aeb7d0e6737" />
+      <keyword name="exit" id="core::dungeon::Doorway::exit" ref="classcore_1_1dungeon_1_1_doorway.html#a607b3a217b85f37bdd9774cdbff9b1e0" />
+      <keyword name="entrance" id="core::dungeon::Doorway::entrance" ref="classcore_1_1dungeon_1_1_doorway.html#ab1255365426591bb3528627ad2669362" />
+      <keyword name="character" id="core::dungeon::RoomEdge::character" ref="classcore_1_1dungeon_1_1_room_edge.html#a6c4207afb631648c9db37b3ea842a3b3" />
+      <keyword name="core::dungeon::common::LockedDoorway" id="core::dungeon::common::LockedDoorway" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html" />
+      <keyword name="LockedDoorway" id="core::dungeon::common::LockedDoorway::LockedDoorway" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html#aa0154f2688f4251439a32b21841bd276" />
+      <keyword name="description" id="core::dungeon::common::LockedDoorway::description" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html#a4aa68c6e65e1cfbdd471a29c3e6344f1" />
+      <keyword name="displayCharacter" id="core::dungeon::common::LockedDoorway::displayCharacter" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html#a65adf44f2a968880d1abd3c6403e778e" />
+      <keyword name="isPassage" id="core::dungeon::common::LockedDoorway::isPassage" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html#a49f61ed0c337e7ace762e8763aaf0c71" />
+      <keyword name="setCharacterAt" id="core::dungeon::common::LockedDoorway::setCharacterAt" ref="classcore_1_1dungeon_1_1common_1_1_locked_doorway.html#ab64556a655c9c5d331770a2dfbed77d1" />
+      <keyword name="Doorway" id="core::dungeon::Doorway::Doorway" ref="classcore_1_1dungeon_1_1_doorway.html#a7bd9ec58f6e8112e0c89c6919951ebe0" />
+      <keyword name="~Doorway" id="core::dungeon::Doorway::~Doorway" ref="classcore_1_1dungeon_1_1_doorway.html#a4a721bb917836a3b0acf80c30ef45c9c" />
+      <keyword name="connect" id="core::dungeon::Doorway::connect" ref="classcore_1_1dungeon_1_1_doorway.html#a151deaf107d00af53b4467e9717d0248" />
+      <keyword name="isEntrance" id="core::dungeon::Doorway::isEntrance" ref="classcore_1_1dungeon_1_1_doorway.html#a4d71fcebd8d213841c0710d0cd0cda3e" />
+      <keyword name="isExit" id="core::dungeon::Doorway::isExit" ref="classcore_1_1dungeon_1_1_doorway.html#a3ff12678aa7585a99d20dd008b67e47d" />
+      <keyword name="RoomEdge" id="core::dungeon::RoomEdge::RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#ae90203c7ed0c83d63a040f6dd1eb15d4" />
+      <keyword name="~RoomEdge" id="core::dungeon::RoomEdge::~RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#a6417c70c22c1d6095e7d99e9049bc02f" />
+      <keyword name="opposite" id="core::dungeon::Doorway::opposite" ref="classcore_1_1dungeon_1_1_doorway.html#a5e24c2ed8a559827d0482aeb7d0e6737" />
+      <keyword name="exit" id="core::dungeon::Doorway::exit" ref="classcore_1_1dungeon_1_1_doorway.html#a607b3a217b85f37bdd9774cdbff9b1e0" />
+      <keyword name="entrance" id="core::dungeon::Doorway::entrance" ref="classcore_1_1dungeon_1_1_doorway.html#ab1255365426591bb3528627ad2669362" />
+      <keyword name="character" id="core::dungeon::RoomEdge::character" ref="classcore_1_1dungeon_1_1_room_edge.html#a6c4207afb631648c9db37b3ea842a3b3" />
+      <keyword name="core::dungeon::common::OneWayDoor" id="core::dungeon::common::OneWayDoor" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html" />
+      <keyword name="OneWayDoor" id="core::dungeon::common::OneWayDoor::OneWayDoor" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html#aa94504525a94b8ae5d1ea7f14896557c" />
+      <keyword name="description" id="core::dungeon::common::OneWayDoor::description" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html#ab19007cda198ac1a322f8631c7053ab5" />
+      <keyword name="displayCharacter" id="core::dungeon::common::OneWayDoor::displayCharacter" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html#a0988dbe99fc8c039918b81ab547cb652" />
+      <keyword name="isPassage" id="core::dungeon::common::OneWayDoor::isPassage" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html#ae8b3f86e04af0991916458c0250a820d" />
+      <keyword name="setCharacterAt" id="core::dungeon::common::OneWayDoor::setCharacterAt" ref="classcore_1_1dungeon_1_1common_1_1_one_way_door.html#a05bc627834e6d2accde251e79881f3fb" />
+      <keyword name="Doorway" id="core::dungeon::Doorway::Doorway" ref="classcore_1_1dungeon_1_1_doorway.html#a7bd9ec58f6e8112e0c89c6919951ebe0" />
+      <keyword name="~Doorway" id="core::dungeon::Doorway::~Doorway" ref="classcore_1_1dungeon_1_1_doorway.html#a4a721bb917836a3b0acf80c30ef45c9c" />
+      <keyword name="connect" id="core::dungeon::Doorway::connect" ref="classcore_1_1dungeon_1_1_doorway.html#a151deaf107d00af53b4467e9717d0248" />
+      <keyword name="isEntrance" id="core::dungeon::Doorway::isEntrance" ref="classcore_1_1dungeon_1_1_doorway.html#a4d71fcebd8d213841c0710d0cd0cda3e" />
+      <keyword name="isExit" id="core::dungeon::Doorway::isExit" ref="classcore_1_1dungeon_1_1_doorway.html#a3ff12678aa7585a99d20dd008b67e47d" />
+      <keyword name="RoomEdge" id="core::dungeon::RoomEdge::RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#ae90203c7ed0c83d63a040f6dd1eb15d4" />
+      <keyword name="~RoomEdge" id="core::dungeon::RoomEdge::~RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#a6417c70c22c1d6095e7d99e9049bc02f" />
+      <keyword name="opposite" id="core::dungeon::Doorway::opposite" ref="classcore_1_1dungeon_1_1_doorway.html#a5e24c2ed8a559827d0482aeb7d0e6737" />
+      <keyword name="exit" id="core::dungeon::Doorway::exit" ref="classcore_1_1dungeon_1_1_doorway.html#a607b3a217b85f37bdd9774cdbff9b1e0" />
+      <keyword name="entrance" id="core::dungeon::Doorway::entrance" ref="classcore_1_1dungeon_1_1_doorway.html#ab1255365426591bb3528627ad2669362" />
+      <keyword name="character" id="core::dungeon::RoomEdge::character" ref="classcore_1_1dungeon_1_1_room_edge.html#a6c4207afb631648c9db37b3ea842a3b3" />
+      <keyword name="core::dungeon::common::OpenDoorWay" id="core::dungeon::common::OpenDoorWay" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html" />
+      <keyword name="OpenDoorWay" id="core::dungeon::common::OpenDoorWay::OpenDoorWay" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html#adf7cff68ef9d51f4c1972079b887f6a2" />
+      <keyword name="OpenDoorWay" id="core::dungeon::common::OpenDoorWay::OpenDoorWay" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html#a60b167ffa318c46852c86f0053b9ae60" />
+      <keyword name="description" id="core::dungeon::common::OpenDoorWay::description" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html#afe8f80114a207da8e0b4991426139f4a" />
+      <keyword name="displayCharacter" id="core::dungeon::common::OpenDoorWay::displayCharacter" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html#a3a350d58c828ce62a9c93f0fbf78fa0e" />
+      <keyword name="isPassage" id="core::dungeon::common::OpenDoorWay::isPassage" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html#a2fdccccb0068ecb0817f93c6a69bd061" />
+      <keyword name="setCharacterAt" id="core::dungeon::common::OpenDoorWay::setCharacterAt" ref="classcore_1_1dungeon_1_1common_1_1_open_door_way.html#a26cf81183c8bc96209e49c525b03a76a" />
+      <keyword name="Doorway" id="core::dungeon::Doorway::Doorway" ref="classcore_1_1dungeon_1_1_doorway.html#a7bd9ec58f6e8112e0c89c6919951ebe0" />
+      <keyword name="~Doorway" id="core::dungeon::Doorway::~Doorway" ref="classcore_1_1dungeon_1_1_doorway.html#a4a721bb917836a3b0acf80c30ef45c9c" />
+      <keyword name="connect" id="core::dungeon::Doorway::connect" ref="classcore_1_1dungeon_1_1_doorway.html#a151deaf107d00af53b4467e9717d0248" />
+      <keyword name="isEntrance" id="core::dungeon::Doorway::isEntrance" ref="classcore_1_1dungeon_1_1_doorway.html#a4d71fcebd8d213841c0710d0cd0cda3e" />
+      <keyword name="isExit" id="core::dungeon::Doorway::isExit" ref="classcore_1_1dungeon_1_1_doorway.html#a3ff12678aa7585a99d20dd008b67e47d" />
+      <keyword name="RoomEdge" id="core::dungeon::RoomEdge::RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#ae90203c7ed0c83d63a040f6dd1eb15d4" />
+      <keyword name="~RoomEdge" id="core::dungeon::RoomEdge::~RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#a6417c70c22c1d6095e7d99e9049bc02f" />
+      <keyword name="opposite" id="core::dungeon::Doorway::opposite" ref="classcore_1_1dungeon_1_1_doorway.html#a5e24c2ed8a559827d0482aeb7d0e6737" />
+      <keyword name="exit" id="core::dungeon::Doorway::exit" ref="classcore_1_1dungeon_1_1_doorway.html#a607b3a217b85f37bdd9774cdbff9b1e0" />
+      <keyword name="entrance" id="core::dungeon::Doorway::entrance" ref="classcore_1_1dungeon_1_1_doorway.html#ab1255365426591bb3528627ad2669362" />
+      <keyword name="character" id="core::dungeon::RoomEdge::character" ref="classcore_1_1dungeon_1_1_room_edge.html#a6c4207afb631648c9db37b3ea842a3b3" />
+      <keyword name="core::dungeon::magical" id="core::dungeon::magical" ref="namespacecore_1_1dungeon_1_1magical.html" />
+      <keyword name="core::dungeon::magical::AlchemistsLaboratory" id="core::dungeon::magical::AlchemistsLaboratory" ref="classcore_1_1dungeon_1_1magical_1_1_alchemists_laboratory.html" />
+      <keyword name="AlchemistsLaboratory" id="core::dungeon::magical::AlchemistsLaboratory::AlchemistsLaboratory" ref="classcore_1_1dungeon_1_1magical_1_1_alchemists_laboratory.html#aa6419cac127ded00db9fb848f631eef2" />
+      <keyword name="Room" id="core::dungeon::Room::Room" ref="classcore_1_1dungeon_1_1_room.html#ac6ef93a7d9c3e1d624e025058d5f16ff" />
+      <keyword name="Room" id="core::dungeon::Room::Room" ref="classcore_1_1dungeon_1_1_room.html#a8701c81a439522a19e2fdfac4c1022ab" />
+      <keyword name="~Room" id="core::dungeon::Room::~Room" ref="classcore_1_1dungeon_1_1_room.html#ac989b4a3fa3844f6e207664f1219f0af" />
+      <keyword name="description" id="core::dungeon::Room::description" ref="classcore_1_1dungeon_1_1_room.html#aa3aa06d6da0d339c2fc8a001d251108b" />
+      <keyword name="setEdge" id="core::dungeon::Room::setEdge" ref="classcore_1_1dungeon_1_1_room.html#ac5199bbe1984e4d84a1d50a2a057184e" />
+      <keyword name="edgeAt" id="core::dungeon::Room::edgeAt" ref="classcore_1_1dungeon_1_1_room.html#aa7102fa0219c2bba2bfdb4308777ca6f" />
+      <keyword name="display" id="core::dungeon::Room::display" ref="classcore_1_1dungeon_1_1_room.html#a7411e34ee3c25f864678614d6b1220bf" />
+      <keyword name="id" id="core::dungeon::Room::id" ref="classcore_1_1dungeon_1_1_room.html#aaecc24dc2ff0b7709e37d2d470f141ab" />
+      <keyword name="item" id="core::dungeon::Room::item" ref="classcore_1_1dungeon_1_1_room.html#ab7eb9beb221da4bbb9f70e92b7228007" />
+      <keyword name="setItem" id="core::dungeon::Room::setItem" ref="classcore_1_1dungeon_1_1_room.html#a7d189e2a7375d995c25af05ce05a3807" />
+      <keyword name="creature" id="core::dungeon::Room::creature" ref="classcore_1_1dungeon_1_1_room.html#a0403d35c40a059fe48c3f67095762778" />
+      <keyword name="setCreature" id="core::dungeon::Room::setCreature" ref="classcore_1_1dungeon_1_1_room.html#ac1905a91c844fbfd6c238f3b11fae25c" />
+      <keyword name="createOpenDoorway" id="core::dungeon::Room::createOpenDoorway" ref="classcore_1_1dungeon_1_1_room.html#a17d6c348ca06a8afaaa960b60b557399" />
+      <keyword name="createOpenDoorway" id="core::dungeon::Room::createOpenDoorway" ref="classcore_1_1dungeon_1_1_room.html#a87ab91197edf8bd2f9d404e977b02d64" />
+      <keyword name="createLockedDoorway" id="core::dungeon::Room::createLockedDoorway" ref="classcore_1_1dungeon_1_1_room.html#a7347690614ed1ddc7b836e91774e4a97" />
+      <keyword name="createOnewaydoor" id="core::dungeon::Room::createOnewaydoor" ref="classcore_1_1dungeon_1_1_room.html#a72889d240f66be2968caad721fb54090" />
+      <keyword name="createBlockedDoorway" id="core::dungeon::Room::createBlockedDoorway" ref="classcore_1_1dungeon_1_1_room.html#a16b55922579e2d47af0e46b4bb14f594" />
+      <keyword name="roomHasExit" id="core::dungeon::Room::roomHasExit" ref="classcore_1_1dungeon_1_1_room.html#af009913e8c7cf62e523ae52960b22673" />
+      <keyword name="hasEntrance" id="core::dungeon::Room::hasEntrance" ref="classcore_1_1dungeon_1_1_room.html#a591ed1cc14b893f2baae19ccf0f74460" />
+      <keyword name="edges" id="core::dungeon::Room::edges" ref="classcore_1_1dungeon_1_1_room.html#abe0cb947808b11cf99bfd8a4295f6bcc" />
+      <keyword name="getDirection" id="core::dungeon::Room::getDirection" ref="classcore_1_1dungeon_1_1_room.html#a09623712abb81c6680a1233b018ce90d" />
+      <keyword name="roomID" id="core::dungeon::Room::roomID" ref="classcore_1_1dungeon_1_1_room.html#a2cdf3261211b81777a5929ee5cc2c642" />
+      <keyword name="core::dungeon::magical::EnchantedLibrary" id="core::dungeon::magical::EnchantedLibrary" ref="classcore_1_1dungeon_1_1magical_1_1_enchanted_library.html" />
+      <keyword name="EnchantedLibrary" id="core::dungeon::magical::EnchantedLibrary::EnchantedLibrary" ref="classcore_1_1dungeon_1_1magical_1_1_enchanted_library.html#a3a5bfa2dc4027eb1fbcb4be6f8675cd7" />
+      <keyword name="core::dungeon::magical::MagicalDungeonLevel" id="core::dungeon::magical::MagicalDungeonLevel" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level.html" />
+      <keyword name="MagicalDungeonLevel" id="core::dungeon::magical::MagicalDungeonLevel::MagicalDungeonLevel" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level.html#abcee9d6349e8df805072c169ec5aec5d" />
+      <keyword name="description" id="core::dungeon::magical::MagicalDungeonLevel::description" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level.html#a87a0f9c4668ff572517514ef925e2777" />
+      <keyword name="DungeonLevel" id="core::dungeon::DungeonLevel::DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html#aa0d526766a36085c685527a565de9b8a" />
+      <keyword name="~DungeonLevel" id="core::dungeon::DungeonLevel::~DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a2c9f484a4867a91747944481a70a92f2" />
+      <keyword name="DungeonLevel" id="core::dungeon::DungeonLevel::DungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a3d96264c8d61ca66592a63fb0fb8b63f" />
+      <keyword name="addRoom" id="core::dungeon::DungeonLevel::addRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a5398f0bcbee625ee5113f9dccf59da5e" />
+      <keyword name="retrieveRoom" id="core::dungeon::DungeonLevel::retrieveRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a1b9a8e42c8f5e5322201daf45c2dd807" />
+      <keyword name="retrieveNearbyRoom" id="core::dungeon::DungeonLevel::retrieveNearbyRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#ad2507485e712e3efa66e22a8d89b312d" />
+      <keyword name="width" id="core::dungeon::DungeonLevel::width" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a1940172e8e195ccc26154302f8c920e2" />
+      <keyword name="height" id="core::dungeon::DungeonLevel::height" ref="classcore_1_1dungeon_1_1_dungeon_level.html#acd83fcdc250a1848fb3df8fbe028914a" />
+      <keyword name="numberOfRooms" id="core::dungeon::DungeonLevel::numberOfRooms" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a227c7ec5ce87420cf045dff0cd92a0b0" />
+      <keyword name="name" id="core::dungeon::DungeonLevel::name" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a5b5bdfb218b447408201e851f1557351" />
+      <keyword name="display" id="core::dungeon::DungeonLevel::display" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a0a8eca04772b82d9bfc171253fc9e4db" />
+      <keyword name="isLeftRoom" id="core::dungeon::DungeonLevel::isLeftRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a9c955afddbefe3127c374f3ee9cf35db" />
+      <keyword name="isRightRoom" id="core::dungeon::DungeonLevel::isRightRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a48bd4c3cec9ff2923e7b58ef8295e4cb" />
+      <keyword name="isTopRoom" id="core::dungeon::DungeonLevel::isTopRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a8392dde5fbe82ce2b25bb12dd538a8ee" />
+      <keyword name="isBottomRoom" id="core::dungeon::DungeonLevel::isBottomRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a83f05d679a7c808cb76b19c8aec5eb90" />
+      <keyword name="isMidRoom" id="core::dungeon::DungeonLevel::isMidRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a6f8d69643df9981b725f4950b5c6f2ae" />
+      <keyword name="isCornerRoom" id="core::dungeon::DungeonLevel::isCornerRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a7b0ae97613a421f1f2df104585f1fb9f" />
+      <keyword name="isNonCornerRoom" id="core::dungeon::DungeonLevel::isNonCornerRoom" ref="classcore_1_1dungeon_1_1_dungeon_level.html#afdb8749dc9e6d75102f150da4749ce08" />
+      <keyword name="levelName" id="core::dungeon::DungeonLevel::levelName" ref="classcore_1_1dungeon_1_1_dungeon_level.html#afe1821b9f4df81d119800b24586510e3" />
+      <keyword name="levelHeight" id="core::dungeon::DungeonLevel::levelHeight" ref="classcore_1_1dungeon_1_1_dungeon_level.html#ac479f5e070acc617f5cd0d142745817e" />
+      <keyword name="levelWidth" id="core::dungeon::DungeonLevel::levelWidth" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a8d04ce822056498508bbbe999d33720b" />
+      <keyword name="rooms" id="core::dungeon::DungeonLevel::rooms" ref="classcore_1_1dungeon_1_1_dungeon_level.html#a8e6e83b8f33d39fa6aa69a3a3e96ef87" />
+      <keyword name="core::dungeon::magical::MagicalDungeonLevelBuilder" id="core::dungeon::magical::MagicalDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html" />
+      <keyword name="MagicalDungeonLevelBuilder" id="core::dungeon::magical::MagicalDungeonLevelBuilder::MagicalDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#a3c3dc8984f40af69efdb2f84da82fce9" />
+      <keyword name="~MagicalDungeonLevelBuilder" id="core::dungeon::magical::MagicalDungeonLevelBuilder::~MagicalDungeonLevelBuilder" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#a2e069affbafb1fc3dc15ecb18ebf02cb" />
+      <keyword name="buildDungeonLevel" id="core::dungeon::magical::MagicalDungeonLevelBuilder::buildDungeonLevel" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#a11c8089704f0ee35e51e752565d47e17" />
+      <keyword name="buildRoom" id="core::dungeon::magical::MagicalDungeonLevelBuilder::buildRoom" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#a959d0c2348e005608cede9b2b768b57b" />
+      <keyword name="buildDoorway" id="core::dungeon::magical::MagicalDungeonLevelBuilder::buildDoorway" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#a40cae929d53ca8184be0cc11262ef6e6" />
+      <keyword name="buildEntrance" id="core::dungeon::magical::MagicalDungeonLevelBuilder::buildEntrance" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#aa4fcd5f3eac21873b21a6ae02bde9358" />
+      <keyword name="buildExit" id="core::dungeon::magical::MagicalDungeonLevelBuilder::buildExit" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#a2640207961786dc9ac444831972a75b1" />
+      <keyword name="buildItem" id="core::dungeon::magical::MagicalDungeonLevelBuilder::buildItem" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#aea918d03e09e2ce8d179a904ab0ef09b" />
+      <keyword name="buildCreature" id="core::dungeon::magical::MagicalDungeonLevelBuilder::buildCreature" ref="classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html#aea8cc1e606c76d71b6dd3abff701a4de" />
+      <keyword name="DungeonLevelBuilder" id="core::dungeon::DungeonLevelBuilder::DungeonLevelBuilder" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a4723e30858d2b5ff59c52642234fcc97" />
+      <keyword name="~DungeonLevelBuilder" id="core::dungeon::DungeonLevelBuilder::~DungeonLevelBuilder" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a2dc50fdac6d4e7362bff38d2a0d0b4ac" />
+      <keyword name="getDungeonLevel" id="core::dungeon::DungeonLevelBuilder::getDungeonLevel" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a8babc0269a6ea078976b021618b229d7" />
+      <keyword name="getRandomOriginConstraint" id="core::dungeon::DungeonLevelBuilder::getRandomOriginConstraint" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a452848386f986f799f4b35c2ab804d7b" />
+      <keyword name="getRandomDestConstraint" id="core::dungeon::DungeonLevelBuilder::getRandomDestConstraint" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#abd70fe31a31390da208be619773b1a15" />
+      <keyword name="getRandomItem" id="core::dungeon::DungeonLevelBuilder::getRandomItem" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#aa779c11ff416e0c4fc0edc4972a4597b" />
+      <keyword name="getRandomCreature" id="core::dungeon::DungeonLevelBuilder::getRandomCreature" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a2120038f87ed6d419a4f15235b7b813b" />
+      <keyword name="createPrototypeItems" id="core::dungeon::DungeonLevelBuilder::createPrototypeItems" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a298352cfed8bb86e69246d7b5b77ccf6" />
+      <keyword name="createPrototypeCreatures" id="core::dungeon::DungeonLevelBuilder::createPrototypeCreatures" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a8c52fe625b8a4581aa3e2cf48e2c12a2" />
+      <keyword name="createItem" id="core::dungeon::DungeonLevelBuilder::createItem" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ad22b4f219ddd4915da0d8252e2504b64" />
+      <keyword name="createMonster" id="core::dungeon::DungeonLevelBuilder::createMonster" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#ab496bb3b597384f2ecaafd1ca56c0754" />
+      <keyword name="prototypeCreatures" id="core::dungeon::DungeonLevelBuilder::prototypeCreatures" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a70e6d541f61e6524893750071ce3505c" />
+      <keyword name="prototypeItems" id="core::dungeon::DungeonLevelBuilder::prototypeItems" ref="classcore_1_1dungeon_1_1_dungeon_level_builder.html#a980f6b4566b3d20fb66184f612b72c3c" />
+      <keyword name="core::dungeon::magical::MagicWall" id="core::dungeon::magical::MagicWall" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html" />
+      <keyword name="MagicWall" id="core::dungeon::magical::MagicWall::MagicWall" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html#a5a5933953b32b526e601084e816e1fbb" />
+      <keyword name="description" id="core::dungeon::magical::MagicWall::description" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html#a3a979b06a1411ce3346c8eb4b4f3ce2b" />
+      <keyword name="displayCharacter" id="core::dungeon::magical::MagicWall::displayCharacter" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html#a630dee09772670a60aa68cc1887605a2" />
+      <keyword name="isPassage" id="core::dungeon::magical::MagicWall::isPassage" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html#af7fb785bf8534621e86a87a77517f773" />
+      <keyword name="setCharacterAt" id="core::dungeon::magical::MagicWall::setCharacterAt" ref="classcore_1_1dungeon_1_1magical_1_1_magic_wall.html#a213f8cd3adc7aa17e68ab7cdca06b98b" />
+      <keyword name="Wall" id="core::dungeon::Wall::Wall" ref="classcore_1_1dungeon_1_1_wall.html#a12dc41bc7bc045c55ec1034a43e52043" />
+      <keyword name="~Wall" id="core::dungeon::Wall::~Wall" ref="classcore_1_1dungeon_1_1_wall.html#a8271d2d19d1eabe861df299047d827bf" />
+      <keyword name="RoomEdge" id="core::dungeon::RoomEdge::RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#ae90203c7ed0c83d63a040f6dd1eb15d4" />
+      <keyword name="~RoomEdge" id="core::dungeon::RoomEdge::~RoomEdge" ref="classcore_1_1dungeon_1_1_room_edge.html#a6417c70c22c1d6095e7d99e9049bc02f" />
+      <keyword name="character" id="core::dungeon::RoomEdge::character" ref="classcore_1_1dungeon_1_1_room_edge.html#a6c4207afb631648c9db37b3ea842a3b3" />
+      <keyword name="core::items" id="core::items" ref="namespacecore_1_1items.html" />
+      <keyword name="core::items::Consumeable" id="core::items::Consumeable" ref="classcore_1_1items_1_1_consumeable.html" />
+      <keyword name="Consumeable" id="core::items::Consumeable::Consumeable" ref="classcore_1_1items_1_1_consumeable.html#ab3a7f561b586ada93596e2af3a7bf4f6" />
+      <keyword name="Consumeable" id="core::items::Consumeable::Consumeable" ref="classcore_1_1items_1_1_consumeable.html#acf4062a400bb24c7c2225f6c9d8b21dd" />
+      <keyword name="clone" id="core::items::Consumeable::clone" ref="classcore_1_1items_1_1_consumeable.html#a49bfdd1ed9ae1cf8a04e1ba2fd34b004" />
+      <keyword name="Item" id="core::items::Item::Item" ref="classcore_1_1items_1_1_item.html#a297720c02984eab37332ae795d22189d" />
+      <keyword name="Item" id="core::items::Item::Item" ref="classcore_1_1items_1_1_item.html#ac9fdd690ffb0ad0563fe4968de86a0a0" />
+      <keyword name="~Item" id="core::items::Item::~Item" ref="classcore_1_1items_1_1_item.html#aa6e4de6c78beb3a5ec200dfac0882bf5" />
+      <keyword name="name" id="core::items::Item::name" ref="classcore_1_1items_1_1_item.html#a75eb15d31b7244deb5ad19228ae3da22" />
+      <keyword name="displayCharacter" id="core::items::Item::displayCharacter" ref="classcore_1_1items_1_1_item.html#a162fe028d72e84f2bd93107f794cea6b" />
+      <keyword name="itemName" id="core::items::Item::itemName" ref="classcore_1_1items_1_1_item.html#a9768acfc195e2bd2f8063e1c9801c4ee" />
+      <keyword name="character" id="core::items::Item::character" ref="classcore_1_1items_1_1_item.html#a21f5a0f7f9b40dcc66f284e884ef3fef" />
+      <keyword name="core::items::Item" id="core::items::Item" ref="classcore_1_1items_1_1_item.html" />
+      <keyword name="Item" id="core::items::Item::Item" ref="classcore_1_1items_1_1_item.html#a297720c02984eab37332ae795d22189d" />
+      <keyword name="Item" id="core::items::Item::Item" ref="classcore_1_1items_1_1_item.html#ac9fdd690ffb0ad0563fe4968de86a0a0" />
+      <keyword name="~Item" id="core::items::Item::~Item" ref="classcore_1_1items_1_1_item.html#aa6e4de6c78beb3a5ec200dfac0882bf5" />
+      <keyword name="clone" id="core::items::Item::clone" ref="classcore_1_1items_1_1_item.html#a82925aaa3c7c05ff06ee8fc67517fd2f" />
+      <keyword name="name" id="core::items::Item::name" ref="classcore_1_1items_1_1_item.html#a75eb15d31b7244deb5ad19228ae3da22" />
+      <keyword name="displayCharacter" id="core::items::Item::displayCharacter" ref="classcore_1_1items_1_1_item.html#a162fe028d72e84f2bd93107f794cea6b" />
+      <keyword name="itemName" id="core::items::Item::itemName" ref="classcore_1_1items_1_1_item.html#a9768acfc195e2bd2f8063e1c9801c4ee" />
+      <keyword name="character" id="core::items::Item::character" ref="classcore_1_1items_1_1_item.html#a21f5a0f7f9b40dcc66f284e884ef3fef" />
+      <keyword name="core::items::Weapon" id="core::items::Weapon" ref="classcore_1_1items_1_1_weapon.html" />
+      <keyword name="Weapon" id="core::items::Weapon::Weapon" ref="classcore_1_1items_1_1_weapon.html#a42dbc46dd70319a24763992c4ebbd396" />
+      <keyword name="Weapon" id="core::items::Weapon::Weapon" ref="classcore_1_1items_1_1_weapon.html#abb43c5f247680f99d48bdfc719a4f975" />
+      <keyword name="clone" id="core::items::Weapon::clone" ref="classcore_1_1items_1_1_weapon.html#a31b79ea4fe726ff062c6ca016d22993d" />
+      <keyword name="Item" id="core::items::Item::Item" ref="classcore_1_1items_1_1_item.html#a297720c02984eab37332ae795d22189d" />
+      <keyword name="Item" id="core::items::Item::Item" ref="classcore_1_1items_1_1_item.html#ac9fdd690ffb0ad0563fe4968de86a0a0" />
+      <keyword name="~Item" id="core::items::Item::~Item" ref="classcore_1_1items_1_1_item.html#aa6e4de6c78beb3a5ec200dfac0882bf5" />
+      <keyword name="name" id="core::items::Item::name" ref="classcore_1_1items_1_1_item.html#a75eb15d31b7244deb5ad19228ae3da22" />
+      <keyword name="displayCharacter" id="core::items::Item::displayCharacter" ref="classcore_1_1items_1_1_item.html#a162fe028d72e84f2bd93107f794cea6b" />
+      <keyword name="itemName" id="core::items::Item::itemName" ref="classcore_1_1items_1_1_item.html#a9768acfc195e2bd2f8063e1c9801c4ee" />
+      <keyword name="character" id="core::items::Item::character" ref="classcore_1_1items_1_1_item.html#a21f5a0f7f9b40dcc66f284e884ef3fef" />
     </keywords>
     <files>
       <file>tabs.css</file>
@@ -56,15 +1337,257 @@
       <file>search/mag_sel.svg</file>
       <file>search/search.css</file>
       <file>search/search.js</file>
+      <file>abstractcreature_8h_source.html</file>
+      <file>alchemistslaboratory_8h_source.html</file>
+      <file>basicdungeonlevel_8h_source.html</file>
+      <file>basicdungeonlevelbuilder_8h_source.html</file>
+      <file>blockeddoorway_8h_source.html</file>
+      <file>consumeable_8h_source.html</file>
+      <file>doorway_8h_source.html</file>
+      <file>dungeonlevel_8h_source.html</file>
+      <file>dungeonlevelbuilder_8h_source.html</file>
+      <file>enchantedlibrary_8h_source.html</file>
+      <file>game_8h_source.html</file>
+      <file>item_8h_source.html</file>
+      <file>lockeddoorway_8h_source.html</file>
+      <file>magicaldungeonlevel_8h_source.html</file>
+      <file>magicaldungeonlevelbuilder_8h_source.html</file>
+      <file>magicwall_8h_source.html</file>
+      <file>menuinterface_8h_source.html</file>
+      <file>monster_8h_source.html</file>
+      <file>onewaydoor_8h_source.html</file>
+      <file>opendoorway_8h_source.html</file>
+      <file>quartzchamber_8h_source.html</file>
+      <file>rockchamber_8h_source.html</file>
+      <file>rockwall_8h_source.html</file>
+      <file>room_8h_source.html</file>
+      <file>roomedge_8h_source.html</file>
+      <file>wall_8h_source.html</file>
+      <file>weapon_8h_source.html</file>
+      <file>abstractcreature_8cpp.html</file>
+      <file>abstractcreature_8h.html</file>
+      <file>alchemistslaboratory_8cpp.html</file>
+      <file>alchemistslaboratory_8h.html</file>
+      <file>basicdungeonlevel_8cpp.html</file>
+      <file>basicdungeonlevel_8h.html</file>
+      <file>basicdungeonlevelbuilder_8cpp.html</file>
+      <file>basicdungeonlevelbuilder_8h.html</file>
+      <file>blockeddoorway_8cpp.html</file>
+      <file>blockeddoorway_8h.html</file>
+      <file>consumeable_8cpp.html</file>
+      <file>consumeable_8h.html</file>
+      <file>doorway_8cpp.html</file>
+      <file>doorway_8h.html</file>
+      <file>dungeonlevel_8cpp.html</file>
+      <file>dungeonlevel_8h.html</file>
+      <file>dungeonlevelbuilder_8cpp.html</file>
+      <file>dungeonlevelbuilder_8h.html</file>
+      <file>enchantedlibrary_8cpp.html</file>
+      <file>enchantedlibrary_8h.html</file>
+      <file>game_8cpp.html</file>
+      <file>game_8h.html</file>
+      <file>item_8cpp.html</file>
+      <file>item_8h.html</file>
+      <file>lockeddoorway_8cpp.html</file>
+      <file>lockeddoorway_8h.html</file>
+      <file>magicaldungeonlevel_8cpp.html</file>
+      <file>magicaldungeonlevel_8h.html</file>
+      <file>magicaldungeonlevelbuilder_8cpp.html</file>
+      <file>magicaldungeonlevelbuilder_8h.html</file>
+      <file>magicwall_8cpp.html</file>
+      <file>magicwall_8h.html</file>
       <file>main_8cpp.html</file>
-      <file>group__test.html</file>
+      <file>menuinterface_8cpp.html</file>
+      <file>menuinterface_8h.html</file>
+      <file>monster_8cpp.html</file>
+      <file>monster_8h.html</file>
+      <file>onewaydoor_8cpp.html</file>
+      <file>onewaydoor_8h.html</file>
+      <file>opendoorway_8cpp.html</file>
+      <file>opendoorway_8h.html</file>
+      <file>quartzchamber_8cpp.html</file>
+      <file>quartzchamber_8h.html</file>
+      <file>rockchamber_8cpp.html</file>
+      <file>rockchamber_8h.html</file>
+      <file>rockwall_8cpp.html</file>
+      <file>rockwall_8h.html</file>
+      <file>room_8cpp.html</file>
+      <file>room_8h.html</file>
+      <file>roomedge_8cpp.html</file>
+      <file>roomedge_8h.html</file>
+      <file>wall_8cpp.html</file>
+      <file>wall_8h.html</file>
+      <file>weapon_8cpp.html</file>
+      <file>weapon_8h.html</file>
+      <file>class_open_doorway.html</file>
+      <file>namespacecore.html</file>
+      <file>classcore_1_1_game.html</file>
+      <file>classcore_1_1_game-members.html</file>
+      <file>classcore_1_1_menu_interface.html</file>
+      <file>classcore_1_1_menu_interface-members.html</file>
+      <file>namespacecore_1_1creatures.html</file>
+      <file>classcore_1_1creatures_1_1_abstract_creature.html</file>
+      <file>classcore_1_1creatures_1_1_abstract_creature.png</file>
+      <file>classcore_1_1creatures_1_1_abstract_creature-members.html</file>
+      <file>classcore_1_1creatures_1_1_monster.html</file>
+      <file>classcore_1_1creatures_1_1_monster.png</file>
+      <file>classcore_1_1creatures_1_1_monster-members.html</file>
+      <file>namespacecore_1_1dungeon.html</file>
+      <file>classcore_1_1dungeon_1_1_doorway.html</file>
+      <file>classcore_1_1dungeon_1_1_doorway.png</file>
+      <file>classcore_1_1dungeon_1_1_doorway-members.html</file>
+      <file>classcore_1_1dungeon_1_1_dungeon_level.html</file>
+      <file>classcore_1_1dungeon_1_1_dungeon_level.png</file>
+      <file>classcore_1_1dungeon_1_1_dungeon_level-members.html</file>
+      <file>classcore_1_1dungeon_1_1_dungeon_level_builder.html</file>
+      <file>classcore_1_1dungeon_1_1_dungeon_level_builder.png</file>
+      <file>classcore_1_1dungeon_1_1_dungeon_level_builder-members.html</file>
+      <file>classcore_1_1dungeon_1_1_room.html</file>
+      <file>classcore_1_1dungeon_1_1_room.png</file>
+      <file>classcore_1_1dungeon_1_1_room-members.html</file>
+      <file>classcore_1_1dungeon_1_1_room_edge.html</file>
+      <file>classcore_1_1dungeon_1_1_room_edge.png</file>
+      <file>classcore_1_1dungeon_1_1_room_edge-members.html</file>
+      <file>classcore_1_1dungeon_1_1_wall.html</file>
+      <file>classcore_1_1dungeon_1_1_wall.png</file>
+      <file>classcore_1_1dungeon_1_1_wall-members.html</file>
+      <file>namespacecore_1_1dungeon_1_1basic.html</file>
+      <file>classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level.html</file>
+      <file>classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level.png</file>
+      <file>classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level-members.html</file>
+      <file>classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.html</file>
+      <file>classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder.png</file>
+      <file>classcore_1_1dungeon_1_1basic_1_1_basic_dungeon_level_builder-members.html</file>
+      <file>classcore_1_1dungeon_1_1basic_1_1_quartz_chamber.html</file>
+      <file>classcore_1_1dungeon_1_1basic_1_1_quartz_chamber.png</file>
+      <file>classcore_1_1dungeon_1_1basic_1_1_quartz_chamber-members.html</file>
+      <file>classcore_1_1dungeon_1_1basic_1_1_rock_chamber.html</file>
+      <file>classcore_1_1dungeon_1_1basic_1_1_rock_chamber.png</file>
+      <file>classcore_1_1dungeon_1_1basic_1_1_rock_chamber-members.html</file>
+      <file>classcore_1_1dungeon_1_1basic_1_1_rock_wall.html</file>
+      <file>classcore_1_1dungeon_1_1basic_1_1_rock_wall.png</file>
+      <file>classcore_1_1dungeon_1_1basic_1_1_rock_wall-members.html</file>
+      <file>namespacecore_1_1dungeon_1_1common.html</file>
+      <file>classcore_1_1dungeon_1_1common_1_1_blocked_doorway.html</file>
+      <file>classcore_1_1dungeon_1_1common_1_1_blocked_doorway.png</file>
+      <file>classcore_1_1dungeon_1_1common_1_1_blocked_doorway-members.html</file>
+      <file>classcore_1_1dungeon_1_1common_1_1_locked_doorway.html</file>
+      <file>classcore_1_1dungeon_1_1common_1_1_locked_doorway.png</file>
+      <file>classcore_1_1dungeon_1_1common_1_1_locked_doorway-members.html</file>
+      <file>classcore_1_1dungeon_1_1common_1_1_one_way_door.html</file>
+      <file>classcore_1_1dungeon_1_1common_1_1_one_way_door.png</file>
+      <file>classcore_1_1dungeon_1_1common_1_1_one_way_door-members.html</file>
+      <file>classcore_1_1dungeon_1_1common_1_1_open_door_way.html</file>
+      <file>classcore_1_1dungeon_1_1common_1_1_open_door_way.png</file>
+      <file>classcore_1_1dungeon_1_1common_1_1_open_door_way-members.html</file>
+      <file>namespacecore_1_1dungeon_1_1magical.html</file>
+      <file>classcore_1_1dungeon_1_1magical_1_1_alchemists_laboratory.html</file>
+      <file>classcore_1_1dungeon_1_1magical_1_1_alchemists_laboratory.png</file>
+      <file>classcore_1_1dungeon_1_1magical_1_1_alchemists_laboratory-members.html</file>
+      <file>classcore_1_1dungeon_1_1magical_1_1_enchanted_library.html</file>
+      <file>classcore_1_1dungeon_1_1magical_1_1_enchanted_library-members.html</file>
+      <file>classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level.html</file>
+      <file>classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level.png</file>
+      <file>classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level-members.html</file>
+      <file>classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.html</file>
+      <file>classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder.png</file>
+      <file>classcore_1_1dungeon_1_1magical_1_1_magical_dungeon_level_builder-members.html</file>
+      <file>classcore_1_1dungeon_1_1magical_1_1_magic_wall.html</file>
+      <file>classcore_1_1dungeon_1_1magical_1_1_magic_wall.png</file>
+      <file>classcore_1_1dungeon_1_1magical_1_1_magic_wall-members.html</file>
+      <file>namespacecore_1_1items.html</file>
+      <file>classcore_1_1items_1_1_consumeable.html</file>
+      <file>classcore_1_1items_1_1_consumeable.png</file>
+      <file>classcore_1_1items_1_1_consumeable-members.html</file>
+      <file>classcore_1_1items_1_1_item.html</file>
+      <file>classcore_1_1items_1_1_item.png</file>
+      <file>classcore_1_1items_1_1_item-members.html</file>
+      <file>classcore_1_1items_1_1_weapon.html</file>
+      <file>classcore_1_1items_1_1_weapon.png</file>
+      <file>classcore_1_1items_1_1_weapon-members.html</file>
       <file>index.html</file>
-      <file>modules.html</file>
+      <file>namespaces.html</file>
+      <file>namespacemembers.html</file>
+      <file>namespacemembers.html</file>
+      <file>namespacemembers.html</file>
+      <file>namespacemembers.html</file>
+      <file>namespacemembers.html</file>
+      <file>namespacemembers.html</file>
+      <file>namespacemembers.html</file>
+      <file>namespacemembers.html</file>
+      <file>namespacemembers.html</file>
+      <file>namespacemembers_type.html</file>
+      <file>namespacemembers_type.html</file>
+      <file>namespacemembers_type.html</file>
+      <file>namespacemembers_type.html</file>
+      <file>namespacemembers_type.html</file>
+      <file>namespacemembers_type.html</file>
+      <file>namespacemembers_type.html</file>
+      <file>namespacemembers_type.html</file>
+      <file>namespacemembers_type.html</file>
+      <file>annotated.html</file>
+      <file>classes.html</file>
+      <file>hierarchy.html</file>
+      <file>functions.html</file>
+      <file>functions_b.html</file>
+      <file>functions_c.html</file>
+      <file>functions_d.html</file>
+      <file>functions_e.html</file>
+      <file>functions_g.html</file>
+      <file>functions_h.html</file>
+      <file>functions_i.html</file>
+      <file>functions_l.html</file>
+      <file>functions_m.html</file>
+      <file>functions_n.html</file>
+      <file>functions_o.html</file>
+      <file>functions_p.html</file>
+      <file>functions_q.html</file>
+      <file>functions_r.html</file>
+      <file>functions_s.html</file>
+      <file>functions_w.html</file>
+      <file>functions_~.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_func.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_vars.html</file>
+      <file>functions_enum.html</file>
+      <file>functions_enum.html</file>
+      <file>functions_enum.html</file>
+      <file>functions_rela.html</file>
       <file>files.html</file>
       <file>globals.html</file>
       <file>globals.html</file>
       <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
       <file>globals_func.html</file>
+      <file>globals_func.html</file>
+      <file>globals_type.html</file>
+      <file>globals_type.html</file>
+      <file>globals_type.html</file>
       <file>globals_defs.html</file>
       <file>globals_defs.html</file>
     </files>

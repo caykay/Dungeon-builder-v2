@@ -1,0 +1,245 @@
+\hypertarget{classcore_1_1dungeon_1_1_doorway}{}\doxysection{core\+::dungeon\+::Doorway Class Reference}
+\label{classcore_1_1dungeon_1_1_doorway}\index{core::dungeon::Doorway@{core::dungeon::Doorway}}
+
+
+The \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway}{Doorway}} class.  
+
+
+
+
+{\ttfamily \#include $<$doorway.\+h$>$}
+
+Inheritance diagram for core\+::dungeon\+::Doorway\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.647059cm]{classcore_1_1dungeon_1_1_doorway}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_a7bd9ec58f6e8112e0c89c6919951ebe0}{Doorway}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway}{Doorway}} Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_a4a721bb917836a3b0acf80c30ef45c9c}{$\sim$\+Doorway}} ()
+\item 
+void \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_a151deaf107d00af53b4467e9717d0248}{connect}} (\mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway}{Doorway}} $\ast$new\+Opposite)
+\begin{DoxyCompactList}\small\item\em connect Connects a doorway reference to the current doorway by setting this opposite to the new\+Opposite also setting the other doorway\textquotesingle{}s opposite to this object \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_a4d71fcebd8d213841c0710d0cd0cda3e}{is\+Entrance}} () const
+\begin{DoxyCompactList}\small\item\em is\+Entrance Defines whether a door is an entrance door \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_a3ff12678aa7585a99d20dd008b67e47d}{is\+Exit}} () const
+\begin{DoxyCompactList}\small\item\em is\+Exit Defines whether a doorway is an exit door \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_a5604c97b735ad559e7316bc7854454b7}{description}} () const override
+\begin{DoxyCompactList}\small\item\em description Provides the description of the type of room edge \end{DoxyCompactList}\item 
+virtual char \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_aed3dcb33bbf56b93b5287f72d8ac3690}{display\+Character}} () const override
+\begin{DoxyCompactList}\small\item\em display\+Character Displays the character representation of the room edge \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_a400e400b13d5d305407152728c935c4f}{is\+Passage}} () const override
+\begin{DoxyCompactList}\small\item\em is\+Passage Returns a boolean state of whether the room edge is a valid passage leading to another room \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_ac5473f1405f3ccd6fbc49ab9cc30da5d}{set\+Character\+At}} (char direction) override
+\begin{DoxyCompactList}\small\item\em set\+Character\+At In special cases where a room edge has may be represented by a different character depending on its direction in the room, then this method is used to identify the location where the room edge will be set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway}{Doorway}} $\ast$ \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_a5e24c2ed8a559827d0482aeb7d0e6737}{opposite}}
+\begin{DoxyCompactList}\small\item\em opposite Pointer reference to a \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway}{Doorway}} connected to the current doorway \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_a607b3a217b85f37bdd9774cdbff9b1e0}{exit}} =false
+\begin{DoxyCompactList}\small\item\em exit True when doorway is an exit default set to false. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_ab1255365426591bb3528627ad2669362}{entrance}} =false
+\begin{DoxyCompactList}\small\item\em entrance True when doorway us an entrance \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway}{Doorway}} class. 
+
+This function specifies the content that may be present on a roomedge. It inherits \mbox{\hyperlink{classcore_1_1dungeon_1_1_room_edge}{Room\+Edge}} class. It specifies properties of a doorway and defines interactions with other doorway specifically when one doorway connects with another doorway of an opposite room. Or if a doorway is an exit or entrance and more.
+
+\begin{DoxyAuthor}{Author}
+Cassian Kahema 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1_doorway_a7bd9ec58f6e8112e0c89c6919951ebe0}\label{classcore_1_1dungeon_1_1_doorway_a7bd9ec58f6e8112e0c89c6919951ebe0}} 
+\index{core::dungeon::Doorway@{core::dungeon::Doorway}!Doorway@{Doorway}}
+\index{Doorway@{Doorway}!core::dungeon::Doorway@{core::dungeon::Doorway}}
+\doxysubsubsection{\texorpdfstring{Doorway()}{Doorway()}}
+{\footnotesize\ttfamily Doorway\+::\+Doorway (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway}{Doorway}} Default constructor. 
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1_doorway_a4a721bb917836a3b0acf80c30ef45c9c}\label{classcore_1_1dungeon_1_1_doorway_a4a721bb917836a3b0acf80c30ef45c9c}} 
+\index{core::dungeon::Doorway@{core::dungeon::Doorway}!````~Doorway@{$\sim$Doorway}}
+\index{````~Doorway@{$\sim$Doorway}!core::dungeon::Doorway@{core::dungeon::Doorway}}
+\doxysubsubsection{\texorpdfstring{$\sim$Doorway()}{~Doorway()}}
+{\footnotesize\ttfamily virtual core\+::dungeon\+::\+Doorway\+::$\sim$\+Doorway (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1_doorway_a151deaf107d00af53b4467e9717d0248}\label{classcore_1_1dungeon_1_1_doorway_a151deaf107d00af53b4467e9717d0248}} 
+\index{core::dungeon::Doorway@{core::dungeon::Doorway}!connect@{connect}}
+\index{connect@{connect}!core::dungeon::Doorway@{core::dungeon::Doorway}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily void Doorway\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway}{Doorway}} $\ast$}]{new\+Opposite }\end{DoxyParamCaption})}
+
+
+
+connect Connects a doorway reference to the current doorway by setting this opposite to the new\+Opposite also setting the other doorway\textquotesingle{}s opposite to this object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Opposite} & \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway}{Doorway}} object reference to be connected with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1_doorway_a5604c97b735ad559e7316bc7854454b7}\label{classcore_1_1dungeon_1_1_doorway_a5604c97b735ad559e7316bc7854454b7}} 
+\index{core::dungeon::Doorway@{core::dungeon::Doorway}!description@{description}}
+\index{description@{description}!core::dungeon::Doorway@{core::dungeon::Doorway}}
+\doxysubsubsection{\texorpdfstring{description()}{description()}}
+{\footnotesize\ttfamily std\+::string Doorway\+::description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+description Provides the description of the type of room edge 
+
+\begin{DoxyReturn}{Returns}
+String description of the room properties 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcore_1_1dungeon_1_1_room_edge_ad2a9494a0383e0578b48b77d20f1b475}{core\+::dungeon\+::\+Room\+Edge}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_open_door_way_afe8f80114a207da8e0b4991426139f4a}{core\+::dungeon\+::common\+::\+Open\+Door\+Way}}, \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_one_way_door_ab19007cda198ac1a322f8631c7053ab5}{core\+::dungeon\+::common\+::\+One\+Way\+Door}}, \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_locked_doorway_a4aa68c6e65e1cfbdd471a29c3e6344f1}{core\+::dungeon\+::common\+::\+Locked\+Doorway}}, and \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_blocked_doorway_acaaf74ba1bb465369875d04492169f25}{core\+::dungeon\+::common\+::\+Blocked\+Doorway}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1_doorway_aed3dcb33bbf56b93b5287f72d8ac3690}\label{classcore_1_1dungeon_1_1_doorway_aed3dcb33bbf56b93b5287f72d8ac3690}} 
+\index{core::dungeon::Doorway@{core::dungeon::Doorway}!displayCharacter@{displayCharacter}}
+\index{displayCharacter@{displayCharacter}!core::dungeon::Doorway@{core::dungeon::Doorway}}
+\doxysubsubsection{\texorpdfstring{displayCharacter()}{displayCharacter()}}
+{\footnotesize\ttfamily char Doorway\+::display\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+display\+Character Displays the character representation of the room edge 
+
+\begin{DoxyReturn}{Returns}
+character representing edge 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcore_1_1dungeon_1_1_room_edge_a27e30dfbfe7a69e27517c54acfd9a037}{core\+::dungeon\+::\+Room\+Edge}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_open_door_way_a3a350d58c828ce62a9c93f0fbf78fa0e}{core\+::dungeon\+::common\+::\+Open\+Door\+Way}}, \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_one_way_door_a0988dbe99fc8c039918b81ab547cb652}{core\+::dungeon\+::common\+::\+One\+Way\+Door}}, \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_locked_doorway_a65adf44f2a968880d1abd3c6403e778e}{core\+::dungeon\+::common\+::\+Locked\+Doorway}}, and \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_blocked_doorway_a2d594428b9ac519180222b6f613f6468}{core\+::dungeon\+::common\+::\+Blocked\+Doorway}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1_doorway_a4d71fcebd8d213841c0710d0cd0cda3e}\label{classcore_1_1dungeon_1_1_doorway_a4d71fcebd8d213841c0710d0cd0cda3e}} 
+\index{core::dungeon::Doorway@{core::dungeon::Doorway}!isEntrance@{isEntrance}}
+\index{isEntrance@{isEntrance}!core::dungeon::Doorway@{core::dungeon::Doorway}}
+\doxysubsubsection{\texorpdfstring{isEntrance()}{isEntrance()}}
+{\footnotesize\ttfamily bool Doorway\+::is\+Entrance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+is\+Entrance Defines whether a door is an entrance door 
+
+\begin{DoxyReturn}{Returns}
+True if entrance, False otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1_doorway_a3ff12678aa7585a99d20dd008b67e47d}\label{classcore_1_1dungeon_1_1_doorway_a3ff12678aa7585a99d20dd008b67e47d}} 
+\index{core::dungeon::Doorway@{core::dungeon::Doorway}!isExit@{isExit}}
+\index{isExit@{isExit}!core::dungeon::Doorway@{core::dungeon::Doorway}}
+\doxysubsubsection{\texorpdfstring{isExit()}{isExit()}}
+{\footnotesize\ttfamily bool Doorway\+::is\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+is\+Exit Defines whether a doorway is an exit door 
+
+\begin{DoxyReturn}{Returns}
+True if exit, False otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1_doorway_a400e400b13d5d305407152728c935c4f}\label{classcore_1_1dungeon_1_1_doorway_a400e400b13d5d305407152728c935c4f}} 
+\index{core::dungeon::Doorway@{core::dungeon::Doorway}!isPassage@{isPassage}}
+\index{isPassage@{isPassage}!core::dungeon::Doorway@{core::dungeon::Doorway}}
+\doxysubsubsection{\texorpdfstring{isPassage()}{isPassage()}}
+{\footnotesize\ttfamily bool Doorway\+::is\+Passage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+is\+Passage Returns a boolean state of whether the room edge is a valid passage leading to another room 
+
+\begin{DoxyReturn}{Returns}
+True if room is passage, False otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classcore_1_1dungeon_1_1_room_edge_aaeee71d51077cfc135a9b719b99a19d2}{core\+::dungeon\+::\+Room\+Edge}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_open_door_way_a2fdccccb0068ecb0817f93c6a69bd061}{core\+::dungeon\+::common\+::\+Open\+Door\+Way}}, \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_one_way_door_ae8b3f86e04af0991916458c0250a820d}{core\+::dungeon\+::common\+::\+One\+Way\+Door}}, \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_locked_doorway_a49f61ed0c337e7ace762e8763aaf0c71}{core\+::dungeon\+::common\+::\+Locked\+Doorway}}, and \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_blocked_doorway_a6b1da2591ddb800bd7ede5aca89b3906}{core\+::dungeon\+::common\+::\+Blocked\+Doorway}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1_doorway_ac5473f1405f3ccd6fbc49ab9cc30da5d}\label{classcore_1_1dungeon_1_1_doorway_ac5473f1405f3ccd6fbc49ab9cc30da5d}} 
+\index{core::dungeon::Doorway@{core::dungeon::Doorway}!setCharacterAt@{setCharacterAt}}
+\index{setCharacterAt@{setCharacterAt}!core::dungeon::Doorway@{core::dungeon::Doorway}}
+\doxysubsubsection{\texorpdfstring{setCharacterAt()}{setCharacterAt()}}
+{\footnotesize\ttfamily void Doorway\+::set\+Character\+At (\begin{DoxyParamCaption}\item[{char}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+set\+Character\+At In special cases where a room edge has may be represented by a different character depending on its direction in the room, then this method is used to identify the location where the room edge will be set. 
+
+\textquotesingle{}n\textquotesingle{} for North \textquotesingle{}s\textquotesingle{} for South \textquotesingle{}e\textquotesingle{} for East and \textquotesingle{}w\textquotesingle{} for West 
+\begin{DoxyParams}{Parameters}
+{\em direction} & character representing the direction of the roomedge \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcore_1_1dungeon_1_1_room_edge_a41ed2537a55a9b37230f91d2122ed2a4}{core\+::dungeon\+::\+Room\+Edge}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_open_door_way_a26cf81183c8bc96209e49c525b03a76a}{core\+::dungeon\+::common\+::\+Open\+Door\+Way}}, \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_one_way_door_a05bc627834e6d2accde251e79881f3fb}{core\+::dungeon\+::common\+::\+One\+Way\+Door}}, \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_locked_doorway_ab64556a655c9c5d331770a2dfbed77d1}{core\+::dungeon\+::common\+::\+Locked\+Doorway}}, and \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_blocked_doorway_ae6f1997d6aa79f1490ff78d1328f8ea4}{core\+::dungeon\+::common\+::\+Blocked\+Doorway}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1_doorway_ab1255365426591bb3528627ad2669362}\label{classcore_1_1dungeon_1_1_doorway_ab1255365426591bb3528627ad2669362}} 
+\index{core::dungeon::Doorway@{core::dungeon::Doorway}!entrance@{entrance}}
+\index{entrance@{entrance}!core::dungeon::Doorway@{core::dungeon::Doorway}}
+\doxysubsubsection{\texorpdfstring{entrance}{entrance}}
+{\footnotesize\ttfamily bool core\+::dungeon\+::\+Doorway\+::entrance =false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+entrance True when doorway us an entrance 
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1_doorway_a607b3a217b85f37bdd9774cdbff9b1e0}\label{classcore_1_1dungeon_1_1_doorway_a607b3a217b85f37bdd9774cdbff9b1e0}} 
+\index{core::dungeon::Doorway@{core::dungeon::Doorway}!exit@{exit}}
+\index{exit@{exit}!core::dungeon::Doorway@{core::dungeon::Doorway}}
+\doxysubsubsection{\texorpdfstring{exit}{exit}}
+{\footnotesize\ttfamily bool core\+::dungeon\+::\+Doorway\+::exit =false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+exit True when doorway is an exit default set to false. 
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1_doorway_a5e24c2ed8a559827d0482aeb7d0e6737}\label{classcore_1_1dungeon_1_1_doorway_a5e24c2ed8a559827d0482aeb7d0e6737}} 
+\index{core::dungeon::Doorway@{core::dungeon::Doorway}!opposite@{opposite}}
+\index{opposite@{opposite}!core::dungeon::Doorway@{core::dungeon::Doorway}}
+\doxysubsubsection{\texorpdfstring{opposite}{opposite}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway}{Doorway}}$\ast$ core\+::dungeon\+::\+Doorway\+::opposite\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+opposite Pointer reference to a \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway}{Doorway}} connected to the current doorway 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{doorway_8h}{doorway.\+h}}\item 
+\mbox{\hyperlink{doorway_8cpp}{doorway.\+cpp}}\end{DoxyCompactItemize}

@@ -103,6 +103,11 @@ public:
      */
     void clearLevel();
     /**
+     * @brief clearBuilder Clears the current builder, incase a new one is to
+     * be set (ie magical)
+     */
+    void clearBuilder();
+    /**
      * @brief displayLevel Prints out the whole structure of the built dungone
      * to the output stream passed in as parameter.
      * @param display Output stream that displays output onto console

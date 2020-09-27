@@ -1,0 +1,135 @@
+\hypertarget{classcore_1_1dungeon_1_1common_1_1_open_door_way}{}\doxysection{core\+::dungeon\+::common\+::Open\+Door\+Way Class Reference}
+\label{classcore_1_1dungeon_1_1common_1_1_open_door_way}\index{core::dungeon::common::OpenDoorWay@{core::dungeon::common::OpenDoorWay}}
+
+
+{\ttfamily \#include $<$opendoorway.\+h$>$}
+
+Inheritance diagram for core\+::dungeon\+::common\+::Open\+Door\+Way\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcore_1_1dungeon_1_1common_1_1_open_door_way}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_open_door_way_adf7cff68ef9d51f4c1972079b887f6a2}{Open\+Door\+Way}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_open_door_way}{Open\+Door\+Way}} Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_open_door_way_a60b167ffa318c46852c86f0053b9ae60}{Open\+Door\+Way}} (char state)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_open_door_way}{Open\+Door\+Way}} Parameterized constructor, main purpose is to identify if its an entrance room or exit. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_open_door_way_afe8f80114a207da8e0b4991426139f4a}{description}} () const override
+\begin{DoxyCompactList}\small\item\em description Provides the description of the type of room edge \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_open_door_way_a3a350d58c828ce62a9c93f0fbf78fa0e}{display\+Character}} () const override
+\begin{DoxyCompactList}\small\item\em display\+Character Displays the character representation of the room edge \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_open_door_way_a2fdccccb0068ecb0817f93c6a69bd061}{is\+Passage}} () const override
+\begin{DoxyCompactList}\small\item\em is\+Passage Returns a boolean state of whether the room edge is a valid passage leading to another room \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_open_door_way_a26cf81183c8bc96209e49c525b03a76a}{set\+Character\+At}} (char direction) override
+\begin{DoxyCompactList}\small\item\em set\+Character\+At In special cases where a room edge has may be represented by a different character depending on its direction in the room, then this method is used to identify the location where the room edge will be set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1common_1_1_open_door_way_adf7cff68ef9d51f4c1972079b887f6a2}\label{classcore_1_1dungeon_1_1common_1_1_open_door_way_adf7cff68ef9d51f4c1972079b887f6a2}} 
+\index{core::dungeon::common::OpenDoorWay@{core::dungeon::common::OpenDoorWay}!OpenDoorWay@{OpenDoorWay}}
+\index{OpenDoorWay@{OpenDoorWay}!core::dungeon::common::OpenDoorWay@{core::dungeon::common::OpenDoorWay}}
+\doxysubsubsection{\texorpdfstring{OpenDoorWay()}{OpenDoorWay()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Open\+Door\+Way\+::\+Open\+Door\+Way (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_open_door_way}{Open\+Door\+Way}} Default Constructor. 
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1common_1_1_open_door_way_a60b167ffa318c46852c86f0053b9ae60}\label{classcore_1_1dungeon_1_1common_1_1_open_door_way_a60b167ffa318c46852c86f0053b9ae60}} 
+\index{core::dungeon::common::OpenDoorWay@{core::dungeon::common::OpenDoorWay}!OpenDoorWay@{OpenDoorWay}}
+\index{OpenDoorWay@{OpenDoorWay}!core::dungeon::common::OpenDoorWay@{core::dungeon::common::OpenDoorWay}}
+\doxysubsubsection{\texorpdfstring{OpenDoorWay()}{OpenDoorWay()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Open\+Door\+Way\+::\+Open\+Door\+Way (\begin{DoxyParamCaption}\item[{char}]{state }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classcore_1_1dungeon_1_1common_1_1_open_door_way}{Open\+Door\+Way}} Parameterized constructor, main purpose is to identify if its an entrance room or exit. 
+
+if the passed in character is \textquotesingle{}x\textquotesingle{} then the state of the door is that of an exit, if character is \textquotesingle{}i\textquotesingle{} then state is an opendoorway. 
+\begin{DoxyParams}{Parameters}
+{\em state} & Character defining if entrance or exit \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1common_1_1_open_door_way_afe8f80114a207da8e0b4991426139f4a}\label{classcore_1_1dungeon_1_1common_1_1_open_door_way_afe8f80114a207da8e0b4991426139f4a}} 
+\index{core::dungeon::common::OpenDoorWay@{core::dungeon::common::OpenDoorWay}!description@{description}}
+\index{description@{description}!core::dungeon::common::OpenDoorWay@{core::dungeon::common::OpenDoorWay}}
+\doxysubsubsection{\texorpdfstring{description()}{description()}}
+{\footnotesize\ttfamily std\+::string Open\+Door\+Way\+::description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+description Provides the description of the type of room edge 
+
+\begin{DoxyReturn}{Returns}
+String description of the room properties 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_a5604c97b735ad559e7316bc7854454b7}{core\+::dungeon\+::\+Doorway}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1common_1_1_open_door_way_a3a350d58c828ce62a9c93f0fbf78fa0e}\label{classcore_1_1dungeon_1_1common_1_1_open_door_way_a3a350d58c828ce62a9c93f0fbf78fa0e}} 
+\index{core::dungeon::common::OpenDoorWay@{core::dungeon::common::OpenDoorWay}!displayCharacter@{displayCharacter}}
+\index{displayCharacter@{displayCharacter}!core::dungeon::common::OpenDoorWay@{core::dungeon::common::OpenDoorWay}}
+\doxysubsubsection{\texorpdfstring{displayCharacter()}{displayCharacter()}}
+{\footnotesize\ttfamily char Open\+Door\+Way\+::display\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+display\+Character Displays the character representation of the room edge 
+
+\begin{DoxyReturn}{Returns}
+character representing edge 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_aed3dcb33bbf56b93b5287f72d8ac3690}{core\+::dungeon\+::\+Doorway}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1common_1_1_open_door_way_a2fdccccb0068ecb0817f93c6a69bd061}\label{classcore_1_1dungeon_1_1common_1_1_open_door_way_a2fdccccb0068ecb0817f93c6a69bd061}} 
+\index{core::dungeon::common::OpenDoorWay@{core::dungeon::common::OpenDoorWay}!isPassage@{isPassage}}
+\index{isPassage@{isPassage}!core::dungeon::common::OpenDoorWay@{core::dungeon::common::OpenDoorWay}}
+\doxysubsubsection{\texorpdfstring{isPassage()}{isPassage()}}
+{\footnotesize\ttfamily bool Open\+Door\+Way\+::is\+Passage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+is\+Passage Returns a boolean state of whether the room edge is a valid passage leading to another room 
+
+\begin{DoxyReturn}{Returns}
+True if room is passage, False otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_a400e400b13d5d305407152728c935c4f}{core\+::dungeon\+::\+Doorway}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1common_1_1_open_door_way_a26cf81183c8bc96209e49c525b03a76a}\label{classcore_1_1dungeon_1_1common_1_1_open_door_way_a26cf81183c8bc96209e49c525b03a76a}} 
+\index{core::dungeon::common::OpenDoorWay@{core::dungeon::common::OpenDoorWay}!setCharacterAt@{setCharacterAt}}
+\index{setCharacterAt@{setCharacterAt}!core::dungeon::common::OpenDoorWay@{core::dungeon::common::OpenDoorWay}}
+\doxysubsubsection{\texorpdfstring{setCharacterAt()}{setCharacterAt()}}
+{\footnotesize\ttfamily void Open\+Door\+Way\+::set\+Character\+At (\begin{DoxyParamCaption}\item[{char}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+set\+Character\+At In special cases where a room edge has may be represented by a different character depending on its direction in the room, then this method is used to identify the location where the room edge will be set. 
+
+\textquotesingle{}n\textquotesingle{} for North \textquotesingle{}s\textquotesingle{} for South \textquotesingle{}e\textquotesingle{} for East and \textquotesingle{}w\textquotesingle{} for West 
+\begin{DoxyParams}{Parameters}
+{\em direction} & character representing the direction of the roomedge \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_doorway_ac5473f1405f3ccd6fbc49ab9cc30da5d}{core\+::dungeon\+::\+Doorway}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{opendoorway_8h}{opendoorway.\+h}}\item 
+\mbox{\hyperlink{opendoorway_8cpp}{opendoorway.\+cpp}}\end{DoxyCompactItemize}

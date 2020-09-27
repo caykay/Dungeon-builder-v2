@@ -1,0 +1,114 @@
+\hypertarget{classcore_1_1dungeon_1_1magical_1_1_magic_wall}{}\doxysection{core\+::dungeon\+::magical\+::Magic\+Wall Class Reference}
+\label{classcore_1_1dungeon_1_1magical_1_1_magic_wall}\index{core::dungeon::magical::MagicWall@{core::dungeon::magical::MagicWall}}
+
+
+{\ttfamily \#include $<$magicwall.\+h$>$}
+
+Inheritance diagram for core\+::dungeon\+::magical\+::Magic\+Wall\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classcore_1_1dungeon_1_1magical_1_1_magic_wall}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcore_1_1dungeon_1_1magical_1_1_magic_wall_a5a5933953b32b526e601084e816e1fbb}{Magic\+Wall}} ()
+\item 
+std\+::string \mbox{\hyperlink{classcore_1_1dungeon_1_1magical_1_1_magic_wall_a3a979b06a1411ce3346c8eb4b4f3ce2b}{description}} () const override
+\begin{DoxyCompactList}\small\item\em description Provides the description of the type of room edge \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classcore_1_1dungeon_1_1magical_1_1_magic_wall_a630dee09772670a60aa68cc1887605a2}{display\+Character}} () const override
+\begin{DoxyCompactList}\small\item\em display\+Character Displays the character representation of the room edge \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcore_1_1dungeon_1_1magical_1_1_magic_wall_af7fb785bf8534621e86a87a77517f773}{is\+Passage}} () const override
+\begin{DoxyCompactList}\small\item\em is\+Passage Returns a boolean state of whether the room edge is a valid passage leading to another room \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcore_1_1dungeon_1_1magical_1_1_magic_wall_a213f8cd3adc7aa17e68ab7cdca06b98b}{set\+Character\+At}} (char direction) override
+\begin{DoxyCompactList}\small\item\em set\+Character\+At In special cases where a room edge has may be represented by a different character depending on its direction in the room, then this method is used to identify the location where the room edge will be set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1magical_1_1_magic_wall_a5a5933953b32b526e601084e816e1fbb}\label{classcore_1_1dungeon_1_1magical_1_1_magic_wall_a5a5933953b32b526e601084e816e1fbb}} 
+\index{core::dungeon::magical::MagicWall@{core::dungeon::magical::MagicWall}!MagicWall@{MagicWall}}
+\index{MagicWall@{MagicWall}!core::dungeon::magical::MagicWall@{core::dungeon::magical::MagicWall}}
+\doxysubsubsection{\texorpdfstring{MagicWall()}{MagicWall()}}
+{\footnotesize\ttfamily Magic\+Wall\+::\+Magic\+Wall (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1magical_1_1_magic_wall_a3a979b06a1411ce3346c8eb4b4f3ce2b}\label{classcore_1_1dungeon_1_1magical_1_1_magic_wall_a3a979b06a1411ce3346c8eb4b4f3ce2b}} 
+\index{core::dungeon::magical::MagicWall@{core::dungeon::magical::MagicWall}!description@{description}}
+\index{description@{description}!core::dungeon::magical::MagicWall@{core::dungeon::magical::MagicWall}}
+\doxysubsubsection{\texorpdfstring{description()}{description()}}
+{\footnotesize\ttfamily std\+::string Magic\+Wall\+::description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+description Provides the description of the type of room edge 
+
+\begin{DoxyReturn}{Returns}
+String description of the room properties 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_wall_a04d2cb6144ba482daf425d0f385408d5}{core\+::dungeon\+::\+Wall}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1magical_1_1_magic_wall_a630dee09772670a60aa68cc1887605a2}\label{classcore_1_1dungeon_1_1magical_1_1_magic_wall_a630dee09772670a60aa68cc1887605a2}} 
+\index{core::dungeon::magical::MagicWall@{core::dungeon::magical::MagicWall}!displayCharacter@{displayCharacter}}
+\index{displayCharacter@{displayCharacter}!core::dungeon::magical::MagicWall@{core::dungeon::magical::MagicWall}}
+\doxysubsubsection{\texorpdfstring{displayCharacter()}{displayCharacter()}}
+{\footnotesize\ttfamily char Magic\+Wall\+::display\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+display\+Character Displays the character representation of the room edge 
+
+\begin{DoxyReturn}{Returns}
+character representing edge 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_wall_a68a65436690bfc7761732e12d5d489d2}{core\+::dungeon\+::\+Wall}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1magical_1_1_magic_wall_af7fb785bf8534621e86a87a77517f773}\label{classcore_1_1dungeon_1_1magical_1_1_magic_wall_af7fb785bf8534621e86a87a77517f773}} 
+\index{core::dungeon::magical::MagicWall@{core::dungeon::magical::MagicWall}!isPassage@{isPassage}}
+\index{isPassage@{isPassage}!core::dungeon::magical::MagicWall@{core::dungeon::magical::MagicWall}}
+\doxysubsubsection{\texorpdfstring{isPassage()}{isPassage()}}
+{\footnotesize\ttfamily bool Magic\+Wall\+::is\+Passage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+is\+Passage Returns a boolean state of whether the room edge is a valid passage leading to another room 
+
+\begin{DoxyReturn}{Returns}
+True if room is passage, False otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classcore_1_1dungeon_1_1_wall_a6d54001163d03d45cfb433838e4fd8ee}{core\+::dungeon\+::\+Wall}}.
+
+\mbox{\Hypertarget{classcore_1_1dungeon_1_1magical_1_1_magic_wall_a213f8cd3adc7aa17e68ab7cdca06b98b}\label{classcore_1_1dungeon_1_1magical_1_1_magic_wall_a213f8cd3adc7aa17e68ab7cdca06b98b}} 
+\index{core::dungeon::magical::MagicWall@{core::dungeon::magical::MagicWall}!setCharacterAt@{setCharacterAt}}
+\index{setCharacterAt@{setCharacterAt}!core::dungeon::magical::MagicWall@{core::dungeon::magical::MagicWall}}
+\doxysubsubsection{\texorpdfstring{setCharacterAt()}{setCharacterAt()}}
+{\footnotesize\ttfamily void Magic\+Wall\+::set\+Character\+At (\begin{DoxyParamCaption}\item[{char}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+set\+Character\+At In special cases where a room edge has may be represented by a different character depending on its direction in the room, then this method is used to identify the location where the room edge will be set. 
+
+\textquotesingle{}n\textquotesingle{} for North \textquotesingle{}s\textquotesingle{} for South \textquotesingle{}e\textquotesingle{} for East and \textquotesingle{}w\textquotesingle{} for West 
+\begin{DoxyParams}{Parameters}
+{\em direction} & character representing the direction of the roomedge \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcore_1_1dungeon_1_1_wall_accb85b50542afd5507ffe8aaf414d9b4}{core\+::dungeon\+::\+Wall}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{magicwall_8h}{magicwall.\+h}}\item 
+\mbox{\hyperlink{magicwall_8cpp}{magicwall.\+cpp}}\end{DoxyCompactItemize}
