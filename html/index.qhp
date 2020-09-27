@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+  <namespace>org.doxygen.Project</namespace>
+  <virtualFolder>doc</virtualFolder>
+  <filterSection>
+    <filterAttribute>doxygen</filterAttribute>
+    <toc>
+      <section title="My Dungeon Builder Project" ref="index.html">
+        <section title="DUNGEON LEVEL BUILDER" ref="index.html" />
+        <section title="Modules" ref="modules.html">
+          <section title="To test" ref="group__test.html" />
+        </section>
+        <section title="Files" ref="files.html">
+          <section title="File List" ref="files.html">
+            <section title="main.cpp" ref="main_8cpp.html">
+              <section title="AUTHOR" ref="main_8cpp.html#a6c8fad838ed64cc67da3f68149009758" />
+              <section title="TITLE" ref="main_8cpp.html#a60a56c499875b57369f7ef3a5a227cb9" />
+              <section title="main" ref="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" />
+            </section>
+          </section>
+          <section title="File Members" ref="globals.html">
+            <section title="All" ref="globals.html" />
+            <section title="Functions" ref="globals_func.html" />
+            <section title="Macros" ref="globals_defs.html" />
+          </section>
+        </section>
+      </section>
+    </toc>
+    <keywords>
+      <keyword name="AUTHOR" id="main.cpp::AUTHOR" ref="main_8cpp.html#a6c8fad838ed64cc67da3f68149009758" />
+      <keyword name="TITLE" id="main.cpp::TITLE" ref="main_8cpp.html#a60a56c499875b57369f7ef3a5a227cb9" />
+      <keyword name="main" id="main.cpp::main" ref="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" />
+      <keyword name="To test" id="To test" ref="group__test.html" />
+    </keywords>
+    <files>
+      <file>tabs.css</file>
+      <file>tab_a.png</file>
+      <file>tab_b.png</file>
+      <file>tab_h.png</file>
+      <file>tab_s.png</file>
+      <file>nav_h.png</file>
+      <file>nav_f.png</file>
+      <file>bc_s.png</file>
+      <file>closed.png</file>
+      <file>open.png</file>
+      <file>bdwn.png</file>
+      <file>sync_on.png</file>
+      <file>sync_off.png</file>
+      <file>doxygen.css</file>
+      <file>jquery.js</file>
+      <file>dynsections.js</file>
+      <file>search/search_l.png</file>
+      <file>search/search_m.png</file>
+      <file>search/search_r.png</file>
+      <file>search/close.svg</file>
+      <file>search/mag_sel.svg</file>
+      <file>search/search.css</file>
+      <file>search/search.js</file>
+      <file>main_8cpp.html</file>
+      <file>group__test.html</file>
+      <file>index.html</file>
+      <file>modules.html</file>
+      <file>files.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals.html</file>
+      <file>globals_func.html</file>
+      <file>globals_defs.html</file>
+      <file>globals_defs.html</file>
+    </files>
+  </filterSection>
+</QtHelpProject>
