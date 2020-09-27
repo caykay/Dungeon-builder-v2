@@ -165,7 +165,7 @@ bool Room::hasEntrance(){
 }
 
 void Room::checkHasExit(){
-    for (int i=static_cast<int>(Direction::North); i <static_cast<int>(Direction::West); i++){
+    for (int i=static_cast<int>(Direction::North); i <=static_cast<int>(Direction::West); i++){
         // Checks if the room edge is an open doorway
         if(std::dynamic_pointer_cast<Doorway>(edges.at(static_cast<Direction>(i)))!=nullptr){
             // Checks if the doorway is an exit door
@@ -180,7 +180,7 @@ void Room::checkHasExit(){
 }
 
 void Room::checkHasEntrance(){
-    for (int i=static_cast<int>(Direction::North); i <static_cast<int>(Direction::West); i++){
+    for (int i=static_cast<int>(Direction::North); i <=static_cast<int>(Direction::West); i++){
         // Checks if the room edge is an open doorway
         if(std::dynamic_pointer_cast<Doorway>(edges.at(static_cast<Direction>(i)))!=nullptr){
             // Checks if the doorway is an exit door

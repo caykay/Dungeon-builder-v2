@@ -24,8 +24,8 @@ protected:
         Goblin, Werewolf, Evil_Wizard, Dragon
     };
 
-    std::map<Monsters, std::shared_ptr<core::creatures::AbstractCreature>> prototypeCreatures;
-    std::map<Items, std::shared_ptr<core::items::Item>> prototypeItems;
+    std::map<Monsters, std::unique_ptr<core::creatures::AbstractCreature>> prototypeCreatures;
+    std::map<Items, std::unique_ptr<core::items::Item>> prototypeItems;
 
     virtual void createPrototypeItems();
     virtual void createPrototypeCreatures();

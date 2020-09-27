@@ -580,7 +580,8 @@ void Game::buildLeftRooms(){
                 }else{
                     // we do not need to build to build any rooms here
                     // in a case of height=1
-                    return; //function ends here
+
+                    // IF ends
                 }
                 // Now we got our room,  time to build its doorways
                 // we know if a room is on any side then it can only connect 3 ways (north, south and east)
@@ -905,7 +906,7 @@ void Game::addItemOfType(int id, std::shared_ptr<Item> item){
 std::shared_ptr<Item> Game::getRandomItemType(){
     // gets a random item in range of 1-100
     // 35% = when number is less than or equal to 35
-    // 65% = when number is
+    // 65% = when number is more than 35
     int randomNum=getRandomInt(1,100);
 
     std::shared_ptr<Item> randomItem;

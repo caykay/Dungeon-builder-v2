@@ -12,9 +12,6 @@ char Item::displayCharacter(){
     return 'L';
 }
 
-std::unique_ptr<Item> Item::clone() const{
-
-}
 
 std::string Item::name(){
     return itemName;

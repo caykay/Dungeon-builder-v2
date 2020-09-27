@@ -27,6 +27,10 @@ class Game
 {
 public:
     ~Game(){
+        level=nullptr;
+        builder=nullptr;
+        delete level;
+        delete builder;
     }
     // Game should not be cloneable
     Game(Game &other)=delete ;

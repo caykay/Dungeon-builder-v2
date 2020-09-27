@@ -22,7 +22,6 @@ private:
     enum Menu {DNG_DescribeView, DNG_Exploration};
     Menu _customMenu;
 
-//    Game Game=Game::instance();
 
     void displayMainMenu();
     void displayDNGDescribeMenu();

@@ -185,7 +185,7 @@ Room::Direction BasicDungeonLevelBuilder::opposite(Direction direction){
 void BasicDungeonLevelBuilder::createPrototypeItems(){
     prototypeItems[Items::Boomerang]= std::make_unique<core::items::Weapon>("Boomerang");
     prototypeItems[Items::Battle_Axe]= std::make_unique<core::items::Weapon>("Battle Axe");
-    prototypeItems[Items::Short_Sword]=std::make_unique<core::items::Weapon>("Short Staff");
+    prototypeItems[Items::Short_Sword]=std::make_unique<core::items::Weapon>("Short Sword");
     prototypeItems[Items::Smoke_Bomb]=std::make_unique<core::items::Consumeable>("Smoke Bomb");
     prototypeItems[Items::Health_Potion]=std::make_unique<core::items::Consumeable>("Health Potion");
     prototypeItems[Items::Molotov_Cocktail]=std::make_unique<core::items::Consumeable>("Molotov Cocktail");
@@ -193,7 +193,7 @@ void BasicDungeonLevelBuilder::createPrototypeItems(){
 
 void BasicDungeonLevelBuilder::createPrototypeCreatures(){
     prototypeCreatures[Monsters::Goblin]= std::make_unique<core::creatures::Monster>("Goblin");
-    prototypeCreatures[Monsters::Werewolf]= std::make_unique<core::creatures::Monster>("Werewold");
+    prototypeCreatures[Monsters::Werewolf]= std::make_unique<core::creatures::Monster>("Werewolf");
     prototypeCreatures[Monsters::Evil_Wizard]= std::make_unique<core::creatures::Monster>("Evil Wizard");
 }
 std::unique_ptr<core::items::Item> BasicDungeonLevelBuilder::createItem(Items item) {

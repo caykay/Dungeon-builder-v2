@@ -1,4 +1,5 @@
 #include "dungeonlevel.h"
+#include <sstream>
 using namespace core::dungeon;
 DungeonLevel::DungeonLevel()
 {
@@ -10,7 +11,7 @@ DungeonLevel::DungeonLevel(const std::string &name, int width, int height){
     levelHeight=height;
 }
 
-//TODO add a check if room is already full
+
 bool DungeonLevel::addRoom(std::shared_ptr<Room> room){
     // fetch the most recent id in the rooms map
     int lastId=getLastID();
@@ -42,75 +43,69 @@ std::string DungeonLevel::name() const{
 
 
 std::vector<std::string> DungeonLevel::display(){
-    std::vector<std::string> result;
-    std::vector<std::string> rows=getDungeonRows();
-    int count=0;
-    for(std::string row : rows){
-        if(row==""){
-            count --;
-        }else{
-            result.push_back(row);
-        }
-        count++;
-    }
 
-
-    return result;
+    return getDungeonRows();
 }
-// TODO update this method: since we already have better helper methods to help reduce the size
+
 std::vector<std::string> DungeonLevel::getDungeonRows(){
     std::vector<std::string> rows;
-    //fill the rows with empty strings before concatenation
-    int expectedRows=5*height()+(height()-1);// the expected number of rows
-    for(int i=0;i<expectedRows; i++){
-        rows.push_back("");
-    }
-    //m[i]=rooms[i]->display()
-    int rowsDone=0; // this variable will keep track of the room string to be
-                     // concatenated on a width row
-    int colsDone=0;   // this variable will change the position to concatenate the next
-                     // string in the final vector everytime we switch to new row
-    // TODO not needed
-    int numberOfRoomsInRow=numberOfRooms(); //proper implementation here pleas????????
-    for(int k=1; k<=height();k++){
-        // loops through rooms across the width
-        for (int i=1; i<=width();i++){
-            // TODO not needed
-            int widthCheck;
-            if(width()>numberOfRoomsInRow){
-                widthCheck=numberOfRoomsInRow;
-            }else{
-                widthCheck=width();
-            }
-            // loops through the string in a room and concatenates with the
-            // string at same position in adjacent room
-            for(int j=0; j<(int)rooms[i+rowsDone]->display().size(); j++){
-                std::string row1="";
-                row1+=rooms[i+rowsDone]->display().at(j);
-                // checks if the room is the last to be added widthwise
-                if(i!=widthCheck){
+    int id=1;
+    for(int k=1; k<=height(); k++){
+        // for each string in room (we picked the first room as all rooms have same size)
+        for(int j=0; j<(int)rooms[1]->display().size(); j++){
+            // this string stores and concatenates string of every row of room
+            std::stringstream a;
+            // Then loop along the width row
+            for(int i=1; i<=width(); i++){
+                // concatenate first string
+                a<<rooms[id]->display().at(j);
+
+                // check if we are at the last room in the row
+                // so that we do not need to apply the "--" or empty space
+                if(i!=width()){
+                    // check if we are at mid position of room
                     if(j==2){
-                        row1+="--";
-                    }
-                    else{row1+="  ";
+                        // check if this room has a connection to the right(east)
+                        if(rooms[id]->edgeAt(Room::Direction::East)->isPassage()==true){
+                            a<<"--";
+                        }else{
+                            a<<"  ";
+                        }
+                    }else{
+                        a<<"  ";
                     }
                 }
-
-                rows.at(colsDone+j)+=row1;
+                // increment id to reference next door int row
+                id+=1;
             }
-            // end row concatenation
-
+            // push the stringstream of a row as the first string of the room display
+            rows.push_back(a.str());
+            // decrement the id to reference the begining of a row so that we
+            // start concatenating the next string in display
+            id-=width();
         }
-        // TODO not needed
-        if(width()<numberOfRoomsInRow){
-            numberOfRoomsInRow-=width();
+        // for loop to check connection with rooms below
+        std::stringstream b;
+        int count=0; // count that checks the number of connections
+        for(int i=1; i<=width(); i++){
+            // check if room has a passage with below room(south)
+            if(rooms[id]->edgeAt(Room::Direction::South)->isPassage()==true){
+                b<<"     |     ";
+                count++;
+            }else{
+                b<<"           ";
+            }
+            b<<"  ";
+            // increment id
+            id+=1;
+        }
+        // check if count >0
+        if(count>0){
+            rows.push_back(b.str());
         }
 
-        // set the count to start from another row
-        // on next iteration
-        colsDone+=6;
-        rowsDone+=width();
-
+        // from the above incrementation id is expected to be incremented to reference
+        // the room of the beginning of the next row
     }
 
     return rows;
@@ -168,11 +163,10 @@ std::vector<int> DungeonLevel::getLastRowIDs(){
     // contains ids of the rooms in the last row
     std::vector<int> lastRow;
     // fills up the last row with room ids
-    int id=numberOfRooms(); //gets the ids from last room
+    int i=numberOfRooms(); //gets the ids from last room
                                       // then decrements from there
-    for (int i=width()-1; i>=0; i--){
+    for (int id=i-width()+1; id<=numberOfRooms(); id++){
         lastRow.push_back(id);
-        id--;
     }
     return lastRow;
 }
