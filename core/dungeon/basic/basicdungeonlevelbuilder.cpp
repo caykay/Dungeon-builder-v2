@@ -182,14 +182,13 @@ Room::Direction BasicDungeonLevelBuilder::opposite(Direction direction){
 }
 
 
-
 void BasicDungeonLevelBuilder::createPrototypeItems(){
-    prototypeItems[Items::Boomerang]= new core::items::Weapon("Boomerang");
-    prototypeItems[Items::Battle_Axe]= new core::items::Weapon("Battle Axe");
-    prototypeItems[Items::Short_Sword]=new core::items::Weapon("Short Staff");
-    prototypeItems[Items::Smoke_Bomb]=new core::items::Weapon("Smoke Bomb");
-    prototypeItems[Items::Health_Potion]=new core::items::Weapon("Health Potion");
-    prototypeItems[Items::Molotov_Cocktail]=new core::items::Weapon("Molotov Cocktail");
+    prototypeItems[Items::Boomerang]= std::make_unique<core::items::Weapon>("Boomerang");
+    prototypeItems[Items::Battle_Axe]= std::make_unique<core::items::Weapon>("Battle Axe");
+    prototypeItems[Items::Short_Sword]=std::make_unique<core::items::Weapon>("Short Staff");
+    prototypeItems[Items::Smoke_Bomb]=std::make_unique<core::items::Consumeable>("Smoke Bomb");
+    prototypeItems[Items::Health_Potion]=std::make_unique<core::items::Consumeable>("Health Potion");
+    prototypeItems[Items::Molotov_Cocktail]=std::make_unique<core::items::Consumeable>("Molotov Cocktail");
 }
 
 void BasicDungeonLevelBuilder::createPrototypeCreatures(){
@@ -197,35 +196,35 @@ void BasicDungeonLevelBuilder::createPrototypeCreatures(){
     prototypeCreatures[Monsters::Werewolf]= std::make_unique<core::creatures::Monster>("Werewold");
     prototypeCreatures[Monsters::Evil_Wizard]= std::make_unique<core::creatures::Monster>("Evil Wizard");
 }
-core::items::Item *BasicDungeonLevelBuilder::createItem(Items item) {
+std::unique_ptr<core::items::Item> BasicDungeonLevelBuilder::createItem(Items item) {
 
-    return prototypeItems[(Items)item]->clone();
+    return prototypeItems[item]->clone();
 }
 
 std::unique_ptr<core::creatures::AbstractCreature> BasicDungeonLevelBuilder::createMonster(Monsters monster){
     return prototypeCreatures[monster]->clone();
 }
 
-std::unique_ptr<core::items::Item> BasicDungeonLevelBuilder::getRandomItem(){
+std::shared_ptr<core::items::Item> BasicDungeonLevelBuilder::getRandomItem(){
     int randomNum=getRandomInt(1,6);
     switch (randomNum) {
     case 1:
-        return std::unique_ptr<core::items::Item>{createItem(Items::Boomerang)};
+        return createItem(Items::Boomerang);
         break;
     case 2:
-        return std::unique_ptr<core::items::Item>{createItem(Items::Battle_Axe)};
+        return createItem(Items::Battle_Axe);
         break;
     case 3:
-        return std::unique_ptr<core::items::Item>{createItem(Items::Short_Sword)};
+        return createItem(Items::Short_Sword);
         break;
     case 4:
-        return std::unique_ptr<core::items::Item>{createItem(Items::Health_Potion)};
+        return createItem(Items::Health_Potion);
         break;
     case 5:
-        return std::unique_ptr<core::items::Item>{createItem(Items::Molotov_Cocktail)};
+        return createItem(Items::Molotov_Cocktail);
         break;
     default:
-        return std::unique_ptr<core::items::Item>{createItem(Items::Smoke_Bomb)};
+        return createItem(Items::Smoke_Bomb);
         break;
     }
 }

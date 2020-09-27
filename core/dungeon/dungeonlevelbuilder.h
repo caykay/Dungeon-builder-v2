@@ -25,11 +25,11 @@ protected:
     };
 
     std::map<Monsters, std::shared_ptr<core::creatures::AbstractCreature>> prototypeCreatures;
-    std::map<Items, core::items::Item*> prototypeItems;
+    std::map<Items, std::shared_ptr<core::items::Item>> prototypeItems;
 
     virtual void createPrototypeItems();
     virtual void createPrototypeCreatures();
-    virtual core::items::Item *createItem(Items item) ;
+    virtual std::unique_ptr<core::items::Item> createItem(Items item) ;
     virtual std::unique_ptr<core::creatures::AbstractCreature> createMonster(Monsters monster);
 public:
     DungeonLevelBuilder();
@@ -58,6 +58,8 @@ public:
     virtual MoveConstraints getRandomOriginConstraint();
     virtual MoveConstraints getRandomDestConstraint();
 
+    virtual std::shared_ptr<core::items::Item> getRandomItem();
+    virtual std::shared_ptr<core::creatures::AbstractCreature> getRandomCreature();
 
 
 };

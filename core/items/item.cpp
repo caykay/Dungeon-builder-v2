@@ -12,7 +12,7 @@ char Item::displayCharacter(){
     return 'L';
 }
 
-Item *Item::clone() const{
+std::unique_ptr<Item> Item::clone() const{
 
 }
 

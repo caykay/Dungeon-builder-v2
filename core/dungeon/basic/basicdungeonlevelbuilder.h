@@ -30,6 +30,8 @@ public:
     void buildCreature (std::shared_ptr<Room> room) override;
 
     DungeonLevel* getDungeonLevel() override;
+    std::shared_ptr<core::items::Item> getRandomItem() override;
+    std::shared_ptr<core::creatures::AbstractCreature> getRandomCreature() override;
 
 private:
     BasicDungeonLevel* _level;
@@ -37,11 +39,10 @@ private:
 
     void createPrototypeItems() override;
     void createPrototypeCreatures()override;
-    core::items::Item *createItem(Items item)  override;
+    std::unique_ptr<core::items::Item> createItem(Items item)  override;
     std::unique_ptr<core::creatures::AbstractCreature> createMonster(Monsters monster)  override;
 
-    std::unique_ptr<core::items::Item> getRandomItem();
-    std::shared_ptr<core::creatures::AbstractCreature> getRandomCreature();
+
 
     int getRandomInt(int min, int max);
 

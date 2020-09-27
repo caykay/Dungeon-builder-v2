@@ -16,7 +16,7 @@ public:
     Item(const std::string &name);
     virtual ~Item(){}
 
-    virtual Item *clone() const;
+    virtual std::unique_ptr<Item> clone() const;
 
     std::string name();
     char displayCharacter();

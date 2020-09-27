@@ -34,8 +34,7 @@ int DungeonLevel::height() const{
     return levelHeight;
 }
 int DungeonLevel::numberOfRooms() const{
-    // or just return width*height
-    return rooms.size();
+    return width()*height();
 }
 std::string DungeonLevel::name() const{
     return levelName;

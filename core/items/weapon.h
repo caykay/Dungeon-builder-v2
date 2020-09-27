@@ -10,7 +10,7 @@ public:
     Weapon();
     Weapon(const std::string &name);
 
-    Item *clone() const override;
+    std::unique_ptr<Item> clone() const override;
 };
 }
 }

@@ -95,7 +95,7 @@ int MenuInterface::getIntInput() const{
     _input >> userInput;
     _input.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-    while(_input.fail()){ // valid the input type is an int
+    while(_input.fail()){ // validates the input type is an int
         _input.clear();
         displayInvalidInputMessage();
         _input.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -108,9 +108,11 @@ int MenuInterface::getIntInput() const{
 }
 
 std::string MenuInterface::getStringInput() const{
+    // TODO fix so you dont have to press enter twice after input
     std::string userInput;
     _input.clear();
-    _input>>userInput;
+    getline(_input,userInput);
+//    _input>>userInput;
     _input.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
     while(_input.fail()){ // validate input type is string
@@ -118,7 +120,8 @@ std::string MenuInterface::getStringInput() const{
         displayInvalidInputMessage();
         _input.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-        _input >> userInput;
+//        _input >> userInput;
+        getline(_input,userInput);
         _input.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
 

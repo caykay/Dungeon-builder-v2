@@ -9,6 +9,6 @@ Consumeable::Consumeable(const std::string &name){
 }
 
 
-Item *Consumeable::clone() const {
-    return new Consumeable(*this);
+std::unique_ptr<Item> Consumeable::clone() const {
+    return std::make_unique<Item>(itemName);
 }

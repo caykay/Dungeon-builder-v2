@@ -40,8 +40,10 @@ void Game::createExampleLevel(){
 void Game::createRandomLevel(const std::string &name, int width, int height){
     builder->buildDungeonLevel(name, width, height);
     level=builder->getDungeonLevel();
-    buildRandomRooms(width*height);
+    addRandomRooms(width*height);
     buildRandomDoorways();
+    addRandomCreatures();
+    addRandomItems();
 }
 
 void Game::displayLevel(std::ostream &display){
@@ -119,7 +121,7 @@ void Game::buildExampleCreatures(){
     builder->buildCreature(level->retrieveRoom(9));
 }
 
-void Game::buildRandomRooms(int size){
+void Game::addRandomRooms(int size){
     for (int i=1; i<=size; i++){
         level->addRoom(builder->buildRoom(i));
     }
@@ -130,11 +132,41 @@ void Game::buildRandomDoorways(){
     buildRandomEntrance();
     //Builds random exit
     buildRandomExit();
-    // Build Corner rooms
-    buildCornerRooms();
-    //build Non Corner rooms
-    buildNonCornerRooms();
-}
+
+    // NOTE THE FOLLOWING A CHECKS FOR SPECIFIC 4 CASES
+    // 1x1
+    // 1xn
+    // nx1
+    // in some of these cases some function will return same results,
+    // so only one of them will be modified to handle the cases and will then be called
+    if(level->width()==1){
+        if(level->height()==1){
+            // we do not build anything in a 1x1 case
+        }else{
+            // only build top and bottom
+            // Build Corner rooms
+            buildTopLeftCornerRoom();// theres only one corner
+            buildLeftRooms(); // these will be considered midrooms in this case
+            buildBottomLeftCornerRoom();
+        }
+    }else{
+        // n x 1 case
+        if(level->height()==1){
+            // we only build top rows
+            buildTopLeftCornerRoom();
+            buildTopRightCornerRoom();
+            buildTopRooms();
+
+        }else{
+            // this is the general nxn case
+            // Build Corner rooms
+            buildCornerRooms();
+            //build Non Corner rooms
+            buildNonCornerRooms();
+
+        }
+    }
+ }
 
 void Game::buildCornerRooms(){
     // a corner room only has two sides it can connect
@@ -177,6 +209,37 @@ void Game::buildTopLeftCornerRoom(){
                     // Building the doorway
                     // since we dealing with 2 sides then get random number either 1(south) or 2 (east)
                     // since its a top left corner
+
+                    //another check for cases where width=1
+                    if(level->width()==1){
+                        if(level->height()==1){
+                            // no building doorways since there is only one room
+                        }else{
+                            // 1 x n case
+                            //otherwise we can only connect with the room below
+                            // check if connection exists
+                            if((level->retrieveRoom(id)->edgeAt(Direction::South)->isPassage())==true){
+
+                            }else{
+                                builder->buildDoorway(level->retrieveRoom(id),level->retrieveNearbyRoom(id,Direction::South),Direction::South
+                                                      , getConstraint());
+                            }
+                            return; //function ends here
+                        }
+                    }else{
+                        // also it may be a n x 1 case
+                        if(level->height()==1){
+                            // can be connected to only right (east)
+                            if((level->retrieveRoom(id)->edgeAt(Direction::East)->isPassage())==true){
+
+                            }else{
+                                builder->buildDoorway(level->retrieveRoom(id),level->retrieveNearbyRoom(id,Direction::East),Direction::East
+                                                      , getConstraint());
+                            }
+                            return; //function ends here
+                        }
+                    }
+                    // Otherwise room has none of the above cases of 1x1, 1xn , nx1
                     Direction side=static_cast<Direction>(getRandomBtn(1,2));
                     Direction otherSide=(side==Direction::East)? Direction::South : Direction::East;
                     // get random number tht determine if we building
@@ -209,6 +272,36 @@ void Game::buildTopRightCornerRoom(){
                 // check if room is on the right side(so we know which direction we set our doorway)
                 if(level->isRightRoom(id)){
                     // Building the doorway
+
+                    //another check for cases where width=1 and width=1
+                    if(level->width()==1){
+                        if(level->height()==1){
+                            // no building doorways since there is only one room
+                        }else{
+                            // 1 x n case
+                            //otherwise we can only connect with the room below
+                            // check if connection exists
+                            if((level->retrieveRoom(id)->edgeAt(Direction::South)->isPassage())==true){
+
+                            }else{
+                                builder->buildDoorway(level->retrieveRoom(id),level->retrieveNearbyRoom(id,Direction::South),Direction::South
+                                                      , getConstraint());
+                            }
+                            return; //function ends here
+                        }
+                    }else{
+                        // also it may be a n x 1 case
+                        if(level->height()==1){
+                            // can be connected to only left (west)
+                            if((level->retrieveRoom(id)->edgeAt(Direction::West)->isPassage())==true){
+
+                            }else{
+                                builder->buildDoorway(level->retrieveRoom(id),level->retrieveNearbyRoom(id,Direction::West),Direction::West
+                                                      , getConstraint());
+                            }
+                            return; //function ends here
+                        }
+                    }
                     // since we dealing with 2 sides then get random number either 1(south) or 3 (west)
                     // since its a top left corner
                     Direction side=static_cast<Direction>(getRandomBtn(1,3));
@@ -242,6 +335,29 @@ void Game::buildBottomLeftCornerRoom(){
                 // check if room is on the right side(so we know which direction we set our doorway)
                 if(level->isLeftRoom(id)){
                     // Building the doorway
+                    //another check for cases where width=1 or height=1
+                    if(level->width()==1){
+                        if(level->height()==1){
+                            // no building doorways since there is only one room
+                        }else{
+                            // 1 x n case
+                            //otherwise we can only connect with the room above
+                            // check if connection exists
+                            if((level->retrieveRoom(id)->edgeAt(Direction::North)->isPassage())==true){
+
+                            }else{
+                                builder->buildDoorway(level->retrieveRoom(id),level->retrieveNearbyRoom(id,Direction::North),Direction::North
+                                                      , getConstraint());
+                            }
+                            return; //function ends here
+                        }
+                    }else{
+                        // for an n by 1 case this should not exist since there should not be a row below
+                        if(level->height()==1){
+                            // Do nothing
+                            return; //function ends here
+                        }
+                    }
                     // since we dealing with 2 sides then get random number either 0(north) or 2 (east)
                     // since its a top left corner
                     Direction side=static_cast<Direction>(getRandomBtn(0,2));
@@ -275,6 +391,30 @@ void Game::buildBottomRightCornerRoom(){
                 // check if room is on the right side(so we know which direction we set our doorway)
                 if(level->isRightRoom(id)){
                     // Building the doorway
+                    //another check for cases where width=1 or height=1
+                    if(level->width()==1){
+                        if(level->height()==1){
+                            // no building doorways since there is only one room
+                        }else{
+                            // 1 x n case
+                            //otherwise we can only connect with the room above
+                            // check if connection exists
+                            if((level->retrieveRoom(id)->edgeAt(Direction::North)->isPassage())==true){
+
+                            }else{
+                                builder->buildDoorway(level->retrieveRoom(id),level->retrieveNearbyRoom(id,Direction::North),Direction::North
+                                                      , getConstraint());
+                            }
+                            return; //function ends here
+                        }
+                    }else{
+                        // for an n by 1 case this should not exist since there should not be a row below
+                        if(level->height()==1){
+                            // Do nothing
+                            return; //function ends here
+                        }
+                    }
+
                     // since we dealing with 2 sides then get random number either 0(north) or 3 (west)
                     // since its a top left corner
                     Direction side=static_cast<Direction>(getRandomBtn(0,3));
@@ -306,6 +446,32 @@ void Game::buildTopRooms(){
             // then check if id is that of a room in the top side
             if(level->isTopRoom(id)==true){
                 // Now we got our room,  time to build its doorways
+                //another check for cases where width=1 or height=1
+                if(level->width()==1){
+                    // if its a one width dungeon we do not build top rows or bottom rows or mid rows
+                    return; //function ends here
+                }else{
+                    // for an n by 1 case toprooms and bottom rooms will be the same thing,
+                    // we will avoid their conflict by having to check if there already passage existing
+                    // so no double building doorways if there should be any already
+                    if(level->height()==1){
+                        // its a non corner room so can only connect east and west
+                        // so we check and build 2 doorways
+                        if(level->retrieveRoom(id)->edgeAt(Direction::East)->isPassage()==true){
+                        }else{
+                            builder->buildDoorway(level->retrieveRoom(id), level->retrieveNearbyRoom(id, Direction::East)
+                                                  , Direction::East, getConstraint());
+                        }
+                        // build second doorways onto west
+                        if(level->retrieveRoom(id)->edgeAt(Direction::West)->isPassage()==true){
+                        }else{
+                            builder->buildDoorway(level->retrieveRoom(id), level->retrieveNearbyRoom(id, Direction::West)
+                                                  , Direction::West, getConstraint());
+                        }
+                        return; //function ends here
+                    }
+                }
+
                 // we know if a room is on any side then it can only connect 3 ways (south, east and west)
                 // we also do not need to check for entrance and exit here as this is not top or bottom xD
 
@@ -342,6 +508,9 @@ void Game::buildBottomRooms(){
         if(level->isNonCornerRoom(id)==true){
             // then check if id is that of a room in the bottom side
             if(level->isBottomRoom(id)==true){
+                // NOTE:: there is no width or height check here because we only use buildToprooms
+                // to handle the specific cases, this is ommitted
+
                 // Now we got our room,  time to build its doorways
                 // we know if a room is on any side then it can only connect 3 ways (north, east and west)
                 // we also do not need to check for entrance and exit here as this is not top or bottom xD
@@ -380,6 +549,39 @@ void Game::buildLeftRooms(){
         if(level->isNonCornerRoom(id)==true){
             // then check if id is that of a room in the left side
             if(level->isLeftRoom(id)==true){
+                //another check for cases where width=1 or height=1
+                // Note:: Left rooms and right rooms are meant to be the same in such cases of width =1
+                // sp i decided to only consider handle the cases in one function (buildLeftRooms)
+                if(level->width()==1){
+                    // if height = 1 nothing happens(already handled)
+                    if(level->height()>1){
+                        // if height =2 this wont happen because there will be 2 corner rooms
+                        // and non of rooms in here are corner rooms, so this is for a case where
+                        // likely height >2
+
+                        // we only check and build doorways above and below (north and south)
+                        if(level->retrieveRoom(id)->edgeAt(Direction::North)->isPassage()==true){
+                            // there is a passage so dont build a doorway
+                        }else{
+                            builder->buildDoorway(level->retrieveRoom(id),
+                                                  level->retrieveNearbyRoom(id, Direction::North),
+                                                  Direction::North, getConstraint());
+                        }
+                        // Build a doorway to south
+                        if(level->retrieveRoom(id)->edgeAt(Direction::South)->isPassage()==true){
+                            // there is a passage so dont build a doorway
+                        }else{
+                            builder->buildDoorway(level->retrieveRoom(id),
+                                                  level->retrieveNearbyRoom(id, Direction::South),
+                                                  Direction::South, getConstraint());
+                        }
+                    }
+                    return; //function ends here
+                }else{
+                    // we do not need to build to build any rooms here
+                    // in a case of height=1
+                    return; //function ends here
+                }
                 // Now we got our room,  time to build its doorways
                 // we know if a room is on any side then it can only connect 3 ways (north, south and east)
                 // we also do not need to check for entrance and exit here as this is not top or bottom xD
@@ -407,6 +609,10 @@ void Game::buildRightRooms(){
         if(level->isNonCornerRoom(id)==true){
             // then check if id is that of a room in the right side
             if(level->isRightRoom(id)==true){
+                // THERE IS NO WIDTH AND HEIGHT CHECK HERE
+                // reason being that cases for right rooms and left rooms are same and in such
+                // cases only one function is needed
+
                 // Now we got our room,  time to build its doorways
                 // we know if a room is on any side then it can only connect 3 ways (north, south and west)
                 // we also do not need to check for entrance and exit here as this is not top or bottom xD
@@ -429,6 +635,10 @@ void Game::buildRightRooms(){
 void Game::buildMidRooms(){
     for(int id=1; id<=level->numberOfRooms(); id++){
         if(level->isMidRoom(id)){
+            // NOTE: cases of 1x1, 1xn, and nx1 do not involve this function
+            // because this function only deals with rooms that can connect in all directions
+            // whereas the cases do not do that
+
             // first we get a random number between 2 and 4
             // as we now we need a minimum of 2 connections and maximum of 4 connections for mid rooms
             int randNum=getRandomInt(1,3);
@@ -521,10 +731,31 @@ void Game::buildRandomExit(){
             //otherwise just build an exit doorway here
             builder->buildExit(level->retrieveRoom(randId), random);
             return;// end the function to avoid any further execution
+        }else{
+            // otherwise the height is greater than 1 we can also build exit at south, east or west(1-3)
+            builder->buildExit(level->retrieveRoom(randId), static_cast<Direction>(getRandomInt(1,3)));
+            return;
         }
-        // otherwise the height is greater than 1 we can also build exit at south, east or west(1-3)
-        builder->buildExit(level->retrieveRoom(randId), static_cast<Direction>(getRandomInt(1,3)));
-    }else{
+    }
+    // There is a case where we have many columns in one row, we need to avoid entrance and
+    // exit to be picked on the same room
+    else if((level->height()==1)&&(level->width()>1)){
+        // check if room already has entrance then re-call the function until a different room is picked
+        if(level->retrieveRoom(randId)->hasEntrance()==true){
+            buildRandomExit(); // recursion
+        }else{
+            // otherwise check if edge if free to make exit and make exit
+            Direction randomDirection=static_cast<Direction>(getRandomInt(0,3));
+            // check if there is a neighbouring room at that direction, if there isnt then good place
+            // to make exit
+            while(level->retrieveNearbyRoom(randId, randomDirection)!=nullptr){
+                // pick another random direction until we find a free one
+                randomDirection=static_cast<Direction>(getRandomInt(0,3));
+            }
+            builder->buildExit(level->retrieveRoom(randId), randomDirection);
+        }
+    }
+    else{
         // check if the random id is that of a corner room (begin and end are corner ids already)
         if(randId==begin){ //first corner at the bottom
             // Direction either south or west(get random number either 1 or 3)
@@ -540,19 +771,6 @@ void Game::buildRandomExit(){
 }
 
 
-int Game::getRandomId(std::vector<int> list){
-    int min=list.at(0);
-    int max=0;
-    for(int i :list){
-        if (min>i){
-            min=i;
-        }
-        if (max<i){
-            max=i;
-        }
-    }
-    return getRandomInt(min, max);
-}
 
 int Game::getRandomInt(int min, int max){
     // no need to generate random number
@@ -600,3 +818,114 @@ void Game::buildRoomDoorway(int id, Direction side){
 
 }
 
+void Game::addRandomCreatures(){
+    // Loops throughout all rooms in the level
+    for(int id=1; id<=level->numberOfRooms(); id++){
+        // check if the room is an entrance (it is the first check
+        if(level->retrieveRoom(id)->hasEntrance()==true){
+            // we do not add a monster on the entrance room
+
+            // then check if it may also be an exit
+            if(level->retrieveRoom(id)->roomHasExit()==true){
+                // we must have a monster in this room, so even if the past
+                // entrance check was true(both entrance and exit) this must happen to overrule it
+                // the added monster will overrule the 25% chance
+                addMonster(id);
+            }
+        }
+        // Otherwise apply the 25% chance rule
+        else{
+            addMonster(id);
+        }
+    }
+}
+
+void Game::addRandomItems(){
+    // Loops throughout all rooms in the level
+    for(int id=1; id<=level->numberOfRooms(); id++){
+        // check if the room is an entrance (it is the first check
+        if(level->retrieveRoom(id)->hasEntrance()==true){
+            // we do not add an item on the entrance room
+
+            // then check if it may also be an exit
+            if(level->retrieveRoom(id)->roomHasExit()==true){
+                // we must have an item in this room, so even if the past
+                // entrance check was true(both entrance and exit) this must happen to overrule it
+                // the added monster will overrule the 35% chance
+                addItem(id);
+            }
+        }
+        // Otherwise apply the 35% chance rule
+        else{
+            addItem(id);
+        }
+    }
+
+}
+
+void Game::addMonster(int id){
+    // get random number between 1-100(representing percentages)
+    int randNum=getRandomInt(1,100);
+    // on a case if it is an exit room we set a different unique number 101
+    // that means we wont depend on the random number and it is out of range
+    if(level->retrieveRoom(id)->roomHasExit()==true){
+        randNum=101;
+    }
+    if(randNum<=25){
+        builder->buildCreature(level->retrieveRoom(id));
+    }else if(randNum==101){
+        builder->buildCreature(level->retrieveRoom(id));
+    }
+}
+
+void Game::addItem(int id){
+    // get random number between 1-100(representing percentages)
+    int randNum=getRandomInt(1,100);
+    // on a case if it is an exit room we set a different unique number 101
+    // that means we wont depend on the random number and it is out of range
+    if(level->retrieveRoom(id)->roomHasExit()==true){
+        randNum=101;
+    }
+    if(randNum<=35){
+        //get and add the item
+        addItemOfType(id, getRandomItemType());
+    }else if(randNum==101){
+        // get and add the item
+        addItemOfType(id, getRandomItemType());
+    }
+
+}
+
+void Game::addItemOfType(int id, std::shared_ptr<Item> item){
+
+    //
+    level->retrieveRoom(id)->setItem(item);
+}
+
+std::shared_ptr<Item> Game::getRandomItemType(){
+    // gets a random item in range of 1-100
+    // 35% = when number is less than or equal to 35
+    // 65% = when number is
+    int randomNum=getRandomInt(1,100);
+
+    std::shared_ptr<Item> randomItem;
+    randomItem=builder->getRandomItem();
+    // 35% is a weapon
+    if(randomNum<=35){
+        // make sure the random item is a consumable otherwise get another one
+        while(std::dynamic_pointer_cast<Weapon>(randomItem)==nullptr){
+            randomItem=builder->getRandomItem();
+        }
+        return randomItem;
+
+    }else{
+        //65 % chance its a consumable
+
+        // make sure the random item is a consumable otherwise get another one
+        while(std::dynamic_pointer_cast<Consumable>(randomItem)==nullptr){
+            randomItem=builder->getRandomItem();
+        }
+        return randomItem;
+    }
+
+}

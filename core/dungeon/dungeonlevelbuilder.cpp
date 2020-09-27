@@ -31,12 +31,16 @@ void DungeonLevelBuilder::createPrototypeItems(){
 void DungeonLevelBuilder::createPrototypeCreatures(){
 }
 
-core::items::Item  *DungeonLevelBuilder::createItem(Items item){
+
+std::unique_ptr<core::items::Item> DungeonLevelBuilder::createItem(Items item){
 }
 
 std::unique_ptr<core::creatures::AbstractCreature> DungeonLevelBuilder::createMonster(Monsters monster){
 
 }
+
+std::shared_ptr<core::items::Item> DungeonLevelBuilder::getRandomItem(){}
+std::shared_ptr<core::creatures::AbstractCreature> DungeonLevelBuilder::getRandomCreature(){}
 
 // sets a random individual constraint for a doorway
 DungeonLevelBuilder::MoveConstraints DungeonLevelBuilder::getRandomOriginConstraint(){}

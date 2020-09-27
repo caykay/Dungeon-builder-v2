@@ -66,9 +66,6 @@ void Room::setCreature (std::shared_ptr<core::creatures::AbstractCreature> newCr
 
 
 std::vector<std::string> Room::display(){
-    // checks if room has exit and assigns the result to a boolean value
-    // this is so as to make the appending of * on boss monsters
-    checkHasExit();
     std::vector<std::string> edgeV(5);
     //  Check for empty edges and fill them up with walls?
     edgeV.at(0)=firstLastRow(edges[Direction::North]->displayCharacter());
@@ -155,9 +152,15 @@ char Room::itemChar(){
 }
 
 bool Room::roomHasExit(){
+    // checks if room has exit and assigns the result to a boolean value
+    checkHasExit();
+
     return _roomExit;
 }
 bool Room::hasEntrance(){
+    // checks if room has entrance before assigning the boolean value
+    checkHasEntrance();
+
     return _roomEntrance;
 }
 

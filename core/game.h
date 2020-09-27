@@ -6,6 +6,9 @@
 #include <iostream>
 #include "core/dungeon/dungeonlevelbuilder.h"
 #include "core/dungeon/dungeonlevel.h"
+#include "core/items/consumeable.h"
+#include "core/items/weapon.h"
+#include "core/items/item.h"
 
 
 namespace core {
@@ -15,6 +18,10 @@ using Room=std::shared_ptr<core::dungeon::Room>;
 using Direction=core::dungeon::Room::Direction;
 using MoveConstraints=DLB::MoveConstraints;
 using DL=core::dungeon::DungeonLevel;
+using Item=core::items::Item;
+using Consumable=core::items::Consumeable;
+using Weapon = core::items::Weapon;
+
 
 class Game
 {
@@ -44,15 +51,27 @@ public:
     double randomDouble();
 private:
     Game(){}
+    static std::unique_ptr<Game> _theInstance;
+
     void createExampleRooms();
     void buildExampleDoorways();
     void buildExampleItems();
     void buildExampleCreatures();
 
-    void buildRandomRooms(int size);
+    void addRandomRooms(int size);
     void buildRandomDoorways();
-    int getRandomId(std::vector<int> list);
-
+    // Function responsible to add monsters to all rooms
+    void addRandomCreatures();
+    //
+    void addRandomItems();
+    // Enforces that the random selected monster has 25% chance to be put in a room
+    void addMonster(int id);
+    // Enforces the 35% that a room can have a random item
+    void addItem(int id);
+    // returns a random Item type according to the constraints set
+    std::shared_ptr<Item> getRandomItemType();
+    // adds a random item of given type into the id
+    void addItemOfType(int id,std::shared_ptr<Item> type);
     // returns a random number in the given range
     int getRandomInt(int min, int max);
     // choses a either int a or b at random and returns it
@@ -95,8 +114,7 @@ private:
 
 
 
-    // Do i need to instantiate it to nullptr?
-    static std::unique_ptr<Game> _theInstance;
+
     std::mt19937 _randomGenerator{uint32_t(time(nullptr))}; //!< Mersenne Twister random number generator seeded by current time
     std::uniform_real_distribution<double> _realDistribution{0.0, 1.0}; //!< For random numbers between 0.0 & 1.0
 
