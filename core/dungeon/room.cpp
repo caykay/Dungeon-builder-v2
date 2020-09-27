@@ -67,7 +67,6 @@ void Room::setCreature (std::shared_ptr<core::creatures::AbstractCreature> newCr
 
 std::vector<std::string> Room::display(){
     std::vector<std::string> edgeV(5);
-    //  Check for empty edges and fill them up with walls?
     edgeV.at(0)=firstLastRow(edges[Direction::North]->displayCharacter());
     edgeV.at(1)=emptyRow();
     edgeV.at(2)=midRow(edges[Direction::East]->displayCharacter()

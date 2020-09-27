@@ -1,5 +1,6 @@
 #ifndef ENCHANTEDLIBRARY_H
 #define ENCHANTEDLIBRARY_H
+#include "core/dungeon/room.h"
 
 namespace core {
 namespace dungeon {

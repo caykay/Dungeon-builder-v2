@@ -28,7 +28,7 @@ void MenuInterface::displayMainMenu() {
     _display<<"(g)enerate the example level"<<std::endl;
     _display<<"(r)andom dungeon level"<<std::endl;
     _display<<"(q)uit"<<std::endl;
-
+    // gets character input and validifies it according to the main menu options
     validifyMainMenuInput(getCharInput());
 }
 
@@ -41,7 +41,7 @@ void MenuInterface::displayDNGDescribeMenu(){
     switch(tolower(getCharInput())){
     case('d'):
         describeLvl();
-        setCustomMenu(DNG_Exploration);
+        setCustomMenu(Menu::DNG_Exploration);
         break;
     case('v'):
         displayLvl();
@@ -53,7 +53,7 @@ void MenuInterface::displayDNGDescribeMenu(){
         break;
     default:
         displayInvalidInputMessage();
-        displayDNGDescribeMenu(); // recursive method
+        displayDNGDescribeMenu(); // recursive method to repeat until correct character is entered
     }
 }
 
@@ -108,21 +108,14 @@ int MenuInterface::getIntInput() const{
 }
 
 std::string MenuInterface::getStringInput() const{
-    // TODO fix so you dont have to press enter twice after input
-    std::string userInput;
-    _input.clear();
-    getline(_input,userInput);
-//    _input>>userInput;
-    _input.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    // TODO Get character input from console
+    char userInput[100];
+    _input.getline(userInput,100);
 
-    while(_input.fail()){ // validate input type is string
-        _input.clear();
+    // validate input type is string
+    while(_input.fail()){
         displayInvalidInputMessage();
-        _input.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-//        _input >> userInput;
-        getline(_input,userInput);
-        _input.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        _input.getline(userInput,100);
     }
 
     return userInput;
@@ -133,12 +126,12 @@ void MenuInterface::validifyMainMenuInput(char input) {
     switch(tolower(input)){
     case('g'):
         generateExampleLvl();
-        setCustomMenu(DNG_DescribeView);
+        setCustomMenu(Menu::DNG_DescribeView);
 
         break;
     case('r'):
         generateRandomLvl();
-        setCustomMenu(DNG_DescribeView);
+        setCustomMenu(Menu::DNG_DescribeView);
         break;
     case('q'):
         if (quitInterface()){
@@ -195,10 +188,10 @@ void MenuInterface::setCustomMenu(Menu menu){
     _customMenu=menu;
 
     switch (menu) {
-    case DNG_DescribeView:
+    case Menu::DNG_DescribeView:
         displayDNGDescribeMenu();
         break;
-    case DNG_Exploration:
+    case Menu::DNG_Exploration:
         displayDNGExplorationMenu();
         break;
 
@@ -207,8 +200,7 @@ void MenuInterface::setCustomMenu(Menu menu){
 
 
 void MenuInterface::generateExampleLvl(){
-    _display<<"Creating Example Dungeon Level..."<<std::endl;
-    Game::instance().clearLevel();
+    _display<<"\nCreating Example Dungeon Level..."<<std::endl;
     Game::instance().createExampleLevel();
     _display<<"Dungeon Level created"<<std::endl;
 }
@@ -225,14 +217,14 @@ void MenuInterface::generateRandomLvl(){
         displayInvalidInputMessage("Please enter a valid name");
         dngName=getStringInput();
     }
-    _display<<"\nHow many rows in *"<<dngName<<"*??"<<std::endl;
+    _display<<"\nHow many rows in *"<<dngName<<"*?"<<std::endl;
     rows=getIntInput();
     while(rows<1 || rows>4){
         displayInvalidInputMessage("Please enter in range of 1 and 4");
         rows=getIntInput();
     }
 
-    _display<<"\nHow many columns in *"<<dngName<<"*??"<<std::endl;
+    _display<<"\nHow many columns in *"<<dngName<<"*?"<<std::endl;
     cols=tolower(getIntInput());
     while(cols<1 || cols>4){
         displayInvalidInputMessage("Please enter in range of 1 and 4");
@@ -246,9 +238,8 @@ void MenuInterface::generateRandomLvl(){
         lvl=getCharInput();
     }
 
-    _display<<"Creating "<<dngName<<"..."<<std::endl;
+    _display<<"\nCreating "<<dngName<<"..."<<std::endl;
 
-    Game::instance().clearLevel();
     Game::instance().setDungeonType('b');
     Game::instance().createRandomLevel(dngName, cols, rows);
     _display<<"Dungeon Level created!"<<std::endl;
@@ -273,7 +264,7 @@ void MenuInterface::describeRoom()
     std::stringstream range;
     range<<"(1-"<<noOfRooms<<")";
     int roomNo;
-    _display<<"Which room would you like to describe?"<<range.str()<<std::endl;
+    _display<<"\nWhich room would you like to describe?"<<range.str()<<std::endl;
     roomNo=getIntInput();
     while(roomNo<1||roomNo>noOfRooms){
         _display<<"Enter number between: "<<range.str()<<std::endl;
@@ -290,7 +281,6 @@ void MenuInterface::emptyLinePrompt(){
     _display<<"\n"<<std::endl;
     _display<<"*Press Enter to continue*\n";
     _input.ignore();
-//    _input.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
 }
 

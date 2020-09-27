@@ -5,10 +5,24 @@
 
 namespace core {
 namespace dungeon {
+/**
+ * @class Wall
+ * @brief The Wall class. This class is a specific type of a
+ * room edge. Its a wall which means by default it has no
+ * passage to another room to start with.
+ *
+ * @author Cassian Kahema
+ */
 class Wall:public RoomEdge
 {
 public:
+    /**
+     * @brief Wall Default Constructor
+     */
     Wall();
+    /**
+     * @brief ~Wall Virtual Constructor
+     */
     virtual ~Wall(){}
 
     virtual std::string description() const override;

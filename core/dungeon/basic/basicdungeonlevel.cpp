@@ -14,9 +14,9 @@ BasicDungeonLevel::BasicDungeonLevel(const std::string &name, int width, int hei
 std::string BasicDungeonLevel::description() const{
     std::stringstream description;
     std::string nxt="\n";
-    description<<this->name()<<nxt;
+    description<<nxt<<this->name()<<nxt;
     description<<"Size: "<<this->width()<<" x "<<this->height()<<nxt;
-    description<<"Type: "<<"Dark Cave(Basic Dungoen)";
+    description<<"Type: "<<"Dark Cave(Basic Dungoen)"<<nxt;
     return description.str();
 }
 

@@ -7,10 +7,18 @@ namespace dungeon {
 namespace basic{
 
 
-
+/**
+ * @class RockWall
+ * @brief The RockWall class. A derived type of wall.
+ *
+ * @author Cassian Kahema
+ */
 class RockWall: public Wall
 {
 public:
+    /**
+     * @brief RockWall Default constructor
+     */
     RockWall();
 
     std::string description() const override;

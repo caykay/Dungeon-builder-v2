@@ -3,10 +3,11 @@
 #include "core/dungeon/room.h"
 #include <algorithm>
 #include "core/dungeon/doorway.h"
-//#include "menuinterface.h"
+
 using namespace core;
 using BasicDLB=core::dungeon::basic::BasicDungeonLevelBuilder;
 std::unique_ptr<Game> Game::_theInstance;
+
 double Game::randomDouble() {
   return _realDistribution(_randomGenerator);
 }
@@ -19,6 +20,7 @@ void Game::setDungeonType(char type){
         break;
     case 'm':
         // set dungeon type to magic dungeon level builder
+        // Not implemented(optional)
         break;
     }
 }
@@ -27,7 +29,9 @@ void Game::setDungeonType(DLB* builder){
     this->builder=builder;
 }
 void Game::createExampleLevel(){
-    builder=new BasicDLB();
+    // clears the current level before building a new one
+    clearLevel();
+    setDungeonType(new BasicDLB());
     builder->buildDungeonLevel("Example Dungeon Level", 3, 3);
     level=builder->getDungeonLevel();
 
@@ -38,6 +42,8 @@ void Game::createExampleLevel(){
 
 }
 void Game::createRandomLevel(const std::string &name, int width, int height){
+    // clears the current level before building a new one
+    clearLevel();
     builder->buildDungeonLevel(name, width, height);
     level=builder->getDungeonLevel();
     addRandomRooms(width*height);
@@ -122,23 +128,27 @@ void Game::buildExampleCreatures(){
 }
 
 void Game::addRandomRooms(int size){
+    // Loop through all intergers from 1 to size
+    // sets them as room ids
     for (int i=1; i<=size; i++){
         level->addRoom(builder->buildRoom(i));
     }
 }
-
+/**
+ *
+ * NOTE THE FOLLOWING FUNCTION CHECKS FOR SPECIFIC 4 CASES
+ * 1x1
+ * 1xn
+ * nx1
+ * in some of these cases some function will return same results,
+ * so only one of them will be modified to handle the cases and will then be called
+ */
 void Game::buildRandomDoorways(){
     //Builds random entrance
     buildRandomEntrance();
     //Builds random exit
     buildRandomExit();
 
-    // NOTE THE FOLLOWING A CHECKS FOR SPECIFIC 4 CASES
-    // 1x1
-    // 1xn
-    // nx1
-    // in some of these cases some function will return same results,
-    // so only one of them will be modified to handle the cases and will then be called
     if(level->width()==1){
         if(level->height()==1){
             // we do not build anything in a 1x1 case
@@ -146,7 +156,8 @@ void Game::buildRandomDoorways(){
             // only build top and bottom
             // Build Corner rooms
             buildTopLeftCornerRoom();// theres only one corner
-            buildLeftRooms(); // these will be considered midrooms in this case
+            // these will be considered midrooms in this case
+            buildLeftRooms();
             buildBottomLeftCornerRoom();
         }
     }else{
@@ -163,7 +174,6 @@ void Game::buildRandomDoorways(){
             buildCornerRooms();
             //build Non Corner rooms
             buildNonCornerRooms();
-
         }
     }
  }
@@ -179,15 +189,14 @@ void Game::buildCornerRooms(){
 
 }
 
+// A non corner room has 5 cases
+// i. room is top row but not corner
+// ii. room is left row but not corner
+// iii.room is right row but not corner
+// iv. room is bottom row but not corner
+// v. room is non of the above making it around mid row
 void Game::buildNonCornerRooms(){
-    // A non corner room has 5 cases
-    // i. room is top row but not corner
-    // ii. room is left row but not corner
-    // iii.room is right row but not corner
-    // iv. room is bottom row but not corner
-    // v. room is non of the above making it around mid row
-
-    // Build top&bottom room doorways
+   // Build top&bottom room doorways
     buildTopRooms();
     buildBottomRooms();
     // Build left&right room doorways
@@ -785,14 +794,14 @@ int Game::getRandomInt(int min, int max){
     return (int)(randomDouble() * (max-min +1)) + min;
 }
 
-int Game::getRandomBtn(int a, int b){
+int Game::getRandomBtn(int num1, int num2){
     int randNum=getRandomInt(1,2);
     switch (randNum) {
     case 1:
-        return a;
+        return num1;
         break;
-    case 2:
-        return b;
+    default:
+        return num2;
         break;
     }
 }

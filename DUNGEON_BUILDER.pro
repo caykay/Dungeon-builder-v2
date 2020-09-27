@@ -62,4 +62,5 @@ HEADERS += \
     core/items/weapon.h \
     core/menuinterface.h
 
-DISTFILES +=
+DISTFILES += \
+    DUNGEON_BUILDER_PROJECT

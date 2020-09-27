@@ -5,18 +5,18 @@ Doorway::Doorway()
 }
 
 
-void Doorway::connect(Doorway* opposite){
+void Doorway::connect(Doorway* newOpposite){
     // first disconnect this door (as well as the other door's opposite which is this door)
     // from its current door
     disconnect(this);
 
-    if(opposite!=nullptr){
+    if(newOpposite!=nullptr){
         //disconnect the opposite door from any of its connections
-        disconnect(opposite);
+        disconnect(newOpposite);
         // connects current door to the passed in door parameter
-        this->opposite=opposite;
+        this->opposite=newOpposite;
         // connects the opposite door to this door respectively
-        opposite->opposite=this;
+        newOpposite->opposite=this;
     }
 }
 void Doorway::setCharacterAt(char direction){}
@@ -37,10 +37,10 @@ char Doorway::displayCharacter() const{
 bool Doorway::isPassage() const{
 }
 
-void Doorway::disconnect(Doorway* doorway){
+void Doorway::disconnect(Doorway* otherDoorway){
     // if doorway is already connected then disconnect otherwise nothing to disconnect
-    if (doorway->isPassage()==true){
+    if (otherDoorway->isPassage()==true){
 //       opposite->opposite=nullptr;
-       doorway->opposite=nullptr;
+       otherDoorway->opposite=nullptr;
     }
 }

@@ -10,7 +10,6 @@ class MagicalDungeonLevelBuilder: public DungeonLevelBuilder
 public:
     MagicalDungeonLevelBuilder();
     ~MagicalDungeonLevelBuilder(){
-        delete _level;
     }
 
     void buildDungeonLevel(const std::string &name, int width, int height)  override;

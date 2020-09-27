@@ -120,35 +120,20 @@ std::shared_ptr<Room> DungeonLevel::retrieveNearbyRoom (int id, Room::Direction 
 
     switch (direction) {
     case Room::Direction::North:
-        return retrieveRoom(getAboveRoomId(id));
+        return retrieveRoom(id-width());
         break;
     case Room::Direction::South:
-        return retrieveRoom(getBelowRoomId(id));
+        return retrieveRoom(id+width());
         break;
     case Room::Direction::East:
-        return retrieveRoom(getRightRoomId(id));
+        return retrieveRoom(id+1);
     break;
     case Room::Direction::West:
-        return retrieveRoom(getLeftRoomId(id));
+        return retrieveRoom(id-1);
     break;
     }
 }
 
-int DungeonLevel::getAboveRoomId(int id){
-    return id-width();
-}
-
-int DungeonLevel::getBelowRoomId(int id){
-    return id+width();
-}
-
-int DungeonLevel::getRightRoomId(int id){
-    return id+1;
-}
-
-int DungeonLevel::getLeftRoomId(int id){
-    return id-1;
-}
 
 std::vector<int> DungeonLevel::getFirstRowIDs(){
     // cointains ids of the rooms in the first row

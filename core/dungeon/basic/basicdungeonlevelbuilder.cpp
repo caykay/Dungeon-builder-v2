@@ -20,6 +20,8 @@ BasicDungeonLevelBuilder::BasicDungeonLevelBuilder()
 
 void BasicDungeonLevelBuilder::buildDungeonLevel(const std::string &name, int width, int height) {
     _level=new BasicDungeonLevel(name, width, height);
+    // Intitializes the prototypeItems and prototypeCreatures variables for
+    // future operations
     createPrototypeItems();
     createPrototypeCreatures();
 }
