@@ -1,6 +1,7 @@
 #ifndef WALL_H
 #define WALL_H
 #include <memory>
+#include <string>
 #include "roomedge.h"
 
 namespace core {

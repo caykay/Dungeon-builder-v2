@@ -497,7 +497,8 @@ void Game::buildTopRooms(){
                 int random=getRandomInt(1,2); // random number to determing the constraint cases
                 // List of the available directions we can connect
                 std::vector<Direction> list={Direction::South, Direction::East, Direction::West};
-                std::random_shuffle(begin(list), end(list)); // shuffles the directions list (to make the options random not fixed)
+                unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+                std::shuffle(begin(list), end(list), std::default_random_engine(seed)); // shuffles the directions list (to make the options random not fixed)
 
                 // the constraint states to include the entrance doorway if the room has entrance
                 // this is considered in the last case. means it is bound to be included whether random number is 2(by default) or 3
@@ -537,7 +538,10 @@ void Game::buildBottomRooms(){
                 int random=getRandomInt(1,2); // random number to determing the constraint cases
                 // List of the available directions we can connect
                 std::vector<Direction> list={Direction::North, Direction::East, Direction::West};
-                std::random_shuffle(begin(list), end(list)); // shuffles the directions list (to make the options random not fixed)
+
+                shuffle_list(list);
+//                unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+//                std::shuffle(begin(list), end(list), std::default_random_engine(seed)); // shuffles the directions list (to make the options random not fixed)
 
                 // the constraint states to include the exit doorway if the room has exit(occurs at bottom row)
                 // this is considered in the last case. means it is bound to be included whether random number is 2 or 3
@@ -609,7 +613,8 @@ void Game::buildLeftRooms(){
                 int random=getRandomInt(1,2); // random number to determing the constraint cases
                 // List of the available directions we can connect
                 std::vector<Direction> list={Direction::North, Direction::South, Direction::East};
-                std::random_shuffle(begin(list), end(list)); // shuffles the directions list (to make the options random not fixed)
+                unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+                std::shuffle(begin(list), end(list), std::default_random_engine(seed)); // shuffles the directions list (to make the options random not fixed)
                 if(random==2){
                     buildRoomDoorway(id, list.at(0));
                 }
@@ -640,7 +645,8 @@ void Game::buildRightRooms(){
                 int random=getRandomInt(1,2); // random number to determing the constraint cases
                 // List of the available directions we can connect
                 std::vector<Direction> list={Direction::North, Direction::South, Direction::West};
-                std::random_shuffle(begin(list), end(list)); // shuffles the directions list (to make the options random not fixed)
+                unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+                std::shuffle(begin(list), end(list), std::default_random_engine(seed)); // shuffles the directions list (to make the options random not fixed)
                 if(random==2){
                     buildRoomDoorway(id, list.at(0));
                 }
@@ -665,7 +671,8 @@ void Game::buildMidRooms(){
             // vector of 4 different random numbers 0-3 (used to cast to direction)
             std::vector<Direction> list={Direction::East,Direction::West, Direction::South, Direction::North};
             //reshuffle
-            std::random_shuffle(begin(list), end(list));
+            unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+            std::shuffle(begin(list), end(list), std::default_random_engine(seed));
             // We make cases
 
 
@@ -707,7 +714,8 @@ void Game::buildRandomEntrance(){
             // otherwise we can only assign north,east or west
             std::vector<Direction> list={Direction::North, Direction::East, Direction::West};
             // shuffle the list with directions
-            std::random_shuffle(begin(list), end(list));
+            unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+            std::shuffle(begin(list), end(list), std::default_random_engine(seed)); // shuffles the directions list (to make the options random not fixed)
             // pick one at random
             builder->buildEntrance(level->retrieveRoom(entranceID), list.at(getRandomInt(0,2)));
         }
@@ -948,4 +956,10 @@ std::shared_ptr<Item> Game::getRandomItemType(){
         return randomItem;
     }
 
+}
+
+template<typename T>
+void Game::shuffle_list(std::vector<T> &list){
+    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+    std::shuffle(begin(list), end(list), std::default_random_engine(seed)); // shuffles the directions list (to make the options random not fixed)
 }

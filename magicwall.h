@@ -1,6 +1,7 @@
 #ifndef MAGICWALL_H
 #define MAGICWALL_H
 #include "wall.h"
+#include <string>
 
 namespace core {
 namespace dungeon {

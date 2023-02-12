@@ -1,6 +1,7 @@
 #ifndef DOORWAY_H
 #define DOORWAY_H
 #include <memory>
+#include <string>
 #include "roomedge.h"
 #include <cstdlib>
 

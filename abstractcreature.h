@@ -1,6 +1,7 @@
 #ifndef ABSTRACTCREATURE_H
 #define ABSTRACTCREATURE_H
 #include <memory>
+#include <string>
 
 namespace  core{
 namespace  creatures{

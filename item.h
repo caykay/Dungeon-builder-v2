@@ -1,6 +1,7 @@
 #ifndef ITEM_H
 #define ITEM_H
 #include <memory>
+#include <string>
 
 namespace  core{
 namespace  items{

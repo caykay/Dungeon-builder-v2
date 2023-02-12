@@ -318,6 +318,9 @@ private:
     std::uniform_real_distribution<double> _realDistribution{0.0, 1.0}; //!< For random numbers between 0.0 & 1.0
 
 
+    // utility for shuffling lists
+    template<typename T>
+    void shuffle_list(std::vector<T> &list);
 
 };//END Game
 }//END core
